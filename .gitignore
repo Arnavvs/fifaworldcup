@@ -11,6 +11,15 @@ fifa_wc_data/db/
 *.csv.gz
 *.zip
 
+# --- Bulk data payloads (repo keeps docs + structure only) ---
+# Processed data tables (regenerable); small dimension/structure CSVs are kept
+fifa_wc_data/processed/
+# Large model-ready datasets (regenerable via src/r6_exports.py)
+research_ready_dataset/ml_match_features.csv
+research_ready_dataset/classification_dataset.csv
+research_ready_dataset/regression_dataset.csv
+research_ready_dataset/tournament_dataset.csv
+
 # --- Secrets (never commit) ---
 .kaggle/
 access_token
