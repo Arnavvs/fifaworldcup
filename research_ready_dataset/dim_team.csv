@@ -1,0 +1,576 @@
+team_id,canonical_name,aliases,fifa_code,continent
+1,AB,,,Other
+2,AD,,,Other
+3,AE,,,Other
+4,AF,,,Other
+5,AG,,,Other
+6,AI,,,Other
+7,AL,,,Other
+8,AM,,,Other
+9,AN,,,Other
+10,AO,,,Other
+11,AS,,,Other
+12,AW,,,Other
+13,AY,,,Other
+14,AZ,,,Other
+15,Abkhazia,,,Other
+16,Afghanistan,,,Other
+17,Albania,,,Other
+18,Alderney,,,Other
+19,Algeria,,ALG,Africa
+20,Ambazonia,,,Other
+21,American Samoa,,,Other
+22,Andalusia,,,Other
+23,Andorra,,,Other
+24,Angola,,,Other
+25,Anguilla,,,Other
+26,Antigua and Barbuda,,,Other
+27,Arameans Suryoye,,,Other
+28,Argentina,,ARG,South America
+29,Armenia,,,Other
+30,Artsakh,,,Other
+31,Aruba,,,Other
+32,Asturias,,,Other
+33,Australia,,AUS,Asia
+34,Austria,,AUT,Europe
+35,Aymara,,,Other
+36,Azerbaijan,,,Other
+37,BB,,,Other
+38,BC,,,Other
+39,BD,,,Other
+40,BF,,,Other
+41,BG,,,Other
+42,BH,,,Other
+43,BI,,,Other
+44,BJ,,,Other
+45,BL,,,Other
+46,BM,,,Other
+47,BN,,,Other
+48,BO,,,Other
+49,BQ,,,Other
+50,BS,,,Other
+51,BT,,,Other
+52,BU,,,Other
+53,BW,,,Other
+54,BX,,,Other
+55,BY,,,Other
+56,BZ,,,Other
+57,Bahamas,,,Other
+58,Bahrain,,,Other
+59,Bangladesh,,,Other
+60,Barawa,,,Other
+61,Barbados,,,Other
+62,Basque Country,,,Other
+63,Belarus,,,Other
+64,Belgium,,BEL,Europe
+65,Belize,,,Other
+66,Benin,,,Other
+67,Bermuda,,,Other
+68,Bhutan,,,Other
+69,Biafra,,,Other
+70,Bolivia,,BOL,South America
+71,Bonaire,,,Other
+72,Bosnia and Herzegovina,,BIH,Europe
+73,Botswana,,,Other
+74,Brazil,,BRA,South America
+75,British Virgin Islands,,,Other
+76,Brittany,,,Other
+77,Brunei,,,Other
+78,Brunei Darussalam,,,Other
+79,Bulgaria,,,Other
+80,Burkina Faso,,,Other
+81,Burundi,,,Other
+82,CB,,,Other
+83,CC,,,Other
+84,CE,,,Other
+85,CF,,,Other
+86,CG,,,Other
+87,CJ,,,Other
+88,CK,,,Other
+89,CN,,,Other
+90,CS,,,Other
+91,CU,,,Other
+92,CX,,,Other
+93,CY,,,Other
+94,Cabo Verde,Cape Verde,CPV,Africa
+95,Cambodia,,,Other
+96,Cameroon,,CMR,Africa
+97,Canada,,CAN,North America
+98,Canary Islands,,,Other
+99,Cascadia,,,Other
+100,Catalonia,,,Other
+101,Cayman Islands,,,Other
+102,Central African Republic,,,Other
+103,Central Spain,,,Other
+104,Chad,,,Other
+105,Chagos Islands,,,Other
+106,Chameria,,,Other
+107,Chechnya,,,Other
+108,Chile,,CHI,South America
+109,China PR,,CHN,Asia
+110,Chinese Taipei,,,Other
+111,Cilento,,,Other
+112,Colombia,,COL,South America
+113,Comoros,,,Other
+114,Congo,,,Other
+115,Congo DR,DR Congo|Zaire,COD,Africa
+116,Cook Islands,,,Other
+117,Corsica,,,Other
+118,Costa Rica,,CRC,North America
+119,County of Nice,,,Other
+120,Crimea,,,Other
+121,Croatia,,CRO,Europe
+122,Cuba,,,Other
+123,Curaçao,Curacao,CUW,North America
+124,Cyprus,,,Other
+125,Czechia,Czech Republic,CZE,Europe
+126,Czechoslovakia,,,Other
+127,Côte d'Ivoire,Ivory Coast,CIV,Africa
+128,DD,,,Other
+129,DH,,,Other
+130,DI,,,Other
+131,DJ,,,Other
+132,DM,,,Other
+133,DN,,,Other
+134,DO,,,Other
+135,DY,,,Other
+136,Darfur,,,Other
+137,Denmark,,DEN,Europe
+138,Djibouti,,,Other
+139,Dominica,,,Other
+140,Dominican Republic,,,Other
+141,Donetsk PR,,,Other
+142,Délvidék,,,Other
+143,EE,,,Other
+144,EH,,,Other
+145,EI,,,Other
+146,EM,,,Other
+147,EP,,,Other
+148,ER,,,Other
+149,ET,,,Other
+150,EU,,,Other
+151,East Turkestan,,,Other
+152,Ecuador,,ECU,South America
+153,Egypt,,EGY,Africa
+154,El Salvador,,,Other
+155,Elba Island,,,Other
+156,Ellan Vannin,,,Other
+157,England,,ENG,Europe
+158,Equatorial Guinea,,,Other
+159,Eritrea,,,Other
+160,Estonia,,,Other
+161,Eswatini,,,Other
+162,Ethiopia,,,Other
+163,FC,,,Other
+164,FI,,,Other
+165,FJ,,,Other
+166,FK,,,Other
+167,FM,,,Other
+168,FN,,,Other
+169,FO,,,Other
+170,FS,,,Other
+171,FT,,,Other
+172,Falkland Islands,,,Other
+173,Faroe Islands,,,Other
+174,Felvidék,,,Other
+175,Fiji,,,Other
+176,Finland,,FIN,Europe
+177,France,,FRA,Europe
+178,Franconia,,,Other
+179,French Guiana,,,Other
+180,Frøya,,,Other
+181,GA,,,Other
+182,GC,,,Other
+183,GD,,,Other
+184,GE,,,Other
+185,GF,,,Other
+186,GI,,,Other
+187,GL,,,Other
+188,GM,,,Other
+189,GN,,,Other
+190,GP,,,Other
+191,GQ,,,Other
+192,GT,,,Other
+193,GU,,,Other
+194,GW,,,Other
+195,GY,,,Other
+196,Gabon,,,Other
+197,Galicia,,,Other
+198,Gambia,,,Other
+199,Georgia,,,Other
+200,German DR,,,Other
+201,Germany,,GER,Europe
+202,Ghana,,GHA,Africa
+203,Gibraltar,,,Other
+204,Gotland,,,Other
+205,Gozo,,,Other
+206,Greece,,GRE,Europe
+207,Greenland,,,Other
+208,Grenada,,,Other
+209,Guadeloupe,,,Other
+210,Guam,,,Other
+211,Guatemala,,,Other
+212,Guernsey,,,Other
+213,Guinea,,,Other
+214,Guinea-Bissau,,,Other
+215,Guyana,,,Other
+216,Găgăuzia,,,Other
+217,HA,,,Other
+218,HG,,,Other
+219,HK,,,Other
+220,Haiti,,HAI,North America
+221,Hitra,,,Other
+222,Hmong,,,Other
+223,Honduras,,HON,North America
+224,Hong Kong,,,Other
+225,Hungary,,HUN,Europe
+226,ID,,,Other
+227,IL,,,Other
+228,IN,,,Other
+229,IR Iran,Iran,IRN,Asia
+230,IS,,,Other
+231,Iceland,,ISL,Europe
+232,India,,,Other
+233,Indonesia,,,Other
+234,Iraq,,IRQ,Asia
+235,Iraqi Kurdistan,,,Other
+236,Ireland,Republic of Ireland,IRL,Europe
+237,Isle of Man,,,Other
+238,Isle of Wight,,,Other
+239,Israel,,,Other
+240,Italy,,ITA,Europe
+241,JS,,,Other
+242,Jamaica,,JAM,North America
+243,Japan,,JPN,Asia
+244,Jersey,,,Other
+245,Jordan,,JOR,Asia
+246,KA,,,Other
+247,KD,,,Other
+248,KE,,,Other
+249,KG,,,Other
+250,KH,,,Other
+251,KI,,,Other
+252,KM,,,Other
+253,KN,,,Other
+254,KO,,,Other
+255,KP,,,Other
+256,KT,,,Other
+257,KU,,,Other
+258,KW,,,Other
+259,KY,,,Other
+260,KZ,,,Other
+261,Kabylia,,,Other
+262,Kazakhstan,,,Other
+263,Kenya,,,Other
+264,Kernow,,,Other
+265,Kiribati,,,Other
+266,Korea DPR,North Korea,PRK,Asia
+267,Korea Republic,South Korea,KOR,Asia
+268,Kosovo,,,Other
+269,Kurdistan,,,Other
+270,Kuwait,,,Other
+271,Kyrgyz Republic,,,Other
+272,Kyrgyzstan,,,Other
+273,Kárpátalja,,,Other
+274,LA,,,Other
+275,LB,,,Other
+276,LC,,,Other
+277,LI,,,Other
+278,LK,,,Other
+279,LR,,,Other
+280,LS,,,Other
+281,LT,,,Other
+282,LU,,,Other
+283,LV,,,Other
+284,LY,,,Other
+285,Laos,,,Other
+286,Latvia,,,Other
+287,Lebanon,,,Other
+288,Lesotho,,,Other
+289,Liberia,,,Other
+290,Libya,,,Other
+291,Liechtenstein,,,Other
+292,Lithuania,,,Other
+293,Luhansk PR,,,Other
+294,Luxembourg,,,Other
+295,MC,,,Other
+296,MD,,,Other
+297,ME,,,Other
+298,MF,,,Other
+299,MG,,,Other
+300,MH,,,Other
+301,MK,,,Other
+302,ML,,,Other
+303,MM,,,Other
+304,MN,,,Other
+305,MO,,,Other
+306,MP,,,Other
+307,MQ,,,Other
+308,MR,,,Other
+309,MS,,,Other
+310,MT,,,Other
+311,MU,,,Other
+312,MV,,,Other
+313,MW,,,Other
+314,MY,,,Other
+315,MZ,,,Other
+316,Macau,,,Other
+317,Madagascar,,,Other
+318,Madrid,,,Other
+319,Malawi,,,Other
+320,Malaysia,,,Other
+321,Maldives,,,Other
+322,Mali,,,Other
+323,Malta,,,Other
+324,Manchukuo,,,Other
+325,Mapuche,,,Other
+326,Marshall Islands,,,Other
+327,Martinique,,,Other
+328,Matabeleland,,,Other
+329,Maule Sur,,,Other
+330,Mauritania,,,Other
+331,Mauritius,,,Other
+332,Mayotte,,,Other
+333,Menorca,,,Other
+334,Mexico,,MEX,North America
+335,Micronesia,,,Other
+336,Moldova,,,Other
+337,Monaco,,,Other
+338,Mongolia,,,Other
+339,Montenegro,,,Other
+340,Montserrat,,,Other
+341,Morocco,,MAR,Africa
+342,Mozambique,,,Other
+343,Myanmar,,,Other
+344,NC,,,Other
+345,ND,,,Other
+346,NE,,,Other
+347,NH,,,Other
+348,NI,,,Other
+349,NM,,,Other
+350,NN,,,Other
+351,NP,,,Other
+352,NS,,,Other
+353,NU,,,Other
+354,NV,,,Other
+355,NY,,,Other
+356,Namibia,,,Other
+357,Nepal,,,Other
+358,Netherlands,,NED,Europe
+359,Netherlands Antilles,,,Other
+360,New Caledonia,,,Other
+361,New Zealand,,NZL,Oceania
+362,Nicaragua,,,Other
+363,Niger,,,Other
+364,Nigeria,,NGA,Africa
+365,Niue,,,Other
+366,North Macedonia,,MKD,Europe
+367,North Vietnam,,,Other
+368,Northern Cyprus,,,Other
+369,Northern Ireland,,,Other
+370,Northern Mariana Islands,,,Other
+371,Norway,,NOR,Europe
+372,OM,,,Other
+373,OR,,,Other
+374,Occitania,,,Other
+375,Oman,,,Other
+376,Orkney,,,Other
+377,PG,,,Other
+378,PH,,,Other
+379,PK,,,Other
+380,PM,,,Other
+381,PR,,,Other
+382,PS,,,Other
+383,PU,,,Other
+384,PW,,,Other
+385,Padania,,,Other
+386,Pakistan,,,Other
+387,Palau,,,Other
+388,Palestine,,,Other
+389,Panama,,PAN,North America
+390,Panjab,,,Other
+391,Papua New Guinea,,,Other
+392,Paraguay,,PAR,South America
+393,Parishes of Jersey,,,Other
+394,Peru,,PER,South America
+395,Philippines,,,Other
+396,Poland,,POL,Europe
+397,Portugal,,POR,Europe
+398,Provence,,,Other
+399,Puerto Rico,,,Other
+400,Qatar,,QAT,Asia
+401,Quebec,,,Other
+402,RB,,,Other
+403,RE,,,Other
+404,RG,,,Other
+405,RH,,,Other
+406,RM,,,Other
+407,RR,,,Other
+408,RV,,,Other
+409,RW,,,Other
+410,Raetia,,,Other
+411,Republic of St. Pauli,,,Other
+412,Rhodes,,,Other
+413,Romani people,,,Other
+414,Romania,,ROU,Europe
+415,Russia,,RUS,Europe
+416,Rwanda,,,Other
+417,Ryūkyū,,,Other
+418,Réunion,,,Other
+419,SB,,,Other
+420,SC,,,Other
+421,SD,,,Other
+422,SG,,,Other
+423,SL,,,Other
+424,SM,,,Other
+425,SO,,,Other
+426,SP,,,Other
+427,SQ,,,Other
+428,SR,,,Other
+429,SS,,,Other
+430,ST,,,Other
+431,SU,,,Other
+432,SV,,,Other
+433,SW,,,Other
+434,SX,,,Other
+435,SY,,,Other
+436,SZ,,,Other
+437,Saare County,,,Other
+438,Saarland,,,Other
+439,Saint Barthélemy,,,Other
+440,Saint Helena,,,Other
+441,Saint Kitts and Nevis,,,Other
+442,Saint Lucia,,,Other
+443,Saint Martin,,,Other
+444,Saint Pierre and Miquelon,,,Other
+445,Saint Vincent and the Grenadines,,,Other
+446,Samoa,,,Other
+447,San Marino,,,Other
+448,Sao Tome and Principe,,,Other
+449,Sark,,,Other
+450,Saudi Arabia,,KSA,Asia
+451,Saugeais,,,Other
+452,Scotland,,SCO,Europe
+453,Sealand,,,Other
+454,Seborga,,,Other
+455,Senegal,,SEN,Africa
+456,Serbia,Serbia and Montenegro|Yugoslavia,SRB,Europe
+457,Seychelles,,,Other
+458,Shetland,,,Other
+459,Sierra Leone,,,Other
+460,Silesia,,,Other
+461,Singapore,,,Other
+462,Sint Maarten,,,Other
+463,Slovakia,,SVK,Europe
+464,Slovenia,,SVN,Europe
+465,Solomon Islands,,,Other
+466,Somalia,,,Other
+467,Somaliland,,,Other
+468,South Africa,,RSA,Africa
+469,South Ossetia,,,Other
+470,South Sudan,,,Other
+471,South Yemen,,,Other
+472,Spain,,ESP,Europe
+473,Sri Lanka,,,Other
+474,St Kitts and Nevis,,,Other
+475,St Lucia,,,Other
+476,St Vincent and the Grenadines,,,Other
+477,Sudan,,,Other
+478,Suriname,,,Other
+479,Surrey,,,Other
+480,Sweden,,SWE,Europe
+481,Switzerland,,SUI,Europe
+482,Syria,,,Other
+483,Székely Land,,,Other
+484,Sápmi,,,Other
+485,São Tomé and Príncipe,,,Other
+486,TC,,,Other
+487,TD,,,Other
+488,TE,,,Other
+489,TG,,,Other
+490,TH,,,Other
+491,TI,,,Other
+492,TJ,,,Other
+493,TL,,,Other
+494,TM,,,Other
+495,TO,,,Other
+496,TT,,,Other
+497,TV,,,Other
+498,TW,,,Other
+499,TY,,,Other
+500,TZ,,,Other
+501,Tahiti,,,Other
+502,Taiwan,,,Other
+503,Tajikistan,,,Other
+504,Tamil Eelam,,,Other
+505,Tanzania,,,Other
+506,Thailand,,,Other
+507,The Gambia,,,Other
+508,Tibet,,,Other
+509,Ticino,,,Other
+510,Timor-Leste,,,Other
+511,To be announced,,,Other
+512,Togo,,,Other
+513,Tonga,,,Other
+514,Trinidad and Tobago,,,Other
+515,Tunisia,,TUN,Africa
+516,Turkmenistan,,,Other
+517,Turks and Caicos Islands,,,Other
+518,Tuvalu,,,Other
+519,Two Sicilies,,,Other
+520,Türkiye,Turkey,TUR,Europe
+521,UG,,,Other
+522,UH,,,Other
+523,UM,,,Other
+524,US Virgin Islands,,,Other
+525,USA,United States,USA,North America
+526,UT,,,Other
+527,UV,,,Other
+528,Uganda,,,Other
+529,Ukraine,,UKR,Europe
+530,United Arab Emirates,,UAE,Asia
+531,United Koreans in Japan,,,Other
+532,United States Virgin Islands,,,Other
+533,Uruguay,,URU,South America
+534,Uzbekistan,,UZB,Asia
+535,VA,,,Other
+536,VC,,,Other
+537,VE,,,Other
+538,VG,,,Other
+539,VI,,,Other
+540,VN,,,Other
+541,VU,,,Other
+542,Vanuatu,,,Other
+543,Vatican City,,,Other
+544,Venezuela,,VEN,South America
+545,Vietnam,,,Other
+546,Vietnam Republic,,,Other
+547,WA,,,Other
+548,WF,,,Other
+549,WG,,,Other
+550,WM,,,Other
+551,WS,,,Other
+552,Wales,,WAL,Europe
+553,Wallis Islands and Futuna,,,Other
+554,West Papua,,,Other
+555,Western Armenia,,,Other
+556,Western Australia,,,Other
+557,Western Isles,,,Other
+558,Western Sahara,,,Other
+559,YE,,,Other
+560,YT,,,Other
+561,YU,,,Other
+562,Yemen,,,Other
+563,Yemen DPR,,,Other
+564,Ynys Môn,,,Other
+565,Yorkshire,,,Other
+566,Yoruba Nation,,,Other
+567,ZD,,,Other
+568,ZM,,,Other
+569,ZN,,,Other
+570,ZR,,,Other
+571,ZW,,,Other
+572,Zambia,,,Other
+573,Zanzibar,,,Other
+574,Zimbabwe,,,Other
+575,Åland Islands,,,Other

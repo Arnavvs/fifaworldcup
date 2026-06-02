@@ -1,0 +1,298 @@
+2026-06-02 17:53:08,926 | INFO    | s01_kaggle         | downloading martj42/international-football-results-from-1872-to-2017 -- all intl results+goalscorers+shootouts
+2026-06-02 17:53:11,935 | INFO    | s01_kaggle         |   -> 4 files: ['former_names.csv', 'goalscorers.csv', 'results.csv', 'shootouts.csv']
+2026-06-02 17:53:11,945 | INFO    | s01_kaggle         | downloading patateriedata/all-international-football-results -- intl results kept current
+2026-06-02 17:53:14,675 | INFO    | s01_kaggle         |   -> 2 files: ['all_matches.csv', 'countries_names.csv']
+2026-06-02 17:53:14,683 | INFO    | s01_kaggle         | downloading abhijitdahatonde/fifa-world-cup-all-dataset -- WC matches/squads/goals
+2026-06-02 17:53:17,044 | INFO    | s01_kaggle         |   -> 4 files: ['2022_world_cup_matches1.csv', 'international_matches1.csv', 'world_cups1.csv', 'world_cup_matches1.csv']
+2026-06-02 17:53:17,051 | INFO    | s01_kaggle         | downloading evangower/fifa-world-cup -- WC matches + tournaments
+2026-06-02 17:53:19,182 | INFO    | s01_kaggle         |   -> 2 files: ['wcmatches.csv', 'worldcups.csv']
+2026-06-02 17:53:19,190 | INFO    | s01_kaggle         | downloading stefanoleone992/fifa-23-complete-player-dataset -- FIFA 23 player ratings (attrs proxy)
+2026-06-02 17:58:02,003 | INFO    | s02_elo            | 1901: 4 teams
+2026-06-02 17:58:03,634 | INFO    | s02_elo            | 1902: 8 teams
+2026-06-02 17:58:05,465 | INFO    | s02_elo            | 1903: 9 teams
+2026-06-02 17:58:07,548 | INFO    | s02_elo            | 1904: 11 teams
+2026-06-02 17:58:09,265 | INFO    | s02_elo            | 1905: 15 teams
+2026-06-02 17:58:11,507 | INFO    | s02_elo            | 1906: 16 teams
+2026-06-02 17:58:13,477 | INFO    | s02_elo            | 1907: 16 teams
+2026-06-02 17:58:15,588 | INFO    | s02_elo            | 1908: 20 teams
+2026-06-02 17:58:17,497 | INFO    | s02_elo            | 1909: 20 teams
+2026-06-02 17:58:19,278 | INFO    | s02_elo            | 1910: 22 teams
+2026-06-02 17:58:21,554 | INFO    | s02_elo            | 1911: 24 teams
+2026-06-02 17:58:23,364 | INFO    | s01_kaggle         |   -> 8 files: ['female_coaches.csv', 'female_players (legacy).csv', 'female_players.csv', 'female_teams.csv', 'male_coaches.csv', 'male_players (legacy).csv', 'male_players.csv', 'male_teams.csv']
+2026-06-02 17:58:23,378 | INFO    | s01_kaggle         | downloading stefanoleone992/fifa-22-complete-player-dataset -- FIFA 22 player ratings
+2026-06-02 17:58:23,510 | INFO    | s02_elo            | 1912: 25 teams
+2026-06-02 17:58:25,244 | INFO    | s02_elo            | 1913: 27 teams
+2026-06-02 17:58:27,094 | INFO    | s02_elo            | 1914: 28 teams
+2026-06-02 17:58:29,234 | INFO    | s02_elo            | 1915: 29 teams
+2026-06-02 17:58:31,387 | INFO    | s02_elo            | 1916: 30 teams
+2026-06-02 17:58:33,173 | INFO    | s02_elo            | 1917: 31 teams
+2026-06-02 17:58:35,363 | INFO    | s02_elo            | 1918: 31 teams
+2026-06-02 17:58:37,436 | INFO    | s02_elo            | 1919: 32 teams
+2026-06-02 17:58:39,290 | INFO    | s02_elo            | 1920: 37 teams
+2026-06-02 17:58:40,147 | INFO    | s01_kaggle         |   -> 17 files: ['Career Mode female player datasets - FIFA 16-22.xlsx', 'Career Mode player datasets - FIFA 15-22.xlsx', 'female_players_16.csv', 'female_players_17.csv', 'female_players_18.csv', 'female_players_19.csv', 'female_players_20.csv', 'female_players_21.csv']...
+2026-06-02 17:58:40,159 | INFO    | s01_kaggle         | downloading cashncarry/fifa-worldcup-2026-qualified-teams -- WC2026 qualified teams (if present)
+2026-06-02 17:58:40,783 | WARNING | s01_kaggle         |   FAILED cashncarry/fifa-worldcup-2026-qualified-teams: 403 Client Error: Forbidden for url: https://api.kaggle.com/v1/datasets.DatasetApiService/DownloadDataset
+2026-06-02 17:58:40,785 | INFO    | s01_kaggle         | stage 01 (kaggle) complete
+2026-06-02 17:58:41,125 | INFO    | s02_elo            | 1921: 44 teams
+2026-06-02 17:58:42,728 | INFO    | s02_elo            | 1922: 48 teams
+2026-06-02 17:58:44,325 | INFO    | s02_elo            | 1923: 51 teams
+2026-06-02 17:58:46,382 | INFO    | s02_elo            | 1924: 55 teams
+2026-06-02 17:58:48,158 | INFO    | s02_elo            | 1925: 57 teams
+2026-06-02 17:58:49,995 | INFO    | s02_elo            | 1926: 60 teams
+2026-06-02 17:58:52,143 | INFO    | s02_elo            | 1927: 61 teams
+2026-06-02 17:58:53,736 | INFO    | s02_elo            | 1928: 63 teams
+2026-06-02 17:58:55,491 | INFO    | s02_elo            | 1929: 66 teams
+2026-06-02 17:58:57,243 | INFO    | s02_elo            | 1930: 69 teams
+2026-06-02 17:58:59,318 | INFO    | s02_elo            | 1931: 71 teams
+2026-06-02 17:59:01,302 | INFO    | s02_elo            | 1932: 76 teams
+2026-06-02 17:59:03,148 | INFO    | s02_elo            | 1933: 79 teams
+2026-06-02 17:59:05,186 | INFO    | s02_elo            | 1934: 83 teams
+2026-06-02 17:59:06,853 | INFO    | s02_elo            | 1935: 84 teams
+2026-06-02 17:59:08,453 | INFO    | s02_elo            | 1936: 86 teams
+2026-06-02 17:59:10,323 | INFO    | s02_elo            | 1937: 86 teams
+2026-06-02 17:59:12,322 | INFO    | s02_elo            | 1938: 94 teams
+2026-06-02 17:59:14,425 | INFO    | s02_elo            | 1939: 95 teams
+2026-06-02 17:59:16,113 | INFO    | s02_elo            | 1940: 94 teams
+2026-06-02 17:59:18,134 | INFO    | s02_elo            | 1941: 96 teams
+2026-06-02 17:59:20,100 | INFO    | s02_elo            | 1942: 98 teams
+2026-06-02 17:59:22,241 | INFO    | s02_elo            | 1943: 98 teams
+2026-06-02 17:59:24,262 | INFO    | s02_elo            | 1944: 99 teams
+2026-06-02 17:59:26,239 | INFO    | s02_elo            | 1945: 98 teams
+2026-06-02 17:59:28,170 | INFO    | s02_elo            | 1946: 100 teams
+2026-06-02 17:59:30,319 | INFO    | s02_elo            | 1947: 106 teams
+2026-06-02 17:59:32,001 | INFO    | s02_elo            | 1948: 110 teams
+2026-06-02 17:59:34,013 | INFO    | s02_elo            | 1949: 114 teams
+2026-06-02 17:59:35,716 | INFO    | s02_elo            | 1950: 117 teams
+2026-06-02 17:59:37,796 | INFO    | s02_elo            | 1951: 121 teams
+2026-06-02 17:59:39,758 | INFO    | s02_elo            | 1952: 123 teams
+2026-06-02 17:59:41,710 | INFO    | s02_elo            | 1953: 129 teams
+2026-06-02 17:59:43,737 | INFO    | s02_elo            | 1954: 136 teams
+2026-06-02 17:59:45,307 | INFO    | s02_elo            | 1955: 136 teams
+2026-06-02 17:59:46,893 | INFO    | s02_elo            | 1956: 141 teams
+2026-06-02 17:59:48,963 | INFO    | s02_elo            | 1957: 143 teams
+2026-06-02 17:59:51,190 | INFO    | s02_elo            | 1958: 144 teams
+2026-06-02 17:59:53,137 | INFO    | s02_elo            | 1959: 147 teams
+2026-06-02 17:59:54,976 | INFO    | s02_elo            | 1960: 150 teams
+2026-06-02 17:59:57,126 | INFO    | s02_elo            | 1961: 155 teams
+2026-06-02 17:59:58,930 | INFO    | s02_elo            | 1962: 156 teams
+2026-06-02 18:00:00,710 | INFO    | s02_elo            | 1963: 159 teams
+2026-06-02 18:00:02,584 | INFO    | s02_elo            | 1964: 160 teams
+2026-06-02 18:00:04,423 | INFO    | s02_elo            | 1965: 164 teams
+2026-06-02 18:00:06,543 | INFO    | s02_elo            | 1966: 170 teams
+2026-06-02 18:00:08,209 | INFO    | s02_elo            | 1967: 171 teams
+2026-06-02 18:00:10,369 | INFO    | s02_elo            | 1968: 173 teams
+2026-06-02 18:00:12,047 | INFO    | s02_elo            | 1969: 173 teams
+2026-06-02 18:00:13,938 | INFO    | s02_elo            | 1970: 174 teams
+2026-06-02 18:00:16,101 | INFO    | s02_elo            | 1971: 177 teams
+2026-06-02 18:00:18,253 | INFO    | s02_elo            | 1972: 180 teams
+2026-06-02 18:00:20,296 | INFO    | s02_elo            | 1973: 180 teams
+2026-06-02 18:00:22,484 | INFO    | s02_elo            | 1974: 182 teams
+2026-06-02 18:00:24,514 | INFO    | s02_elo            | 1975: 182 teams
+2026-06-02 18:00:26,430 | INFO    | s02_elo            | 1976: 183 teams
+2026-06-02 18:00:28,418 | INFO    | s02_elo            | 1977: 183 teams
+2026-06-02 18:00:30,093 | INFO    | s02_elo            | 1978: 183 teams
+2026-06-02 18:00:31,855 | INFO    | s02_elo            | 1979: 189 teams
+2026-06-02 18:00:34,017 | INFO    | s02_elo            | 1980: 190 teams
+2026-06-02 18:00:35,169 | INFO    | common             | wrote  67261 rows -> fifa_wc_data\raw\fifa_rankings\fifa_rankings.csv
+2026-06-02 18:00:35,176 | INFO    | s03_fifa           | fifa rankings: 67261 rows, 216 teams, 1992-12-31..2024-04-04
+2026-06-02 18:00:35,472 | WARNING | s03_fifa           | wikipedia fifa ranking failed: HTTP Error 403: Forbidden
+2026-06-02 18:00:35,474 | INFO    | s03_fifa           | stage 03 (fifa rankings) complete
+2026-06-02 18:00:35,926 | INFO    | s02_elo            | 1981: 191 teams
+2026-06-02 18:00:37,148 | INFO    | common             | wrote    104 rows -> fifa_wc_data\raw\worldcup\wc2026_fixtures.csv
+2026-06-02 18:00:37,157 | INFO    | common             | wrote     49 rows -> fifa_wc_data\raw\worldcup\wc2026_qualified_teams.csv
+2026-06-02 18:00:37,157 | INFO    | s04_wc             | WC2026 qualified teams parsed: 49
+2026-06-02 18:00:37,164 | INFO    | common             | wrote    900 rows -> fifa_wc_data\raw\worldcup\wc_matches_history.csv
+2026-06-02 18:00:37,168 | INFO    | common             | wrote     21 rows -> fifa_wc_data\raw\worldcup\wc_tournaments.csv
+2026-06-02 18:00:37,200 | INFO    | common             | wrote    248 rows -> fifa_wc_data\raw\worldcup\squad_female_players_16.csv
+2026-06-02 18:00:37,235 | INFO    | common             | wrote    299 rows -> fifa_wc_data\raw\worldcup\squad_female_players_17.csv
+2026-06-02 18:00:37,269 | INFO    | common             | wrote    317 rows -> fifa_wc_data\raw\worldcup\squad_female_players_18.csv
+2026-06-02 18:00:37,307 | INFO    | common             | wrote    299 rows -> fifa_wc_data\raw\worldcup\squad_female_players_19.csv
+2026-06-02 18:00:37,346 | INFO    | common             | wrote    345 rows -> fifa_wc_data\raw\worldcup\squad_female_players_20.csv
+2026-06-02 18:00:37,386 | INFO    | common             | wrote    345 rows -> fifa_wc_data\raw\worldcup\squad_female_players_21.csv
+2026-06-02 18:00:37,425 | INFO    | common             | wrote    391 rows -> fifa_wc_data\raw\worldcup\squad_female_players_22.csv
+2026-06-02 18:00:37,906 | INFO    | s02_elo            | 1982: 192 teams
+2026-06-02 18:00:37,973 | INFO    | common             | wrote  16155 rows -> fifa_wc_data\raw\worldcup\squad_players_15.csv
+2026-06-02 18:00:38,475 | INFO    | common             | wrote  15623 rows -> fifa_wc_data\raw\worldcup\squad_players_16.csv
+2026-06-02 18:00:39,088 | INFO    | common             | wrote  17596 rows -> fifa_wc_data\raw\worldcup\squad_players_17.csv
+2026-06-02 18:00:39,697 | INFO    | common             | wrote  17954 rows -> fifa_wc_data\raw\worldcup\squad_players_18.csv
+2026-06-02 18:00:39,718 | INFO    | s02_elo            | 1983: 194 teams
+2026-06-02 18:00:40,307 | INFO    | common             | wrote  18085 rows -> fifa_wc_data\raw\worldcup\squad_players_19.csv
+2026-06-02 18:00:41,086 | INFO    | common             | wrote  18483 rows -> fifa_wc_data\raw\worldcup\squad_players_20.csv
+2026-06-02 18:00:41,979 | INFO    | s02_elo            | 1984: 194 teams
+2026-06-02 18:00:42,019 | INFO    | common             | wrote  18944 rows -> fifa_wc_data\raw\worldcup\squad_players_21.csv
+2026-06-02 18:00:42,823 | INFO    | common             | wrote  19239 rows -> fifa_wc_data\raw\worldcup\squad_players_22.csv
+2026-06-02 18:00:42,971 | INFO    | common             | wrote   3196 rows -> fifa_wc_data\raw\worldcup\squad_female_players (legacy).csv
+2026-06-02 18:00:44,305 | INFO    | s02_elo            | 1985: 197 teams
+2026-06-02 18:00:46,267 | INFO    | s02_elo            | 1986: 197 teams
+2026-06-02 18:00:48,317 | INFO    | s02_elo            | 1987: 198 teams
+2026-06-02 18:00:49,382 | INFO    | common             | wrote 181361 rows -> fifa_wc_data\raw\worldcup\squad_female_players.csv
+2026-06-02 18:00:50,589 | INFO    | s02_elo            | 1988: 199 teams
+2026-06-02 18:00:52,775 | INFO    | s02_elo            | 1989: 200 teams
+2026-06-02 18:00:54,458 | INFO    | s02_elo            | 1990: 201 teams
+2026-06-02 18:00:56,028 | INFO    | common             | wrote 161583 rows -> fifa_wc_data\raw\worldcup\squad_male_players (legacy).csv
+2026-06-02 18:00:56,700 | INFO    | s02_elo            | 1991: 210 teams
+2026-06-02 18:00:58,640 | INFO    | s02_elo            | 1992: 217 teams
+2026-06-02 18:01:00,637 | INFO    | s02_elo            | 1993: 220 teams
+2026-06-02 18:01:02,484 | INFO    | s02_elo            | 1994: 222 teams
+2026-06-02 18:01:04,880 | INFO    | s02_elo            | 1995: 222 teams
+2026-06-02 18:01:07,527 | INFO    | s02_elo            | 1996: 223 teams
+2026-06-02 18:01:09,603 | INFO    | s02_elo            | 1997: 223 teams
+2026-06-02 18:01:11,759 | INFO    | s02_elo            | 1998: 226 teams
+2026-06-02 18:01:14,184 | INFO    | s02_elo            | 1999: 228 teams
+2026-06-02 18:01:16,325 | INFO    | s02_elo            | 2000: 229 teams
+2026-06-02 18:01:18,653 | INFO    | s02_elo            | 2001: 231 teams
+2026-06-02 18:01:20,963 | INFO    | s02_elo            | 2002: 231 teams
+2026-06-02 18:01:23,186 | INFO    | s02_elo            | 2003: 232 teams
+2026-06-02 18:01:25,710 | INFO    | s02_elo            | 2004: 234 teams
+2026-06-02 18:01:27,919 | INFO    | s02_elo            | 2005: 234 teams
+2026-06-02 18:01:30,000 | INFO    | s02_elo            | 2006: 235 teams
+2026-06-02 18:01:32,063 | INFO    | s02_elo            | 2007: 235 teams
+2026-06-02 18:01:34,484 | INFO    | s02_elo            | 2008: 235 teams
+2026-06-02 18:01:36,564 | INFO    | s02_elo            | 2009: 235 teams
+2026-06-02 18:01:38,821 | INFO    | s02_elo            | 2010: 237 teams
+2026-06-02 18:01:41,319 | INFO    | s02_elo            | 2011: 237 teams
+2026-06-02 18:01:43,893 | INFO    | s02_elo            | 2012: 240 teams
+2026-06-02 18:01:46,319 | INFO    | s02_elo            | 2013: 240 teams
+2026-06-02 18:01:48,828 | INFO    | s02_elo            | 2014: 242 teams
+2026-06-02 18:01:51,011 | INFO    | s02_elo            | 2015: 243 teams
+2026-06-02 18:01:53,075 | INFO    | s02_elo            | 2016: 243 teams
+2026-06-02 18:01:55,033 | INFO    | s02_elo            | 2017: 243 teams
+2026-06-02 18:01:57,003 | INFO    | s02_elo            | 2018: 243 teams
+2026-06-02 18:01:59,433 | INFO    | s02_elo            | 2019: 243 teams
+2026-06-02 18:02:01,746 | INFO    | s02_elo            | 2020: 243 teams
+2026-06-02 18:02:04,012 | INFO    | s02_elo            | 2021: 243 teams
+2026-06-02 18:02:06,450 | INFO    | s02_elo            | 2022: 243 teams
+2026-06-02 18:02:09,040 | INFO    | s02_elo            | 2023: 242 teams
+2026-06-02 18:02:11,282 | INFO    | s02_elo            | 2024: 242 teams
+2026-06-02 18:02:13,821 | INFO    | s02_elo            | 2025: 243 teams
+2026-06-02 18:02:16,364 | INFO    | s02_elo            | current: 243 teams
+2026-06-02 18:02:16,671 | INFO    | common             | wrote  18142 rows -> fifa_wc_data\raw\elo\elo_ratings.csv
+2026-06-02 18:02:16,676 | INFO    | s02_elo            | stage 02 (elo) complete: 18142 rows, 296 teams, 1901-12-31..2026-06-02
+2026-06-02 18:07:53,189 | INFO    | s04_wc             | WC squad tables surfaced: 18
+2026-06-02 18:07:53,581 | INFO    | s04_wc             | stage 04 (worldcup) complete
+2026-06-02 18:08:41,246 | WARNING | common             | HTTP 300 on https://www.football-data.co.uk/internationals.php
+2026-06-02 18:08:41,248 | INFO    | s05_fdata          | football-data: discovered 0 csv links
+2026-06-02 18:08:41,248 | WARNING | s05_fdata          | football-data: no international odds CSVs available (site publishes club leagues only) -- odds table left empty
+2026-06-02 18:08:41,257 | INFO    | s05_fdata          | stage 05 (football-data) complete
+2026-06-02 18:08:43,019 | WARNING | common             | HTTP 404 on https://www.transfermarkt.com/weltmeisterschaft-2026/teilnehmer/pokalwettbewerb/WM26
+2026-06-02 18:08:43,021 | WARNING | s07_tm             | Transfermarkt blocked from this host (anti-bot). Squad market values fall back to FIFA-game value_eur (stage 08). Re-run on a residential IP / with Selenium to populate the live TM tables.
+2026-06-02 18:14:39,050 | INFO    | s09_features       | canonical matches: 49353 (1872-11-30..2026-06-27)
+2026-06-02 18:14:39,288 | INFO    | common             | wrote  49353 rows -> fifa_wc_data\processed\matches.csv
+2026-06-02 18:14:46,188 | INFO    | common             | wrote  98562 rows -> fifa_wc_data\processed\team_match_features.csv
+2026-06-02 18:14:46,191 | INFO    | s09_features       | stage 09 (features) complete: 98562 team-match rows, 30 feature cols
+2026-06-02 18:14:50,041 | INFO    | s08_players        | loaded 18127 current players (FIFA v23) from male_players.csv
+2026-06-02 18:14:51,101 | INFO    | common             | wrote  18127 rows -> fifa_wc_data\processed\players.csv
+2026-06-02 18:14:51,313 | INFO    | common             | wrote  12948 rows -> fifa_wc_data\processed\wc2026_player_pool.csv
+2026-06-02 18:14:51,315 | INFO    | s08_players        | WC2026 pool: 12948 players across 48/48 teams
+2026-06-02 18:14:51,337 | INFO    | common             | wrote     48 rows -> fifa_wc_data\processed\market_values.csv
+2026-06-02 18:14:51,347 | INFO    | s08_players        | top squads by FIFA value:
+      date    team  total_value    avg_value  median_value  n_players
+2022-09-01   Spain 5108480000.0 4.752074e+06     1600000.0       1075
+2022-09-01  France 4526415000.0 4.724859e+06     1300000.0        958
+2022-09-01  Brazil 4174960000.0 5.790513e+06     2100000.0        721
+2022-09-01 England 4006155000.0 2.448750e+06      687500.0       1636
+2022-09-01 Germany 3477595000.0 2.883578e+06      937500.0       1206
+2026-06-02 18:14:51,347 | INFO    | s08_players        | stage 08 (players) complete
+2026-06-02 18:15:16,151 | INFO    | s10_db             | building C:\Users\HP\OneDrive\Desktop\worldCup\fifa_wc_data\db\football.db
+2026-06-02 18:15:16,471 | INFO    | s10_db             |   table matches                    49353 rows, 14 cols
+2026-06-02 18:15:17,373 | INFO    | s10_db             |   table team_match_features        98562 rows, 30 cols
+2026-06-02 18:15:17,555 | INFO    | s10_db             |   table players                    18127 rows, 22 cols
+2026-06-02 18:15:17,656 | INFO    | s10_db             |   table squads                     12948 rows, 6 cols
+2026-06-02 18:15:17,701 | INFO    | s10_db             |   table elo_ratings                18142 rows, 4 cols
+2026-06-02 18:15:17,849 | INFO    | s10_db             |   table fifa_rankings              67261 rows, 4 cols
+2026-06-02 18:15:17,871 | INFO    | s10_db             |   table market_values                 48 rows, 6 cols
+2026-06-02 18:15:17,889 | INFO    | s10_db             |   table wc_matches_history           900 rows, 15 cols
+2026-06-02 18:15:17,908 | INFO    | s10_db             |   table wc_tournaments                21 rows, 10 cols
+2026-06-02 18:15:17,929 | INFO    | s10_db             |   table wc2026_fixtures              104 rows, 9 cols
+2026-06-02 18:15:17,940 | INFO    | s10_db             |   table wc2026_qualified_teams        49 rows, 3 cols
+2026-06-02 18:15:18,123 | INFO    | s10_db             |   table goalscorers                47601 rows, 8 cols
+2026-06-02 18:15:18,143 | INFO    | s10_db             |   table odds                           0 rows, 9 cols
+2026-06-02 18:15:18,150 | INFO    | s10_db             |   table team_match_stats               0 rows, 13 cols
+2026-06-02 18:15:18,157 | INFO    | s10_db             |   table player_match_stats             0 rows, 12 cols
+2026-06-02 18:15:18,162 | INFO    | s10_db             |   table player_tournament_stats        0 rows, 8 cols
+2026-06-02 18:15:18,169 | INFO    | s10_db             |   table injuries                       0 rows, 5 cols
+2026-06-02 18:15:18,173 | INFO    | s10_db             |   table venues                         0 rows, 8 cols
+2026-06-02 18:15:18,175 | INFO    | s10_db             | stage 10 (db) complete: 18 tables -> ['elo_ratings', 'fifa_rankings', 'goalscorers', 'injuries', 'market_values', 'matches', 'odds', 'player_match_stats', 'player_tournament_stats', 'players', 'squads', 'team_match_features', 'team_match_stats', 'venues', 'wc2026_fixtures', 'wc2026_qualified_teams', 'wc_matches_history', 'wc_tournaments']
+2026-06-02 18:15:50,184 | INFO    | s12_venues         | geocoding 16 WC2026 venues
+2026-06-02 18:16:26,536 | INFO    | common             | wrote     16 rows -> fifa_wc_data\processed\venues.csv
+2026-06-02 18:16:26,536 | INFO    | s12_venues         | stage 12 (venues) complete: 15/16 geocoded
+2026-06-02 18:17:07,261 | INFO    | s10_db             | building C:\Users\HP\OneDrive\Desktop\worldCup\fifa_wc_data\db\football.db
+2026-06-02 18:17:07,469 | INFO    | s10_db             |   table matches                    49353 rows, 14 cols
+2026-06-02 18:17:08,074 | INFO    | s10_db             |   table team_match_features        98562 rows, 30 cols
+2026-06-02 18:17:08,197 | INFO    | s10_db             |   table players                    18127 rows, 22 cols
+2026-06-02 18:17:08,253 | INFO    | s10_db             |   table squads                     12948 rows, 6 cols
+2026-06-02 18:17:08,287 | INFO    | s10_db             |   table elo_ratings                18142 rows, 4 cols
+2026-06-02 18:17:08,407 | INFO    | s10_db             |   table fifa_rankings              67261 rows, 4 cols
+2026-06-02 18:17:08,417 | INFO    | s10_db             |   table market_values                 48 rows, 6 cols
+2026-06-02 18:17:08,433 | INFO    | s10_db             |   table wc_matches_history           900 rows, 15 cols
+2026-06-02 18:17:08,444 | INFO    | s10_db             |   table wc_tournaments                21 rows, 10 cols
+2026-06-02 18:17:08,454 | INFO    | s10_db             |   table wc2026_fixtures              104 rows, 9 cols
+2026-06-02 18:17:08,464 | INFO    | s10_db             |   table wc2026_qualified_teams        49 rows, 3 cols
+2026-06-02 18:17:08,614 | INFO    | s10_db             |   table goalscorers                47601 rows, 8 cols
+2026-06-02 18:17:08,622 | INFO    | s10_db             |   table odds                           0 rows, 9 cols
+2026-06-02 18:17:08,634 | INFO    | s10_db             |   table venues                        16 rows, 7 cols
+2026-06-02 18:17:08,635 | INFO    | s10_db             | stage 10 (db) complete: 18 tables -> ['elo_ratings', 'fifa_rankings', 'goalscorers', 'injuries', 'market_values', 'matches', 'odds', 'player_match_stats', 'player_tournament_stats', 'players', 'squads', 'team_match_features', 'team_match_stats', 'venues', 'wc2026_fixtures', 'wc2026_qualified_teams', 'wc_matches_history', 'wc_tournaments']
+2026-06-02 18:17:11,779 | INFO    | s11_quality        | ================================================================
+2026-06-02 18:17:11,780 | INFO    | s11_quality        | DATA QUALITY SUMMARY
+2026-06-02 18:17:11,780 | INFO    | s11_quality        | ================================================================
+2026-06-02 18:17:11,780 | INFO    | s11_quality        |   elo_ratings                   18142 rows x  4 cols [1901-12-31..2026-06-02]
+2026-06-02 18:17:11,780 | INFO    | s11_quality        |   fifa_rankings                 67261 rows x  4 cols [1992-12-31..2024-04-04]
+2026-06-02 18:17:11,780 | INFO    | s11_quality        |   goalscorers                   47601 rows x  8 cols [1916-07-02..2026-03-31]
+2026-06-02 18:17:11,780 | INFO    | s11_quality        |   injuries                          0 rows x  5 cols
+2026-06-02 18:17:11,780 | INFO    | s11_quality        |   market_values                    48 rows x  6 cols [2022-09-01..2022-09-01]
+2026-06-02 18:17:11,780 | INFO    | s11_quality        |   matches                       49353 rows x 14 cols [1872-11-30..2026-06-27]
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   odds                              0 rows x  9 cols
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   player_match_stats                0 rows x 12 cols
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   player_tournament_stats           0 rows x  8 cols
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   players                       18127 rows x 22 cols
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   squads                        12948 rows x  6 cols
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   team_match_features           98562 rows x 30 cols [1872-11-30..2026-05-31]
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   team_match_stats                  0 rows x 13 cols
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   venues                           16 rows x  7 cols
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   wc2026_fixtures                 104 rows x  9 cols
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   wc2026_qualified_teams           49 rows x  3 cols
+2026-06-02 18:17:11,781 | INFO    | s11_quality        |   wc_matches_history              900 rows x 15 cols [1930-07-13..2018-07-15]
+2026-06-02 18:17:11,782 | INFO    | s11_quality        |   wc_tournaments                   21 rows x 10 cols
+2026-06-02 18:17:11,782 | INFO    | s11_quality        |   empty tables (blocked/unavailable sources): ['injuries', 'odds', 'player_match_stats', 'player_tournament_stats', 'team_match_stats']
+2026-06-02 18:17:11,782 | INFO    | s11_quality        | ================================================================
+2026-06-02 18:17:11,782 | INFO    | s11_quality        | reports -> C:\Users\HP\OneDrive\Desktop\worldCup\fifa_wc_data\logs\table_summary.csv , C:\Users\HP\OneDrive\Desktop\worldCup\fifa_wc_data\logs\data_quality_report.csv
+2026-06-02 18:18:24,024 | INFO    | s09_features       | canonical matches: 49353 (1872-11-30..2026-06-27)
+2026-06-02 18:18:24,176 | INFO    | common             | wrote  49353 rows -> fifa_wc_data\processed\matches.csv
+2026-06-02 18:18:27,562 | INFO    | common             | wrote  98562 rows -> fifa_wc_data\processed\team_match_features.csv
+2026-06-02 18:18:27,563 | INFO    | s09_features       | stage 09 (features) complete: 98562 team-match rows, 30 feature cols
+2026-06-02 18:18:28,927 | INFO    | s10_db             | building C:\Users\HP\OneDrive\Desktop\worldCup\fifa_wc_data\db\football.db
+2026-06-02 18:18:29,202 | INFO    | s10_db             |   table matches                    49353 rows, 14 cols
+2026-06-02 18:18:29,931 | INFO    | s10_db             |   table team_match_features        98562 rows, 30 cols
+2026-06-02 18:18:30,073 | INFO    | s10_db             |   table players                    18127 rows, 22 cols
+2026-06-02 18:18:30,145 | INFO    | s10_db             |   table squads                     12948 rows, 6 cols
+2026-06-02 18:18:30,186 | INFO    | s10_db             |   table elo_ratings                18142 rows, 4 cols
+2026-06-02 18:18:30,324 | INFO    | s10_db             |   table fifa_rankings              67261 rows, 4 cols
+2026-06-02 18:18:30,334 | INFO    | s10_db             |   table market_values                 48 rows, 6 cols
+2026-06-02 18:18:30,353 | INFO    | s10_db             |   table wc_matches_history           900 rows, 15 cols
+2026-06-02 18:18:30,365 | INFO    | s10_db             |   table wc_tournaments                21 rows, 10 cols
+2026-06-02 18:18:30,379 | INFO    | s10_db             |   table wc2026_fixtures              104 rows, 9 cols
+2026-06-02 18:18:30,392 | INFO    | s10_db             |   table wc2026_qualified_teams        49 rows, 3 cols
+2026-06-02 18:18:30,648 | INFO    | s10_db             |   table goalscorers                47601 rows, 8 cols
+2026-06-02 18:18:30,660 | INFO    | s10_db             |   table odds                           0 rows, 9 cols
+2026-06-02 18:18:30,672 | INFO    | s10_db             |   table venues                        16 rows, 7 cols
+2026-06-02 18:18:30,674 | INFO    | s10_db             | stage 10 (db) complete: 18 tables -> ['elo_ratings', 'fifa_rankings', 'goalscorers', 'injuries', 'market_values', 'matches', 'odds', 'player_match_stats', 'player_tournament_stats', 'players', 'squads', 'team_match_features', 'team_match_stats', 'venues', 'wc2026_fixtures', 'wc2026_qualified_teams', 'wc_matches_history', 'wc_tournaments']
+2026-06-02 22:52:06,658 | INFO    | s13_sb             | WC2022: 64 matches
+2026-06-02 22:54:02,266 | INFO    | s13_sb             | WC2022: cumulative starters=1408 team-rows=127
+2026-06-02 22:54:04,636 | INFO    | s13_sb             | WC2018: 64 matches
+2026-06-02 22:54:39,107 | INFO    | common             | wrote   1246 rows -> fifa_wc_data\raw\squads_wc2026\official_squads.csv
+2026-06-02 22:54:39,128 | INFO    | s14_squads         | official WC2026 squads: 1246 players across 48 teams
+2026-06-02 22:54:39,129 | INFO    | s14_squads         | sample teams: Algeria, Argentina, Australia, Austria, Belgium, Bosnia and Herzegovina, Brazil, Canada, Cape Verde, Colombia, Croatia, Curaçao
+2026-06-02 22:55:12,618 | INFO    | s15_odds           | austro/beat-the-bookie-worldwide-football-dataset: 0 csv files
+2026-06-02 22:55:12,619 | WARNING | s15_odds           | no odds data obtained
+2026-06-02 22:56:03,989 | INFO    | s15_odds           | austro/beat-the-bookie-worldwide-football-dataset: 5 csv files
+2026-06-02 22:56:05,660 | INFO    | s13_sb             | WC2018: cumulative starters=2816 team-rows=255
+2026-06-02 22:56:05,675 | INFO    | common             | wrote    128 rows -> fifa_wc_data\raw\statsbomb\sb_matches.csv
+2026-06-02 22:56:05,681 | INFO    | common             | wrote   2816 rows -> fifa_wc_data\raw\statsbomb\starting_lineups.csv
+2026-06-02 22:56:05,683 | INFO    | common             | wrote    255 rows -> fifa_wc_data\raw\statsbomb\sb_team_match_stats.csv
+2026-06-02 22:56:05,689 | INFO    | common             | wrote   1757 rows -> fifa_wc_data\raw\statsbomb\sb_player_match_stats.csv
+2026-06-02 22:56:05,731 | INFO    | s13_sb             | StatsBomb done: 128 matches, 2816 starter rows, 255 team-xg rows, 1757 player-xg rows
+2026-06-02 22:59:02,413 | INFO    | s15_odds           | austro/beat-the-bookie-worldwide-football-dataset: loading ['closing_odds.csv.gz', 'odds_series_b_matches.csv.gz', 'odds_series_matches.csv.gz']
+2026-06-02 22:59:03,400 | WARNING | s15_odds           | read odds_series_b_matches.csv.gz: 'utf-8' codec can't decode byte 0xf4 in position 26466: invalid continuation byte
+2026-06-02 22:59:03,402 | WARNING | s15_odds           | read odds_series_matches.csv.gz: 'utf-8' codec can't decode byte 0xe9 in position 382: invalid continuation byte
+2026-06-02 22:59:06,216 | INFO    | common             | wrote 479440 rows -> fifa_wc_data\raw\odds\odds_bank_raw.csv
+2026-06-02 22:59:08,182 | INFO    | s15_odds           | odds_bank: 479440 rows from closing_odds.csv.gz; cols=['match_id', 'league', 'match_date', 'home_team', 'home_score', 'away_team', 'away_score', 'avg_odds_home_win', 'avg_odds_draw', 'avg_odds_away_win', 'max_odds_home_win', 'max_odds_draw']

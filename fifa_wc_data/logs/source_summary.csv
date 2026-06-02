@@ -1,0 +1,11 @@
+source,empty,fail,ok,total_rows
+db,0,0,32,626248
+elo,0,0,126,18142
+features,0,0,1,98562
+fifa_rankings,0,1,1,67261
+football_data,1,0,0,0
+kaggle,0,1,6,37
+players,0,0,1,18127
+transfermarkt,0,1,0,0
+venues,1,0,16,30
+worldcup,0,0,4,1074

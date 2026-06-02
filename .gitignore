@@ -1,0 +1,30 @@
+# --- Large / regenerable data (NOT pushed; rebuild via the pipeline) ---
+# Raw downloads: 6.6 GB incl. a 5.6 GB FIFA CSV — far over GitHub's 100 MB limit
+fifa_wc_data/raw/
+# SQLite DB is 122 MB (>100 MB limit) and regenerable from src/
+fifa_wc_data/db/
+*.db
+*.db-journal
+*.sqlite
+
+# Compressed data dumps
+*.csv.gz
+*.zip
+
+# --- Secrets (never commit) ---
+.kaggle/
+access_token
+*.env
+.env
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
