@@ -1,0 +1,85 @@
+{
+  "s05_shared_club_matrix": {
+    "status": "done",
+    "updated_at": "2026-06-06T15:31:45.167437Z",
+    "meta": {
+      "teams": 48
+    }
+  },
+  "s03_travel_timezone": {
+    "status": "done",
+    "updated_at": "2026-06-06T15:31:48.738712Z",
+    "meta": {
+      "rows": 752
+    }
+  },
+  "s04_squad_aggregates": {
+    "status": "done",
+    "updated_at": "2026-06-07T18:41:06.353814Z",
+    "meta": {
+      "teams": 48
+    }
+  },
+  "s07_qualification_strength": {
+    "status": "done",
+    "updated_at": "2026-06-07T18:58:21.088970Z",
+    "meta": {
+      "rows": 147,
+      "wc2026_teams_matched": 44
+    }
+  },
+  "s08_continental_form": {
+    "status": "done",
+    "updated_at": "2026-06-07T19:00:30.053974Z",
+    "meta": {
+      "rows": 104,
+      "tournaments": 5,
+      "wc2026_teams_matched": 48
+    }
+  },
+  "s06_manager_tenure": {
+    "status": "done",
+    "updated_at": "2026-06-07T19:03:45.820601Z",
+    "meta": {
+      "rows": 48,
+      "managers_found": 44,
+      "appointments_found": 43
+    }
+  },
+  "s10_understat_xg": {
+    "status": "done",
+    "updated_at": "2026-06-07T19:08:32.171276Z",
+    "meta": {
+      "rows": 96,
+      "leagues": 5,
+      "season": "2025-26"
+    }
+  },
+  "s01_fifa_rankings": {
+    "status": "done",
+    "updated_at": "2026-06-07T19:22:37.576952Z",
+    "meta": {
+      "rows": 210,
+      "source": "kaggle_cashncarry"
+    }
+  },
+  "s02_weather": {
+    "status": "done",
+    "updated_at": "2026-06-07T19:36:25.296381Z",
+    "meta": {
+      "rows": 624,
+      "venues": 16
+    }
+  },
+  "s09_odds_scraper": {
+    "status": "done",
+    "updated_at": "2026-06-07T20:16:59.208552Z",
+    "meta": {
+      "rows": 228,
+      "source": "oddsportal",
+      "intl_matches": 228,
+      "club_matches": 5330,
+      "tournaments": 5
+    }
+  }
+}

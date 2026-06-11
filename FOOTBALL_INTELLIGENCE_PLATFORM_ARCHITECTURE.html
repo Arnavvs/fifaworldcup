@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Intelligence Platform — Comprehensive Architecture & Implementation Plan</title>
+<style>
+  :root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --accent: #2563eb;
+    --accent2: #059669;
+    --warn: #d97706;
+    --danger: #dc2626;
+    --border: #e2e8f0;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 28px; }
+  header {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: #fff;
+    padding: 44px 28px;
+    border-radius: 0 0 var(--radius) var(--radius);
+    margin-bottom: 28px;
+  }
+  header h1 { margin: 0 0 10px; font-size: 30px; }
+  header p { margin: 0; opacity: .85; font-size: 15px; }
+  h2 { font-size: 20px; margin-top: 36px; margin-bottom: 12px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+  h3 { font-size: 16px; margin-top: 24px; margin-bottom: 10px; color: var(--accent); }
+  h4 { font-size: 14px; margin-top: 18px; margin-bottom: 8px; color: var(--text); }
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .tag-success { background: #dcfce7; color: #166534; }
+  .tag-warn { background: #fef3c7; color: #92400e; }
+  .tag-danger { background: #fee2e2; color: #991b1b; }
+  .tag-info { background: #dbeafe; color: #1e40af; }
+  .tag-premium { background: #f3e8ff; color: #6b21a8; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    margin: 10px 0 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  th, td { padding: 9px 11px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: #f1f5f9; font-weight: 700; }
+  tr:last-child td { border-bottom: none; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  @media (max-width: 900px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+  .callout {
+    background: #eff6ff;
+    border-left: 4px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 14px 0;
+  }
+  .callout-warn { background: #fffbeb; border-left-color: var(--warn); }
+  .callout-danger { background: #fef2f2; border-left-color: var(--danger); }
+  .callout-success { background: #f0fdf4; border-left-color: var(--accent2); }
+  pre.diagram {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 18px;
+    border-radius: var(--radius);
+    font-size: 12px;
+    overflow-x: auto;
+    line-height: 1.5;
+  }
+  .metric { font-size: 24px; font-weight: 800; color: var(--accent); }
+  .muted { color: var(--muted); font-size: 12.5px; }
+  .section { margin-top: 32px; }
+  ul.compact { padding-left: 18px; margin: 6px 0; }
+  ul.compact li { margin-bottom: 6px; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11px; background: #eef2ff; color: #3730a3; margin: 2px 4px 2px 0; }
+  .tier1 { border-left: 4px solid #059669; padding-left: 12px; margin: 8px 0; }
+  .tier2 { border-left: 4px solid #d97706; padding-left: 12px; margin: 8px 0; }
+  .tier3 { border-left: 4px solid #7c3aed; padding-left: 12px; margin: 8px 0; }
+  footer { text-align:center; color:var(--muted); font-size:12px; padding: 24px 0 40px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Football Intelligence Platform</h1>
+    <p>Comprehensive Architecture & Implementation Plan — Principal ML Architect & Research Lead Assessment</p>
+    <p style="margin-top:6px; opacity:.7; font-size:13px;">Synthesized from research corpus, production system blueprints, and existing data asset audit (worldCup project)</p>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="card" style="margin-bottom:24px;">
+  <h3 style="margin-top:0;">Executive Summary</h3>
+  <p>This document provides a complete architectural blueprint for evolving the existing FIFA World Cup prediction pipeline into a production-grade football intelligence platform. The plan spans three maturity levels — MVP, Research-Grade, and Betting-Grade — and maps every feature taxonomy to its raw data dependency, availability status, and engineering effort.</p>
+  <p><strong>Core finding:</strong> The existing dataset (~626k rows, 27 tables) is sufficient to ship a credible MVP within 1–2 weeks. However, the gap to betting-grade edge is defined by four data layers: (1) <strong>market odds</strong> (calibration & CLV), (2) <strong>spatiotemporal event data</strong> (xG/xT/OBV), (3) <strong>availability feeds</strong> (injuries/lineups), and (4) <strong>real-time infrastructure</strong> (streaming feature store & sub-millisecond inference).</p>
+  <p style="margin-top:10px;">
+    <span class="tag tag-success">MVP ready: 1–2 weeks</span>
+    <span class="tag tag-warn">Research grade: 8–12 weeks</span>
+    <span class="tag tag-premium">Betting grade: 16–24 weeks</span>
+  </p>
+</div>
+
+<!-- SECTION 1: DEPENDENCY GRAPH -->
+<div class="section">
+  <h2>1. End-to-End Dependency Graph</h2>
+  <p class="muted">Complete data flow from raw ingestion to betting execution. Each layer depends on the layer above it.</p>
+
+  <pre class="diagram">
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│  LAYER 0: RAW DATA INGESTION                                                                │
+│  ├── Match Results (Football-data, Kaggle, FBref)                                           │
+│  ├── Spatiotemporal Events (StatsBomb 360, Opta Vision, Wyscout)                            │
+│  ├── Player/Team Metadata (Transfermarkt, FIFA ratings, ELO)                              │
+│  ├── Betting Markets (Pinnacle API, OddsPortal, football-data)                              │
+│  ├── Injury & Availability (Transfermarkt, club medical feeds)                              │
+│  ├── Environmental (OpenWeather, elevation APIs, venue geocodes)                           │
+│  └── Tournament Structure (FIFA fixtures, bracket rules, tiebreakers)                     │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│  LAYER 1: DATA HARMONIZATION & ID RESOLUTION                                              │
+│  ├── SPADL schema normalization                                                           │
+│  ├── dim_team canonical mapping (575 IDs)                                                 │
+│  ├── Player ID crosswalk (Opta ↔ StatsBomb ↔ Wyscout ↔ Transfermarkt)                     │
+│  ├── Temporal boundary enforcement (t &lt; T for all features)                                │
+│  └── Leakage audit pipeline (temporal / lineup / target boundaries)                         │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│  LAYER 2: FEATURE ENGINEERING (18 Taxonomies)                                               │
+│  ├── Team Strength (ELO, xGD, Bayesian intercepts)                                          │
+│  ├── Team Form (decay-weighted rolling windows N∈{3,5,10,15,30})                           │
+│  ├── Player Quality (OBV, xT, xP deviation, GSAA)                                          │
+│  ├── Squad Depth (entropy, elasticity, rotation Gini)                                     │
+│  ├── Injuries (ZINB hazard, XGBSE survival, severity weight)                               │
+│  ├── Team Chemistry (SNA networks, shared minutes, pass connectivity)                       │
+│  ├── Tactical (PPDA, Field Tilt, xD, line-breaking passes)                                  │
+│  ├── Formation (Delaunay clusters, shape entropy, matchup scores)                           │
+│  ├── Matchup (Gower distance, spectral clustering, cosine similarity)                       │
+│  ├── Scheduling (RRD, rest deltas, congestion indices)                                    │
+│  ├── Travel (TDF, timezone delta, eastward weighting)                                       │
+│  ├── Environmental (heat index, altitude, pitch moisture)                                   │
+│  ├── Tournament (dynamic Elo, suspension risk, stage priors)                               │
+│  ├── Psychological (momentum flow, resilience, half-time counterfactuals)                  │
+│  ├── Betting Market (CLV, Shin probs, sentiment index, odds volatility)                   │
+│  ├── Transfer Market (expenditure Gini, valuation multipliers, ROI)                         │
+│  ├── Referee (card bias, penalty ratio, extra-time allocation)                              │
+│  └── Fan/Crowd (stadium occupancy density, home advantage elasticity)                       │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│  LAYER 3: FEATURE STORE (Feast)                                                           │
+│  ├── Offline Store: S3 Parquet Lake (training, backtesting, time-travel)                   │
+│  └── Online Store: Redis Cache (sub-millisecond pre-match / in-play serving)               │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│  LAYER 4: MODEL BASELINES                                                                 │
+│  ├── Elo Rating System (recursive logistic scalar, venue-adjusted)                        │
+│  ├── Independent Poisson (legacy / reference only)                                          │
+│  └── Dixon-Coles (bivariate Poisson + ρ + ξ decay, xG-derived rates)                      │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│  LAYER 5: MACHINE LEARNING MODELS                                                           │
+│  ├── CatBoost (high-cardinality categoricals: ref, manager, formation, weather)           │
+│  ├── LightGBM (continuous spatiotemporal features: PPDA, field tilt, xD)                   │
+│  ├── XGBoost (deep tabular ensembles, robust regression)                                    │
+│  ├── HIGFormer GNN (player interaction graphs, passing networks, team embeddings)            │
+│  └── Temporal Transformer (ordered event sequences, self-attention over build-up)         │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│  LAYER 6: ENSEMBLE & CALIBRATION                                                            │
+│  ├── Level-0: CatBoost + LightGBM + XGBoost + Dixon-Coles + HIGFormer                     │
+│  ├── Level-1 Meta-Learner: Calibrated Ridge / Shallow NN / Logistic stacking               │
+│  ├── Calibration: Isotonic Regression (large datasets) + Platt Scaling (small sets)          │
+│  └── Output: Calibrated P(Home Win), P(Draw), P(Away Win), Poisson λ/μ                     │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│  LAYER 7: TOURNAMENT SIMULATION                                                             │
+│  ├── Bayesian Hierarchical Skill Model (attack/defense random effects)                     │
+│  ├── Bivariate Dixon-Coles Scoreline Generator (per match)                                │
+│  ├── Dynamic Elo Updates (momentum within simulation runs)                                 │
+│  ├── Monte Carlo Engine (N ≥ 50,000 iterations, Celery distributed workers)               │
+│  └── Output: P(group advance), P(reach SF/F), P(win tournament), tail-risk curves         │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│  LAYER 8: BETTING ANALYTICS & EXECUTION                                                   │
+│  ├── Shin Overround Removal (true market probability extraction)                           │
+│  ├── CLV Bias Calculation (model prob vs market prob drift)                                │
+│  ├── EV Engine: EV = (TrueProb × Odds) − 1                                                  │
+│  ├── Kelly Criterion Staking: f* = (bp − q) / b  (fractional Kelly: f*/4)                  │
+│  └── Automated Execution Pipeline (REST API order placement, liability tracking)          │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+  </pre>
+</div>
+
+<!-- SECTION 2: DATA REQUIREMENTS MATRIX -->
+<div class="section">
+  <h2>2. Data Requirements Matrix</h2>
+  <p class="muted">For every major feature category: required raw data, source, cost, difficulty, and current availability in the worldCup project.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Feature Category</th>
+        <th>Required Raw Data</th>
+        <th>Primary Source</th>
+        <th>Cost</th>
+        <th>Difficulty</th>
+        <th>Current Availability</th>
+        <th>Gap Severity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Team Strength</strong><br>ELO, xGD, Bayesian intercepts</td>
+        <td>Match results (scores, teams, venues); shot coordinates + defensive pressure; historical rankings</td>
+        <td>eloratings.net; Understat; StatsBomb; Football-data</td>
+        <td>Free–Premium</td>
+        <td>Easy</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>Match results ✓<br>ELO year-end ✓<br>xG only WC 18/22</td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Team Form</strong><br>Rolling win%, xGD, goals</td>
+        <td>Match scoreboard histories; timestamps; xG shot data</td>
+        <td>Football-data; Understat; StatsBomb</td>
+        <td>Free</td>
+        <td>Easy</td>
+        <td><span class="tag tag-success">MOSTLY COMPLETE</span><br>Matches 1872→2026 ✓<br>Form windows built ✓<br>xG form missing</td>
+        <td><span class="tag tag-success">Low</span></td>
+      </tr>
+      <tr>
+        <td><strong>Player Quality</strong><br>OBV, xT, xP, GSAA</td>
+        <td>Spatiotemporal event coordinates (passes, carries, pressures); shot velocities; goalkeeper positioning; lineups</td>
+        <td>StatsBomb 360; Opta Vision; Wyscout</td>
+        <td>Premium</td>
+        <td>Hard</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>FIFA ratings proxy ✓<br>Real OBV/xT missing<br>Lineups only WC 18/22</td>
+        <td><span class="tag tag-danger">High</span></td>
+      </tr>
+      <tr>
+        <td><strong>Squad Depth</strong><br>Entropy, elasticity, rotation</td>
+        <td>Player market valuations; historical lineups & minutes; roster databases</td>
+        <td>Transfermarkt; club rosters</td>
+        <td>Free–Premium</td>
+        <td>Medium</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>Player values (FIFA proxy) ✓<br>Official 26-man squads ✓<br>Minutes entropy missing</td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Injuries</strong><br>ZINB hazard, XGBSE, severity</td>
+        <td>Injury logs; recovery distributions; GPS training loads; player demographics</td>
+        <td>Transfermarkt; physioroom; club medical feeds</td>
+        <td>Free–Premium</td>
+        <td>Hard</td>
+        <td><span class="tag tag-danger">MISSING</span><br>injuries table empty<br>Blocked by anti-bot</td>
+        <td><span class="tag tag-danger">High</span></td>
+      </tr>
+      <tr>
+        <td><strong>Team Chemistry</strong><br>SNA, shared minutes, pass networks</td>
+        <td>Career-level passing events; shared playing time logs; manager tenure dates</td>
+        <td>StatsBomb; Transfermarkt; Wyscout</td>
+        <td>Premium</td>
+        <td>Hard</td>
+        <td><span class="tag tag-danger">MISSING</span><br>No career pass networks<br>No joint-minutes matrix</td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Tactical</strong><br>PPDA, Field Tilt, xD, LBP</td>
+        <td>Event-level spatial coordinates (passes, tackles, interceptions, pressures); defensive action locations</td>
+        <td>StatsBomb 360; Opta; Wyscout</td>
+        <td>Premium</td>
+        <td>Hard</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>PPDA/Field Tilt derivable from public event data<br>xD/LBP need 360 data</td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Formation</strong><br>Delaunay, shape entropy</td>
+        <td>Lineup databases; player positional assignments; tracking coordinates (25 Hz)</td>
+        <td>Wyscout; Opta; 25 Hz tracking feeds</td>
+        <td>Premium</td>
+        <td>Hard</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>Starting XIs for WC 18/22 ✓<br>Dynamic formations missing</td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Matchup</strong><br>Gower distance, spectral</td>
+        <td>Multi-dimensional playstyle vectors (PPDA, line height, directness, width); historical head-to-head</td>
+        <td>Wyscout; StatsBomb; Opta</td>
+        <td>Premium</td>
+        <td>Medium</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>H2H features exist ✓<br>Playstyle embeddings missing</td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Scheduling</strong><br>RRD, congestion</td>
+        <td>Fixture calendars; match timestamps; competition schedules</td>
+        <td>Football-data; public APIs; FIFA fixtures</td>
+        <td>Free</td>
+        <td>Easy</td>
+        <td><span class="tag tag-success">MOSTLY COMPLETE</span><br>Match dates ✓<br>days_rest computed ✓<br>Tournament rest delta missing</td>
+        <td><span class="tag tag-success">Low</span></td>
+      </tr>
+      <tr>
+        <td><strong>Travel</strong><br>TDF, timezone delta</td>
+        <td>Venue geocodes (lat/lng); team base locations; match schedules</td>
+        <td>Public APIs (geopy); venue databases</td>
+        <td>Free</td>
+        <td>Easy</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>Venue geocodes ✓<br>Travel distance not computed<br>Team bases unknown</td>
+        <td><span class="tag tag-success">Low</span></td>
+      </tr>
+      <tr>
+        <td><strong>Environmental</strong><br>Heat index, altitude</td>
+        <td>Temperature, humidity forecasts; stadium elevation; pitch surface data</td>
+        <td>OpenWeather; public elevation APIs</td>
+        <td>Free</td>
+        <td>Easy</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>Altitude (venues) ✓<br>Weather forecasts missing</td>
+        <td><span class="tag tag-success">Low</span></td>
+      </tr>
+      <tr>
+        <td><strong>Tournament</strong><br>Dynamic Elo, suspension</td>
+        <td>Tournament brackets; rules; tiebreakers; historical yellow/red cards; stage progression</td>
+        <td>FIFA; Opta; public records</td>
+        <td>Free–Premium</td>
+        <td>Medium</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>WC fixtures ✓<br>Group stage structure ✓<br>Dynamic Elo not implemented</td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Psychological</strong><br>Momentum, resilience</td>
+        <td>In-play event sequences; half-time scoring times; post-hit counterfactuals; shot velocity</td>
+        <td>StatsBomb; broadcast tracking</td>
+        <td>Premium</td>
+        <td>Hard</td>
+        <td><span class="tag tag-danger">MISSING</span></td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Betting Market</strong><br>CLV, Shin, sentiment</td>
+        <td>Real-time & historical odds time-series (open/close); volume data; bookmaker margins</td>
+        <td>Pinnacle API; OddsPortal; football-data</td>
+        <td>Free–Premium</td>
+        <td>Medium</td>
+        <td><span class="tag tag-danger">MISSING</span><br>odds_bank: 2005–2015 only<br>Live odds table empty</td>
+        <td><span class="tag tag-danger">Critical</span></td>
+      </tr>
+      <tr>
+        <td><strong>Transfer Market</strong><br>Gini, expenditure, ROI</td>
+        <td>Transfer records; player market valuations; wage data; squad rosters</td>
+        <td>Transfermarkt; club financial disclosures</td>
+        <td>Free–Premium</td>
+        <td>Medium</td>
+        <td><span class="tag tag-warn">PARTIAL</span><br>Market values snapshot ✓<br>Transfer history missing<br>Wage data missing</td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Referee</strong><br>Card bias, penalty ratio</td>
+        <td>Referee assignment history; card/penalty logs; extra-time allocations; stadium occupancy</td>
+        <td>Football-data; Transfermarkt; Opta</td>
+        <td>Free–Premium</td>
+        <td>Medium</td>
+        <td><span class="tag tag-danger">MISSING</span><br>Referee column 100% null<br>No referee history DB</td>
+        <td><span class="tag tag-warn">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Fan/Crowd</strong><br>Occupancy density</td>
+        <td>Attendance logs; stadium capacity; crowd proximity metrics; decibel forecasts</td>
+        <td>Transfermarkt; public stadium records</td>
+        <td>Free</td>
+        <td>Easy</td>
+        <td><span class="tag tag-danger">MISSING</span></td>
+        <td><span class="tag tag-success">Low</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 3: EXISTING DATA ANALYSIS -->
+<div class="section">
+  <h2>3. Existing Data Asset Analysis</h2>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3 style="margin-top:0; color:var(--accent2);">What Already Exists</h3>
+      <ul class="compact">
+        <li><strong>49,353 match results</strong> (1872→2026, all comps)</li>
+        <li><strong>98,562 team-match feature rows</strong> (30 engineered features)</li>
+        <li><strong>49,281 research-ready samples</strong> (39 leakage-safe features, time-split)</li>
+        <li><strong>18,142 ELO ratings</strong> (year-end, 1901→2026)</li>
+        <li><strong>67,261 FIFA rankings</strong> (1992→2024-04)</li>
+        <li><strong>18,127 player profiles</strong> (FIFA game ratings proxy)</li>
+        <li><strong>1,246 official WC2026 squads</strong> (caps, clubs, positions)</li>
+        <li><strong>900 WC historical matches</strong> (1930→2018)</li>
+        <li><strong>104 WC2026 fixtures</strong> + 48 qualified teams</li>
+        <li><strong>16 venue geocodes</strong> (lat/lng + altitude)</li>
+        <li><strong>StatsBomb xG</strong> (WC 2018+2022: 255 team rows, 1,757 player rows)</li>
+        <li><strong>Starting lineups</strong> (WC 2018+2022: 2,816 rows)</li>
+        <li><strong>479,440 historical odds rows</strong> (2005→2015)</li>
+        <li><strong>575 canonical team IDs</strong> (dim_team normalization)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0; color:var(--danger);">What Is Missing</h3>
+      <ul class="compact">
+        <li><strong>Recent betting odds</strong> (2016→2026) — critical for calibration</li>
+        <li><strong>xG for qualifiers & friendlies</strong> (StatsBomb only covers WC 18/22)</li>
+        <li><strong>Live FIFA rankings</strong> (stale since April 2024)</li>
+        <li><strong>Per-match ELO</strong> (only year-end snapshots)</li>
+        <li><strong>Injuries & suspensions</strong> (table empty, source blocked)</li>
+        <li><strong>Club-season player form</strong> (minutes, goals, xG 23/24→25/26)</li>
+        <li><strong>Real-time lineups</strong> (2026 fixtures are future events)</li>
+        <li><strong>Weather forecasts</strong> (not collected)</li>
+        <li><strong>Referee data</strong> (100% null)</li>
+        <li><strong>Travel distances</strong> (venues geocoded but distances not computed)</li>
+        <li><strong>Spatiotemporal event data</strong> (no full PPDA/Field Tilt/xD feeds)</li>
+        <li><strong>Passing network data</strong> (no SNA graphs)</li>
+        <li><strong>Manager/tenure data</strong> (no structured manager DB)</li>
+        <li><strong>Environmental data</strong> (heat, humidity, pitch moisture)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0; color:var(--warn);">Critical vs. Postponable</h3>
+      <p class="muted" style="margin-top:0;"><strong>Critical (block MVP→Betting):</strong></p>
+      <ul class="compact">
+        <li>Live FIFA rankings 2024→2026</li>
+        <li>Recent betting odds (2016→2026)</li>
+        <li>Per-match ELO (or self-computed)</li>
+        <li>Official squad aggregates (caps, age, club quality)</li>
+      </ul>
+      <p class="muted"><strong>Important (Research grade):</strong></p>
+      <ul class="compact">
+        <li>xG for all matches (not just WC)</li>
+        <li>Injuries & availability</li>
+        <li>Weather & travel computation</li>
+        <li>Referee profiles</li>
+      </ul>
+      <p class="muted"><strong>Postponable (Tier 3 / Experimental):</strong></p>
+      <ul class="compact">
+        <li>25 Hz optical tracking</li>
+        <li>Real-time in-play Poisson</li>
+        <li>GNN embeddings (until xG/lineups ready)</li>
+        <li>Agent-based RoboCup simulations</li>
+        <li>Psychological momentum flows</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: FEATURE INVENTORY -->
+<div class="section">
+  <h2>4. Feature Inventory by Tier</h2>
+  <p class="muted">Synthesized from the 18 taxonomies and 300+ feature formulations in the research corpus, mapped to the project's current capabilities.</p>
+
+  <h3>Tier 1 — Core Predictive Engine (Must-Have)</h3>
+  <div class="tier1">
+    <p class="muted">These features provide the highest out-of-sample log-loss reduction and are immediately buildable from existing + near-term acquirable data.</p>
+  </div>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Feature</th><th>Taxonomy</th><th>Formula / Description</th><th>Raw Data Needed</th><th>Pre-Match?</th><th>Effort</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Elo Rating Delta (ΔElo)</td><td>Team Strength</td><td>Elo_team − Elo_opponent</td><td>Historical match results</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>2</td><td>FIFA Rank Diff</td><td>Team Strength</td><td>Ranking_team − Ranking_opponent</td><td>FIFA ranking tables</td><td>Yes</td><td>Needs refresh</td></tr>
+      <tr><td>3</td><td>Decay-Weighted GD (N=10)</td><td>Team Form</td><td>Σ e^(−ξ(t−tk)) · GD_k</td><td>Match scoreboard histories</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>4</td><td>Win % Form (L5/10/20)</td><td>Team Form</td><td>Rolling win percentage over N matches</td><td>Match results</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>5</td><td>Goals For/Against Avg (L5/10/20)</td><td>Team Form</td><td>Rolling goals scored/conceded averages</td><td>Match results</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>6</td><td>H2H Win % (L10)</td><td>Matchup</td><td>Head-to-head win rate last 10 meetings</td><td>Match results</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>7</td><td>Days Rest Diff (RRD)</td><td>Scheduling</td><td>Rest_team − Rest_opponent</td><td>Fixture calendars</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>8</td><td>Home Field / Neutral Flag</td><td>Context</td><td>Is_home × (1 − neutral)</td><td>Match metadata</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>9</td><td>WC Experience Diff</td><td>Tournament</td><td>Prior WC appearances delta</td><td>WC historical rosters</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>10</td><td>Stage Weight</td><td>Tournament</td><td>Group=1 → Final=5 ordinal</td><td>Fixture metadata</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>11</td><td>Travel Distance Fatigue (TDF)</td><td>Travel</td><td>log(Dist_km + 1) × ΔTimezones</td><td>Venue geocodes + team bases</td><td>Yes</td><td>2–3 hrs</td></tr>
+      <tr><td>12</td><td>Altitude Penalty</td><td>Environmental</td><td>Elevation × I(Elevation ≥ 1000)</td><td>Venue elevation</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>13</td><td>Closing Line Value (CLV)</td><td>Betting Market</td><td>Odds_open / (Odds_close · (1−Margin))</td><td>Historical odds time-series</td><td>Yes</td><td>Needs collection</td></tr>
+      <tr><td>14</td><td>Shin Implied Probability</td><td>Betting Market</td><td>Iterative overround removal solving z</td><td>Bookmaker decimal odds</td><td>Yes</td><td>Needs collection</td></tr>
+      <tr><td>15</td><td>Dixon-Coles xGD Prior</td><td>Team Strength</td><td>Venue-adjusted rolling xG diff (10)</td><td>Shot-level xG data</td><td>Yes</td><td>Needs xG feed</td></tr>
+      <tr><td>16</td><td>Lineup Overall Rating</td><td>Player Quality</td><td>Mean FIFA overall of starting XI</td><td>Player ratings + lineups</td><td>Yes</td><td>1 day</td></tr>
+      <tr><td>17</td><td>Squad Age Centroid</td><td>Squad Depth</td><td>Mean age of starting XI</td><td>Player DOBs + lineups</td><td>Yes</td><td>1 day</td></tr>
+      <tr><td>18</td><td>Team Value Multiplier</td><td>Transfer Market</td><td>log(ΣValue_opp / ΣValue_team)</td><td>Player market values</td><td>Yes</td><td>Done</td></tr>
+      <tr><td>19</td><td>Manager Tenure Days</td><td>Team Chemistry</td><td>t_kickoff − t_appoint</td><td>Manager appointment logs</td><td>Yes</td><td>Needs collection</td></tr>
+      <tr><td>20</td><td>Clean Sheet Probability</td><td>Team Strength</td><td>Dixon-Coles CSP from (α,β,γ)</td><td>Historical scorelines</td><td>Yes</td><td>2 days</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Tier 2 — Contextual & Tactical Stabilizers (Important)</h3>
+  <div class="tier2">
+    <p class="muted">High predictive value but require data acquisition or moderate engineering effort. Should be built immediately after Tier 1 is stable.</p>
+  </div>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Feature</th><th>Taxonomy</th><th>Description</th><th>Data Needed</th><th>Effort</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>21</td><td>Venue-Adjusted Rolling xGD (N=10)</td><td>Team Strength</td><td>xG-generated − xG-conceded − HA_adj</td><td>Shot coordinates, defensive pressure</td><td>Medium</td></tr>
+      <tr><td>22</td><td>Expected Threat (xT) Attacking Diff</td><td>Tactical</td><td>xT_team − xT_opp (Markov value iteration)</td><td>Pass/carries spatial coordinates</td><td>Medium</td></tr>
+      <tr><td>23</td><td>PPDA (Pressing Intensity)</td><td>Tactical</td><td>Opponent passes in F60% / defensive actions</td><td>Interceptions, tackles, fouls, passes</td><td>Medium</td></tr>
+      <tr><td>24</td><td>Field Tilt Share</td><td>Tactical</td><td>Team F3 passes / total F3 passes</td><td>Spatial pass coordinates</td><td>Medium</td></tr>
+      <tr><td>25</td><td>Expected Disruption (xD)</td><td>Tactical</td><td>Opponent expected passes / completed passes</td><td>Defensive events + pass completion models</td><td>Hard</td></tr>
+      <tr><td>26</td><td>Lineup Cohesion Index</td><td>Team Chemistry</td><td>Σ_{i&lt;j} MinPlayedTogether_{i,j}</td><td>Historical lineups + shared minutes</td><td>Medium</td></tr>
+      <tr><td>27</td><td>Lineup Net OBV</td><td>Player Quality</td><td>Σ_{p=1}^{11} OBV_p (on-ball value)</td><td>StatsBomb 360 event values + lineups</td><td>Hard</td></tr>
+      <tr><td>28</td><td>GK GSAA</td><td>Player Quality</td><td>PSxG_faced − Conceded</td><td>Goalkeeper shot events + xG</td><td>Medium</td></tr>
+      <tr><td>29</td><td>Squad Depth Elasticity</td><td>Squad Depth</td><td>Value(StartingXI) / Value(Squad)</td><td>Market valuations + projected lineups</td><td>Medium</td></tr>
+      <tr><td>30</td><td>Minutes Rotation Entropy</td><td>Squad Depth</td><td>−Σ p(mi) log p(mi)</td><td>Player minutes distributions</td><td>Medium</td></tr>
+      <tr><td>31</td><td>Dynamic Injury Severity Weight</td><td>Injuries</td><td>Σ_{p∈Injured} OBV_net,p × Severity_days</td><td>Injury logs + recovery distributions + player values</td><td>Hard</td></tr>
+      <tr><td>32</td><td>Roster Injury Density</td><td>Injuries</td><td>Σ_{p∈injured} Value_p</td><td>Injury logs + valuations</td><td>Medium</td></tr>
+      <tr><td>33</td><td>Gower Playstyle Distance</td><td>Matchup</td><td>Weighted distance over playstyle centroids</td><td>Multi-dimensional playstyle vectors</td><td>Hard</td></tr>
+      <tr><td>34</td><td>Tactical Matchup Cosine</td><td>Matchup</td><td>1 − cos(θ_team, θ_opp)</td><td>Playstyle embeddings</td><td>Hard</td></tr>
+      <tr><td>35</td><td>Deep Completion Volume</td><td>Tactical</td><td>Passes completed within 20m of goal</td><td>Spatial pass coordinates</td><td>Medium</td></tr>
+      <tr><td>36</td><td>Set-Piece Attacking xG</td><td>Tactical</td><td>Σ xG_set-piece shots</td><td>Set-piece shot events</td><td>Medium</td></tr>
+      <tr><td>37</td><td>Weather Heat Index</td><td>Environmental</td><td>Temp_C + 0.55 × (1 − Humidity%)</td><td>Meteorological forecasts</td><td>Easy</td></tr>
+      <tr><td>38</td><td>Referee Card Bias</td><td>Referee</td><td>Mean(Yellows + 2×Reds) per referee</td><td>Referee match histories</td><td>Medium</td></tr>
+      <tr><td>39</td><td>Referee Penalty Ratio</td><td>Referee</td><td>Penalties awarded / matches</td><td>Referee assignment + penalty logs</td><td>Medium</td></tr>
+      <tr><td>40</td><td>Stadium Occupancy Density</td><td>Fan/Crowd</td><td>Attendance / Capacity</td><td>Match attendance + capacity</td><td>Easy</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Tier 3 — Experimental / Research-Grade</h3>
+  <div class="tier3">
+    <p class="muted">High theoretical value but require premium data, heavy compute, or novel research implementation. Deploy only after Tier 1 and Tier 2 are validated in production.</p>
+  </div>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Feature</th><th>Taxonomy</th><th>Description</th><th>Data Needed</th><th>Effort</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>41</td><td>HIGFormer Player Embedding</td><td>Player Quality</td><td>Latent node representation from heterogeneous interaction graph</td><td>StatsBomb 360 + career pass networks</td><td>Very Hard</td></tr>
+      <tr><td>42</td><td>HIGFormer Team Interaction</td><td>Matchup</td><td>Team convolution output from macro-level competitive graph</td><td>Historical match results + player graphs</td><td>Very Hard</td></tr>
+      <tr><td>43</td><td>Edge-Conditioned GNN Logits</td><td>Team Chemistry</td><td>Passer star-graph topology receiver prediction</td><td>Spatiotemporal passing events</td><td>Very Hard</td></tr>
+      <tr><td>44</td><td>TacticGen Classifier Guidance</td><td>Tactical</td><td>∇_x log p(Objective | x) alignment with generated trajectories</td><td>25 Hz tracking data + generative model</td><td>Very Hard</td></tr>
+      <tr><td>45</td><td>Pitch Control Area Share</td><td>Tactical</td><td>∬ P(x,y) ≥ 0.5 dxdy (Voronoi tessellation)</td><td>25 Hz player tracking (all 22 players)</td><td>Very Hard</td></tr>
+      <tr><td>46</td><td>Time to Control (TTC) Delta</td><td>Tactical</td><td>TTC_XI − TTC_opp_XI (physics-based spatial accessibility)</td><td>Player velocities, acceleration, reaction params</td><td>Very Hard</td></tr>
+      <tr><td>47</td><td>Off-the-Ball Sprint Density</td><td>Physical Load</td><td>Σ sprints_off-ball ( SkillCorner / tracking )</td><td>Broadcast tracking or SkillCorner</td><td>Hard</td></tr>
+      <tr><td>48</td><td>XGBSE Workload Survival Hazard</td><td>Injuries</td><td>Tree-based survival embedding for injury risk</td><td>GPS training loads + high-freq physical metrics</td><td>Hard</td></tr>
+      <tr><td>49</td><td>ZINB Re-Injury Recurrence</td><td>Injuries</td><td>Zero-Inflated Negative Binomial for time-loss</td><td>Injury history + biomechanical markers</td><td>Hard</td></tr>
+      <tr><td>50</td><td>HT Post-Hit Counterfactual Momentum</td><td>Psychology</td><td>I(Goal_HT) − I(PostHit_HT)</td><td>In-play shot metadata (post vs. goal)</td><td>Medium</td></tr>
+      <tr><td>51</td><td>In-Play Momentum Flow Velocity</td><td>Psychology</td><td>Mean shot velocity over 5-min rolling windows</td><td>Live in-play shot feeds</td><td>Medium</td></tr>
+      <tr><td>52</td><td>Cognitive Panic Metric</td><td>Psychology</td><td>Voronoi area expansion rate after conceding</td><td>25 Hz tracking data</td><td>Very Hard</td></tr>
+      <tr><td>53</td><td>Delaunay Adjacency Shape Shift</td><td>Formation</td><td>g-segmentation over Delaunay matrices</td><td>Player positional tracking</td><td>Hard</td></tr>
+      <tr><td>54</td><td>Manager-Player Exposure Days</td><td>Team Chemistry</td><td>Σ DaysActiveUnderManager_{p,m}</td><td>Career-level manager-player logs</td><td>Medium</td></tr>
+      <tr><td>55</td><td>Language Barrier Misunderstanding Index</td><td>Referee</td><td>1 − I(Lang_team = Lang_ref)</td><td>Player/referee nationality language maps</td><td>Low</td></tr>
+      <tr><td>56</td><td>Agent-Based Simulation Output</td><td>Research</td><td>RoboCup SS2D / Google Research Football emergent tactics</td><td>Custom multi-agent environment</td><td>Very Hard</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 5: ARCHITECTURES -->
+<div class="section">
+  <h2>5. Recommended Architectures</h2>
+
+  <h3>A) MVP Architecture (Weeks 1–3)</h3>
+  <div class="card">
+    <p><strong>Objective:</strong> Ship a credible, backtestable WC 2026 prediction system that beats Elo-only baselines.</p>
+    <div class="grid-2">
+      <div>
+        <h4>Data Layer</h4>
+        <ul class="compact">
+          <li>Existing matches + team_match_features</li>
+          <li>Refresh FIFA rankings to 2026</li>
+          <li>Compute travel distances from venues</li>
+          <li>Integrate official squads (caps, age, club)</li>
+        </ul>
+        <h4>Feature Layer</h4>
+        <ul class="compact">
+          <li>Tier 1 features only (20 features)</li>
+          <li>ELO diff, FIFA rank diff, form windows</li>
+          <li>H2H, rest, home/neutral, stage weight</li>
+          <li>Travel TDF, altitude</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Model Layer</h4>
+        <ul class="compact">
+          <li><strong>Elo baseline</strong> — reference log-loss</li>
+          <li><strong>Dixon-Coles</strong> — goal simulation engine</li>
+          <li><strong>LightGBM</strong> — W/D/L classifier</li>
+          <li><strong>CatBoost</strong> — cross-check classifier</li>
+        </ul>
+        <h4>Output Layer</h4>
+        <ul class="compact">
+          <li>Calibrated 1X2 probabilities</li>
+          <li>Poisson goal expectations</li>
+          <li>Monte-Carlo tournament sim (50k runs)</li>
+          <li>WC 2026 win probabilities per team</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout callout-success" style="margin-top:14px;">
+      <strong>MVP Validation Gate:</strong> The LightGBM/CatBoost ensemble must achieve lower log-loss and higher RPS than the Elo baseline on a time-based walk-forward test (train on ≤2018, predict 2022). Only then should the project advance to Tier 2.
+    </div>
+  </div>
+
+  <h3>B) Research-Grade Architecture (Weeks 4–12)</h3>
+  <div class="card">
+    <p><strong>Objective:</strong> Add spatiotemporal signal, player-level granularity, and tactical context to create a publishable/competitive research platform.</p>
+    <div class="grid-2">
+      <div>
+        <h4>Data Additions</h4>
+        <ul class="compact">
+          <li>StatsBomb 360 / Opta Vision event feeds</li>
+          <li>xG for all matches (not just WC)</li>
+          <li>Full historical lineups + minutes played</li>
+          <li>Manager tenure + tactical assignment logs</li>
+          <li>Weather forecasts (OpenWeather API)</li>
+          <li>Referee assignment + card histories</li>
+        </ul>
+        <h4>Feature Additions</h4>
+        <ul class="compact">
+          <li>Tier 2 features (20 features)</li>
+          <li>xGD, xT, PPDA, Field Tilt, xD</li>
+          <li>Lineup cohesion (shared minutes proxy)</li>
+          <li>Squad depth + injury severity weights</li>
+          <li>Gower playstyle distance</li>
+          <li>Weather + referee adjustments</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Model Additions</h4>
+        <ul class="compact">
+          <li><strong>HIGFormer GNN</strong> — player interaction graphs (passing networks as edges, player OBV as nodes)</li>
+          <li><strong>Temporal Transformer</strong> — ordered event sequences for possession progression</li>
+          <li><strong>Bayesian Hierarchical Poisson</strong> — attack/defense random effects for sparse data</li>
+        </ul>
+        <h4>Infrastructure Additions</h4>
+        <ul class="compact">
+          <li>Feast Feature Store (offline S3 + online Redis)</li>
+          <li>Spark/Flink batch jobs for rolling windows</li>
+          <li>Temporal leakage audit pipeline</li>
+          <li>ONNX export for sub-millisecond inference</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:14px;">
+      <strong>Research Gate:</strong> The GNN + Transformer ensemble must demonstrate measurable log-loss improvement over the MVP GBDT baseline on a held-out tournament (e.g., Euro 2024 or WC 2022). If improvement is &lt;2%, abandon deep learning and invest in data quality instead.
+    </div>
+  </div>
+
+  <h3>C) Betting-Grade Architecture (Weeks 13–24)</h3>
+  <div class="card">
+    <p><strong>Objective:</strong> Extract positive expected value (+EV) from betting markets via real-time calibration, market inefficiency detection, and automated execution.</p>
+    <div class="grid-2">
+      <div>
+        <h4>Data Additions</h4>
+        <ul class="compact">
+          <li>Pinnacle API (real-time WebSocket odds)</li>
+          <li>Multiple bookmaker feeds (for cross-market arb)</li>
+          <li>Injury/availability real-time feeds</li>
+          <li>Lineup confirmation feeds (60-min pre-kickoff)</li>
+          <li>Live in-play event streams (PPDA, possession)</li>
+        </ul>
+        <h4>Feature Additions</h4>
+        <ul class="compact">
+          <li>Tier 3 features (selectively)</li>
+          <li>CLV bias, Shin implied probs, odds volatility</li>
+          <li>Underdog sentiment index</li>
+          <li>Live injury severity updates</li>
+          <li>In-play momentum flow (5-min windows)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Model & Execution Layer</h4>
+        <ul class="compact">
+          <li><strong>Level-0 Ensemble:</strong> CatBoost + LightGBM + HIGFormer + Dixon-Coles</li>
+          <li><strong>Level-1 Meta-Learner:</strong> Calibrated Ridge / shallow NN combining model probs + market probs</li>
+          <li><strong>Calibration:</strong> Isotonic regression on validation set</li>
+          <li><strong>EV Engine:</strong> Compare calibrated true prob vs Shin-derived market prob</li>
+          <li><strong>Kelly Criterion:</strong> Fractional staking (f*/4) with bankroll management</li>
+          <li><strong>Execution:</strong> REST API order placement to sharp books</li>
+        </ul>
+        <h4>Risk Controls</h4>
+        <ul class="compact">
+          <li>Maximum bet size limits (1–2% bankroll)</li>
+          <li>Market liquidity filters (avoid low-limit props)</li>
+          <li>CLV tracking (verify edge persists to close)</li>
+          <li>Drawdown circuit breakers (&gt;15% bankroll = halt)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout callout-warn" style="margin-top:14px;">
+      <strong>Betting-Grade Gate:</strong> Before deploying capital, the system must demonstrate positive closing-line value (CLV &gt; 0) over a minimum of 500 bets in a paper-trading phase. No exceptions.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: ROADMAP -->
+<div class="section">
+  <h2>6. Implementation Roadmap</h2>
+
+  <h3>Phase 1: Data Collection & Harmonization (Weeks 1–4)</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Task</th><th>Deliverable</th><th>Owner</th><th>Blockers</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>W1</td><td>Refresh FIFA rankings 2024→2026</td><td>Updated fifa_rankings table (live to 2026-06)</td><td>Data Engineer</td><td>None</td></tr>
+        <tr><td>W1</td><td>Scrape per-match ELO series or compute from results</td><td>ELO table with sub-annual granularity</td><td>Data Engineer</td><td>None</td></tr>
+        <tr><td>W1–2</td><td>Harvest recent odds 2016→2026 (OddsPortal + Playwright)</td><td>Populated odds table with closing 1X2 lines</td><td>Data Engineer</td><td>Anti-bot / rate limits</td></tr>
+        <tr><td>W2</td><td>Compute travel distances + timezone shifts from venues</td><td>Travel feature columns in feature store</td><td>Data Engineer</td><td>None</td></tr>
+        <tr><td>W2–3</td><td>Integrate official squads into player aggregates</td><td>Squad strength features (caps, age, club quality)</td><td>ML Engineer</td><td>Club-to-league quality mapping</td></tr>
+        <tr><td>W3–4</td><td>Attempt FBref/Transfermarkt unblocking (Playwright/Selenium on residential IP or cloud VM)</td><td>xG, player stats, injuries tables populated</td><td>Data Engineer</td><td>Cloudflare / anti-bot</td></tr>
+        <tr><td>W3–4</td><td>ID resolution mapping (dim_team expansion + player ID crosswalk)</td><td>Canonical IDs linking all sources</td><td>Data Engineer</td><td>Name normalization edge cases</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Phase 2: Feature Engineering & Store Assembly (Weeks 3–6)</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Task</th><th>Deliverable</th><th>Owner</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>W3–4</td><td>Build expanding-window calculation engine</td><td>Scala/Spark or Python/Polars jobs for rolling features</td><td>ML Engineer</td></tr>
+        <tr><td>W4–5</td><td>Implement Tier 1 feature set (20 features)</td><td>Feature vectors for 49k matches</td><td>ML Engineer</td></tr>
+        <tr><td>W5–6</td><td>Deploy Feast Feature Store (offline S3 + online Redis)</td><td>Sub-millisecond feature serving for pre-match</td><td>Platform Engineer</td></tr>
+        <tr><td>W5–6</td><td>Leakage audit: enforce temporal, lineup, target boundaries</td><td>Leakage report + automated validation tests</td><td>ML Engineer</td></tr>
+        <tr><td>W6</td><td>Feature interaction engineering (Elo×xGD, Cohesion×Gower, etc.)</td><td>Interaction terms for GBDT training</td><td>ML Engineer</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Phase 3: Baseline Models (Weeks 5–7)</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Task</th><th>Deliverable</th><th>Success Criteria</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>W5</td><td>Elo baseline implementation</td><td>Reference log-loss on test split</td><td>Functional Elo system</td></tr>
+        <tr><td>W6</td><td>Dixon-Coles with xG-derived rates (if xG available) or goal-derived rates</td><td>Scoreline probability matrices</td><td>RPS benchmark established</td></tr>
+        <tr><td>W6–7</td><td>Poisson goals model (independent, for comparison)</td><td>Baseline goal expectations</td><td>Document DC superiority</td></tr>
+        <tr><td>W7</td><td>Walk-forward validation on 2018 & 2022 WCs</td><td>Backtest report (log-loss, RPS, Brier)</td><td>Baselines reproducible</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Phase 4: GBDT Models (Weeks 7–10)</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Task</th><th>Deliverable</th><th>Owner</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>W7–8</td><td>LightGBM classifier (W/D/L) on Tier 1 features</td><td>Trained model + feature importance report</td><td>ML Engineer</td></tr>
+        <tr><td>W8</td><td>CatBoost classifier (high-cardinality categoricals)</td><td>Trained model + calibration curves</td><td>ML Engineer</td></tr>
+        <tr><td>W8–9</td><td>XGBoost regression (home/away goals, Poisson deviance)</td><td>Goal expectation model</td><td>ML Engineer</td></tr>
+        <tr><td>W9</td><td>Time-series CV (expanding window, never shuffle)</td><td>Cross-validation report</td><td>ML Engineer</td></tr>
+        <tr><td>W9–10</td><td>Hyperparameter optimization (Optuna / Ray Tune)</td><td>Optimized configs per model</td><td>ML Engineer</td></tr>
+        <tr><td>W10</td><td>Model vs. Elo benchmark report</td><td>Go/No-Go decision for ensemble</td><td>Research Lead</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Phase 5: Ensemble & Calibration (Weeks 10–12)</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Task</th><th>Deliverable</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>W10</td><td>Level-0 out-of-fold predictions (time-aware)</td><td>OOF matrix: CatBoost, LightGBM, XGBoost, Dixon-Coles</td></tr>
+        <tr><td>W10–11</td><td>Level-1 meta-learner (Ridge / shallow GBM / logistic)</td><td>Stacked ensemble model</td></tr>
+        <tr><td>W11</td><td>Calibration layer fitting (Isotonic + Platt)</td><td>Calibrated probability outputs</td></tr>
+        <tr><td>W11</td><td>Reliability diagrams + Brier score validation</td><td>Calibration quality report</td></tr>
+        <tr><td>W12</td><td>Feature importance drift check vs. precheck baseline</td><td>Drift report (catch leakage or concept shift)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Phase 6: Tournament Simulator (Weeks 11–13)</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Task</th><th>Deliverable</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>W11</td><td>Bivariate Dixon-Coles scoreline generator</td><td>Match-level P(scoreline) function</td></tr>
+        <tr><td>W12</td><td>Dynamic Elo update within simulation runs</td><td>Momentum-capturing rating adjustments</td></tr>
+        <tr><td>W12</td><td>Monte Carlo engine (Celery workers, N=50,000)</td><td>Distributed simulation framework</td></tr>
+        <tr><td>W13</td><td>WC 2026 bracket simulation + reporting</td><td>Per-team P(advance), P(win), tail-risk curves</td></tr>
+        <tr><td>W13</td><td>Historical backtest: simulate 2010, 2014, 2018, 2022</td><td>Walk-forward tournament validation</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Phase 7: Advanced Research Features (Weeks 12–20+)</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Week</th><th>Task</th><th>Deliverable</th><th>Risk</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>W12–14</td><td>Build SNA passing networks (career shared minutes + passes)</td><td>Graph adjacency matrices per team</td><td>Data availability</td></tr>
+        <tr><td>W14–16</td><td>HIGFormer GNN prototype (player nodes + pass edges)</td><td>Trained GNN + embedding extractor</td><td>High compute; marginal gain uncertain</td></tr>
+        <tr><td>W16–18</td><td>Temporal Transformer on ordered event sequences</td><td>Sequence model + attention maps</td><td>Requires large event corpus</td></tr>
+        <tr><td>W18–20</td><td>Tactical embeddings (Gower distance + spectral clustering)</td><td>Playstyle centroid vectors + matchup scores</td><td>Medium</td></tr>
+        <tr><td>W20+</td><td>Manager-player familiarity indices + adaptation kinetics</td><td>Manager exposure day features</td><td>Low (Transfermarkt data)</td></tr>
+        <tr><td>W20+</td><td>Psychological features (momentum flow, resilience)</td><td>In-play rolling momentum indices</td><td>High (noisy signal)</td></tr>
+        <tr><td>W20+</td><td>Agent-based simulation (RoboCup SS2D / Google Football)</td><td>Simulation environment for tactic testing</td><td>Very Hard; research-only</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SECTION 7: FINAL STRATEGIC REPORT -->
+<div class="section">
+  <h2>7. Strategic Assessment & Final Recommendations</h2>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-top:0; color:var(--danger);">What Is Missing?</h3>
+      <ul class="compact">
+        <li><strong>Temporal freshness:</strong> FIFA rankings are 2 years stale; ELO is year-end only.</li>
+        <li><strong>Market data:</strong> No recent odds (2016→2026). Without this, calibration is impossible.</li>
+        <li><strong>Spatiotemporal events:</strong> xG exists only for 2 World Cups. No qualifier/friendly coverage.</li>
+        <li><strong>Availability:</strong> Injuries table is empty. No suspensions or fitness data.</li>
+        <li><strong>Live infrastructure:</strong> No streaming feature store, no real-time odds ingestion.</li>
+        <li><strong>Referees:</strong> 100% null. Referee bias is a real factor, especially in cards/corners.</li>
+        <li><strong>Deep features:</strong> No passing networks, no tracking data, no tactical embeddings.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0; color:var(--accent2);">What Should Be Collected Next?</h3>
+      <p class="muted">Ranked by expected log-loss improvement per hour of work:</p>
+      <ol>
+        <li><strong>Live FIFA rankings (2024→2026)</strong> — 2–4 hours, massive lift</li>
+        <li><strong>Team-name normalization fix</strong> — 2–3 hours, prevents silent failures</li>
+        <li><strong>Recent odds (2016→2026)</strong> — 1–2 days, enables market calibration</li>
+        <li><strong>Per-match ELO or self-computed ELO</strong> — 1 day, sharpens strength signal</li>
+        <li><strong>Weather forecasts for WC 2026</strong> — 2–3 hours, easy context wins</li>
+        <li><strong>Referee histories (cards, penalties, extra time)</strong> — 1 day, medium lift</li>
+        <li><strong>xG for all matches (Understat scrape)</strong> — 2–3 days, high research value</li>
+        <li><strong>Injuries via Playwright/Transfermarkt</strong> — 2–3 days, requires infra</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-top:0; color:var(--warn);">What Can Be Postponed?</h3>
+      <ul class="compact">
+        <li><strong>25 Hz optical tracking feeds</strong> (Tracab / Second Spectrum) — extreme cost, complex, low ROI unless building custom physical models.</li>
+        <li><strong>Real-time in-play Poisson engine</strong> — requires sub-second event ingestion and low-latency execution infrastructure. Only relevant for betting-grade deployment.</li>
+        <li><strong>Agent-based simulations</strong> (RoboCup / Google Football) — fascinating research direction, but zero near-term predictive value for WC forecasting.</li>
+        <li><strong>Psychological momentum flows</strong> — highly noisy, difficult to validate, marginal signal for 1X2 markets. Better suited to in-play trading research.</li>
+        <li><strong>Language barrier indices</strong> — clever idea, but effect size on match outcomes is likely negligible vs. tactical and strength features.</li>
+        <li><strong>Transfer market Gini shocks</strong> — more relevant for club-league season-long modeling than single-tournament national team prediction.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0; color:var(--danger);">Biggest Risks</h3>
+      <ul class="compact">
+        <li><strong>Data leakage via temporal boundaries.</strong> If rolling features include the match being predicted, backtests will be falsely inflated. Automated leakage tests are mandatory.</li>
+        <li><strong>Anti-bot blocking on richest data sources.</strong> FBref and Transfermarkt are the primary paths to xG, injuries, and club form. Without a residential IP or browser automation stack, these remain inaccessible.</li>
+        <li><strong>Overfitting to small tournament samples.</strong> A World Cup has only 64 matches. Training on 49k matches and validating on 64 creates high variance. Use walk-forward on multiple tournaments + leagues.</li>
+        <li><strong>Assuming lineups are known pre-kickoff.</strong> Official sheets drop ~60 minutes before kickoff. Pre-match models must use projected lineups or probability distributions, not deterministic XIs.</li>
+        <li><strong>Calibrated probabilities without market benchmark.</strong> A model with perfect calibration but no odds comparison cannot identify +EV. The market is the ultimate validator.</li>
+        <li><strong>Premature deep learning.</strong> GNNs and Transformers need large, high-resolution event datasets to beat GBDTs. With the current data, they will likely underperform and consume disproportionate engineering time.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0; color:var(--accent);">Highest ROI Features</h3>
+    <p class="muted">Features ranked by expected predictive value per unit effort, validated against research corpus findings:</p>
+    <table>
+      <thead>
+        <tr><th>Rank</th><th>Feature</th><th>Why High ROI</th><th>Effort</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Venue-Adjusted Rolling xGD (10)</td><td>Strips finishing variance; best shot-independent strength signal</td><td>Medium</td></tr>
+        <tr><td>2</td><td>Closing Line Value (CLV) Bias</td><td>Market integrates all information; CLV detects model-market divergence</td><td>Medium</td></tr>
+        <tr><td>3</td><td>Live FIFA Rankings (refresh)</td><td>Zero engineering; massive freshness improvement</td><td>Very Easy</td></tr>
+        <tr><td>4</td><td>Travel Distance Fatigue (TDF)</td><td>Computational from existing geocodes; real physiological impact</td><td>Very Easy</td></tr>
+        <tr><td>5</td><td>Lineup Net OBV / Overall</td><td>Captures rotation drop-offs; replaces squad averages with XI quality</td><td>Medium</td></tr>
+        <tr><td>6</td><td>Per-Match ELO (or self-computed)</td><td>Removes year-end staleness; sharper strength delta</td><td>Medium</td></tr>
+        <tr><td>7</td><td>PPDA + Field Tilt</td><td>Publicly derivable from event data; strong tactical discriminators</td><td>Medium</td></tr>
+        <tr><td>8</td><td>Dynamic Injury Severity Weight</td><td>Key-player absence materially shifts win probability</td><td>Hard</td></tr>
+        <tr><td>9</td><td>Lineup Cohesion Index</td><td>Shared minutes predict passing efficiency; explains "team chemistry"</td><td>Medium</td></tr>
+        <tr><td>10</td><td>Referee Card / Penalty Bias</td><td>Systematic officiating tilt affects low-probability events (cards, pens)</td><td>Medium</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0; color:var(--accent2);">Recommended Next 14 Days of Work</h3>
+    <p class="muted">A concrete sprint plan assuming 1–2 developers:</p>
+    <table>
+      <thead>
+        <tr><th>Day</th><th>Task</th><th>Deliverable</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Refresh FIFA rankings to 2026</td><td>Updated rankings table</td></tr>
+        <tr><td>2</td><td>Fix team-name normalization (dim_team pass over all tables)</td><td>Canonical join keys, zero string-join failures</td></tr>
+        <tr><td>3</td><td>Compute travel distances + timezone deltas from venue geocodes</td><td>TDF feature column</td></tr>
+        <tr><td>4</td><td>Build official squad aggregates (mean caps, mean age, club quality proxy)</td><td>Squad strength features</td></tr>
+        <tr><td>5–7</td><td>Scrape recent odds 2016→2026 (OddsPortal + Playwright framework)</td><td>Odds ingestion pipeline + populated odds table</td></tr>
+        <tr><td>8–9</td><td>Compute per-match ELO or source full series</td><td>Sub-annual ELO features</td></tr>
+        <tr><td>10</td><td>Re-train LightGBM + CatBoost with refreshed features</td><td>New benchmark vs. Elo baseline</td></tr>
+        <tr><td>11–12</td><td>Implement Dixon-Coles with updated rate parameters</td><td>Goal simulation engine</td></tr>
+        <tr><td>13–14</td><td>Run 50k Monte-Carlo WC 2026 simulation</td><td>Win probabilities + benchmark report</td></tr>
+      </tbody>
+    </table>
+    <div class="callout callout-success" style="margin-top:14px;">
+      <strong>Sprint Goal:</strong> At the end of Day 14, present a reproducible pipeline that outputs WC 2026 win probabilities, validated against the Elo baseline via walk-forward on 2018 & 2022, with a documented log-loss and RPS score. This is the "ship the baseline" milestone. Everything after Day 14 is optimization.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 8: MODEL ARCHITECTURE DIAGRAMS -->
+<div class="section">
+  <h2>8. Architecture Blueprints</h2>
+
+  <h3>Feature Store Architecture (Feast)</h3>
+  <pre class="diagram">
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           INGESTION LAYER                                   │
+│  StatsBomb 360 ──┐                                                          │
+│  Opta Vision   ──┼──> Kafka Topics (raw_events, raw_tracking, raw_odds)   │
+│  Pinnacle API  ──┘                                                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    SPARK / FLINK STREAM PROCESSING                          │
+│  - Compute rolling windows (xGD, PPDA, Field Tilt)                        │
+│  - Enforce temporal lag (t &lt; T strict)                                      │
+│  - Compute SNA graphs + Gower distances                                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                    ┌─────────────────┴─────────────────┐
+                    ▼                                   ▼
+┌─────────────────────────────┐       ┌─────────────────────────────────────┐
+│      FEAST REGISTRY         │       │         OFFLINE STORE               │
+│  - Feature definitions      │       │  S3 Parquet Lake                    │
+│  - Versioning + lineage     │       │  - Training data (time-travel)      │
+│  - Leakage audit hooks      │       │  - Backtesting datasets             │
+└──────────────┬──────────────┘       │  - Batch model training             │
+               │                       └─────────────────────────────────────┘
+               ▼
+┌─────────────────────────────┐
+│      ONLINE STORE (Redis)   │
+│  - Sub-millisecond reads    │
+│  - Pre-match feature vector │
+│  - In-play rolling updates  │
+└─────────────────────────────┘
+  </pre>
+
+  <h3>Betting Execution Architecture</h3>
+  <pre class="diagram">
+┌──────────────────────┐     ┌──────────────────────────────┐
+│   PINNACLE WEBSOCKET │     │   FEATURE STORE (Redis)      │
+│   (odds time-series) │     │   (pre-match + live features)│
+└──────────┬───────────┘     └──────────────┬───────────────┘
+           │                                  │
+           ▼                                  ▼
+┌─────────────────────────────────────────────────────────────┐
+│              SHIN OVERROUND REMOVAL ENGINE                  │
+│  Iteratively solves z (insider proportion) such that Σp=1  │
+│  Output: "True" market probability P_market                 │
+└─────────────────────────────┬───────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                  LEVEL-0 MODEL ENSEMBLE                     │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
+│  │ CatBoost │  │ LightGBM │  │ XGBoost  │  │ Dixon-Coles│  │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘  │
+│       └─────────────┴─────────────┴─────────────┘        │
+│                         │                                  │
+│                         ▼                                  │
+│              LEVEL-1 META-LEARNER                         │
+│              (Calibrated Ridge / Shallow NN)               │
+│              Output: P_model (Home, Draw, Away)            │
+└─────────────────────────┬─────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────────┐
+│              EV + KELLY CAPITAL ENGINE                      │
+│  EV = (P_model × Odds) − 1                                │
+│  IF EV &gt; threshold AND P_model &gt; P_market × margin:       │
+│     f* = (bp − q) / b   (fractional Kelly: f*/4)         │
+│     Execute bet via REST API                              │
+│  ELSE: No action                                            │
+└─────────────────────────────────────────────────────────────┘
+  </pre>
+
+  <h3>Tournament Simulation Architecture</h3>
+  <pre class="diagram">
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     BAYESIAN HIERARCHICAL SKILL MODEL                        │
+│  goals_k ~ Poisson(μ_k)                                                     │
+│  ln(μ_k) = home·I(k∈Home) + α_team(k) − β_opp(k)                          │
+│  α_i ~ N(μ_att, σ²_att)   β_i ~ N(μ_def, σ²_def)                          │
+│  (Shares info across teams with sparse history)                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    DISTRIBUTED CELERY WORKER POOL                            │
+│  Worker 1..N: Run independent Monte Carlo iteration (N ≥ 50,000)           │
+│  Per iteration:                                                            │
+│    1. Draw group stage results from bivariate Dixon-Coles                  │
+│    2. Update dynamic Elo ratings (momentum)                                │
+│    3. Resolve tiebreakers (GD, GF, H2H)                                    │
+│    4. Populate knockout bracket                                            │
+│    5. Resolve knockouts (extra time / penalties model)                     │
+│    6. Record champion + all progression paths                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        AGGREGATION & REPORTING                             │
+│  Output:                                                                    │
+│    - P(advance from group) per team                                         │
+│    - P(reach R16 / QF / SF / Final)                                         │
+│    - P(win World Cup)                                                       │
+│    - Tail-risk curves (EVT)                                                 │
+│    - Most likely bracket path                                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+  </pre>
+</div>
+
+<!-- SECTION 9: SYNTHESIS -->
+<div class="section">
+  <h2>9. Synthesis & Decision Framework</h2>
+  <div class="card">
+    <p>The research corpus defines a theoretically optimal platform with 300+ features across 18 taxonomies, requiring premium data feeds (StatsBomb 360, Opta Vision, Pinnacle API), heavy compute infrastructure (Spark/Flink, Feast, ONNX, Celery), and cutting-edge deep learning (HIGFormer, Temporal Transformers).</p>
+    <p><strong>However, the existing project is not starting from zero.</strong> It already possesses:</p>
+    <ul class="compact">
+      <li>A modular, resumable pipeline architecture</li>
+      <li>49k matches with 30 engineered features</li>
+      <li>39 research-ready leakage-safe features</li>
+      <li>Official WC 2026 squads and fixtures</li>
+      <li>Canonical team normalization (dim_team)</li>
+      <li>Time-based train/val/test splits</li>
+    </ul>
+    <p><strong>The optimal strategy is therefore staged convergence, not big-bang rebuild:</strong></p>
+    <ol>
+      <li><strong>Week 1–2:</strong> Close data freshness gaps (rankings, ELO, travel) and ship MVP baseline.</li>
+      <li><strong>Week 3–6:</strong> Add odds + xG feeds; build Tier 2 features; validate GBDT ensemble.</li>
+      <li><strong>Week 7–12:</strong> If GBDTs beat Elo by &gt;5% log-loss, invest in GNN/Transformer research. If not, invest in more data.</li>
+      <li><strong>Week 13+:</strong> Only pursue betting-grade infrastructure if paper-trading demonstrates positive CLV over 500+ bets.</li>
+    </ol>
+    <div class="callout" style="margin-top:14px;">
+      <strong>Core Principle:</strong> In football prediction, data quality and temporal freshness almost always beats model complexity. A LightGBM model with live rankings, per-match ELO, and recent odds will outperform a HIGFormer GNN with stale features. Prioritize data over architecture until the data ceiling is reached.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Comprehensive Architecture & Implementation Plan — Football Intelligence Platform<br>
+  Synthesized from research corpus (research1.txt + research2.txt) and existing data asset audit (worldCup project).<br>
+  Deliverable type: Strategic planning & gap analysis. No implementation code included per mandate.
+</footer>
+
+</div>
+</body>
+</html>

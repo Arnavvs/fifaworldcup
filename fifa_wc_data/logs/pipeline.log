@@ -296,3 +296,33 @@
 2026-06-02 22:59:03,402 | WARNING | s15_odds           | read odds_series_matches.csv.gz: 'utf-8' codec can't decode byte 0xe9 in position 382: invalid continuation byte
 2026-06-02 22:59:06,216 | INFO    | common             | wrote 479440 rows -> fifa_wc_data\raw\odds\odds_bank_raw.csv
 2026-06-02 22:59:08,182 | INFO    | s15_odds           | odds_bank: 479440 rows from closing_odds.csv.gz; cols=['match_id', 'league', 'match_date', 'home_team', 'home_score', 'away_team', 'away_score', 'avg_odds_home_win', 'avg_odds_draw', 'avg_odds_away_win', 'max_odds_home_win', 'max_odds_draw']
+2026-06-12 01:21:35,943 | INFO    | m0_baseline        | rows train=34497 val=7401 test=7383 (modern test=7383) features=39
+2026-06-12 01:21:36,043 | INFO    | m0_baseline        | elo_only  | LL 1.0397 | Brier 0.6260 | acc 0.488 | LL(2010+) 1.0397
+2026-06-12 01:21:36,636 | INFO    | m0_baseline        | logreg    | LL 0.8838 | Brier 0.5190 | acc 0.599 | LL(2010+) 0.8838
+2026-06-12 01:21:45,466 | INFO    | m0_baseline        | histgb    | LL 0.8823 | Brier 0.5183 | acc 0.598 | LL(2010+) 0.8823
+2026-06-12 01:21:45,608 | INFO    | m0_baseline        | blend_raw | LL 0.8777 | Brier 0.5155 | acc 0.600 | LL(2010+) 0.8777
+2026-06-12 01:21:45,634 | INFO    | m0_baseline        | blend_cal | LL 0.8811 | Brier 0.5150 | acc 0.601 | LL(2010+) 0.8811
+2026-06-12 01:21:45,636 | INFO    | m0_baseline        | wrote C:\Users\HP\OneDrive\Desktop\worldCup\research_ready_dataset\baseline_metrics.json
+2026-06-12 02:15:26,529 | INFO    | m0_baseline        | rows train=34497 val=7401 test=7383 (modern test=7383) features=39
+2026-06-12 02:15:26,583 | INFO    | m0_baseline        | elo_only  | LL 1.0397 | Brier 0.6260 | acc 0.488 | LL(2010+) 1.0397
+2026-06-12 02:15:26,966 | INFO    | m0_baseline        | logreg    | LL 0.8838 | Brier 0.5190 | acc 0.599 | LL(2010+) 0.8838
+2026-06-12 02:15:33,877 | INFO    | m0_baseline        | histgb    | LL 0.8823 | Brier 0.5183 | acc 0.598 | LL(2010+) 0.8823
+2026-06-12 02:15:33,999 | INFO    | m0_baseline        | blend_raw | LL 0.8777 | Brier 0.5155 | acc 0.600 | LL(2010+) 0.8777
+2026-06-12 02:15:34,026 | INFO    | m0_baseline        | blend_cal | LL 0.8811 | Brier 0.5150 | acc 0.601 | LL(2010+) 0.8811
+2026-06-12 02:15:34,027 | INFO    | m0_baseline        | wrote C:\Users\HP\OneDrive\Desktop\worldCup\research_ready_dataset\baseline_metrics.json
+2026-06-12 02:47:47,523 | INFO    | m1_elo             | elo_match: 49353 rows, coverage 100.0%; top-5 current: [['Spain', 2228.5], ['Argentina', 2189.3], ['France', 2144.9], ['England', 2086.3], ['Brazil', 2067.5]]
+2026-06-12 02:47:47,753 | INFO    | m1_elo             | Davidson: nu=0.705 home_adv=142 | train NLL 0.9226 | TEST log-loss 0.8682 (n=7383)
+2026-06-12 02:47:47,755 | INFO    | m1_elo             | m1 complete
+2026-06-12 02:48:44,899 | INFO    | f1_features        | base 49281 rows; elo_match joined 100.0%
+2026-06-12 02:48:47,741 | INFO    | f1_features        | classification_dataset_v2.csv: 49281 rows x 55 cols
+2026-06-12 02:48:49,024 | INFO    | f1_features        | regression_dataset_v2.csv: 49281 rows x 56 cols
+2026-06-12 02:48:49,047 | INFO    | f1_features        | f1 complete; test-era elo coverage now 100.0%
+2026-06-12 02:49:42,587 | INFO    | m0_baseline        | rows train=34497 val=7401 test=7383 (modern test=7383) features=44
+2026-06-12 02:49:42,665 | INFO    | m0_baseline        | elo_only  | LL 0.8812 | Brier 0.5175 | acc 0.603 | LL(2010+) 0.8812
+2026-06-12 02:49:43,182 | INFO    | m0_baseline        | logreg    | LL 0.8625 | Brier 0.5060 | acc 0.607 | LL(2010+) 0.8625
+2026-06-12 02:49:48,993 | INFO    | m0_baseline        | histgb    | LL 0.8645 | Brier 0.5074 | acc 0.605 | LL(2010+) 0.8645
+2026-06-12 02:49:49,063 | INFO    | m0_baseline        | blend_raw | LL 0.8591 | Brier 0.5044 | acc 0.606 | LL(2010+) 0.8591
+2026-06-12 02:49:49,077 | INFO    | m0_baseline        | blend_cal | LL 0.8598 | Brier 0.5040 | acc 0.607 | LL(2010+) 0.8598
+2026-06-12 02:49:49,078 | INFO    | m0_baseline        | wrote C:\Users\HP\OneDrive\Desktop\worldCup\research_ready_dataset\baseline_metrics_v2.json
+2026-06-12 02:52:24,874 | INFO    | f2_market          | MARKET BENCHMARK: closing-odds log-loss 0.8219 on 97 matches (5 tournaments, 2018-06..2024-07)
+2026-06-12 02:52:24,885 | INFO    | f2_market          | f2 complete; table odds_implied_recent written

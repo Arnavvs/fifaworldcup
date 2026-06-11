@@ -1,0 +1,105 @@
+team,tournament,confederation,cont_pld,cont_w,cont_d,cont_l,cont_gf,cont_ga,cont_pts,cont_ppg,reached_stage,reached_ordinal,is_wc2026
+Argentina,2024 Copa America,CONMEBOL,3,3.0,0.0,0.0,5.0,0.0,9.0,3.0,Winner,5,True
+Spain,Euro 2024,UEFA,3,3.0,0.0,0.0,5.0,0.0,9.0,3.0,Winner,5,True
+Qatar,AFC Asian Cup 2023,AFC,7,6.0,1.0,0.0,14.0,5.0,19.0,2.714,Winner,5,True
+Mexico,Gold Cup 2023,CONCACAF,3,2.0,0.0,1.0,7.0,2.0,6.0,2.0,Winner,5,True
+Ivory Coast,AFCON 2023,CAF,7,4.0,1.0,2.0,8.0,8.0,13.0,1.857,Winner,5,True
+Colombia,2024 Copa America,CONMEBOL,3,2.0,1.0,0.0,6.0,2.0,7.0,2.333,Final,4,True
+Panama,Gold Cup 2023,CONCACAF,3,2.0,1.0,0.0,6.0,4.0,7.0,2.333,Final,4,True
+Jordan,AFC Asian Cup 2023,AFC,7,4.0,1.0,2.0,13.0,8.0,13.0,1.857,Final,4,True
+England,Euro 2024,UEFA,3,1.0,2.0,0.0,2.0,1.0,5.0,1.667,Final,4,True
+Uruguay,2024 Copa America,CONMEBOL,3,3.0,0.0,0.0,9.0,1.0,9.0,3.0,Knockout,3,True
+Germany,Euro 2024,UEFA,3,2.0,1.0,0.0,8.0,2.0,7.0,2.333,Knockout,3,True
+United States,Gold Cup 2023,CONCACAF,3,2.0,1.0,0.0,13.0,1.0,7.0,2.333,Knockout,3,True
+Panama,2024 Copa America,CONMEBOL,3,2.0,0.0,1.0,6.0,5.0,6.0,2.0,Knockout,3,True
+Austria,Euro 2024,UEFA,3,2.0,0.0,1.0,6.0,4.0,6.0,2.0,Knockout,3,True
+Brazil,2024 Copa America,CONMEBOL,3,1.0,2.0,0.0,5.0,2.0,5.0,1.667,Knockout,3,True
+Switzerland,Euro 2024,UEFA,3,1.0,2.0,0.0,5.0,3.0,5.0,1.667,Knockout,3,True
+France,Euro 2024,UEFA,3,1.0,2.0,0.0,2.0,1.0,5.0,1.667,Knockout,3,True
+Canada,Gold Cup 2023,CONCACAF,3,1.0,2.0,0.0,6.0,4.0,5.0,1.667,Knockout,3,True
+Canada,2024 Copa America,CONMEBOL,3,1.0,1.0,1.0,1.0,2.0,4.0,1.333,Knockout,3,True
+Ecuador,2024 Copa America,CONMEBOL,3,1.0,1.0,1.0,4.0,3.0,4.0,1.333,Knockout,3,True
+Netherlands,Euro 2024,UEFA,3,1.0,1.0,1.0,4.0,4.0,4.0,1.333,Knockout,3,True
+Belgium,Euro 2024,UEFA,3,1.0,1.0,1.0,2.0,1.0,4.0,1.333,Knockout,3,True
+Qatar,Gold Cup 2023,CONCACAF,3,1.0,1.0,1.0,3.0,3.0,4.0,1.333,Knockout,3,True
+Portugal,Euro 2024,UEFA,3,2.0,0.0,1.0,5.0,3.0,,,Knockout,3,True
+Turkey,Euro 2024,UEFA,3,2.0,0.0,1.0,5.0,5.0,,,Knockout,3,True
+Australia,AFC Asian Cup 2023,AFC,5,3.0,1.0,1.0,9.0,3.0,,,Knockout,3,True
+Uzbekistan,AFC Asian Cup 2023,AFC,5,2.0,3.0,0.0,7.0,3.0,,,Knockout,3,True
+Iraq,AFC Asian Cup 2023,AFC,4,3.0,0.0,1.0,10.0,7.0,,,Knockout,3,True
+Japan,AFC Asian Cup 2023,AFC,5,3.0,0.0,2.0,12.0,8.0,,,Knockout,3,True
+Saudi Arabia,AFC Asian Cup 2023,AFC,4,2.0,2.0,0.0,5.0,2.0,,,Knockout,3,True
+Senegal,AFCON 2023,CAF,4,3.0,1.0,0.0,9.0,2.0,10.0,2.5,Group stage,1,True
+Cape Verde,AFCON 2023,CAF,5,3.0,2.0,0.0,8.0,3.0,11.0,2.2,Group stage,1,True
+Morocco,AFCON 2023,CAF,4,2.0,1.0,1.0,5.0,3.0,7.0,1.75,Group stage,1,True
+South Africa,AFCON 2023,CAF,7,2.0,4.0,1.0,7.0,3.0,10.0,1.429,Group stage,1,True
+Mexico,2024 Copa America,CONMEBOL,3,1.0,1.0,1.0,1.0,1.0,4.0,1.333,Group stage,1,True
+DR Congo,AFCON 2023,CAF,7,1.0,5.0,1.0,6.0,5.0,8.0,1.143,Group stage,1,True
+United States,2024 Copa America,CONMEBOL,3,1.0,0.0,2.0,3.0,3.0,3.0,1.0,Group stage,1,True
+Egypt,AFCON 2023,CAF,4,0.0,4.0,0.0,7.0,7.0,4.0,1.0,Group stage,1,True
+Haiti,Gold Cup 2023,CONCACAF,3,1.0,0.0,2.0,4.0,6.0,3.0,1.0,Group stage,1,True
+Croatia,Euro 2024,UEFA,3,0.0,2.0,1.0,3.0,6.0,2.0,0.667,Group stage,1,True
+Algeria,AFCON 2023,CAF,3,0.0,2.0,1.0,3.0,4.0,2.0,0.667,Group stage,1,True
+Tunisia,AFCON 2023,CAF,3,0.0,2.0,1.0,1.0,2.0,2.0,0.667,Group stage,1,True
+Scotland,Euro 2024,UEFA,3,0.0,1.0,2.0,2.0,7.0,1.0,0.333,Group stage,1,True
+Czech Republic,Euro 2024,UEFA,3,0.0,1.0,2.0,3.0,5.0,1.0,0.333,Group stage,1,True
+Paraguay,2024 Copa America,CONMEBOL,3,0.0,0.0,3.0,3.0,8.0,0.0,0.0,Group stage,1,True
+Ghana,AFCON 2023,CAF,3,0.0,2.0,1.0,5.0,6.0,,,Group stage,1,True
+Iran,AFC Asian Cup 2023,AFC,6,4.0,1.0,1.0,12.0,7.0,,,Group stage,1,True
+South Korea,AFC Asian Cup 2023,AFC,6,2.0,3.0,1.0,11.0,10.0,,,Group stage,1,True
+Nigeria,AFCON 2023,CAF,7,4.0,2.0,1.0,8.0,4.0,14.0,2.0,Final,4,False
+Venezuela,2024 Copa America,CONMEBOL,3,3.0,0.0,0.0,6.0,1.0,9.0,3.0,Knockout,3,False
+Jamaica,Gold Cup 2023,CONCACAF,3,2.0,1.0,0.0,10.0,2.0,7.0,2.333,Knockout,3,False
+Guatemala,Gold Cup 2023,CONCACAF,3,2.0,1.0,0.0,4.0,2.0,7.0,2.333,Knockout,3,False
+Italy,Euro 2024,UEFA,3,1.0,1.0,1.0,3.0,3.0,4.0,1.333,Knockout,3,False
+Romania,Euro 2024,UEFA,3,1.0,1.0,1.0,4.0,3.0,4.0,1.333,Knockout,3,False
+Slovakia,Euro 2024,UEFA,3,1.0,1.0,1.0,3.0,3.0,4.0,1.333,Knockout,3,False
+Georgia,Euro 2024,UEFA,3,1.0,1.0,1.0,4.0,4.0,4.0,1.333,Knockout,3,False
+Costa Rica,Gold Cup 2023,CONCACAF,3,1.0,1.0,1.0,7.0,6.0,4.0,1.333,Knockout,3,False
+Denmark,Euro 2024,UEFA,3,0.0,3.0,0.0,2.0,2.0,,,Knockout,3,False
+Slovenia,Euro 2024,UEFA,3,0.0,3.0,0.0,2.0,2.0,,,Knockout,3,False
+Tajikistan,AFC Asian Cup 2023,AFC,5,1.0,2.0,2.0,3.0,4.0,,,Knockout,3,False
+Syria,AFC Asian Cup 2023,AFC,4,1.0,2.0,1.0,2.0,2.0,,,Knockout,3,False
+United Arab Emirates,AFC Asian Cup 2023,AFC,4,1.0,2.0,1.0,6.0,5.0,,,Knockout,3,False
+Palestine,AFC Asian Cup 2023,AFC,4,1.0,1.0,2.0,6.0,7.0,,,Knockout,3,False
+Indonesia,AFC Asian Cup 2023,AFC,4,1.0,0.0,3.0,3.0,10.0,,,Knockout,3,False
+Bahrain,AFC Asian Cup 2023,AFC,4,2.0,0.0,2.0,4.0,6.0,,,Knockout,3,False
+Thailand,AFC Asian Cup 2023,AFC,4,1.0,2.0,1.0,3.0,2.0,,,Knockout,3,False
+Angola,AFCON 2023,CAF,5,3.0,1.0,1.0,9.0,4.0,10.0,2.0,Group stage,1,False
+Equatorial Guinea,AFCON 2023,CAF,4,2.0,1.0,1.0,9.0,4.0,7.0,1.75,Group stage,1,False
+Mali,AFCON 2023,CAF,5,2.0,2.0,1.0,6.0,4.0,8.0,1.6,Group stage,1,False
+Guinea,AFCON 2023,CAF,5,2.0,1.0,2.0,4.0,6.0,7.0,1.4,Group stage,1,False
+Costa Rica,2024 Copa America,CONMEBOL,3,1.0,1.0,1.0,2.0,4.0,4.0,1.333,Group stage,1,False
+Ukraine,Euro 2024,UEFA,3,1.0,1.0,1.0,2.0,4.0,4.0,1.333,Group stage,1,False
+Honduras,Gold Cup 2023,CONCACAF,3,1.0,1.0,1.0,3.0,6.0,4.0,1.333,Group stage,1,False
+Guadeloupe,Gold Cup 2023,CONCACAF,3,1.0,1.0,1.0,8.0,6.0,4.0,1.333,Group stage,1,False
+Hungary,Euro 2024,UEFA,3,1.0,0.0,2.0,2.0,5.0,3.0,1.0,Group stage,1,False
+Cameroon,AFCON 2023,CAF,4,1.0,1.0,2.0,5.0,8.0,4.0,1.0,Group stage,1,False
+Burkina Faso,AFCON 2023,CAF,4,1.0,1.0,2.0,4.0,6.0,4.0,1.0,Group stage,1,False
+Namibia,AFCON 2023,CAF,4,1.0,1.0,2.0,1.0,7.0,4.0,1.0,Group stage,1,False
+Trinidad and Tobago,Gold Cup 2023,CONCACAF,3,1.0,0.0,2.0,4.0,10.0,3.0,1.0,Group stage,1,False
+Martinique,Gold Cup 2023,CONCACAF,3,1.0,0.0,2.0,7.0,9.0,3.0,1.0,Group stage,1,False
+Mauritania,AFCON 2023,CAF,4,1.0,0.0,3.0,3.0,5.0,3.0,0.75,Group stage,1,False
+Chile,2024 Copa America,CONMEBOL,3,0.0,2.0,1.0,0.0,1.0,2.0,0.667,Group stage,1,False
+Serbia,Euro 2024,UEFA,3,0.0,2.0,1.0,1.0,2.0,2.0,0.667,Group stage,1,False
+China,AFC Asian Cup 2023,AFC,3,0.0,2.0,1.0,0.0,1.0,2.0,0.667,Group stage,1,False
+Oman,AFC Asian Cup 2023,AFC,3,0.0,2.0,1.0,2.0,3.0,2.0,0.667,Group stage,1,False
+El Salvador,Gold Cup 2023,CONCACAF,3,0.0,2.0,1.0,3.0,4.0,2.0,0.667,Group stage,1,False
+Peru,2024 Copa America,CONMEBOL,3,0.0,1.0,2.0,0.0,3.0,1.0,0.333,Group stage,1,False
+Albania,Euro 2024,UEFA,3,0.0,1.0,2.0,3.0,5.0,1.0,0.333,Group stage,1,False
+Poland,Euro 2024,UEFA,3,0.0,1.0,2.0,3.0,6.0,1.0,0.333,Group stage,1,False
+Lebanon,AFC Asian Cup 2023,AFC,3,0.0,1.0,2.0,1.0,5.0,1.0,0.333,Group stage,1,False
+Malaysia,AFC Asian Cup 2023,AFC,3,0.0,1.0,2.0,3.0,8.0,1.0,0.333,Group stage,1,False
+Kyrgyzstan,AFC Asian Cup 2023,AFC,3,0.0,1.0,2.0,1.0,5.0,1.0,0.333,Group stage,1,False
+Jamaica,2024 Copa America,CONMEBOL,3,0.0,0.0,3.0,1.0,7.0,0.0,0.0,Group stage,1,False
+Bolivia,2024 Copa America,CONMEBOL,3,0.0,0.0,3.0,1.0,10.0,0.0,0.0,Group stage,1,False
+Guinea-Bissau,AFCON 2023,CAF,3,0.0,0.0,3.0,2.0,7.0,0.0,0.0,Group stage,1,False
+Gambia,AFCON 2023,CAF,3,0.0,0.0,3.0,2.0,7.0,0.0,0.0,Group stage,1,False
+India,AFC Asian Cup 2023,AFC,3,0.0,0.0,3.0,0.0,6.0,0.0,0.0,Group stage,1,False
+Hong Kong,AFC Asian Cup 2023,AFC,3,0.0,0.0,3.0,1.0,7.0,0.0,0.0,Group stage,1,False
+Vietnam,AFC Asian Cup 2023,AFC,3,0.0,0.0,3.0,4.0,8.0,0.0,0.0,Group stage,1,False
+Saint Kitts and Nevis,Gold Cup 2023,CONCACAF,3,0.0,0.0,3.0,0.0,14.0,0.0,0.0,Group stage,1,False
+Cuba,Gold Cup 2023,CONCACAF,3,0.0,0.0,3.0,3.0,9.0,0.0,0.0,Group stage,1,False
+Mozambique,AFCON 2023,CAF,3,0.0,2.0,1.0,4.0,7.0,,,Group stage,1,False
+Zambia,AFCON 2023,CAF,3,0.0,2.0,1.0,2.0,3.0,,,Group stage,1,False
+Tanzania,AFCON 2023,CAF,3,0.0,2.0,1.0,1.0,4.0,,,Group stage,1,False

@@ -1,0 +1,10 @@
+[
+ {
+  "ts": "2026-06-11 21:21 UTC",
+  "msg": "Session 2026-06-12: audit done, m1 ELO+Davidson built (0.8682), features v2 (blend 0.8591), tracker created"
+ },
+ {
+  "ts": "2026-06-11 21:22 UTC",
+  "msg": "f2: market benchmark computed from 228 closing-odds matches"
+ }
+]

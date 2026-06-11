@@ -1,0 +1,8 @@
+exp_id,date,module,model,features_desc,n_train,logloss_test,brier_test,rps_test,acc_test,ece_test,beats_baseline,decision,notes
+m1_davidson,2026-06-11,m1_elo_davidson,elo_davidson,per-match elo only,34497,0.8682,,,,,yes,KEEP,nu=0.705 H=142 coverage=1.000
+m0_elo_only_v2,2026-06-11,m0_baseline_sanity,elo_only,classification_dataset_v2.csv (44 feats),34497,0.8812,0.5175,,0.6026,,no,LOG,
+m0_logreg_v2,2026-06-11,m0_baseline_sanity,logreg,classification_dataset_v2.csv (44 feats),34497,0.8625,0.5060,,0.6065,,yes,LOG,
+m0_histgb_v2,2026-06-11,m0_baseline_sanity,histgb,classification_dataset_v2.csv (44 feats),34497,0.8645,0.5074,,0.6046,,yes,LOG,
+m0_blend_raw_v2,2026-06-11,m0_baseline_sanity,blend_raw,classification_dataset_v2.csv (44 feats),34497,0.8591,0.5044,,0.6063,,yes,LOG,
+m0_blend_cal_v2,2026-06-11,m0_baseline_sanity,blend_cal,classification_dataset_v2.csv (44 feats),34497,0.8598,0.5040,,0.6067,,yes,LOG,
+market_closing,2026-06-11,f2_market_benchmark,bookmaker_closing,228 intl matches WC18/22 Euro20/24 Copa21,,0.8219,,,,,n/a,BENCHMARK,the honest ceiling on big tournaments

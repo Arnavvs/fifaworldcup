@@ -1,0 +1,229 @@
+date,home,away,home_score,away_score,close_h,close_d,close_a,tournament,source,imp_h,imp_d,imp_a
+18 Dec 2022,Argentina,France,4,3,2.77,3.1,2.9,World Cup 2022,oddsportal,0.361,0.3226,0.3448
+17 Dec 2022,Croatia,Morocco,2,1,2.25,3.6,3.2,World Cup 2022,oddsportal,0.4444,0.2778,0.3125
+14 Dec 2022,France,Morocco,2,0,1.65,4.0,7.05,World Cup 2022,oddsportal,0.6061,0.25,0.1418
+13 Dec 2022,Argentina,Croatia,3,0,2.06,3.3,4.75,World Cup 2022,oddsportal,0.4854,0.303,0.2105
+10 Dec 2022,England,France,1,2,3.0,3.2,2.85,World Cup 2022,oddsportal,0.3333,0.3125,0.3509
+,Morocco,Portugal,1,0,6.25,3.95,1.8,World Cup 2022,oddsportal,0.16,0.2532,0.5556
+09 Dec 2022,Netherlands,Argentina,2,3,4.02,3.25,2.25,World Cup 2022,oddsportal,0.2488,0.3077,0.4444
+,Croatia,Brazil,2,1,9.83,5.15,1.42,World Cup 2022,oddsportal,0.1017,0.1942,0.7042
+06 Dec 2022,Portugal,Switzerland,6,1,1.92,3.7,4.75,World Cup 2022,oddsportal,0.5208,0.2703,0.2105
+,Morocco,Spain,1,0,6.8,4.2,1.65,World Cup 2022,oddsportal,0.1471,0.2381,0.6061
+05 Dec 2022,Brazil,South Korea,4,1,1.28,6.75,15.0,World Cup 2022,oddsportal,0.7812,0.1481,0.0667
+,Cameroon,Serbia,3,3,5.75,3.8,1.73,World Cup 2022,oddsportal,0.1739,0.2632,0.578
+,Japan,Croatia,1,2,4.1,3.4,2.15,World Cup 2022,oddsportal,0.2439,0.2941,0.4651
+04 Dec 2022,England,Senegal,3,0,1.7,3.9,7.0,World Cup 2022,oddsportal,0.5882,0.2564,0.1429
+,France,Poland,3,1,1.42,5.25,11.0,World Cup 2022,oddsportal,0.7042,0.1905,0.0909
+03 Dec 2022,Argentina,Australia,2,1,1.3,6.4,13.0,World Cup 2022,oddsportal,0.7692,0.1562,0.0769
+,Netherlands,USA,3,1,2.05,3.4,4.6,World Cup 2022,oddsportal,0.4878,0.2941,0.2174
+02 Dec 2022,Cameroon,Brazil,1,0,9.5,5.5,1.4,World Cup 2022,oddsportal,0.1053,0.1818,0.7143
+,Serbia,Switzerland,2,3,2.7,3.5,2.95,World Cup 2022,oddsportal,0.3704,0.2857,0.339
+,Ghana,Uruguay,0,2,4.9,3.95,1.9,World Cup 2022,oddsportal,0.2041,0.2532,0.5263
+,South Korea,Portugal,2,1,4.5,3.95,1.9,World Cup 2022,oddsportal,0.2222,0.2532,0.5263
+01 Dec 2022,Costa Rica,Germany,2,4,31.0,12.0,1.12,World Cup 2022,oddsportal,0.0323,0.0833,0.8929
+,Japan,Spain,2,1,7.5,4.65,1.5,World Cup 2022,oddsportal,0.1333,0.2151,0.6667
+,Croatia,Belgium,0,0,3.1,3.55,2.7,World Cup 2022,oddsportal,0.3226,0.2817,0.3704
+,Canada,Morocco,1,2,4.75,3.6,1.86,World Cup 2022,oddsportal,0.2105,0.2778,0.5376
+30 Nov 2022,Poland,Argentina,0,2,8.5,4.8,1.5,World Cup 2022,oddsportal,0.1176,0.2083,0.6667
+,Saudi Arabia,Mexico,1,2,5.75,4.4,1.7,World Cup 2022,oddsportal,0.1739,0.2273,0.5882
+,Australia,Denmark,1,0,8.5,5.0,1.5,World Cup 2022,oddsportal,0.1176,0.2,0.6667
+,Tunisia,France,1,0,6.1,3.9,1.65,World Cup 2022,oddsportal,0.1639,0.2564,0.6061
+29 Nov 2022,Wales,England,0,3,9.5,4.6,1.45,World Cup 2022,oddsportal,0.1053,0.2174,0.6897
+,Iran,USA,0,1,4.35,3.6,2.07,World Cup 2022,oddsportal,0.2299,0.2778,0.4831
+,Ecuador,Senegal,1,2,2.6,3.3,3.3,World Cup 2022,oddsportal,0.3846,0.303,0.303
+,Netherlands,Qatar,2,0,1.23,7.0,17.0,World Cup 2022,oddsportal,0.813,0.1429,0.0588
+28 Nov 2022,Portugal,Uruguay,2,0,2.07,3.5,4.45,World Cup 2022,oddsportal,0.4831,0.2857,0.2247
+,Brazil,Switzerland,1,0,1.5,4.45,8.5,World Cup 2022,oddsportal,0.6667,0.2247,0.1176
+,South Korea,Ghana,2,3,2.8,3.25,2.98,World Cup 2022,oddsportal,0.3571,0.3077,0.3356
+27 Nov 2022,Spain,Germany,1,1,2.7,3.4,2.85,World Cup 2022,oddsportal,0.3704,0.2941,0.3509
+,Croatia,Canada,4,1,2.33,3.45,3.7,World Cup 2022,oddsportal,0.4292,0.2899,0.2703
+,Belgium,Morocco,0,2,1.9,3.5,4.8,World Cup 2022,oddsportal,0.5263,0.2857,0.2083
+,Japan,Costa Rica,0,1,1.5,4.5,8.0,World Cup 2022,oddsportal,0.6667,0.2222,0.125
+26 Nov 2022,Argentina,Mexico,2,0,1.57,4.2,7.75,World Cup 2022,oddsportal,0.6369,0.2381,0.129
+,France,Denmark,2,1,1.85,3.75,5.1,World Cup 2022,oddsportal,0.5405,0.2667,0.1961
+,Poland,Saudi Arabia,2,0,1.75,3.8,6.0,World Cup 2022,oddsportal,0.5714,0.2632,0.1667
+,Tunisia,Australia,0,1,2.23,3.4,3.7,World Cup 2022,oddsportal,0.4484,0.2941,0.2703
+25 Nov 2022,England,USA,0,0,1.53,4.6,8.0,World Cup 2022,oddsportal,0.6536,0.2174,0.125
+,Netherlands,Ecuador,1,1,1.86,3.5,4.9,World Cup 2022,oddsportal,0.5376,0.2857,0.2041
+,Qatar,Senegal,1,3,6.25,3.65,1.75,World Cup 2022,oddsportal,0.16,0.274,0.5714
+,Wales,Iran,0,2,2.2,3.2,4.1,World Cup 2022,oddsportal,0.4545,0.3125,0.2439
+24 Nov 2022,Brazil,Serbia,2,0,1.5,4.9,8.6,World Cup 2022,oddsportal,0.6667,0.2041,0.1163
+,Portugal,Ghana,3,2,1.35,5.8,11.0,World Cup 2022,oddsportal,0.7407,0.1724,0.0909
+15 Jul 2018,France,Croatia,4,2,2.02,3.2,4.5,World Cup 2018,oddsportal,0.495,0.3125,0.2222
+14 Jul 2018,Belgium,England,2,0,2.3,3.6,3.05,World Cup 2018,oddsportal,0.4348,0.2778,0.3279
+11 Jul 2018,Croatia,England,2,1,3.8,3.05,2.37,World Cup 2018,oddsportal,0.2632,0.3279,0.4219
+10 Jul 2018,France,Belgium,1,0,2.57,3.1,3.15,World Cup 2018,oddsportal,0.3891,0.3226,0.3175
+07 Jul 2018,Russia,Croatia,2,3,4.0,3.2,2.1,World Cup 2018,oddsportal,0.25,0.3125,0.4762
+,Sweden,England,0,2,5.0,3.3,1.95,World Cup 2018,oddsportal,0.2,0.303,0.5128
+06 Jul 2018,Brazil,Belgium,1,2,2.17,3.45,3.6,World Cup 2018,oddsportal,0.4608,0.2899,0.2778
+,Uruguay,France,0,2,4.6,3.1,2.1,World Cup 2018,oddsportal,0.2174,0.3226,0.4762
+03 Jul 2018,Colombia,England,1,2,4.0,3.1,2.22,World Cup 2018,oddsportal,0.25,0.3226,0.4505
+,Sweden,Switzerland,1,0,3.2,2.9,2.77,World Cup 2018,oddsportal,0.3125,0.3448,0.361
+02 Jul 2018,Belgium,Japan,3,2,1.41,4.8,10.25,World Cup 2018,oddsportal,0.7092,0.2083,0.0976
+,Brazil,Costa Rica,2,0,1.22,6.65,19.0,World Cup 2018,oddsportal,0.8197,0.1504,0.0526
+,Brazil,Mexico,2,0,1.53,4.35,7.5,World Cup 2018,oddsportal,0.6536,0.2299,0.1333
+01 Jul 2018,Croatia,Denmark,2,1,1.97,3.25,4.65,World Cup 2018,oddsportal,0.5076,0.3077,0.2151
+,Spain,Russia,1,2,1.6,4.2,6.5,World Cup 2018,oddsportal,0.625,0.2381,0.1538
+30 Jun 2018,Uruguay,Portugal,2,1,2.95,2.9,2.9,World Cup 2018,oddsportal,0.339,0.3448,0.3448
+,France,Argentina,4,3,2.42,3.05,3.5,World Cup 2018,oddsportal,0.4132,0.3279,0.2857
+28 Jun 2018,England,Belgium,0,1,2.65,2.9,3.55,World Cup 2018,oddsportal,0.3774,0.3448,0.2817
+,Panama,Tunisia,1,2,4.45,3.7,1.87,World Cup 2018,oddsportal,0.2247,0.2703,0.5348
+,Senegal,Colombia,0,1,5.1,3.75,1.88,World Cup 2018,oddsportal,0.1961,0.2667,0.5319
+,Japan,Poland,0,1,2.85,3.1,2.85,World Cup 2018,oddsportal,0.3509,0.3226,0.3509
+27 Jun 2018,Serbia,Brazil,0,2,7.5,4.5,1.55,World Cup 2018,oddsportal,0.1333,0.2222,0.6452
+,Switzerland,Costa Rica,2,2,1.65,3.6,7.5,World Cup 2018,oddsportal,0.6061,0.2778,0.1333
+,South Korea,Germany,2,0,18.0,8.0,1.2,World Cup 2018,oddsportal,0.0556,0.125,0.8333
+,Mexico,Sweden,0,3,2.4,3.3,3.5,World Cup 2018,oddsportal,0.4167,0.303,0.2857
+26 Jun 2018,Nigeria,Argentina,1,2,6.15,5.1,1.55,World Cup 2018,oddsportal,0.1626,0.1961,0.6452
+,Iceland,Croatia,1,2,4.35,3.85,1.95,World Cup 2018,oddsportal,0.2299,0.2597,0.5128
+,Australia,Peru,0,2,2.9,3.5,2.45,World Cup 2018,oddsportal,0.3448,0.2857,0.4082
+,Denmark,France,0,0,5.1,2.75,2.15,World Cup 2018,oddsportal,0.1961,0.3636,0.4651
+25 Jun 2018,Iran,Portugal,1,1,6.2,3.95,1.67,World Cup 2018,oddsportal,0.1613,0.2532,0.5988
+,Spain,Morocco,2,2,1.37,5.0,9.9,World Cup 2018,oddsportal,0.7299,0.2,0.101
+,Saudi Arabia,Egypt,2,1,5.0,3.7,1.85,World Cup 2018,oddsportal,0.2,0.2703,0.5405
+,Uruguay,Russia,3,0,2.87,3.05,2.95,World Cup 2018,oddsportal,0.3484,0.3279,0.339
+24 Jun 2018,Poland,Colombia,0,3,3.45,3.4,2.25,World Cup 2018,oddsportal,0.2899,0.2941,0.4444
+,Japan,Senegal,2,2,3.2,3.2,2.65,World Cup 2018,oddsportal,0.3125,0.3125,0.3774
+,England,Panama,6,1,1.23,6.3,17.0,World Cup 2018,oddsportal,0.813,0.1587,0.0588
+23 Jun 2018,Germany,Sweden,2,1,1.57,4.4,7.0,World Cup 2018,oddsportal,0.6369,0.2273,0.1429
+,South Korea,Mexico,1,2,5.7,3.6,1.73,World Cup 2018,oddsportal,0.1754,0.2778,0.578
+,Belgium,Tunisia,5,2,1.38,4.9,11.0,World Cup 2018,oddsportal,0.7246,0.2041,0.0909
+22 Jun 2018,Serbia,Switzerland,1,2,2.85,3.0,2.9,World Cup 2018,oddsportal,0.3509,0.3333,0.3448
+,Nigeria,Iceland,2,0,2.95,3.05,2.75,World Cup 2018,oddsportal,0.339,0.3279,0.3636
+21 Jun 2018,Argentina,Croatia,0,3,2.17,3.25,3.9,World Cup 2018,oddsportal,0.4608,0.3077,0.2564
+,France,Peru,1,0,1.61,3.9,6.5,World Cup 2018,oddsportal,0.6211,0.2564,0.1538
+,Denmark,Australia,1,1,2.15,3.3,4.5,World Cup 2018,oddsportal,0.4651,0.303,0.2222
+20 Jun 2018,Iran,Spain,0,1,19.0,6.5,1.23,World Cup 2018,oddsportal,0.0526,0.1538,0.813
+,Uruguay,Saudi Arabia,1,0,1.23,6.5,20.0,World Cup 2018,oddsportal,0.813,0.1538,0.05
+,Portugal,Morocco,1,0,1.7,3.6,6.1,World Cup 2018,oddsportal,0.5882,0.2778,0.1639
+19 Jun 2018,Russia,Egypt,3,1,2.07,3.45,4.2,World Cup 2018,oddsportal,0.4831,0.2899,0.2381
+,Poland,Senegal,1,2,2.48,3.1,3.5,World Cup 2018,oddsportal,0.4032,0.3226,0.2857
+,Colombia,Japan,1,2,1.83,3.4,5.52,World Cup 2018,oddsportal,0.5464,0.2941,0.1812
+14 Jul 2024,Spain,England,2,1,2.45,2.9,3.7,Euro 2024,oddsportal,0.4082,0.3448,0.2703
+10 Jul 2024,Netherlands,England,1,2,3.25,2.88,2.75,Euro 2024,oddsportal,0.3077,0.3472,0.3636
+09 Jul 2024,Spain,France,2,1,2.71,2.85,3.35,Euro 2024,oddsportal,0.369,0.3509,0.2985
+06 Jul 2024,Netherlands,Turkey,2,1,1.64,4.0,6.25,Euro 2024,oddsportal,0.6098,0.25,0.16
+,England,Switzerland,2,1,2.28,3.0,4.2,Euro 2024,oddsportal,0.4386,0.3333,0.2381
+05 Jul 2024,Portugal,France,0,1,3.4,3.0,2.5,Euro 2024,oddsportal,0.2941,0.3333,0.4
+,Spain,Germany,2,1,2.75,3.3,2.85,Euro 2024,oddsportal,0.3636,0.303,0.3509
+02 Jul 2024,Austria,Turkey,1,2,2.02,3.4,4.4,Euro 2024,oddsportal,0.495,0.2941,0.2273
+,Romania,Netherlands,0,3,8.5,4.7,1.52,Euro 2024,oddsportal,0.1176,0.2128,0.6579
+01 Jul 2024,Portugal,Slovenia,1,0,1.37,5.3,10.0,Euro 2024,oddsportal,0.7299,0.1887,0.1
+,Slovenia,Serbia,1,1,5.75,3.85,1.72,Euro 2024,oddsportal,0.1739,0.2597,0.5814
+,France,Belgium,1,0,2.06,3.4,4.35,Euro 2024,oddsportal,0.4854,0.2941,0.2299
+30 Jun 2024,Spain,Georgia,4,1,1.21,7.5,17.0,Euro 2024,oddsportal,0.8264,0.1333,0.0588
+,England,Slovakia,2,1,1.48,4.4,9.5,Euro 2024,oddsportal,0.6757,0.2273,0.1053
+29 Jun 2024,Germany,Denmark,2,0,1.62,4.0,6.5,Euro 2024,oddsportal,0.6173,0.25,0.1538
+,Switzerland,Italy,2,0,3.35,2.9,2.65,Euro 2024,oddsportal,0.2985,0.3448,0.3774
+26 Jun 2024,Czech Republic,Turkey,1,2,2.57,3.35,3.0,Euro 2024,oddsportal,0.3891,0.2985,0.3333
+,Georgia,Portugal,2,0,9.5,5.25,1.38,Euro 2024,oddsportal,0.1053,0.1905,0.7246
+,Ukraine,Belgium,0,0,5.75,4.2,1.65,Euro 2024,oddsportal,0.1739,0.2381,0.6061
+,Slovakia,Romania,1,1,3.2,2.16,4.5,Euro 2024,oddsportal,0.3125,0.463,0.2222
+25 Jun 2024,Denmark,Serbia,0,0,2.35,3.35,3.5,Euro 2024,oddsportal,0.4255,0.2985,0.2857
+,England,Slovenia,0,0,1.35,5.5,13.0,Euro 2024,oddsportal,0.7407,0.1818,0.0769
+,Netherlands,Austria,2,3,1.85,3.65,5.1,Euro 2024,oddsportal,0.5405,0.274,0.1961
+,France,Poland,1,1,1.33,6.0,13.0,Euro 2024,oddsportal,0.7519,0.1667,0.0769
+24 Jun 2024,Albania,Spain,0,1,9.0,5.1,1.42,Euro 2024,oddsportal,0.1111,0.1961,0.7042
+,Croatia,Italy,1,1,3.14,3.1,2.65,Euro 2024,oddsportal,0.3185,0.3226,0.3774
+23 Jun 2024,Switzerland,Germany,1,1,7.5,4.2,1.58,Euro 2024,oddsportal,0.1333,0.2381,0.6329
+,Scotland,Hungary,0,1,2.5,4.2,2.8,Euro 2024,oddsportal,0.4,0.2381,0.3571
+22 Jun 2024,Belgium,Romania,2,0,1.4,5.5,9.0,Euro 2024,oddsportal,0.7143,0.1818,0.1111
+,Turkey,Portugal,0,3,6.2,4.4,1.62,Euro 2024,oddsportal,0.1613,0.2273,0.6173
+,Georgia,Czech Republic,1,1,4.5,3.9,1.86,Euro 2024,oddsportal,0.2222,0.2564,0.5376
+21 Jun 2024,Netherlands,France,0,0,3.2,3.2,2.55,Euro 2024,oddsportal,0.3125,0.3125,0.3922
+,Poland,Austria,1,3,4.3,3.4,2.05,Euro 2024,oddsportal,0.2326,0.2941,0.4878
+,Slovakia,Ukraine,1,2,3.4,3.35,2.35,Euro 2024,oddsportal,0.2941,0.2985,0.4255
+20 Jun 2024,Spain,Italy,1,0,2.3,3.15,3.75,Euro 2024,oddsportal,0.4348,0.3175,0.2667
+,Denmark,England,1,1,5.8,3.7,1.82,Euro 2024,oddsportal,0.1724,0.2703,0.5495
+19 Jun 2024,Scotland,Switzerland,1,1,4.6,3.4,1.95,Euro 2024,oddsportal,0.2174,0.2941,0.5128
+,Germany,Hungary,2,0,1.28,6.75,12.25,Euro 2024,oddsportal,0.7812,0.1481,0.0816
+,Croatia,Albania,2,2,1.47,4.6,8.5,Euro 2024,oddsportal,0.6803,0.2174,0.1176
+18 Jun 2024,Portugal,Czech Republic,2,1,1.5,4.5,7.5,Euro 2024,oddsportal,0.6667,0.2222,0.1333
+,Turkey,Georgia,3,1,1.65,4.1,5.8,Euro 2024,oddsportal,0.6061,0.2439,0.1724
+17 Jun 2024,Austria,France,0,1,6.75,4.3,1.58,Euro 2024,oddsportal,0.1481,0.2326,0.6329
+,Belgium,Slovakia,0,1,1.52,4.6,7.5,Euro 2024,oddsportal,0.6579,0.2174,0.1333
+,Romania,Ukraine,3,0,4.8,3.6,1.86,Euro 2024,oddsportal,0.2083,0.2778,0.5376
+16 Jun 2024,Serbia,England,0,1,7.5,4.6,1.53,Euro 2024,oddsportal,0.1333,0.2174,0.6536
+,Slovenia,Denmark,1,1,6.0,3.95,1.7,Euro 2024,oddsportal,0.1667,0.2532,0.5882
+,Poland,Netherlands,1,2,8.0,4.5,1.53,Euro 2024,oddsportal,0.125,0.2222,0.6536
+15 Jun 2024,Italy,Albania,2,1,1.38,5.1,12.0,Euro 2024,oddsportal,0.7246,0.1961,0.0833
+,Spain,Croatia,3,0,1.94,3.55,4.5,Euro 2024,oddsportal,0.5155,0.2817,0.2222
+,Hungary,Switzerland,1,3,3.95,3.25,2.2,Euro 2024,oddsportal,0.2532,0.3077,0.4545
+11 Jul 2021,Italy,England,2,1,3.4,2.95,2.57,Euro 2020,oddsportal,0.2941,0.339,0.3891
+07 Jul 2021,England,Denmark,2,1,1.8,3.45,5.75,Euro 2020,oddsportal,0.5556,0.2899,0.1739
+06 Jul 2021,Italy,Spain,2,1,2.65,3.2,3.05,Euro 2020,oddsportal,0.3774,0.3125,0.3279
+03 Jul 2021,Ukraine,England,0,4,7.5,4.05,1.57,Euro 2020,oddsportal,0.1333,0.2469,0.6369
+,Czech Republic,Denmark,1,2,4.0,3.1,2.22,Euro 2020,oddsportal,0.25,0.3226,0.4505
+02 Jul 2021,Belgium,Italy,1,2,3.45,3.2,2.42,Euro 2020,oddsportal,0.2899,0.3125,0.4132
+,Switzerland,Spain,1,2,6.0,3.85,1.68,Euro 2020,oddsportal,0.1667,0.2597,0.5952
+29 Jun 2021,Sweden,Ukraine,1,2,2.47,3.2,3.45,Euro 2020,oddsportal,0.4049,0.3125,0.2899
+,England,Germany,2,0,2.45,3.35,3.2,Euro 2020,oddsportal,0.4082,0.2985,0.3125
+28 Jun 2021,France,Switzerland,3,4,1.68,3.9,6.2,Euro 2020,oddsportal,0.5952,0.2564,0.1613
+,Croatia,Spain,3,5,6.5,3.85,1.65,Euro 2020,oddsportal,0.1538,0.2597,0.6061
+27 Jun 2021,Belgium,Portugal,1,0,2.52,3.35,3.1,Euro 2020,oddsportal,0.3968,0.2985,0.3226
+,Netherlands,Czech Republic,0,2,1.63,4.0,6.2,Euro 2020,oddsportal,0.6135,0.25,0.1613
+26 Jun 2021,Italy,Austria,2,1,1.6,3.9,7.2,Euro 2020,oddsportal,0.625,0.2564,0.1389
+,Hungary,France,1,1,12.0,5.6,1.32,Euro 2020,oddsportal,0.0833,0.1786,0.7576
+,Wales,Denmark,0,4,4.7,3.15,2.05,Euro 2020,oddsportal,0.2128,0.3175,0.4878
+23 Jun 2021,Portugal,France,2,2,4.35,3.5,2.0,Euro 2020,oddsportal,0.2299,0.2857,0.5
+,Germany,Hungary,2,2,1.13,11.0,24.0,Euro 2020,oddsportal,0.885,0.0909,0.0417
+,Sweden,Poland,3,2,3.0,3.4,2.56,Euro 2020,oddsportal,0.3333,0.2941,0.3906
+,Slovakia,Spain,0,5,19.0,7.5,1.21,Euro 2020,oddsportal,0.0526,0.1333,0.8264
+22 Jun 2021,Croatia,Scotland,3,1,2.55,3.95,2.87,Euro 2020,oddsportal,0.3922,0.2532,0.3484
+,Czech Republic,England,0,1,8.2,4.2,1.53,Euro 2020,oddsportal,0.122,0.2381,0.6536
+21 Jun 2021,Finland,Belgium,0,2,9.5,4.8,1.42,Euro 2020,oddsportal,0.1053,0.2083,0.7042
+,Russia,Denmark,1,4,5.7,4.25,1.65,Euro 2020,oddsportal,0.1754,0.2353,0.6061
+,Ukraine,Austria,0,1,3.8,2.25,3.2,Euro 2020,oddsportal,0.2632,0.4444,0.3125
+,North Macedonia,Netherlands,0,3,13.0,6.75,1.26,Euro 2020,oddsportal,0.0769,0.1481,0.7937
+20 Jun 2021,Italy,Wales,1,0,1.53,4.0,8.6,Euro 2020,oddsportal,0.6536,0.25,0.1163
+,Switzerland,Turkey,3,1,1.68,4.4,5.2,Euro 2020,oddsportal,0.5952,0.2273,0.1923
+19 Jun 2021,Spain,Poland,1,1,1.33,5.6,11.0,Euro 2020,oddsportal,0.7519,0.1786,0.0909
+,Portugal,Germany,2,4,3.5,3.4,2.25,Euro 2020,oddsportal,0.2857,0.2941,0.4444
+18 Jun 2021,England,Scotland,0,0,1.33,5.4,12.5,Euro 2020,oddsportal,0.7519,0.1852,0.08
+,Croatia,Czech Republic,1,1,2.3,3.25,3.65,Euro 2020,oddsportal,0.4348,0.3077,0.274
+,Sweden,Slovakia,1,0,1.97,3.3,4.8,Euro 2020,oddsportal,0.5076,0.303,0.2083
+17 Jun 2021,Netherlands,Austria,2,0,1.65,3.95,6.1,Euro 2020,oddsportal,0.6061,0.2532,0.1639
+,Denmark,Belgium,1,2,4.2,3.25,2.1,Euro 2020,oddsportal,0.2381,0.3077,0.4762
+,Ukraine,North Macedonia,2,1,1.87,3.55,4.9,Euro 2020,oddsportal,0.5348,0.2817,0.2041
+16 Jun 2021,Italy,Switzerland,3,0,1.75,3.6,6.1,Euro 2020,oddsportal,0.5714,0.2778,0.1639
+,Turkey,Wales,0,2,2.9,3.0,2.9,Euro 2020,oddsportal,0.3448,0.3333,0.3448
+,Finland,Russia,0,1,7.0,3.85,1.62,Euro 2020,oddsportal,0.1429,0.2597,0.6173
+15 Jun 2021,France,Germany,1,0,2.85,3.35,2.6,Euro 2020,oddsportal,0.3509,0.2985,0.3846
+,Hungary,Portugal,0,3,8.25,4.3,1.47,Euro 2020,oddsportal,0.1212,0.2326,0.6803
+14 Jun 2021,Spain,Sweden,0,0,1.36,5.1,10.5,Euro 2020,oddsportal,0.7353,0.1961,0.0952
+,Poland,Slovakia,1,2,1.78,3.45,5.8,Euro 2020,oddsportal,0.5618,0.2899,0.1724
+,Scotland,Czech Republic,0,2,2.9,2.95,2.85,Euro 2020,oddsportal,0.3448,0.339,0.3509
+13 Jun 2021,Netherlands,Ukraine,3,2,1.53,4.3,6.75,Euro 2020,oddsportal,0.6536,0.2326,0.1481
+,Austria,North Macedonia,3,1,1.72,3.75,5.5,Euro 2020,oddsportal,0.5814,0.2667,0.1818
+,England,Croatia,1,0,1.53,4.25,7.0,Euro 2020,oddsportal,0.6536,0.2353,0.1429
+12 Jun 2021,Belgium,Russia,3,0,2.07,3.25,4.15,Euro 2020,oddsportal,0.4831,0.3077,0.241
+,Denmark,Finland,0,1,1.34,4.8,12.0,Euro 2020,oddsportal,0.7463,0.2083,0.0833
+,Wales,Switzerland,1,1,4.75,3.2,1.97,Euro 2020,oddsportal,0.2105,0.3125,0.5076
+10 Jul 2021,Argentina,Brazil,1,0,4.0,3.1,2.1,Copa America 2021,oddsportal,0.25,0.3226,0.4762
+09 Jul 2021,Colombia,Peru,3,2,1.8,3.7,4.45,Copa America 2021,oddsportal,0.5556,0.2703,0.2247
+06 Jul 2021,Argentina,Colombia,2,1,1.87,3.2,4.9,Copa America 2021,oddsportal,0.5348,0.3125,0.2041
+05 Jul 2021,Brazil,Peru,1,0,1.21,6.0,16.5,Copa America 2021,oddsportal,0.8264,0.1667,0.0606
+03 Jul 2021,Argentina,Ecuador,3,0,1.58,3.75,6.9,Copa America 2021,oddsportal,0.6329,0.2667,0.1449
+,Bolivia,Uruguay,0,2,16.5,6.5,1.23,Copa America 2021,oddsportal,0.0606,0.1538,0.813
+,Uruguay,Colombia,0,1,2.33,3.05,3.45,Copa America 2021,oddsportal,0.4292,0.3279,0.2899
+02 Jul 2021,Brazil,Chile,1,0,1.33,5.2,11.5,Copa America 2021,oddsportal,0.7519,0.1923,0.087
+,Peru,Paraguay,4,3,3.0,2.8,2.97,Copa America 2021,oddsportal,0.3333,0.3571,0.3367
+28 Jun 2021,Bolivia,Argentina,1,4,23.0,8.5,1.14,Copa America 2021,oddsportal,0.0435,0.1176,0.8772
+,Uruguay,Paraguay,1,0,1.95,3.1,5.1,Copa America 2021,oddsportal,0.5128,0.3226,0.1961
+27 Jun 2021,Brazil,Ecuador,1,1,1.45,4.4,9.25,Copa America 2021,oddsportal,0.6897,0.2273,0.1081
+,Venezuela,Peru,0,1,3.8,3.05,2.32,Copa America 2021,oddsportal,0.2632,0.3279,0.431
+24 Jun 2021,Chile,Paraguay,0,2,2.48,3.05,3.35,Copa America 2021,oddsportal,0.4032,0.3279,0.2985
+23 Jun 2021,Brazil,Colombia,2,1,1.47,4.2,8.25,Copa America 2021,oddsportal,0.6803,0.2381,0.1212
+,Ecuador,Peru,2,2,2.43,3.15,3.3,Copa America 2021,oddsportal,0.4115,0.3175,0.303
+21 Jun 2021,Argentina,Paraguay,1,0,1.55,3.85,7.5,Copa America 2021,oddsportal,0.6452,0.2597,0.1333
+,Uruguay,Chile,1,1,2.37,3.05,3.7,Copa America 2021,oddsportal,0.4219,0.3279,0.2703
+20 Jun 2021,Colombia,Peru,1,2,1.72,3.45,6.1,Copa America 2021,oddsportal,0.5814,0.2899,0.1639
+,Venezuela,Ecuador,2,2,6.5,3.81,1.63,Copa America 2021,oddsportal,0.1538,0.2625,0.6135
+18 Jun 2021,Argentina,Uruguay,1,0,1.93,3.35,4.3,Copa America 2021,oddsportal,0.5181,0.2985,0.2326
+,Chile,Bolivia,1,0,1.35,5.25,10.25,Copa America 2021,oddsportal,0.7407,0.1905,0.0976
+17 Jun 2021,Brazil,Peru,4,0,1.22,6.75,14.5,Copa America 2021,oddsportal,0.8197,0.1481,0.069
+,Colombia,Venezuela,0,0,1.38,4.85,12.5,Copa America 2021,oddsportal,0.7246,0.2062,0.08
+14 Jun 2021,Paraguay,Bolivia,3,1,1.57,3.85,7.4,Copa America 2021,oddsportal,0.6369,0.2597,0.1351
+,Argentina,Chile,1,1,1.73,3.6,6.2,Copa America 2021,oddsportal,0.578,0.2778,0.1613
+13 Jun 2021,Colombia,Ecuador,1,0,2.15,3.15,3.95,Copa America 2021,oddsportal,0.4651,0.3175,0.2532
+,Brazil,Venezuela,3,0,1.1,11.5,38.0,Copa America 2021,oddsportal,0.9091,0.087,0.0263

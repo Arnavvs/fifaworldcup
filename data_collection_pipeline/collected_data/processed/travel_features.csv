@@ -1,0 +1,753 @@
+team,venue_id,venue_name,distance_km,timezone_delta,travel_fatigue_index,altitude_delta_m,eastward_penalty
+Algeria,1,Atlanta Stadium,7645.96,-6,53.652,290.0,0
+Algeria,2,BC Place Vancouver,9080.56,-8,72.912,11.0,0
+Algeria,3,Boston Stadium,6207.19,-5,43.668,83.0,0
+Algeria,4,Dallas Stadium,8665.49,-6,54.403,149.0,0
+Algeria,5,Guadalajara Stadium,10010.35,-7,64.48,1566.0,0
+Algeria,6,Houston Stadium,8764.89,-6,54.472,15.0,0
+Algeria,7,Kansas City Stadium,8097.78,-6,53.997,273.0,0
+Algeria,8,Los Angeles Stadium,10056.57,-8,73.729,247.0,0
+Algeria,9,Mexico City Stadium,9766.13,-7,64.307,2287.0,0
+Algeria,10,Miami Stadium,7762.77,-5,44.786,12.0,0
+Algeria,11,Monterrey Stadium,9417.41,-7,64.053,549.0,0
+Algeria,12,New York/New Jersey Stadium,6477.7,-5,43.881,9.0,0
+Algeria,13,Philadelphia Stadium,6603.48,-5,43.978,1.0,0
+Algeria,14,San Francisco Bay Area Stadium,10019.38,-8,73.699,1.0,0
+Algeria,15,Seattle Stadium,9184.0,-8,73.003,3.0,0
+Algeria,16,Toronto Stadium,6753.61,-5,44.09,85.0,0
+Argentina,1,Atlanta Stadium,8071.65,-2,17.992,290.0,0
+Argentina,2,BC Place Vancouver,11297.94,-4,37.33,11.0,0
+Argentina,3,Boston Stadium,8628.53,-1,9.063,83.0,0
+Argentina,4,Dallas Stadium,8495.97,-2,18.095,149.0,0
+Argentina,5,Guadalajara Stadium,7767.96,-3,26.874,1566.0,0
+Argentina,6,Houston Stadium,8135.5,-2,18.008,15.0,0
+Argentina,7,Kansas City Stadium,8992.13,-2,18.208,273.0,0
+Argentina,8,Los Angeles Stadium,9855.57,-4,36.784,247.0,0
+Argentina,9,Mexico City Stadium,7381.56,-3,26.721,2287.0,0
+Argentina,10,Miami Stadium,7096.88,-1,8.868,12.0,0
+Argentina,11,Monterrey Stadium,8029.86,-3,26.973,549.0,0
+Argentina,12,New York/New Jersey Stadium,8538.41,-1,9.052,9.0,0
+Argentina,13,Philadelphia Stadium,8466.92,-1,9.044,1.0,0
+Argentina,14,San Francisco Bay Area Stadium,10352.39,-4,36.98,1.0,0
+Argentina,15,Seattle Stadium,11131.4,-4,37.27,3.0,0
+Argentina,16,Toronto Stadium,8956.95,-1,9.1,85.0,0
+Australia,1,Atlanta Stadium,15169.94,-16,154.034,290.0,0
+Australia,2,BC Place Vancouver,12747.27,-18,170.157,11.0,0
+Australia,3,Boston Stadium,16462.61,-15,145.634,83.0,0
+Australia,4,Dallas Stadium,14052.33,-16,152.81,149.0,0
+Australia,5,Guadalajara Stadium,12866.9,-17,160.862,1566.0,0
+Australia,6,Houston Stadium,14035.11,-16,152.79,15.0,0
+Australia,7,Kansas City Stadium,14478.9,-16,153.288,273.0,0
+Australia,8,Los Angeles Stadium,12327.68,-18,169.554,247.0,0
+Australia,9,Mexico City Stadium,13168.49,-17,161.256,2287.0,0
+Australia,10,Miami Stadium,15224.61,-15,144.461,12.0,0
+Australia,11,Monterrey Stadium,13407.83,-17,161.562,549.0,0
+Australia,12,New York/New Jersey Stadium,16221.04,-15,145.412,9.0,0
+Australia,13,Philadelphia Stadium,16116.83,-15,145.315,1.0,0
+Australia,14,San Francisco Bay Area Stadium,12206.85,-18,169.377,1.0,0
+Australia,15,Seattle Stadium,12716.19,-18,170.113,3.0,0
+Australia,16,Toronto Stadium,15807.0,-15,145.024,85.0,0
+Austria,1,Atlanta Stadium,7992.93,-7,62.905,290.0,0
+Austria,2,BC Place Vancouver,8499.46,-9,81.431,11.0,0
+Austria,3,Boston Stadium,6522.49,-6,52.699,83.0,0
+Austria,4,Dallas Stadium,8831.6,-7,63.603,149.0,0
+Austria,5,Guadalajara Stadium,10299.84,-8,73.92,1566.0,0
+Austria,6,Houston Stadium,9020.14,-7,63.751,15.0,0
+Austria,7,Kansas City Stadium,8163.47,-7,63.053,273.0,0
+Austria,8,Los Angeles Stadium,9804.51,-9,82.716,247.0,0
+Austria,9,Mexico City Stadium,10164.01,-8,73.814,2287.0,0
+Austria,10,Miami Stadium,8360.16,-6,54.188,12.0,0
+Austria,11,Monterrey Stadium,9665.82,-8,73.412,549.0,0
+Austria,12,New York/New Jersey Stadium,6793.45,-6,52.943,9.0,0
+Austria,13,Philadelphia Stadium,6928.42,-6,53.061,1.0,0
+Austria,14,San Francisco Bay Area Stadium,9642.04,-9,82.566,1.0,0
+Austria,15,Seattle Stadium,8641.13,-9,81.58,3.0,0
+Austria,16,Toronto Stadium,6920.58,-6,53.054,85.0,0
+Belgium,1,Atlanta Stadium,7086.5,-6,53.197,290.0,0
+Belgium,2,BC Place Vancouver,7816.38,-8,71.713,11.0,0
+Belgium,3,Boston Stadium,5614.25,-5,43.166,83.0,0
+Belgium,4,Dallas Stadium,7948.68,-6,53.885,149.0,0
+Belgium,5,Guadalajara Stadium,9406.21,-7,64.045,1566.0,0
+Belgium,6,Houston Stadium,8126.07,-6,54.018,15.0,0
+Belgium,7,Kansas City Stadium,7293.44,-6,53.369,273.0,0
+Belgium,8,Los Angeles Stadium,9018.49,-8,72.857,247.0,0
+Belgium,9,Mexico City Stadium,9258.95,-7,63.934,2287.0,0
+Belgium,10,Miami Stadium,7445.49,-5,44.577,12.0,0
+Belgium,11,Monterrey Stadium,8774.98,-7,63.558,549.0,0
+Belgium,12,New York/New Jersey Stadium,5886.0,-5,43.403,9.0,0
+Belgium,13,Philadelphia Stadium,6020.7,-5,43.516,1.0,0
+Belgium,14,San Francisco Bay Area Stadium,8893.4,-8,72.745,1.0,0
+Belgium,15,Seattle Stadium,7944.07,-8,71.842,3.0,0
+Belgium,16,Toronto Stadium,6028.69,-5,43.522,85.0,0
+Bosnia and Herzegovina,1,Atlanta Stadium,8382.6,-7,63.238,290.0,0
+Bosnia and Herzegovina,2,BC Place Vancouver,9004.47,-9,81.95,11.0,0
+Bosnia and Herzegovina,3,Boston Stadium,6908.75,-6,53.044,83.0,0
+Bosnia and Herzegovina,4,Dallas Stadium,9258.84,-7,63.934,149.0,0
+Bosnia and Herzegovina,5,Guadalajara Stadium,10712.76,-8,74.234,1566.0,0
+Bosnia and Herzegovina,6,Houston Stadium,9432.85,-7,64.064,15.0,0
+Bosnia and Herzegovina,7,Kansas City Stadium,8603.48,-7,63.42,273.0,0
+Bosnia and Herzegovina,8,Los Angeles Stadium,10290.06,-9,83.151,247.0,0
+Bosnia and Herzegovina,9,Mexico City Stadium,10555.35,-8,74.116,2287.0,0
+Bosnia and Herzegovina,10,Miami Stadium,8697.1,-6,54.425,12.0,0
+Bosnia and Herzegovina,11,Monterrey Stadium,10083.0,-8,73.75,549.0,0
+Bosnia and Herzegovina,12,New York/New Jersey Stadium,7181.59,-6,53.276,9.0,0
+Bosnia and Herzegovina,13,Philadelphia Stadium,7315.69,-6,53.387,1.0,0
+Bosnia and Herzegovina,14,San Francisco Bay Area Stadium,10137.52,-9,83.017,1.0,0
+Bosnia and Herzegovina,15,Seattle Stadium,9144.65,-9,82.089,3.0,0
+Bosnia and Herzegovina,16,Toronto Stadium,7337.16,-6,53.405,85.0,0
+Brazil,1,Atlanta Stadium,6733.14,-3,26.445,290.0,0
+Brazil,2,BC Place Vancouver,10301.82,-5,46.201,11.0,0
+Brazil,3,Boston Stadium,6868.75,-2,17.67,83.0,0
+Brazil,4,Dallas Stadium,7491.26,-3,26.765,149.0,0
+Brazil,5,Guadalajara Stadium,7285.63,-4,35.575,1566.0,0
+Brazil,6,Houston Stadium,7177.55,-3,26.637,15.0,0
+Brazil,7,Kansas City Stadium,7783.69,-3,26.88,273.0,0
+Brazil,8,Los Angeles Stadium,9267.83,-5,45.672,247.0,0
+Brazil,9,Mexico City Stadium,6830.02,-4,35.317,2287.0,0
+Brazil,10,Miami Stadium,5795.54,-2,17.33,12.0,0
+Brazil,11,Monterrey Stadium,7311.41,-4,35.589,549.0,0
+Brazil,12,New York/New Jersey Stadium,6849.81,-2,17.664,9.0,0
+Brazil,13,Philadelphia Stadium,6812.41,-2,17.653,1.0,0
+Brazil,14,San Francisco Bay Area Stadium,9725.01,-5,45.913,1.0,0
+Brazil,15,Seattle Stadium,10178.81,-5,46.141,3.0,0
+Brazil,16,Toronto Stadium,7345.52,-2,17.804,85.0,0
+Cabo Verde,1,Atlanta Stadium,6419.13,-4,35.069,290.0,0
+Cabo Verde,2,BC Place Vancouver,9433.94,-6,54.913,11.0,0
+Cabo Verde,3,Boston Stadium,5460.61,-3,25.816,83.0,0
+Cabo Verde,4,Dallas Stadium,7568.92,-4,35.728,149.0,0
+Cabo Verde,5,Guadalajara Stadium,8395.2,-5,45.178,1566.0,0
+Cabo Verde,6,Houston Stadium,7467.18,-4,35.674,15.0,0
+Cabo Verde,7,Kansas City Stadium,7338.5,-4,35.604,273.0,0
+Cabo Verde,8,Los Angeles Stadium,9499.9,-6,54.955,247.0,0
+Cabo Verde,9,Mexico City Stadium,7991.09,-5,44.931,2287.0,0
+Cabo Verde,10,Miami Stadium,5987.58,-3,26.093,12.0,0
+Cabo Verde,11,Monterrey Stadium,7997.11,-5,44.935,549.0,0
+Cabo Verde,12,New York/New Jersey Stadium,5642.5,-3,25.915,9.0,0
+Cabo Verde,13,Philadelphia Stadium,5709.75,-3,25.95,1.0,0
+Cabo Verde,14,San Francisco Bay Area Stadium,9730.88,-6,55.099,1.0,0
+Cabo Verde,15,Seattle Stadium,9432.41,-6,54.912,3.0,0
+Cabo Verde,16,Toronto Stadium,6146.41,-3,26.171,85.0,0
+Canada,1,Atlanta Stadium,1492.2,-1,7.309,290.0,0
+Canada,2,BC Place Vancouver,3538.49,-3,24.515,11.0,0
+Canada,3,Boston Stadium,513.56,0,0.0,83.0,0
+Canada,4,Dallas Stadium,2285.69,-1,7.735,149.0,0
+Canada,5,Guadalajara Stadium,3733.09,-2,16.451,1566.0,0
+Canada,6,Houston Stadium,2453.15,-1,7.806,15.0,0
+Canada,7,Kansas City Stadium,1695.88,-1,7.437,273.0,0
+Canada,8,Los Angeles Stadium,3788.25,-3,24.72,247.0,0
+Canada,9,Mexico City Stadium,3616.59,-2,16.387,2287.0,0
+Canada,10,Miami Stadium,2220.37,0,0.0,12.0,0
+Canada,11,Monterrey Stadium,3101.09,-2,16.08,549.0,0
+Canada,12,New York/New Jersey Stadium,529.01,0,0.0,9.0,0
+Canada,13,Philadelphia Stadium,610.49,0,0.0,1.0,0
+Canada,14,San Francisco Bay Area Stadium,3903.9,-3,24.81,1.0,0
+Canada,15,Seattle Stadium,3522.81,-3,24.502,3.0,0
+Canada,16,Toronto Stadium,355.69,0,0.0,85.0,0
+Colombia,1,Atlanta Stadium,3403.16,-1,8.133,290.0,0
+Colombia,2,BC Place Vancouver,6756.17,-3,26.455,11.0,0
+Colombia,3,Boston Stadium,4165.77,0,0.0,83.0,0
+Colombia,4,Dallas Stadium,3909.6,-1,8.271,149.0,0
+Colombia,5,Guadalajara Stadium,3626.33,-2,16.393,1566.0,0
+Colombia,6,Houston Stadium,3569.09,-1,8.18,15.0,0
+Colombia,7,Kansas City Stadium,4336.8,-1,8.375,273.0,0
+Colombia,8,Los Angeles Stadium,5596.35,-3,25.89,247.0,0
+Colombia,9,Mexico City Stadium,3165.63,-2,16.121,2287.0,0
+Colombia,10,Miami Stadium,2431.82,0,0.0,12.0,0
+Colombia,11,Monterrey Stadium,3641.19,-2,16.401,549.0,0
+Colombia,12,New York/New Jersey Stadium,4014.42,0,0.0,9.0,0
+Colombia,13,Philadelphia Stadium,3919.32,0,0.0,1.0,0
+Colombia,14,San Francisco Bay Area Stadium,6060.24,-3,26.129,1.0,0
+Colombia,15,Seattle Stadium,6611.49,-3,26.39,3.0,0
+Colombia,16,Toronto Stadium,4359.69,0,0.0,85.0,0
+Congo DR,1,Atlanta Stadium,11174.27,-7,65.25,290.0,0
+Congo DR,2,BC Place Vancouver,13679.23,-9,85.713,11.0,0
+Congo DR,3,Boston Stadium,10053.05,-6,55.294,83.0,0
+Congo DR,4,Dallas Stadium,12328.47,-7,65.938,149.0,0
+Congo DR,5,Guadalajara Stadium,13154.13,-8,75.877,1566.0,0
+Congo DR,6,Houston Stadium,12246.19,-7,65.891,15.0,0
+Congo DR,7,Kansas City Stadium,12018.56,-7,65.76,273.0,0
+Congo DR,8,Los Angeles Stadium,14192.72,-9,86.045,247.0,0
+Congo DR,9,Mexico City Stadium,12730.9,-8,75.615,2287.0,0
+Congo DR,10,Miami Stadium,10767.61,-6,55.706,12.0,0
+Congo DR,11,Monterrey Stadium,12779.61,-8,75.645,549.0,0
+Congo DR,12,New York/New Jersey Stadium,10274.8,-6,55.425,9.0,0
+Congo DR,13,Philadelphia Stadium,10363.62,-6,55.477,1.0,0
+Congo DR,14,San Francisco Bay Area Stadium,14337.36,-9,86.136,1.0,0
+Congo DR,15,Seattle Stadium,13745.77,-9,85.757,3.0,0
+Congo DR,16,Toronto Stadium,10725.03,-6,55.683,85.0,0
+Croatia,1,Atlanta Stadium,8104.42,-7,63.002,290.0,0
+Croatia,2,BC Place Vancouver,8726.01,-9,81.668,11.0,0
+Croatia,3,Boston Stadium,6630.99,-6,52.798,83.0,0
+Croatia,4,Dallas Stadium,8972.73,-7,63.714,149.0,0
+Croatia,5,Guadalajara Stadium,10429.67,-8,74.02,1566.0,0
+Croatia,6,Houston Stadium,9149.57,-7,63.851,15.0,0
+Croatia,7,Kansas City Stadium,8315.33,-7,63.182,273.0,0
+Croatia,8,Los Angeles Stadium,10001.42,-9,82.895,247.0,0
+Croatia,9,Mexico City Stadium,10277.3,-8,73.902,2287.0,0
+Croatia,10,Miami Stadium,8434.28,-6,54.241,12.0,0
+Croatia,11,Monterrey Stadium,9798.91,-8,73.521,549.0,0
+Croatia,12,New York/New Jersey Stadium,6903.45,-6,53.04,9.0,0
+Croatia,13,Philadelphia Stadium,7037.81,-6,53.155,1.0,0
+Croatia,14,San Francisco Bay Area Stadium,9851.86,-9,82.76,1.0,0
+Croatia,15,Seattle Stadium,8864.47,-9,81.809,3.0,0
+Croatia,16,Toronto Stadium,7052.7,-6,53.168,85.0,0
+Curaçao,1,Atlanta Stadium,2875.59,-1,7.964,290.0,0
+Curaçao,2,BC Place Vancouver,6433.62,-3,26.308,11.0,0
+Curaçao,3,Boston Stadium,3340.33,0,0.0,83.0,0
+Curaçao,4,Dallas Stadium,3650.15,-1,8.203,149.0,0
+Curaçao,5,Guadalajara Stadium,3788.86,-2,16.48,1566.0,0
+Curaçao,6,Houston Stadium,3362.09,-1,8.121,15.0,0
+Curaçao,7,Kansas City Stadium,3915.21,-1,8.273,273.0,0
+Curaçao,8,Los Angeles Stadium,5536.06,-3,25.858,247.0,0
+Curaçao,9,Mexico City Stadium,3331.5,-2,16.223,2287.0,0
+Curaçao,10,Miami Stadium,1926.36,0,0.0,12.0,0
+Curaçao,11,Monterrey Stadium,3621.29,-2,16.39,549.0,0
+Curaçao,12,New York/New Jersey Stadium,3230.36,0,0.0,9.0,0
+Curaçao,13,Philadelphia Stadium,3155.05,0,0.0,1.0,0
+Curaçao,14,San Francisco Bay Area Stadium,5955.26,-3,26.077,1.0,0
+Curaçao,15,Seattle Stadium,6314.24,-3,26.252,3.0,0
+Curaçao,16,Toronto Stadium,3646.69,0,0.0,85.0,0
+Czechia,1,Atlanta Stadium,7767.41,-7,62.705,290.0,0
+Czechia,2,BC Place Vancouver,8250.8,-9,81.164,11.0,0
+Czechia,3,Boston Stadium,6299.25,-6,52.49,83.0,0
+Czechia,4,Dallas Stadium,8593.72,-7,63.412,149.0,0
+Czechia,5,Guadalajara Stadium,10065.62,-8,73.736,1566.0,0
+Czechia,6,Houston Stadium,8786.55,-7,63.568,15.0,0
+Czechia,7,Kansas City Stadium,7922.19,-7,62.843,273.0,0
+Czechia,8,Los Angeles Stadium,9553.93,-9,82.483,247.0,0
+Czechia,9,Mexico City Stadium,9936.64,-8,73.633,2287.0,0
+Czechia,10,Miami Stadium,8153.35,-6,54.038,12.0,0
+Czechia,11,Monterrey Stadium,9430.59,-8,73.215,549.0,0
+Czechia,12,New York/New Jersey Stadium,6569.32,-6,52.742,9.0,0
+Czechia,13,Philadelphia Stadium,6704.5,-6,52.864,1.0,0
+Czechia,14,San Francisco Bay Area Stadium,9391.26,-9,82.329,1.0,0
+Czechia,15,Seattle Stadium,8391.8,-9,81.316,3.0,0
+Czechia,16,Toronto Stadium,6686.8,-6,52.848,85.0,0
+Côte d'Ivoire,1,Atlanta Stadium,15173.11,-16,154.038,290.0,0
+Côte d'Ivoire,2,BC Place Vancouver,12753.57,-18,170.166,11.0,0
+Côte d'Ivoire,3,Boston Stadium,16467.02,-15,145.638,83.0,0
+Côte d'Ivoire,4,Dallas Stadium,14055.92,-16,152.814,149.0,0
+Côte d'Ivoire,5,Guadalajara Stadium,12869.3,-17,160.866,1566.0,0
+Côte d'Ivoire,6,Houston Stadium,14038.21,-16,152.794,15.0,0
+Côte d'Ivoire,7,Kansas City Stadium,14483.28,-16,153.293,273.0,0
+Côte d'Ivoire,8,Los Angeles Stadium,12332.44,-18,169.561,247.0,0
+Côte d'Ivoire,9,Mexico City Stadium,13170.42,-17,161.259,2287.0,0
+Côte d'Ivoire,10,Miami Stadium,15226.13,-15,144.463,12.0,0
+Côte d'Ivoire,11,Monterrey Stadium,13410.67,-17,161.566,549.0,0
+Côte d'Ivoire,12,New York/New Jersey Stadium,16225.21,-15,145.416,9.0,0
+Côte d'Ivoire,13,Philadelphia Stadium,16120.84,-15,145.319,1.0,0
+Côte d'Ivoire,14,San Francisco Bay Area Stadium,12212.09,-18,169.385,1.0,0
+Côte d'Ivoire,15,Seattle Stadium,12722.34,-18,170.121,3.0,0
+Côte d'Ivoire,16,Toronto Stadium,15811.76,-15,145.029,85.0,0
+Ecuador,1,Atlanta Stadium,3825.78,-1,8.25,290.0,0
+Ecuador,2,BC Place Vancouver,6949.42,-3,26.54,11.0,0
+Ecuador,3,Boston Stadium,4755.6,0,0.0,83.0,0
+Ecuador,4,Dallas Stadium,4136.09,-1,8.328,149.0,0
+Ecuador,5,Guadalajara Stadium,3563.13,-2,16.357,1566.0,0
+Ecuador,6,Houston Stadium,3775.49,-1,8.237,15.0,0
+Ecuador,7,Kansas City Stadium,4657.53,-1,8.446,273.0,0
+Ecuador,8,Los Angeles Stadium,5625.28,-3,25.906,247.0,0
+Ecuador,9,Mexico City Stadium,3127.5,-2,16.097,2287.0,0
+Ecuador,10,Miami Stadium,2892.75,0,0.0,12.0,0
+Ecuador,11,Monterrey Stadium,3712.39,-2,16.439,549.0,0
+Ecuador,12,New York/New Jersey Stadium,4579.91,0,0.0,9.0,0
+Ecuador,13,Philadelphia Stadium,4473.99,0,0.0,1.0,0
+Ecuador,14,San Francisco Bay Area Stadium,6110.18,-3,26.154,1.0,0
+Ecuador,15,Seattle Stadium,6789.13,-3,26.47,3.0,0
+Ecuador,16,Toronto Stadium,4872.82,0,0.0,85.0,0
+Egypt,1,Atlanta Stadium,10217.29,-8,73.855,290.0,0
+Egypt,2,BC Place Vancouver,10835.82,-10,92.907,11.0,0
+Egypt,3,Boston Stadium,8747.0,-7,63.536,83.0,0
+Egypt,4,Dallas Stadium,11140.92,-8,74.548,149.0,0
+Egypt,5,Guadalajara Stadium,12571.78,-9,84.954,1566.0,0
+Egypt,6,Houston Stadium,11296.4,-8,74.659,15.0,0
+Egypt,7,Kansas City Stadium,10499.01,-8,74.073,273.0,0
+Egypt,8,Los Angeles Stadium,12186.71,-10,94.082,247.0,0
+Egypt,9,Mexico City Stadium,12380.05,-9,84.815,2287.0,0
+Egypt,10,Miami Stadium,10434.4,-7,64.771,12.0,0
+Egypt,11,Monterrey Stadium,11950.39,-9,84.497,549.0,0
+Egypt,12,New York/New Jersey Stadium,9020.87,-7,63.752,9.0,0
+Egypt,13,Philadelphia Stadium,9152.92,-7,63.854,1.0,0
+Egypt,14,San Francisco Bay Area Stadium,12013.61,-10,93.939,1.0,0
+Egypt,15,Seattle Stadium,10986.65,-10,93.045,3.0,0
+Egypt,16,Toronto Stadium,9212.35,-7,63.899,85.0,0
+England,1,Atlanta Stadium,6768.43,-6,52.921,290.0,0
+England,2,BC Place Vancouver,7578.4,-8,71.466,11.0,0
+England,3,Boston Stadium,5295.69,-5,42.874,83.0,0
+England,4,Dallas Stadium,7638.62,-6,53.647,149.0,0
+England,5,Guadalajara Stadium,9092.11,-7,63.807,1566.0,0
+England,6,Houston Stadium,7812.08,-6,53.781,15.0,0
+England,7,Kansas City Stadium,6988.28,-6,53.113,273.0,0
+England,8,Los Angeles Stadium,8741.63,-8,72.608,247.0,0
+England,9,Mexico City Stadium,8941.13,-7,63.69,2287.0,0
+England,10,Miami Stadium,7125.03,-5,44.358,12.0,0
+England,11,Monterrey Stadium,8461.95,-7,63.304,549.0,0
+England,12,New York/New Jersey Stadium,5567.7,-5,43.125,9.0,0
+England,13,Philadelphia Stadium,5702.29,-5,43.244,1.0,0
+England,14,San Francisco Bay Area Stadium,8629.83,-8,72.505,1.0,0
+England,15,Seattle Stadium,7700.74,-8,71.594,3.0,0
+England,16,Toronto Stadium,5716.08,-5,43.256,85.0,0
+France,1,Atlanta Stadium,7036.07,-6,53.154,290.0,0
+France,2,BC Place Vancouver,7921.04,-8,71.819,11.0,0
+France,3,Boston Stadium,5562.1,-5,43.12,83.0,0
+France,4,Dallas Stadium,7931.55,-6,53.872,149.0,0
+France,5,Guadalajara Stadium,9373.64,-7,64.02,1566.0,0
+France,6,Houston Stadium,8094.84,-6,53.995,15.0,0
+France,7,Kansas City Stadium,7290.93,-6,53.367,273.0,0
+France,8,Los Angeles Stadium,9071.55,-8,72.904,247.0,0
+France,9,Mexico City Stadium,9208.38,-7,63.896,2287.0,0
+France,10,Miami Stadium,7354.76,-5,44.516,12.0,0
+France,11,Monterrey Stadium,8747.02,-7,63.536,549.0,0
+France,12,New York/New Jersey Stadium,5835.26,-5,43.359,9.0,0
+France,13,Philadelphia Stadium,5969.07,-5,43.473,1.0,0
+France,14,San Francisco Bay Area Stadium,8966.18,-8,72.811,1.0,0
+France,15,Seattle Stadium,8042.62,-8,71.941,3.0,0
+France,16,Toronto Stadium,6004.36,-5,43.502,85.0,0
+Germany,1,Atlanta Stadium,7575.64,-7,62.53,290.0,0
+Germany,2,BC Place Vancouver,7976.79,-9,80.86,11.0,0
+Germany,3,Boston Stadium,6113.33,-6,52.31,83.0,0
+Germany,4,Dallas Stadium,8376.06,-7,63.233,149.0,0
+Germany,5,Guadalajara Stadium,9854.98,-8,73.567,1566.0,0
+Germany,6,Houston Stadium,8578.03,-7,63.4,15.0,0
+Germany,7,Kansas City Stadium,7696.93,-7,62.641,273.0,0
+Germany,8,Los Angeles Stadium,9295.68,-9,82.237,247.0,0
+Germany,9,Mexico City Stadium,9739.6,-8,73.472,2287.0,0
+Germany,10,Miami Stadium,7993.98,-6,53.919,12.0,0
+Germany,11,Monterrey Stadium,9218.21,-8,73.032,549.0,0
+Germany,12,New York/New Jersey Stadium,6381.4,-6,52.568,9.0,0
+Germany,13,Philadelphia Stadium,6516.8,-6,52.694,1.0,0
+Germany,14,San Francisco Bay Area Stadium,9125.51,-9,82.07,1.0,0
+Germany,15,Seattle Stadium,8119.25,-9,81.019,3.0,0
+Germany,16,Toronto Stadium,6479.47,-6,52.659,85.0,0
+Ghana,1,Atlanta Stadium,9126.83,-6,54.715,290.0,0
+Ghana,2,BC Place Vancouver,11808.37,-8,75.013,11.0,0
+Ghana,3,Boston Stadium,8033.23,-5,44.957,83.0,0
+Ghana,4,Dallas Stadium,10281.0,-6,55.429,149.0,0
+Ghana,5,Guadalajara Stadium,11144.53,-7,65.232,1566.0,0
+Ghana,6,Houston Stadium,10201.01,-6,55.382,15.0,0
+Ghana,7,Kansas City Stadium,9984.57,-6,55.253,273.0,0
+Ghana,8,Los Angeles Stadium,12160.5,-8,75.248,247.0,0
+Ghana,9,Mexico City Stadium,10735.83,-7,64.97,2287.0,0
+Ghana,10,Miami Stadium,8737.23,-5,45.377,12.0,0
+Ghana,11,Monterrey Stadium,10744.16,-7,64.975,549.0,0
+Ghana,12,New York/New Jersey Stadium,8246.81,-5,45.089,9.0,0
+Ghana,13,Philadelphia Stadium,8331.25,-5,45.139,1.0,0
+Ghana,14,San Francisco Bay Area Stadium,12333.91,-8,75.362,1.0,0
+Ghana,15,Seattle Stadium,11848.62,-8,75.04,3.0,0
+Ghana,16,Toronto Stadium,8711.92,-5,45.363,85.0,0
+Haiti,1,Atlanta Stadium,2070.5,-1,7.636,290.0,0
+Haiti,2,BC Place Vancouver,5645.35,-3,25.916,11.0,0
+Haiti,3,Boston Stadium,2614.56,0,0.0,83.0,0
+Haiti,4,Dallas Stadium,2902.08,-1,7.974,149.0,0
+Haiti,5,Guadalajara Stadium,3254.19,-2,16.176,1566.0,0
+Haiti,6,Houston Stadium,2641.29,-1,7.879,15.0,0
+Haiti,7,Kansas City Stadium,3119.54,-1,8.046,273.0,0
+Haiti,8,Los Angeles Stadium,4838.38,-3,25.454,247.0,0
+Haiti,9,Mexico City Stadium,2821.37,-2,15.891,2287.0,0
+Haiti,10,Miami Stadium,1138.22,0,0.0,12.0,0
+Haiti,11,Monterrey Stadium,2984.18,-2,16.003,549.0,0
+Haiti,12,New York/New Jersey Stadium,2476.39,0,0.0,9.0,0
+Haiti,13,Philadelphia Stadium,2390.02,0,0.0,1.0,0
+Haiti,14,San Francisco Bay Area Stadium,5234.49,-3,25.69,1.0,0
+Haiti,15,Seattle Stadium,5531.78,-3,25.855,3.0,0
+Haiti,16,Toronto Stadium,2862.6,0,0.0,85.0,0
+Iraq,1,Atlanta Stadium,10835.28,-9,83.616,290.0,0
+Iraq,2,BC Place Vancouver,10748.04,-11,102.108,11.0,0
+Iraq,3,Boston Stadium,9369.91,-8,73.163,83.0,0
+Iraq,4,Dallas Stadium,11614.86,-9,84.241,149.0,0
+Iraq,5,Guadalajara Stadium,13103.32,-10,94.807,1566.0,0
+Iraq,6,Houston Stadium,11830.99,-9,84.407,15.0,0
+Iraq,7,Kansas City Stadium,10919.55,-9,83.686,273.0,0
+Iraq,8,Los Angeles Stadium,12293.66,-11,103.586,247.0,0
+Iraq,9,Mexico City Stadium,12999.61,-10,94.728,2287.0,0
+Iraq,10,Miami Stadium,11211.86,-8,74.599,12.0,0
+Iraq,11,Monterrey Stadium,12464.91,-10,94.308,549.0,0
+Iraq,12,New York/New Jersey Stadium,9639.23,-8,73.39,9.0,0
+Iraq,13,Philadelphia Stadium,9774.53,-8,73.501,1.0,0
+Iraq,14,San Francisco Bay Area Stadium,12025.2,-11,103.343,1.0,0
+Iraq,15,Seattle Stadium,10921.2,-11,102.284,3.0,0
+Iraq,16,Toronto Stadium,9735.59,-8,73.469,85.0,0
+Japan,1,Atlanta Stadium,11038.9,-15,139.639,290.0,0
+Japan,2,BC Place Vancouver,7557.01,-17,151.816,11.0,0
+Japan,3,Boston Stadium,10814.01,-14,130.042,83.0,0
+Japan,4,Dallas Stadium,10403.44,-15,138.75,149.0,0
+Japan,5,Guadalajara Stadium,10896.85,-16,148.741,1566.0,0
+Japan,6,Houston Stadium,10744.06,-15,139.233,15.0,0
+Japan,7,Kansas City Stadium,10021.58,-15,138.189,273.0,0
+Japan,8,Los Angeles Stadium,8817.9,-17,154.439,247.0,0
+Japan,9,Mexico City Stadium,11318.73,-16,149.349,2287.0,0
+Japan,10,Miami Stadium,12002.27,-14,131.501,12.0,0
+Japan,11,Monterrey Stadium,10731.81,-16,148.497,549.0,0
+Japan,12,New York/New Jersey Stadium,10839.14,-14,130.074,9.0,0
+Japan,13,Philadelphia Stadium,10881.15,-14,130.128,1.0,0
+Japan,14,San Francisco Bay Area Stadium,8330.49,-17,153.473,1.0,0
+Japan,15,Seattle Stadium,7701.21,-17,152.137,3.0,0
+Japan,16,Toronto Stadium,10351.96,-14,129.43,85.0,0
+Jordan,1,Atlanta Stadium,10402.61,-8,73.999,290.0,0
+Jordan,2,BC Place Vancouver,10748.08,-10,92.826,11.0,0
+Jordan,3,Boston Stadium,8928.64,-7,63.68,83.0,0
+Jordan,4,Dallas Stadium,11272.47,-8,74.642,149.0,0
+Jordan,5,Guadalajara Stadium,12732.82,-9,85.068,1566.0,0
+Jordan,6,Houston Stadium,11452.71,-8,74.769,15.0,0
+Jordan,7,Kansas City Stadium,10606.56,-8,74.155,273.0,0
+Jordan,8,Los Angeles Stadium,12180.45,-10,94.077,247.0,0
+Jordan,9,Mexico City Stadium,12574.93,-9,84.956,2287.0,0
+Jordan,10,Miami Stadium,10685.53,-7,64.937,12.0,0
+Jordan,11,Monterrey Stadium,12101.7,-9,84.611,549.0,0
+Jordan,12,New York/New Jersey Stadium,9201.72,-7,63.891,9.0,0
+Jordan,13,Philadelphia Stadium,9335.61,-7,63.992,1.0,0
+Jordan,14,San Francisco Bay Area Stadium,11969.79,-10,93.902,1.0,0
+Jordan,15,Seattle Stadium,10908.14,-10,92.974,3.0,0
+Jordan,16,Toronto Stadium,9355.36,-7,64.007,85.0,0
+Korea Republic,1,Atlanta Stadium,11444.56,-14,130.835,290.0,0
+Korea Republic,2,BC Place Vancouver,8159.94,-16,144.114,11.0,0
+Korea Republic,3,Boston Stadium,10966.62,-13,120.935,83.0,0
+Korea Republic,4,Dallas Stadium,10975.92,-14,130.25,149.0,0
+Korea Republic,5,Guadalajara Stadium,11671.22,-15,140.475,1566.0,0
+Korea Republic,6,Houston Stadium,11333.83,-14,130.699,15.0,0
+Korea Republic,7,Kansas City Stadium,10500.0,-14,129.629,273.0,0
+Korea Republic,8,Los Angeles Stadium,9582.44,-16,146.685,247.0,0
+Korea Republic,9,Mexico City Stadium,12062.05,-15,140.969,2287.0,0
+Korea Republic,10,Miami Stadium,12421.1,-13,122.554,12.0,0
+Korea Republic,11,Monterrey Stadium,11420.84,-15,140.149,549.0,0
+Korea Republic,12,New York/New Jersey Stadium,11040.2,-13,121.022,9.0,0
+Korea Republic,13,Philadelphia Stadium,11104.5,-13,121.098,1.0,0
+Korea Republic,14,San Francisco Bay Area Stadium,9086.0,-16,145.834,1.0,0
+Korea Republic,15,Seattle Stadium,8323.61,-16,144.432,3.0,0
+Korea Republic,16,Toronto Stadium,10602.02,-13,120.496,85.0,0
+Mexico,1,Atlanta Stadium,2160.59,1,7.679,290.0,1
+Mexico,2,BC Place Vancouver,3945.56,-1,8.281,11.0,0
+Mexico,3,Boston Stadium,3634.38,2,16.397,83.0,2
+Mexico,4,Dallas Stadium,1502.78,1,7.316,149.0,1
+Mexico,5,Guadalajara Stadium,461.4,0,0.0,1566.0,0
+Mexico,6,Houston Stadium,1200.29,1,7.091,15.0,1
+Mexico,7,Kansas City Stadium,2226.52,1,7.709,273.0,1
+Mexico,8,Los Angeles Stadium,2491.97,-1,7.821,247.0,0
+Mexico,9,Mexico City Stadium,14.53,0,0.0,2287.0,0
+Mexico,10,Miami Stadium,2066.25,2,15.268,12.0,2
+Mexico,11,Monterrey Stadium,707.46,0,0.0,549.0,0
+Mexico,12,New York/New Jersey Stadium,3361.61,2,16.241,9.0,2
+Mexico,13,Philadelphia Stadium,3227.44,2,16.16,1.0,2
+Mexico,14,San Francisco Bay Area Stadium,2981.28,-1,8.0,1.0,0
+Mexico,15,Seattle Stadium,3766.88,-1,8.234,3.0,0
+Mexico,16,Toronto Stadium,3257.52,2,16.178,85.0,2
+Morocco,1,Atlanta Stadium,6965.55,-6,53.093,290.0,0
+Morocco,2,BC Place Vancouver,8824.09,-8,72.683,11.0,0
+Morocco,3,Boston Stadium,5578.13,-5,43.134,83.0,0
+Morocco,4,Dallas Stadium,8040.2,-6,53.954,149.0,0
+Morocco,5,Guadalajara Stadium,9307.28,-7,63.971,1566.0,0
+Morocco,6,Houston Stadium,8099.33,-6,53.998,15.0,0
+Morocco,7,Kansas City Stadium,7531.37,-6,53.562,273.0,0
+Morocco,8,Los Angeles Stadium,9594.71,-8,73.353,247.0,0
+Morocco,9,Mexico City Stadium,9026.13,-7,63.756,2287.0,0
+Morocco,10,Miami Stadium,6982.07,-5,44.256,12.0,0
+Morocco,11,Monterrey Stadium,8741.75,-7,63.532,549.0,0
+Morocco,12,New York/New Jersey Stadium,5840.3,-5,43.364,9.0,0
+Morocco,13,Philadelphia Stadium,5958.36,-5,43.464,1.0,0
+Morocco,14,San Francisco Bay Area Stadium,9623.41,-8,73.376,1.0,0
+Morocco,15,Seattle Stadium,8902.48,-8,72.754,3.0,0
+Morocco,16,Toronto Stadium,6176.82,-5,43.644,85.0,0
+Netherlands,1,Atlanta Stadium,7058.97,-6,53.173,290.0,0
+Netherlands,2,BC Place Vancouver,7696.44,-8,71.589,11.0,0
+Netherlands,3,Boston Stadium,5589.76,-5,43.144,83.0,0
+Netherlands,4,Dallas Stadium,7898.79,-6,53.848,149.0,0
+Netherlands,5,Guadalajara Stadium,9364.79,-7,64.014,1566.0,0
+Netherlands,6,Houston Stadium,8084.97,-6,53.987,15.0,0
+Netherlands,7,Kansas City Stadium,7235.1,-6,53.321,273.0,0
+Netherlands,8,Los Angeles Stadium,8925.7,-8,72.774,247.0,0
+Netherlands,9,Mexico City Stadium,9229.34,-7,63.912,2287.0,0
+Netherlands,10,Miami Stadium,7444.83,-5,44.577,12.0,0
+Netherlands,11,Monterrey Stadium,8731.18,-7,63.523,549.0,0
+Netherlands,12,New York/New Jersey Stadium,5860.19,-5,43.381,9.0,0
+Netherlands,13,Philadelphia Stadium,5995.29,-5,43.494,1.0,0
+Netherlands,14,San Francisco Bay Area Stadium,8789.73,-8,72.652,1.0,0
+Netherlands,15,Seattle Stadium,7827.23,-8,71.724,3.0,0
+Netherlands,16,Toronto Stadium,5985.55,-5,43.486,85.0,0
+New Zealand,1,Atlanta Stadium,13227.51,-18,170.822,290.0,0
+New Zealand,2,BC Place Vancouver,11754.33,-20,187.441,11.0,0
+New Zealand,3,Boston Stadium,14674.28,-17,163.097,83.0,0
+New Zealand,4,Dallas Stadium,12219.8,-18,169.396,149.0,0
+New Zealand,5,Guadalajara Stadium,10861.49,-19,176.568,1566.0,0
+New Zealand,6,Houston Stadium,12113.95,-18,169.24,15.0,0
+New Zealand,7,Kansas City Stadium,12791.6,-18,170.219,273.0,0
+New Zealand,8,Los Angeles Stadium,10826.07,-20,185.796,247.0,0
+New Zealand,9,Mexico City Stadium,11092.99,-19,176.969,2287.0,0
+New Zealand,10,Miami Stadium,13070.91,-17,161.13,12.0,0
+New Zealand,11,Monterrey Stadium,11460.25,-19,177.588,549.0,0
+New Zealand,12,New York/New Jersey Stadium,14402.82,-17,162.779,9.0,0
+New Zealand,13,Philadelphia Stadium,14275.82,-17,162.629,1.0,0
+New Zealand,14,San Francisco Bay Area Stadium,10851.99,-20,185.844,1.0,0
+New Zealand,15,Seattle Stadium,11658.85,-20,187.278,3.0,0
+New Zealand,16,Toronto Stadium,14134.69,-17,162.46,85.0,0
+Norway,1,Atlanta Stadium,7079.13,-7,62.055,290.0,0
+Norway,2,BC Place Vancouver,7181.8,-9,79.915,11.0,0
+Norway,3,Boston Stadium,5651.68,-6,51.839,83.0,0
+Norway,4,Dallas Stadium,7786.2,-7,62.722,149.0,0
+Norway,5,Guadalajara Stadium,9279.58,-8,73.085,1566.0,0
+Norway,6,Houston Stadium,8017.71,-7,62.927,15.0,0
+Norway,7,Kansas City Stadium,7085.07,-7,62.061,273.0,0
+Norway,8,Los Angeles Stadium,8559.88,-9,81.495,247.0,0
+Norway,9,Mexico City Stadium,9209.3,-8,73.025,2287.0,0
+Norway,10,Miami Stadium,7600.19,-6,53.616,12.0,0
+Norway,11,Monterrey Stadium,8640.95,-8,72.515,549.0,0
+Norway,12,New York/New Jersey Stadium,5909.77,-6,52.107,9.0,0
+Norway,13,Philadelphia Stadium,6044.43,-6,52.242,1.0,0
+Norway,14,San Francisco Bay Area Stadium,8362.1,-9,81.284,1.0,0
+Norway,15,Seattle Stadium,7330.34,-9,80.099,3.0,0
+Norway,16,Toronto Stadium,5939.66,-6,52.137,85.0,0
+Panama,1,Atlanta Stadium,2801.25,-1,7.938,290.0,0
+Panama,2,BC Place Vancouver,6026.16,-3,26.112,11.0,0
+Panama,3,Boston Stadium,3769.0,0,0.0,83.0,0
+Panama,4,Dallas Stadium,3184.44,-1,8.066,149.0,0
+Panama,5,Guadalajara Stadium,2866.78,-2,15.923,1566.0,0
+Panama,6,Houston Stadium,2834.83,-1,7.95,15.0,0
+Panama,7,Kansas City Stadium,3660.57,-1,8.206,273.0,0
+Panama,8,Los Angeles Stadium,4831.46,-3,25.449,247.0,0
+Panama,9,Mexico City Stadium,2404.44,-2,15.571,2287.0,0
+Panama,10,Miami Stadium,1869.2,0,0.0,12.0,0
+Panama,11,Monterrey Stadium,2877.39,-2,15.93,549.0,0
+Panama,12,New York/New Jersey Stadium,3579.86,0,0.0,9.0,0
+Panama,13,Philadelphia Stadium,3469.23,0,0.0,1.0,0
+Panama,14,San Francisco Bay Area Stadium,5297.4,-3,25.725,1.0,0
+Panama,15,Seattle Stadium,5876.06,-3,26.036,3.0,0
+Panama,16,Toronto Stadium,3852.92,0,0.0,85.0,0
+Paraguay,1,Atlanta Stadium,7149.91,-2,17.75,290.0,0
+Paraguay,2,BC Place Vancouver,10512.11,-4,37.042,11.0,0
+Paraguay,3,Boston Stadium,7620.53,-1,8.939,83.0,0
+Paraguay,4,Dallas Stadium,7672.95,-2,17.891,149.0,0
+Paraguay,5,Guadalajara Stadium,7108.63,-3,26.608,1566.0,0
+Paraguay,6,Houston Stadium,7322.03,-2,17.798,15.0,0
+Paraguay,7,Kansas City Stadium,8114.95,-2,18.003,273.0,0
+Paraguay,8,Los Angeles Stadium,9191.13,-4,36.504,247.0,0
+Paraguay,9,Mexico City Stadium,6690.6,-3,26.426,2287.0,0
+Paraguay,10,Miami Stadium,6173.6,-1,8.728,12.0,0
+Paraguay,11,Monterrey Stadium,7292.3,-3,26.684,549.0,0
+Paraguay,12,New York/New Jersey Stadium,7542.57,-1,8.928,9.0,0
+Paraguay,13,Philadelphia Stadium,7477.15,-1,8.92,1.0,0
+Paraguay,14,San Francisco Bay Area Stadium,9680.91,-4,36.712,1.0,0
+Paraguay,15,Seattle Stadium,10357.87,-4,36.982,3.0,0
+Paraguay,16,Toronto Stadium,7978.97,-1,8.985,85.0,0
+Portugal,1,Atlanta Stadium,6577.0,-5,43.957,290.0,0
+Portugal,2,BC Place Vancouver,8283.78,-7,63.155,11.0,0
+Portugal,3,Boston Stadium,5156.1,-4,34.193,83.0,0
+Portugal,4,Dallas Stadium,7620.88,-5,44.694,149.0,0
+Portugal,5,Guadalajara Stadium,8936.55,-6,54.588,1566.0,0
+Portugal,6,Houston Stadium,7703.15,-5,44.748,15.0,0
+Portugal,7,Kansas City Stadium,7081.78,-5,44.327,273.0,0
+Portugal,8,Los Angeles Stadium,9107.65,-7,63.819,247.0,0
+Portugal,9,Mexico City Stadium,8681.49,-6,54.414,2287.0,0
+Portugal,10,Miami Stadium,6670.0,-4,35.222,12.0,0
+Portugal,11,Monterrey Stadium,8352.65,-6,54.183,549.0,0
+Portugal,12,New York/New Jersey Stadium,5423.6,-4,34.395,9.0,0
+Portugal,13,Philadelphia Stadium,5546.38,-4,34.484,1.0,0
+Portugal,14,San Francisco Bay Area Stadium,9115.91,-7,63.825,1.0,0
+Portugal,15,Seattle Stadium,8366.81,-7,63.225,3.0,0
+Portugal,16,Toronto Stadium,5729.14,-4,34.614,85.0,0
+Qatar,1,Atlanta Stadium,11965.65,-9,84.509,290.0,0
+Qatar,2,BC Place Vancouver,11707.14,-11,103.048,11.0,0
+Qatar,3,Boston Stadium,10499.39,-8,74.073,83.0,0
+Qatar,4,Dallas Stadium,12737.31,-9,85.071,149.0,0
+Qatar,5,Guadalajara Stadium,14228.54,-10,95.631,1566.0,0
+Qatar,6,Houston Stadium,12958.77,-9,85.226,15.0,0
+Qatar,7,Kansas City Stadium,12036.9,-9,84.562,273.0,0
+Qatar,8,Los Angeles Stadium,13316.05,-11,104.465,247.0,0
+Qatar,9,Mexico City Stadium,14130.11,-10,95.561,2287.0,0
+Qatar,10,Miami Stadium,12326.82,-8,75.357,12.0,0
+Qatar,11,Monterrey Stadium,13589.84,-10,95.172,549.0,0
+Qatar,12,New York/New Jersey Stadium,10769.07,-8,74.276,9.0,0
+Qatar,13,Philadelphia Stadium,10904.33,-8,74.376,1.0,0
+Qatar,14,San Francisco Bay Area Stadium,13011.4,-11,104.21,1.0,0
+Qatar,15,Seattle Stadium,11888.27,-11,103.217,3.0,0
+Qatar,16,Toronto Stadium,10864.94,-8,74.347,85.0,0
+Saudi Arabia,1,Atlanta Stadium,11707.48,-9,84.313,290.0,0
+Saudi Arabia,2,BC Place Vancouver,11725.59,-11,103.066,11.0,0
+Saudi Arabia,3,Boston Stadium,10234.43,-8,73.869,83.0,0
+Saudi Arabia,4,Dallas Stadium,12539.76,-9,84.931,149.0,0
+Saudi Arabia,5,Guadalajara Stadium,14016.81,-10,95.481,1566.0,0
+Saudi Arabia,6,Houston Stadium,12737.99,-9,85.072,15.0,0
+Saudi Arabia,7,Kansas City Stadium,11856.16,-9,84.426,273.0,0
+Saudi Arabia,8,Los Angeles Stadium,13275.62,-11,104.431,247.0,0
+Saudi Arabia,9,Mexico City Stadium,13880.16,-10,95.383,2287.0,0
+Saudi Arabia,10,Miami Stadium,12008.1,-8,75.147,12.0,0
+Saudi Arabia,11,Monterrey Stadium,13381.05,-10,95.017,549.0,0
+Saudi Arabia,12,New York/New Jersey Stadium,10506.67,-8,74.079,9.0,0
+Saudi Arabia,13,Philadelphia Stadium,10641.17,-8,74.181,1.0,0
+Saudi Arabia,14,San Francisco Bay Area Stadium,13006.65,-11,104.206,1.0,0
+Saudi Arabia,15,Seattle Stadium,11900.07,-11,103.228,3.0,0
+Saudi Arabia,16,Toronto Stadium,10638.24,-8,74.178,85.0,0
+Scotland,1,Atlanta Stadium,6435.42,-6,52.618,290.0,0
+Scotland,2,BC Place Vancouver,7064.09,-8,70.903,11.0,0
+Scotland,3,Boston Stadium,4972.84,-5,42.56,83.0,0
+Scotland,4,Dallas Stadium,7251.11,-6,53.334,149.0,0
+Scotland,5,Guadalajara Stadium,8723.54,-7,63.517,1566.0,0
+Scotland,6,Houston Stadium,7444.91,-6,53.493,15.0,0
+Scotland,7,Kansas City Stadium,6581.86,-6,52.753,273.0,0
+Scotland,8,Los Angeles Stadium,8268.17,-8,72.162,247.0,0
+Scotland,9,Mexico City Stadium,8600.81,-7,63.418,2287.0,0
+Scotland,10,Miami Stadium,6862.87,-5,44.17,12.0,0
+Scotland,11,Monterrey Stadium,8088.15,-7,62.988,549.0,0
+Scotland,12,New York/New Jersey Stadium,5240.85,-5,42.822,9.0,0
+Scotland,13,Philadelphia Stadium,5376.25,-5,42.95,1.0,0
+Scotland,14,San Francisco Bay Area Stadium,8138.6,-8,72.036,1.0,0
+Scotland,15,Seattle Stadium,7190.3,-8,71.045,3.0,0
+Scotland,16,Toronto Stadium,5345.29,-5,42.921,85.0,0
+Senegal,1,Atlanta Stadium,6988.57,-5,44.261,290.0,0
+Senegal,2,BC Place Vancouver,9865.01,-7,64.378,11.0,0
+Senegal,3,Boston Stadium,5953.72,-4,34.768,83.0,0
+Senegal,4,Dallas Stadium,8142.13,-5,45.025,149.0,0
+Senegal,5,Guadalajara Stadium,9017.87,-6,54.642,1566.0,0
+Senegal,6,Houston Stadium,8057.5,-5,44.972,15.0,0
+Senegal,7,Kansas City Stadium,7873.05,-5,44.857,273.0,0
+Senegal,8,Los Angeles Stadium,10045.4,-7,64.505,247.0,0
+Senegal,9,Mexico City Stadium,8620.35,-6,54.372,2287.0,0
+Senegal,10,Miami Stadium,6600.36,-4,35.18,12.0,0
+Senegal,11,Monterrey Stadium,8603.05,-6,54.36,549.0,0
+Senegal,12,New York/New Jersey Stadium,6151.8,-4,34.899,9.0,0
+Senegal,13,Philadelphia Stadium,6228.0,-4,34.948,1.0,0
+Senegal,14,San Francisco Bay Area Stadium,10250.27,-7,64.646,1.0,0
+Senegal,15,Seattle Stadium,9878.26,-7,64.387,3.0,0
+Senegal,16,Toronto Stadium,6638.76,-4,35.203,85.0,0
+South Africa,1,Atlanta Stadium,13562.53,-8,76.121,290.0,0
+South Africa,2,BC Place Vancouver,16418.82,-10,97.062,11.0,0
+South Africa,3,Boston Stadium,12639.3,-7,66.113,83.0,0
+South Africa,4,Dallas Stadium,14680.34,-8,76.755,149.0,0
+South Africa,5,Guadalajara Stadium,15061.2,-9,86.579,1566.0,0
+South Africa,6,Houston Stadium,14504.02,-8,76.658,15.0,0
+South Africa,7,Kansas City Stadium,14529.9,-8,76.672,273.0,0
+South Africa,8,Los Angeles Stadium,16662.28,-10,97.21,247.0,0
+South Africa,9,Mexico City Stadium,14597.17,-9,86.298,2287.0,0
+South Africa,10,Miami Stadium,12946.99,-7,66.281,12.0,0
+South Africa,11,Monterrey Stadium,14895.45,-9,86.48,549.0,0
+South Africa,12,New York/New Jersey Stadium,12833.73,-7,66.219,9.0,0
+South Africa,13,Philadelphia Stadium,12904.58,-7,66.258,1.0,0
+South Africa,14,San Francisco Bay Area Stadium,16926.31,-10,97.367,1.0,0
+South Africa,15,Seattle Stadium,16477.32,-10,97.098,3.0,0
+South Africa,16,Toronto Stadium,13324.27,-7,66.482,85.0,0
+Spain,1,Atlanta Stadium,6942.1,-6,53.073,290.0,0
+Spain,2,BC Place Vancouver,8414.42,-8,72.303,11.0,0
+Spain,3,Boston Stadium,5497.44,-5,43.061,83.0,0
+Spain,4,Dallas Stadium,7953.19,-6,53.889,149.0,0
+Spain,5,Guadalajara Stadium,9307.88,-7,63.971,1566.0,0
+Spain,6,Houston Stadium,8057.16,-6,53.967,15.0,0
+Spain,7,Kansas City Stadium,7383.03,-6,53.442,273.0,0
+Spain,8,Los Angeles Stadium,9349.06,-8,73.145,247.0,0
+Spain,9,Mexico City Stadium,9073.3,-7,63.792,2287.0,0
+Spain,10,Miami Stadium,7089.2,-5,44.332,12.0,0
+Spain,11,Monterrey Stadium,8710.57,-7,63.507,549.0,0
+Spain,12,New York/New Jersey Stadium,5768.64,-5,43.302,9.0,0
+Spain,13,Philadelphia Stadium,5895.29,-5,43.41,1.0,0
+Spain,14,San Francisco Bay Area Stadium,9321.96,-8,73.122,1.0,0
+Spain,15,Seattle Stadium,8511.11,-8,72.394,3.0,0
+Spain,16,Toronto Stadium,6039.37,-5,43.531,85.0,0
+Sweden,1,Atlanta Stadium,7478.38,-7,62.439,290.0,0
+Sweden,2,BC Place Vancouver,7437.37,-9,80.23,11.0,0
+Sweden,3,Boston Stadium,6058.2,-6,52.256,83.0,0
+Sweden,4,Dallas Stadium,8162.37,-7,63.052,149.0,0
+Sweden,5,Guadalajara Stadium,9657.36,-8,73.405,1566.0,0
+Sweden,6,Houston Stadium,8401.73,-7,63.254,15.0,0
+Sweden,7,Kansas City Stadium,7455.66,-7,62.418,273.0,0
+Sweden,8,Los Angeles Stadium,8866.5,-9,81.811,247.0,0
+Sweden,9,Mexico City Stadium,9598.75,-8,73.356,2287.0,0
+Sweden,10,Miami Stadium,8011.95,-6,53.933,12.0,0
+Sweden,11,Monterrey Stadium,9019.28,-8,72.858,549.0,0
+Sweden,12,New York/New Jersey Stadium,6314.58,-6,52.505,9.0,0
+Sweden,13,Philadelphia Stadium,6448.95,-6,52.631,1.0,0
+Sweden,14,San Francisco Bay Area Stadium,8647.48,-9,81.586,1.0,0
+Sweden,15,Seattle Stadium,7592.82,-9,80.416,3.0,0
+Sweden,16,Toronto Stadium,6332.29,-6,52.521,85.0,0
+Switzerland,1,Atlanta Stadium,7469.03,-6,53.512,290.0,0
+Switzerland,2,BC Place Vancouver,8304.08,-8,72.197,11.0,0
+Switzerland,3,Boston Stadium,5995.11,-5,43.494,83.0,0
+Switzerland,4,Dallas Stadium,8366.36,-6,54.193,149.0,0
+Switzerland,5,Guadalajara Stadium,9808.3,-7,64.338,1566.0,0
+Switzerland,6,Houston Stadium,8529.63,-6,54.309,15.0,0
+Switzerland,7,Kansas City Stadium,7724.39,-6,53.714,273.0,0
+Switzerland,8,Los Angeles Stadium,9488.51,-8,73.264,247.0,0
+Switzerland,9,Mexico City Stadium,9640.93,-7,64.217,2287.0,0
+Switzerland,10,Miami Stadium,7775.73,-5,44.794,12.0,0
+Switzerland,11,Monterrey Stadium,9181.91,-7,63.876,549.0,0
+Switzerland,12,New York/New Jersey Stadium,6268.41,-5,43.717,9.0,0
+Switzerland,13,Philadelphia Stadium,6402.06,-5,43.823,1.0,0
+Switzerland,14,San Francisco Bay Area Stadium,9372.42,-8,73.165,1.0,0
+Switzerland,15,Seattle Stadium,8430.66,-8,72.318,3.0,0
+Switzerland,16,Toronto Stadium,6439.31,-5,43.852,85.0,0
+Tunisia,1,Atlanta Stadium,8199.73,-7,63.084,290.0,0
+Tunisia,2,BC Place Vancouver,9395.94,-9,82.333,11.0,0
+Tunisia,3,Boston Stadium,6745.24,-6,52.9,83.0,0
+Tunisia,4,Dallas Stadium,9188.44,-7,63.881,149.0,0
+Tunisia,5,Guadalajara Stadium,10565.74,-8,74.124,1566.0,0
+Tunisia,6,Houston Stadium,9307.03,-7,63.97,15.0,0
+Tunisia,7,Kansas City Stadium,8594.31,-7,63.413,273.0,0
+Tunisia,8,Los Angeles Stadium,10483.53,-9,83.319,247.0,0
+Tunisia,9,Mexico City Stadium,10339.67,-8,73.951,2287.0,0
+Tunisia,10,Miami Stadium,8358.67,-6,54.187,12.0,0
+Tunisia,11,Monterrey Stadium,9961.75,-8,73.653,549.0,0
+Tunisia,12,New York/New Jersey Stadium,7017.86,-6,53.138,9.0,0
+Tunisia,13,Philadelphia Stadium,7146.39,-6,53.247,1.0,0
+Tunisia,14,San Francisco Bay Area Stadium,10408.69,-9,83.254,1.0,0
+Tunisia,15,Seattle Stadium,9513.36,-9,82.445,3.0,0
+Tunisia,16,Toronto Stadium,7263.89,-6,53.345,85.0,0
+Türkiye,1,Atlanta Stadium,12814.99,-11,104.043,290.0,0
+Türkiye,2,BC Place Vancouver,11126.3,-13,121.123,11.0,0
+Türkiye,3,Boston Stadium,11516.05,-10,93.516,83.0,0
+Türkiye,4,Dallas Stadium,13161.74,-11,104.337,149.0,0
+Türkiye,5,Guadalajara Stadium,14537.11,-12,115.014,1566.0,0
+Türkiye,6,Houston Stadium,13488.18,-11,104.606,15.0,0
+Türkiye,7,Kansas City Stadium,12444.98,-11,103.721,273.0,0
+Türkiye,8,Los Angeles Stadium,12853.55,-13,122.999,247.0,0
+Türkiye,9,Mexico City Stadium,14675.6,-12,115.128,2287.0,0
+Türkiye,10,Miami Stadium,13504.41,-10,95.108,12.0,0
+Türkiye,11,Monterrey Stadium,13972.86,-12,114.539,549.0,0
+Türkiye,12,New York/New Jersey Stadium,11749.18,-10,93.716,9.0,0
+Türkiye,13,Philadelphia Stadium,11877.37,-10,93.825,1.0,0
+Türkiye,14,San Francisco Bay Area Stadium,12410.63,-13,122.543,1.0,0
+Türkiye,15,Seattle Stadium,11322.46,-13,121.35,3.0,0
+Türkiye,16,Toronto Stadium,11637.93,-10,93.621,85.0,0
+USA,1,Atlanta Stadium,871.28,-1,6.771,290.0,0
+USA,2,BC Place Vancouver,3790.47,-3,24.722,11.0,0
+USA,3,Boston Stadium,602.73,0,0.0,83.0,0
+USA,4,Dallas Stadium,1898.97,-1,7.55,149.0,0
+USA,5,Guadalajara Stadium,3227.75,-2,16.16,1566.0,0
+USA,6,Houston Stadium,1969.25,-1,7.586,15.0,0
+USA,7,Kansas City Stadium,1505.92,-1,7.318,273.0,0
+USA,8,Los Angeles Stadium,3681.19,-3,24.634,247.0,0
+USA,9,Mexico City Stadium,3044.07,-2,16.043,2287.0,0
+USA,10,Miami Stadium,1488.96,0,0.0,12.0,0
+USA,11,Monterrey Stadium,2622.49,-2,15.745,549.0,0
+USA,12,New York/New Jersey Stadium,329.92,0,0.0,9.0,0
+USA,13,Philadelphia Stadium,195.82,0,0.0,1.0,0
+USA,14,San Francisco Bay Area Stadium,3892.25,-3,24.801,1.0,0
+USA,15,Seattle Stadium,3735.95,-3,24.678,3.0,0
+USA,16,Toronto Stadium,561.89,0,0.0,85.0,0
+Uruguay,1,Atlanta Stadium,8182.23,-2,18.02,290.0,0
+Uruguay,2,BC Place Vancouver,11447.55,-4,37.382,11.0,0
+Uruguay,3,Boston Stadium,8698.19,-1,9.071,83.0,0
+Uruguay,4,Dallas Stadium,8634.74,-2,18.127,149.0,0
+Uruguay,5,Guadalajara Stadium,7935.79,-3,26.938,1566.0,0
+Uruguay,6,Houston Stadium,8276.09,-2,18.042,15.0,0
+Uruguay,7,Kansas City Stadium,9117.43,-2,18.236,273.0,0
+Uruguay,8,Los Angeles Stadium,10024.86,-4,36.852,247.0,0
+Uruguay,9,Mexico City Stadium,7544.2,-3,26.786,2287.0,0
+Uruguay,10,Miami Stadium,7206.13,-1,8.883,12.0,0
+Uruguay,11,Monterrey Stadium,8185.49,-3,27.031,549.0,0
+Uruguay,12,New York/New Jersey Stadium,8616.08,-1,9.062,9.0,0
+Uruguay,13,Philadelphia Stadium,8548.13,-1,9.054,1.0,0
+Uruguay,14,San Francisco Bay Area Stadium,10521.14,-4,37.045,1.0,0
+Uruguay,15,Seattle Stadium,11283.36,-4,37.325,3.0,0
+Uruguay,16,Toronto Stadium,9044.68,-1,9.11,85.0,0
+Uzbekistan,1,Atlanta Stadium,11242.56,-11,102.603,290.0,0
+Uzbekistan,2,BC Place Vancouver,9871.18,-13,119.567,11.0,0
+Uzbekistan,3,Boston Stadium,9929.88,-10,92.034,83.0,0
+Uzbekistan,4,Dallas Stadium,11653.89,-11,102.998,149.0,0
+Uzbekistan,5,Guadalajara Stadium,13081.33,-12,113.748,1566.0,0
+Uzbekistan,6,Houston Stadium,11965.75,-11,103.289,15.0,0
+Uzbekistan,7,Kansas City Stadium,10929.93,-11,102.293,273.0,0
+Uzbekistan,8,Los Angeles Stadium,11590.1,-13,121.654,247.0,0
+Uzbekistan,9,Mexico City Stadium,13170.81,-12,113.83,2287.0,0
+Uzbekistan,10,Miami Stadium,11918.0,-10,93.859,12.0,0
+Uzbekistan,11,Monterrey Stadium,12487.59,-12,113.191,549.0,0
+Uzbekistan,12,New York/New Jersey Stadium,10164.26,-10,92.267,9.0,0
+Uzbekistan,13,Philadelphia Stadium,10292.98,-10,92.393,1.0,0
+Uzbekistan,14,San Francisco Bay Area Stadium,11189.88,-13,121.197,1.0,0
+Uzbekistan,15,Seattle Stadium,10065.33,-13,119.82,3.0,0
+Uzbekistan,16,Toronto Stadium,10064.77,-10,92.169,85.0,0

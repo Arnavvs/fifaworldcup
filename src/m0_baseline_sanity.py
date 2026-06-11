@@ -51,13 +51,17 @@ def calibrate_isotonic(p_val, y_val_idx, p_test):
 
 
 def main():
-    df = pd.read_csv(OUT / "classification_dataset.csv", parse_dates=["date"])
+    import sys
+    fname = sys.argv[1] if len(sys.argv) > 1 else "classification_dataset.csv"
+    tag = fname.replace("classification_dataset", "").replace(".csv", "") or "_v1"
+    df = pd.read_csv(OUT / fname, parse_dates=["date"])
     df = df[df["split"].isin(["train", "val", "test"])].copy()
     df = df.dropna(subset=["home_win_draw_loss"])
     y = df["home_win_draw_loss"].map({c: i for i, c in enumerate(CLASSES)}).values
 
     drop = ["match_id", "date", "team_home", "team_away", "team_id_home",
-            "team_id_away", "split", "home_win_draw_loss"]
+            "team_id_away", "split", "home_win_draw_loss", "tournament", "stage",
+            "sample_weight"]
     feats = [c for c in df.columns if c not in drop]
     X = df[feats].astype(float).values
 
@@ -111,8 +115,23 @@ def main():
     evaluate("blend_raw", p_te)
     evaluate("blend_cal", calibrate_isotonic(p_val, y[va], p_te))
 
-    (OUT / "baseline_metrics.json").write_text(json.dumps(results, indent=2))
-    log.info(f"wrote {OUT/'baseline_metrics.json'}")
+    out_json = OUT / f"baseline_metrics{tag if tag != '_v1' else ''}.json"
+    out_json.write_text(json.dumps(results, indent=2))
+    log.info(f"wrote {out_json}")
+
+    # ledger rows
+    ledger = OUT / "experiments.csv"
+    if not ledger.exists():
+        ledger.write_text("exp_id,date,module,model,features_desc,n_train,logloss_test,"
+                          "brier_test,rps_test,acc_test,ece_test,beats_baseline,decision,notes\n")
+    from datetime import datetime
+    with open(ledger, "a", encoding="utf-8") as f:
+        for name, m in results.items():
+            f.write(f"m0_{name}{tag},{datetime.utcnow():%Y-%m-%d},m0_baseline_sanity,"
+                    f"{name},{fname} ({len(feats)} feats),{int(tr.sum())},"
+                    f"{m['logloss_test']:.4f},{m['brier_test']:.4f},,"
+                    f"{m['acc_test']:.4f},,"
+                    f"{'yes' if m['logloss_test'] < 0.8777 else 'no'},LOG,\n")
 
 
 if __name__ == "__main__":

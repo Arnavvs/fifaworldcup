@@ -1,0 +1,148 @@
+team,qual_pos,qual_pld,qual_pts,qual_ppg,is_wc2026
+England,1,8,24,3.0,True
+Morocco,1,8,24,3.0,True
+Norway,1,8,24,3.0,True
+Tunisia,1,10,28,2.8,True
+Croatia,1,8,22,2.75,True
+France,1,6,16,2.667,True
+Spain,1,6,16,2.667,True
+Egypt,1,10,26,2.6,True
+Ivory Coast,1,10,26,2.6,True
+Algeria,1,10,25,2.5,True
+Germany,1,6,15,2.5,True
+Ghana,1,10,25,2.5,True
+Netherlands,1,8,20,2.5,True
+Senegal,1,10,24,2.4,True
+Austria,1,8,19,2.375,True
+Switzerland,1,6,14,2.333,True
+Cape Verde,1,10,23,2.3,True
+Iran,1,10,23,2.3,True
+Japan,1,10,23,2.3,True
+Belgium,1,8,18,2.25,True
+DR Congo,2,10,22,2.2,True
+South Korea,1,10,22,2.2,True
+Portugal,1,6,13,2.167,True
+Scotland,1,6,13,2.167,True
+Turkey,2,6,13,2.167,True
+Bosnia and Herzegovina,2,8,17,2.125,True
+Argentina,1,18,38,2.111,True
+Uzbekistan,2,10,21,2.1,True
+Curaçao,1,6,12,2.0,True
+Czech Republic,2,8,16,2.0,True
+Panama,1,6,12,2.0,True
+Australia,2,10,19,1.9,True
+Haiti,1,6,11,1.833,True
+South Africa,1,10,18,1.8,True
+Ecuador,2,18,29,1.611,True
+Jordan,2,10,16,1.6,True
+Brazil,5,18,28,1.556,True
+Colombia,3,18,28,1.556,True
+Paraguay,6,18,28,1.556,True
+Uruguay,4,18,28,1.556,True
+Iraq,3,10,15,1.5,True
+Qatar,4,10,13,1.3,True
+Saudi Arabia,3,10,13,1.3,True
+Sweden,4,6,2,0.333,True
+Gabon,2,10,25,2.5,False
+Italy,2,8,18,2.25,False
+Poland,2,8,17,2.125,False
+Burkina Faso,2,10,21,2.1,False
+Slovakia,2,6,12,2.0,False
+Wales,2,8,16,2.0,False
+Cameroon,2,10,19,1.9,False
+Madagascar,2,10,19,1.9,False
+Niger,6,8,15,1.875,False
+Denmark,2,6,11,1.833,False
+Jamaica,2,6,11,1.833,False
+Kosovo,2,6,11,1.833,False
+Mali,3,10,18,1.8,False
+Mozambique,3,10,18,1.8,False
+Uganda,2,10,18,1.8,False
+Albania,2,8,14,1.75,False
+Benin,3,10,17,1.7,False
+Nigeria,2,10,17,1.7,False
+Republic of Ireland,2,6,10,1.667,False
+Ukraine,2,6,10,1.667,False
+North Macedonia,3,8,13,1.625,False
+Romania,3,8,13,1.625,False
+Serbia,3,8,13,1.625,False
+Libya,3,10,16,1.6,False
+Comoros,4,10,15,1.5,False
+Faroe Islands,3,8,12,1.5,False
+Guinea,4,10,15,1.5,False
+Honduras,3,6,9,1.5,False
+Israel,3,8,12,1.5,False
+Liberia,3,10,15,1.5,False
+Namibia,2,10,15,1.5,False
+Northern Ireland,3,6,9,1.5,False
+Sierra Leone,3,10,15,1.5,False
+Suriname,2,6,9,1.5,False
+United Arab Emirates,3,10,15,1.5,False
+Guatemala,3,6,8,1.333,False
+Hungary,3,6,8,1.333,False
+Gambia,3,10,13,1.3,False
+Malawi,4,10,13,1.3,False
+Sudan,3,10,13,1.3,False
+Finland,3,8,10,1.25,False
+Tanzania,3,8,10,1.25,False
+Angola,4,10,12,1.2,False
+Indonesia,4,10,12,1.2,False
+Kenya,4,10,12,1.2,False
+Lesotho,4,10,12,1.2,False
+Costa Rica,3,6,7,1.167,False
+Greece,3,6,7,1.167,False
+Iceland,3,6,7,1.167,False
+Trinidad and Tobago,3,6,7,1.167,False
+Montenegro,4,8,9,1.125,False
+Zambia,4,8,9,1.125,False
+Bolivia,7,18,20,1.111,False
+Equatorial Guinea,5,10,11,1.1,False
+Oman,4,10,11,1.1,False
+Rwanda,5,10,11,1.1,False
+Botswana,5,10,10,1.0,False
+Burundi,5,10,10,1.0,False
+Cyprus,4,8,8,1.0,False
+Guinea-Bissau,4,10,10,1.0,False
+Kazakhstan,4,8,8,1.0,False
+Palestine,5,10,10,1.0,False
+Venezuela,8,18,18,1.0,False
+China,5,10,9,0.9,False
+Ethiopia,5,10,9,0.9,False
+Central African Republic,5,10,8,0.8,False
+Kyrgyzstan,5,10,8,0.8,False
+Togo,4,10,8,0.8,False
+Mauritania,5,10,7,0.7,False
+Nicaragua,4,6,4,0.667,False
+Peru,9,18,12,0.667,False
+Slovenia,3,6,4,0.667,False
+Latvia,4,8,5,0.625,False
+Malta,4,8,5,0.625,False
+Chile,10,18,11,0.611,False
+Bahrain,6,10,6,0.6,False
+Mauritius,5,10,6,0.6,False
+Armenia,4,6,3,0.5,False
+Bulgaria,4,6,3,0.5,False
+El Salvador,4,6,3,0.5,False
+Estonia,4,8,4,0.5,False
+Georgia,3,6,3,0.5,False
+Kuwait,6,10,5,0.5,False
+South Sudan,6,10,5,0.5,False
+Zimbabwe,6,10,5,0.5,False
+Lithuania,5,8,3,0.375,False
+Belarus,4,6,2,0.333,False
+Eswatini,6,10,3,0.3,False
+North Korea,6,10,3,0.3,False
+São Tomé and Príncipe,6,10,3,0.3,False
+Azerbaijan,4,6,1,0.167,False
+Bermuda,4,6,1,0.167,False
+Andorra,5,8,1,0.125,False
+Congo,5,8,1,0.125,False
+Moldova,5,8,1,0.125,False
+Chad,6,10,1,0.1,False
+Djibouti,6,10,1,0.1,False
+Somalia,6,10,1,0.1,False
+Gibraltar,5,8,0,0.0,False
+Liechtenstein,5,8,0,0.0,False
+Luxembourg,4,6,0,0.0,False
+San Marino,5,8,0,0.0,False
+Seychelles,6,10,0,0.0,False
