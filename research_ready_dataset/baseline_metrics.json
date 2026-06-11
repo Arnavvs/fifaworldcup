@@ -1,0 +1,32 @@
+{
+  "elo_only": {
+    "logloss_test": 1.039666002091973,
+    "brier_test": 0.6259984625232522,
+    "acc_test": 0.4878775565488284,
+    "logloss_test_2010plus": 1.039666002091973
+  },
+  "logreg": {
+    "logloss_test": 0.8837853643586498,
+    "brier_test": 0.5189666354676221,
+    "acc_test": 0.5993498577813897,
+    "logloss_test_2010plus": 0.8837853643586498
+  },
+  "histgb": {
+    "logloss_test": 0.8823044689837443,
+    "brier_test": 0.5183098512999416,
+    "acc_test": 0.5981308411214953,
+    "logloss_test_2010plus": 0.8823044689837443
+  },
+  "blend_raw": {
+    "logloss_test": 0.8777132198227882,
+    "brier_test": 0.515503199123816,
+    "acc_test": 0.6001625355546526,
+    "logloss_test_2010plus": 0.8777132198227882
+  },
+  "blend_cal": {
+    "logloss_test": 0.8811116107983926,
+    "brier_test": 0.5150341026928881,
+    "acc_test": 0.6008397670323716,
+    "logloss_test_2010plus": 0.8811116107983926
+  }
+}
