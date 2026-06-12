@@ -42,3 +42,7 @@ Thumbs.db
 research_ready_dataset/match_features_v2.csv
 research_ready_dataset/classification_dataset_v2.csv
 research_ready_dataset/regression_dataset_v2.csv
+
+# model binaries + sim artifacts (regenerable; keep repo docs-only)
+models/
+artifacts/

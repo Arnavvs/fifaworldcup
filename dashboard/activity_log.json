@@ -6,5 +6,25 @@
  {
   "ts": "2026-06-11 21:22 UTC",
   "msg": "f2: market benchmark computed from 228 closing-odds matches"
+ },
+ {
+  "ts": "2026-06-12 07:45 UTC",
+  "msg": "m4 -> done (test LL 0.9143, goal calib within 5%)"
+ },
+ {
+  "ts": "2026-06-12 07:45 UTC",
+  "msg": "m6 -> done (stack test LL 0.8563 raw / 0.8574 cal - new best)"
+ },
+ {
+  "ts": "2026-06-12 07:45 UTC",
+  "msg": "m7 -> done (temperature T=1.099 fitted on val_b)"
+ },
+ {
+  "ts": "2026-06-12 07:45 UTC",
+  "msg": "m8 -> done (50k sims: Argentina 17.5%, Spain 14.6%)"
+ },
+ {
+  "ts": "2026-06-12 07:45 UTC",
+  "msg": "m8 first artifacts run_20260612T0743; champion odds live on dashboard"
  }
 ]

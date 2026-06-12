@@ -1,7 +1,7 @@
 window.PROGRESS = {
- "updated": "2026-06-11 21:24 UTC",
- "run_id": "47c5620",
- "best_logloss": 0.8591,
+ "updated": "2026-06-12 07:45 UTC",
+ "run_id": "5a82843",
+ "best_logloss": 0.8574,
  "elo_coverage": "100%",
  "wc_played": 0,
  "experiments": [
@@ -20,6 +20,22 @@ window.PROGRESS = {
    "beats_baseline": "",
    "decision": "BENCHMARK",
    "notes": "the honest ceiling on big tournaments"
+  },
+  {
+   "exp_id": "m6_stack_cal",
+   "date": "2026-06-12",
+   "module": "m6_stack",
+   "model": "stack(dav+dc+lr+gb)+temp",
+   "features_desc": "v2 features",
+   "n_train": 34497.0,
+   "logloss_test": 0.8574,
+   "brier_test": 0.5033,
+   "rps_test": "",
+   "acc_test": 0.6065,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "KEEP",
+   "notes": "T=1.099 raw=0.8563"
   },
   {
    "exp_id": "m0_blend_raw_v2",
@@ -116,6 +132,22 @@ window.PROGRESS = {
    "beats_baseline": "no",
    "decision": "LOG",
    "notes": ""
+  },
+  {
+   "exp_id": "m4_dixon_coles",
+   "date": "2026-06-12",
+   "module": "m4_dixon_coles",
+   "model": "dixon_coles",
+   "features_desc": "team att/def + decay xi=0.0019",
+   "n_train": 24781.0,
+   "logloss_test": 0.9143,
+   "brier_test": "",
+   "rps_test": "",
+   "acc_test": "",
+   "ece_test": "",
+   "beats_baseline": "no",
+   "decision": "KEEP",
+   "notes": "rho fitted; goal calib h x0.96 a x1.02"
   }
  ],
  "tasks": [
@@ -179,8 +211,8 @@ window.PROGRESS = {
    "id": "m4",
    "sprint": "Sprint 1 \u2014 Ensemble",
    "desc": "Dixon-Coles time-decayed goals model",
-   "status": "todo",
-   "note": "also the simulator goal engine"
+   "status": "done",
+   "note": "test LL 0.9143, goal calib within 5%"
   },
   {
    "id": "m5",
@@ -193,15 +225,15 @@ window.PROGRESS = {
    "id": "m6",
    "sprint": "Sprint 1 \u2014 Ensemble",
    "desc": "Stacking ensemble (time-aware OOF)",
-   "status": "todo",
-   "note": ""
+   "status": "done",
+   "note": "stack test LL 0.8563 raw / 0.8574 cal - new best"
   },
   {
    "id": "m7",
    "sprint": "Sprint 1 \u2014 Ensemble",
    "desc": "Temperature calibration + ECE report",
-   "status": "todo",
-   "note": "isotonic proven to overfit val"
+   "status": "done",
+   "note": "temperature T=1.099 fitted on val_b"
   },
   {
    "id": "BT22",
@@ -214,8 +246,8 @@ window.PROGRESS = {
    "id": "m8",
    "sprint": "Sprint 2 \u2014 Simulator",
    "desc": "48-team Monte-Carlo simulator (groups, best-thirds, bracket)",
-   "status": "todo",
-   "note": "lock played matches"
+   "status": "done",
+   "note": "50k sims: Argentina 17.5%, Spain 14.6%"
   },
   {
    "id": "PENS",
@@ -429,6 +461,26 @@ window.PROGRESS = {
   {
    "ts": "2026-06-11 21:22 UTC",
    "msg": "f2: market benchmark computed from 228 closing-odds matches"
+  },
+  {
+   "ts": "2026-06-12 07:45 UTC",
+   "msg": "m4 -> done (test LL 0.9143, goal calib within 5%)"
+  },
+  {
+   "ts": "2026-06-12 07:45 UTC",
+   "msg": "m6 -> done (stack test LL 0.8563 raw / 0.8574 cal - new best)"
+  },
+  {
+   "ts": "2026-06-12 07:45 UTC",
+   "msg": "m7 -> done (temperature T=1.099 fitted on val_b)"
+  },
+  {
+   "ts": "2026-06-12 07:45 UTC",
+   "msg": "m8 -> done (50k sims: Argentina 17.5%, Spain 14.6%)"
+  },
+  {
+   "ts": "2026-06-12 07:45 UTC",
+   "msg": "m8 first artifacts run_20260612T0743; champion odds live on dashboard"
   }
  ]
 };

@@ -326,3 +326,18 @@
 2026-06-12 02:49:49,078 | INFO    | m0_baseline        | wrote C:\Users\HP\OneDrive\Desktop\worldCup\research_ready_dataset\baseline_metrics_v2.json
 2026-06-12 02:52:24,874 | INFO    | f2_market          | MARKET BENCHMARK: closing-odds log-loss 0.8219 on 97 matches (5 tournaments, 2018-06..2024-07)
 2026-06-12 02:52:24,885 | INFO    | f2_market          | f2 complete; table odds_implied_recent written
+2026-06-12 13:05:21,656 | INFO    | m4_dc              | matches 1990+: 32164
+2026-06-12 13:05:27,510 | INFO    | m4_dc              | [eval] fitted: 232 entities, home_adv=0.310, rho=-0.08, mu=0.031
+2026-06-12 13:05:50,062 | INFO    | m4_dc              | matches 1990+: 32164
+2026-06-12 13:05:55,023 | INFO    | m4_dc              | [eval] fitted: 232 entities, home_adv=0.310, rho=-0.08, mu=0.031
+2026-06-12 13:05:55,325 | INFO    | m4_dc              | TEST log-loss 0.9143 (n=7383) | goal calib home x0.961 away x1.017
+2026-06-12 13:05:55,554 | INFO    | m4_dc              | [trainonly] fitted: 214 entities, home_adv=0.312, rho=-0.03, mu=0.053
+2026-06-12 13:05:56,611 | INFO    | m4_dc              | [deploy] fitted: 243 entities, home_adv=0.217, rho=-0.07, mu=0.086
+2026-06-12 13:05:56,615 | INFO    | m4_dc              | m4 complete (models/m4_eval.pkl, m4_trainonly.pkl, m4_deploy.pkl)
+2026-06-12 13:07:59,775 | INFO    | m6_stack           | DC coverage val 100.0% test 100.0% (missing -> davidson fallback)
+2026-06-12 13:08:13,112 | INFO    | m6_stack           | STACK test LL 0.8563 -> 0.8574 after T=1.099 | Brier 0.5033 | acc 0.607 | bar 0.8591
+2026-06-12 13:08:17,032 | INFO    | m6_stack           | m6 complete (models/ensemble_v1.pkl)
+2026-06-12 13:11:50,616 | INFO    | m8_sim             | groups=12 teams=48 sims=50000
+2026-06-12 13:11:51,117 | INFO    | m8_sim             | running knockout sims...
+2026-06-12 13:13:46,145 | INFO    | m8_sim             | TOP-10 CHAMPION ODDS: Argentina 17.5%, Spain 14.6%, England 6.7%, France 6.3%, Brazil 5.8%, Portugal 5.4%, Colombia 5.3%, Morocco 5.1%, Japan 4.3%, Germany 4.1%
+2026-06-12 13:13:46,145 | INFO    | m8_sim             | m8 complete -> C:\Users\HP\OneDrive\Desktop\worldCup\artifacts\run_20260612T0743

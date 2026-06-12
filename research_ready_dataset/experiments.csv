@@ -6,3 +6,5 @@ m0_histgb_v2,2026-06-11,m0_baseline_sanity,histgb,classification_dataset_v2.csv 
 m0_blend_raw_v2,2026-06-11,m0_baseline_sanity,blend_raw,classification_dataset_v2.csv (44 feats),34497,0.8591,0.5044,,0.6063,,yes,LOG,
 m0_blend_cal_v2,2026-06-11,m0_baseline_sanity,blend_cal,classification_dataset_v2.csv (44 feats),34497,0.8598,0.5040,,0.6067,,yes,LOG,
 market_closing,2026-06-11,f2_market_benchmark,bookmaker_closing,228 intl matches WC18/22 Euro20/24 Copa21,,0.8219,,,,,n/a,BENCHMARK,the honest ceiling on big tournaments
+m4_dixon_coles,2026-06-12,m4_dixon_coles,dixon_coles,team att/def + decay xi=0.0019,24781,0.9143,,,,,no,KEEP,rho fitted; goal calib h x0.96 a x1.02
+m6_stack_cal,2026-06-12,m6_stack,stack(dav+dc+lr+gb)+temp,v2 features,34497,0.8574,0.5033,,0.6065,,yes,KEEP,T=1.099 raw=0.8563
