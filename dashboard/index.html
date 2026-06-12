@@ -59,6 +59,12 @@
 <div class="sub" id="meta">loading…</div>
 <div class="meta-chips" id="chips"></div>
 
+<h2>📡 Live standings (SofaScore)</h2>
+<div class="ggrid" id="live-standings"></div>
+
+<h2>🏅 SofaScore power rankings</h2>
+<div class="champ" id="power-rank"></div>
+
 <h2>🥇 Champion probability (50,000 simulated tournaments)</h2>
 <div class="champ" id="champ"></div>
 
@@ -86,10 +92,36 @@
 <script src="data/history_data.js"></script>
 <script src="data/entropy_data.js"></script>
 <script src="data/scorelines_data.js"></script>
+<script src="data/sofascore_data.js"></script>
 <script>
 const S = window.SIM || {};
+const SS = window.SOFASCORE || {};
 function esc(s){return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
 function pct(x){return (100*x).toFixed(1)+'%'}
+
+// live standings from SofaScore
+const liveStandings = SS.standings || {};
+document.getElementById('live-standings').innerHTML = Object.keys(liveStandings).sort().map(g => {
+  const rows = liveStandings[g];
+  const anyPlayed = rows.some(r => r.mp > 0);
+  return `<div class="gcard"><h3>${esc(g)}${anyPlayed ? ' <span style="color:var(--green);font-size:11px">● LIVE</span>' : ''}</h3><table>
+    <tr><th>team</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>Pts</th></tr>${
+    rows.map(r => `<tr style="${r.pts > 0 ? 'color:var(--green)' : ''}">
+      <td>${esc(r.team)}</td><td>${r.mp}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td>
+      <td>${r.gf}</td><td>${r.ga}</td><td><b>${r.pts}</b></td></tr>`).join('')}</table></div>`;
+}).join('');
+
+// power rankings (top 15)
+const pr = (SS.power_rankings || []).slice(0, 15);
+if (pr.length) {
+  const maxPts = pr[0].points;
+  document.getElementById('power-rank').innerHTML = pr.map(r => `
+    <div class="crow"><div class="name">#${r.rank} ${esc(r.team)}</div>
+    <div class="bar-bg"><div class="bar" style="width:${100*r.points/maxPts}%;background:linear-gradient(90deg,var(--blue),var(--green))"></div></div>
+    <div class="pct">${r.points}</div></div>`).join('');
+} else {
+  document.getElementById('power-rank').innerHTML = '<div style="color:var(--dim)">Run scrapers/sofascore_test.py to fetch power rankings</div>';
+}
 
 // meta
 const meta=S.meta||{};
