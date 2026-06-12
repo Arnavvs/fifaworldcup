@@ -256,6 +256,9 @@ def main():
     }
     (run_dir / "sim_results.json").write_text(json.dumps(out, indent=1))
     shutil.copy(run_dir / "sim_results.json", DASH / "sim_results.json")
+    # JS wrapper so dashboard pages work from file:// (fetch of local json is CORS-blocked)
+    (ROOT / "dashboard" / "sim_data.js").write_text(
+        "window.SIM = " + json.dumps(out) + ";", encoding="utf-8")
 
     hist = ART / "prediction_history.csv"
     new = not hist.exists()

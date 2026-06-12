@@ -1,6 +1,6 @@
 window.PROGRESS = {
- "updated": "2026-06-12 07:45 UTC",
- "run_id": "5a82843",
+ "updated": "2026-06-12 07:52 UTC",
+ "run_id": "7f8d1a7",
  "best_logloss": 0.8574,
  "elo_coverage": "100%",
  "wc_played": 0,
@@ -481,6 +481,10 @@ window.PROGRESS = {
   {
    "ts": "2026-06-12 07:45 UTC",
    "msg": "m8 first artifacts run_20260612T0743; champion odds live on dashboard"
+  },
+  {
+   "ts": "2026-06-12 07:52 UTC",
+   "msg": "dashboard/index.html simulation showcase built (champion bars, reach table, group forecasts, 72 match cards, chaos gauge)"
   }
  ]
 };
