@@ -10,3 +10,4 @@ m4_dixon_coles,2026-06-12,m4_dixon_coles,dixon_coles,team att/def + decay xi=0.0
 m6_stack_cal,2026-06-12,m6_stack,stack(dav+dc+lr+gb)+temp,v2 features,34497,0.8574,0.5033,,0.6065,,yes,KEEP,T=1.099 raw=0.8563
 PENS_logistic,2026-06-12,m8_simulate,penalty_logistic,shootouts.csv 572 joined,572,,,,,,KEEP,logistic p=sigmoid(0.0185+0.6265*|elo|/400); shift<1pp
 m9_entropy,2026-06-12,m9_entropy,entropy_engine,davidson+dixon sources,44563,,,,,,KEEP,8 WC tournaments 1994-2022; 2022 most chaotic
+BT22,2026-06-12,bt_backtest,blend_0.5dc_0.5dav,wc2022 freeze,64,1.0513,,,,,yes,KEEP,Argentina rank=2 P=24.8%; market=0.7273089186922294
