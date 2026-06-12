@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WC2026 — Scoreline Predictions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--txt:#e6edf3;--dim:#8b949e;
+        --green:#3fb950;--amber:#d29922;--red:#f85149;--blue:#58a6ff;--purple:#bc8cff;--gold:#e3b341}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font:14px/1.5 'Segoe UI',system-ui,sans-serif;padding:24px;max-width:1400px;margin:auto}
+  h1{font-size:24px} h2{font-size:15px;margin:30px 0 12px;color:var(--blue);text-transform:uppercase;letter-spacing:.08em}
+  .sub{color:var(--dim);font-size:13px;margin:4px 0 16px}
+  nav a{color:var(--blue);text-decoration:none;margin-right:16px;font-size:13px}
+
+  .controls{margin-bottom:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  select,input{background:var(--card);color:var(--txt);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:13px}
+
+  .match-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(600px,1fr));gap:16px}
+  .mcard{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color .2s}
+  .mcard:hover{border-color:var(--blue)}
+  .mcard .header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .mcard .teams{font-weight:700;font-size:15px}
+  .mcard .meta{color:var(--dim);font-size:12px}
+  .mcard .lock{color:var(--green);font-size:11px}
+
+  /* Heatmap */
+  .heatmap{display:inline-grid;gap:1px;margin:8px 0}
+  .hm-cell{width:46px;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;
+           font-weight:600;border-radius:3px;cursor:default}
+  .hm-label{width:46px;height:28px;display:flex;align-items:center;justify-content:center;font-size:11px;
+            color:var(--dim);font-weight:600}
+
+  /* Score list */
+  .scorelist{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin:8px 0}
+  .scorelist .sl{background:#21262d;border-radius:6px;padding:6px 8px;text-align:center}
+  .scorelist .sl .score{font-weight:700;font-size:14px}
+  .scorelist .sl .pct{color:var(--dim);font-size:12px}
+  .scorelist .sl.top{background:#1a3a2a;border:1px solid var(--green)}
+
+  /* Market lines */
+  .markets{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:6px;margin:8px 0}
+  .market{background:#21262d;border-radius:8px;padding:8px;text-align:center}
+  .market .label{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+  .market .val{font-size:16px;font-weight:700;margin-top:2px}
+  .market .val.high{color:var(--green)} .market .val.mid{color:var(--amber)} .market .val.low{color:var(--red)}
+
+  /* Expected goals bar */
+  .xg-bar{display:flex;height:24px;border-radius:6px;overflow:hidden;margin:6px 0;font-size:0}
+  .xg-home{background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff}
+  .xg-away{background:var(--purple);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff}
+  .xg-legend{display:flex;justify-content:space-between;font-size:12px;color:var(--dim)}
+
+  footer{margin-top:30px;color:var(--dim);font-size:12px}
+</style>
+</head>
+<body>
+<h1>Scoreline Predictions</h1>
+<nav>
+  <a href="index.html">Simulations</a>
+  <a href="bracket.html">Bracket</a>
+  <a href="entropy.html">Entropy</a>
+  <a href="scorelines.html">Scorelines</a>
+  <a href="progress.html">Tracker</a>
+  <a href="https://github.com/Arnavvs/fifaworldcup" target="_blank">GitHub</a>
+</nav>
+<div class="sub" id="meta">loading...</div>
+
+<div class="controls">
+  <label>Group: <select id="gsel" onchange="render()"><option value="">all</option></select></label>
+  <label>Sort: <select id="sort" onchange="render()">
+    <option value="match_number">match order</option>
+    <option value="most_likely_prob">highest confidence</option>
+    <option value="over_2_5">most goals expected</option>
+    <option value="btts">BTTS likelihood</option>
+  </select></label>
+</div>
+
+<div class="match-grid" id="grid"></div>
+
+<footer id="foot"></footer>
+
+<script src="data/scorelines_data.js"></script>
+<script>
+const S = window.SCORELINES || {};
+const matches = S.matches || [];
+
+function esc(s){return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function pct(x){return (100*x).toFixed(1)+'%'}
+
+// Meta
+const meta = S.meta || {};
+document.getElementById('meta').textContent =
+  `${meta.as_of||'?'} · method: ${meta.method||'?'} · ${meta.n_matches} matches · max ${meta.max_goals_display} goals shown`;
+
+// Group filter
+const groups = [...new Set(matches.map(m=>m.group).filter(Boolean))].sort();
+const gsel = document.getElementById('gsel');
+groups.forEach(g=>{const o=document.createElement('option');o.value=g;o.textContent=g;gsel.appendChild(o)});
+
+function heatColor(p, maxP) {
+  if (p <= 0) return 'rgba(0,0,0,0)';
+  const intensity = Math.min(p / Math.max(maxP, 0.01), 1);
+  const r = Math.round(22 + intensity * 40);
+  const g = Math.round(27 + intensity * 120);
+  const b = Math.round(34 + intensity * 200);
+  return `rgb(${r},${g},${b})`;
+}
+
+function valClass(v, thresholds) {
+  if (v >= thresholds[0]) return 'high';
+  if (v >= thresholds[1]) return 'mid';
+  return 'low';
+}
+
+function renderMatch(m) {
+  const maxP = Math.max(...m.matrix.flat());
+  const d = m.matrix.length;
+
+  // Heatmap
+  let hm = `<div class="heatmap" style="grid-template-columns:repeat(${d+1},46px)">`;
+  hm += `<div class="hm-label"></div>`;
+  for (let a=0;a<d;a++) hm += `<div class="hm-label">${esc(m.away)} ${a}</div>`;
+  for (let h=0;h<d;h++) {
+    hm += `<div class="hm-label">${esc(m.home)} ${h}</div>`;
+    for (let a=0;a<d;a++) {
+      const p = m.matrix[h][a];
+      const bg = heatColor(p, maxP);
+      const txt = p >= 0.005 ? (100*p).toFixed(1) : '';
+      hm += `<div class="hm-cell" style="background:${bg}" title="${h}-${a}: ${pct(p)}">${txt}</div>`;
+    }
+  }
+  hm += '</div>';
+
+  // Top scorelines
+  let sl = '<div class="scorelist">';
+  m.top_scorelines.slice(0,10).forEach((s,i)=>{
+    sl += `<div class="sl${i===0?' top':''}"><div class="score">${s.score}</div><div class="pct">${pct(s.prob)}</div></div>`;
+  });
+  sl += '</div>';
+
+  // Markets
+  const mk = `<div class="markets">
+    <div class="market"><div class="label">O1.5</div><div class="val ${valClass(m.over_1_5,[0.7,0.5])}">${pct(m.over_1_5)}</div></div>
+    <div class="market"><div class="label">O2.5</div><div class="val ${valClass(m.over_2_5,[0.6,0.4])}">${pct(m.over_2_5)}</div></div>
+    <div class="market"><div class="label">O3.5</div><div class="val ${valClass(m.over_3_5,[0.4,0.25])}">${pct(m.over_3_5)}</div></div>
+    <div class="market"><div class="label">BTTS</div><div class="val ${valClass(m.btts,[0.6,0.4])}">${pct(m.btts)}</div></div>
+    <div class="market"><div class="label">CS ${esc(m.home)}</div><div class="val">${pct(m.clean_sheet_home)}</div></div>
+    <div class="market"><div class="label">CS ${esc(m.away)}</div><div class="val">${pct(m.clean_sheet_away)}</div></div>
+  </div>`;
+
+  // xG bar
+  const total = m.exp_home_goals + m.exp_away_goals;
+  const hPct = total > 0 ? (m.exp_home_goals/total*100) : 50;
+  const xg = `<div class="xg-bar">
+    <div class="xg-home" style="width:${hPct}%">${m.exp_home_goals}</div>
+    <div class="xg-away" style="width:${100-hPct}%">${m.exp_away_goals}</div>
+  </div>
+  <div class="xg-legend"><span>${esc(m.home)} xG</span><span>total ${total.toFixed(2)}</span><span>${esc(m.away)} xG</span></div>`;
+
+  return `<div class="mcard">
+    <div class="header">
+      <div><div class="teams">#${m.match_number} ${esc(m.home)} vs ${esc(m.away)}</div>
+        <div class="meta">${esc(m.group||'')} · most likely: <b>${m.most_likely}</b> (${pct(m.most_likely_prob)})</div></div>
+      ${m.locked?'<span class="lock">played</span>':''}
+    </div>
+    ${xg}${mk}
+    <h2 style="margin:12px 0 4px;font-size:13px">Top Scorelines</h2>
+    ${sl}
+    <details><summary style="color:var(--dim);font-size:12px;cursor:pointer;margin-top:8px">Score Matrix Heatmap</summary>${hm}</details>
+  </div>`;
+}
+
+function render() {
+  const gf = gsel.value;
+  const sortKey = document.getElementById('sort').value;
+  let filtered = matches.filter(m => !gf || m.group === gf);
+
+  if (sortKey === 'most_likely_prob') filtered.sort((a,b) => b.most_likely_prob - a.most_likely_prob);
+  else if (sortKey === 'over_2_5') filtered.sort((a,b) => b.over_2_5 - a.over_2_5);
+  else if (sortKey === 'btts') filtered.sort((a,b) => b.btts - a.btts);
+  else filtered.sort((a,b) => a.match_number - b.match_number);
+
+  document.getElementById('grid').innerHTML = filtered.map(renderMatch).join('');
+}
+
+render();
+document.getElementById('foot').textContent =
+  `Scoreline model: Dixon-Coles score matrix tilted by ensemble W/D/L marginals. ${matches.length} group-stage matches.`;
+</script>
+</body>
+</html>

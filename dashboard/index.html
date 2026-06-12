@@ -54,7 +54,7 @@
 </head>
 <body>
 <h1>🏆 World Cup 2026 — Prediction Dashboard</h1>
-<nav><a href="index.html">Simulations</a><a href="bracket.html">Bracket</a><a href="entropy.html">Entropy</a><a href="progress.html">Engineering tracker</a>
+<nav><a href="index.html">Simulations</a><a href="bracket.html">Bracket</a><a href="entropy.html">Entropy</a><a href="scorelines.html">Scorelines</a><a href="progress.html">Engineering tracker</a>
 <a href="https://github.com/Arnavvs/fifaworldcup" target="_blank">GitHub</a></nav>
 <div class="sub" id="meta">loading…</div>
 <div class="meta-chips" id="chips"></div>
@@ -85,6 +85,7 @@
 <script src="sim_data.js"></script>
 <script src="data/history_data.js"></script>
 <script src="data/entropy_data.js"></script>
+<script src="data/scorelines_data.js"></script>
 <script>
 const S = window.SIM || {};
 function esc(s){return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
@@ -125,11 +126,21 @@ document.getElementById('groups').innerHTML=Object.keys(G).sort().map(g=>{
 const sel=document.getElementById('gsel');
 [...new Set((S.match_probs||[]).map(m=>m.group))].sort().forEach(g=>{
   const o=document.createElement('option');o.value=g;o.textContent=g;sel.appendChild(o);});
+// scoreline lookup
+const SL = window.SCORELINES || {};
+const slMap = {};
+(SL.matches||[]).forEach(m => { slMap[m.match_number] = m; });
+
 function renderMatches(){
   const f=sel.value;
   document.getElementById('matches').innerHTML=(S.match_probs||[])
    .filter(m=>!f||m.group===f).map(m=>{
     const [pl,pd,pw]=m.p;
+    const sl = slMap[m.match_number];
+    const slHtml = sl ? `<div class="xg" style="margin-top:5px">
+      <span style="color:var(--gold)">predicted: <b>${esc(sl.most_likely)}</b> (${pct(sl.most_likely_prob)})</span>
+      · O2.5 ${pct(sl.over_2_5)} · BTTS ${pct(sl.btts)}
+      · <a href="scorelines.html" style="color:var(--blue)">details</a></div>` : '';
     return `<div class="mcard">
       <div class="vs"><span>#${m.match_number} · ${esc(m.group||'')}</span>
         ${m.locked?'<span class="lock">✓ played</span>':''}</div>
@@ -139,7 +150,8 @@ function renderMatches(){
         <div class="pl" style="width:${100*pl}%"></div></div>
       <div class="plegend"><span>${esc(m.home)} ${pct(pw)}</span><span>draw ${pct(pd)}</span>
         <span>${esc(m.away)} ${pct(pl)}</span></div>
-      <div class="xg">expected goals ${m.exp_goals[0]} – ${m.exp_goals[1]}</div></div>`;
+      <div class="xg">expected goals ${m.exp_goals[0]} – ${m.exp_goals[1]}</div>
+      ${slHtml}</div>`;
   }).join('');
 }
 renderMatches();

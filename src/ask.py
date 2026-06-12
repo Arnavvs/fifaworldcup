@@ -7,6 +7,7 @@ Usage:
   python ask.py group <A..L>
   python ask.py match <match_number>
   python ask.py scorers [--top N]
+  python ask.py scoreline <match_number>
   python ask.py chaos
   python ask.py status
 
@@ -153,6 +154,37 @@ def cmd_chaos(args):
     }, default=str)
 
 
+def cmd_scoreline(args):
+    if not args:
+        return json.dumps({"error": "match_number required"})
+    n = int(args[0])
+    data = None
+    runs = sorted((ROOT / "artifacts").glob("run_*"))
+    if runs:
+        sf = runs[-1] / "scorelines.json"
+        if sf.exists():
+            data = json.loads(sf.read_text(encoding="utf-8"))
+    if not data:
+        return json.dumps({"error": "scoreline model not yet built"})
+    for m in data.get("matches", []):
+        if m["match_number"] == n:
+            return json.dumps({
+                "match_number": n,
+                "home": m["home"], "away": m["away"],
+                "most_likely": m["most_likely"],
+                "most_likely_prob": m["most_likely_prob"],
+                "top_scorelines": m["top_scorelines"],
+                "exp_home_goals": m["exp_home_goals"],
+                "exp_away_goals": m["exp_away_goals"],
+                "over_1_5": m["over_1_5"],
+                "over_2_5": m["over_2_5"],
+                "over_3_5": m["over_3_5"],
+                "btts": m["btts"],
+                "run_id": data.get("meta", {}).get("as_of", "?"),
+            }, default=str)
+    return json.dumps({"error": f"match {n} not found in scorelines"})
+
+
 def cmd_status(args):
     sim = latest_sim()
     meta = sim.get("meta", {})
@@ -180,6 +212,8 @@ def main():
         print(cmd_match(args))
     elif cmd == "scorers":
         print(cmd_scorers(args))
+    elif cmd == "scoreline":
+        print(cmd_scoreline(args))
     elif cmd == "chaos":
         print(cmd_chaos(args))
     elif cmd == "status":
