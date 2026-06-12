@@ -91,18 +91,34 @@ def backtest():
     nu, H = res.x
     log.info(f"Davidson refit: nu={nu:.3f} H={H:.0f}")
 
+    # ---- Build ELO lookup for WC2022 teams ----
+    con = sqlite3.connect(DB_PATH)
+    elo_wc = pd.read_sql("""
+        SELECT m.match_id, m.home_team, m.away_team, e.elo_home_pre, e.elo_away_pre
+        FROM matches m JOIN elo_match e ON m.match_id = e.match_id
+        WHERE m.date >= '2022-11-20' AND m.date <= '2022-12-20'
+          AND m.competition LIKE '%World Cup%'
+    """, con)
+    con.close()
+    elo_pre = {}
+    for _, er in elo_wc.iterrows():
+        elo_pre.setdefault(er["home_team"], er["elo_home_pre"])
+        elo_pre.setdefault(er["away_team"], er["elo_away_pre"])
+
+    def davidson_probs(team_h, team_a, neutral):
+        eh = elo_pre.get(team_h, 1500)
+        ea = elo_pre.get(team_a, 1500)
+        dr = (eh - ea) + (0 if neutral else H)
+        pi = 10 ** (dr / 400.0)
+        sq = np.sqrt(pi)
+        D = pi + 1.0 + nu * sq
+        return np.clip(np.array([1.0 / D, nu * sq / D, pi / D]), 1e-12, 1)
+
     # ---- 3. Blend probs for WC2022 matches ----
     P = np.zeros((len(wc22), 3))
     for i, r in wc22.iterrows():
         dc_p, _, _ = wdl_probs(dc_model, r["h"], r["a"], int(r["neutral"]))
-        # Davidson
-        dr = (r.get("elo_home_pre", 1500) - r.get("elo_away_pre", 1500)) + (0 if r["neutral"] else H)
-        pi = 10 ** (dr / 400.0)
-        sq = np.sqrt(pi)
-        D = pi + 1.0 + nu * sq
-        dav_p = np.array([1.0 / D, nu * sq / D, pi / D])
-        dav_p = np.clip(dav_p, 1e-12, 1)
-        # Blend
+        dav_p = davidson_probs(r["home_team"], r["away_team"], r["neutral"])
         P[i] = 0.5 * dc_p + 0.5 * dav_p
 
     # Actual outcomes
@@ -214,12 +230,7 @@ def backtest():
         r16_winners = []
         for _, r in r16.iterrows():
             dc_p, _, _ = wdl_probs(dc_model, r["h"], r["a"], int(r["neutral"]))
-            dr = (r.get("elo_home_pre", 1500) - r.get("elo_away_pre", 1500)) + (0 if r["neutral"] else H)
-            pi = 10 ** (dr / 400.0)
-            sq = np.sqrt(pi)
-            D = pi + 1.0 + nu * sq
-            dav_p = np.array([1.0 / D, nu * sq / D, pi / D])
-            dav_p = np.clip(dav_p, 1e-12, 1)
+            dav_p = davidson_probs(r["home_team"], r["away_team"], r["neutral"])
             p = 0.5 * dc_p + 0.5 * dav_p
             # Sample outcome
             out = rng.choice(3, p=p)
@@ -238,11 +249,8 @@ def backtest():
         qf_pairs = [(r16_winners[i], r16_winners[i+1]) for i in range(0, 8, 2)]
         qf_winners = []
         for h, a in qf_pairs:
-            # We need to know who was home in the actual QF
-            # For simplicity, use the first team as home
             dc_p, _, _ = wdl_probs(dc_model, h, a, 1)
-            # No actual elo for these teams, use default
-            dav_p = np.array([1/3, 1/3, 1/3])
+            dav_p = davidson_probs(h, a, True)
             p = 0.5 * dc_p + 0.5 * dav_p
             out = rng.choice(3, p=p)
             if out == 2:
@@ -260,7 +268,8 @@ def backtest():
         sf_winners = []
         for h, a in sf_pairs:
             dc_p, _, _ = wdl_probs(dc_model, h, a, 1)
-            p = 0.5 * dc_p + 0.5 * np.array([1/3, 1/3, 1/3])
+            dav_p = davidson_probs(h, a, True)
+            p = 0.5 * dc_p + 0.5 * dav_p
             out = rng.choice(3, p=p)
             if out == 2:
                 sf_winners.append(h)
@@ -274,7 +283,8 @@ def backtest():
 
         # Final
         dc_p, _, _ = wdl_probs(dc_model, sf_winners[0], sf_winners[1], 1)
-        p = 0.5 * dc_p + 0.5 * np.array([1/3, 1/3, 1/3])
+        dav_p = davidson_probs(sf_winners[0], sf_winners[1], True)
+        p = 0.5 * dc_p + 0.5 * dav_p
         out = rng.choice(3, p=p)
         if out == 2:
             champ = sf_winners[0]

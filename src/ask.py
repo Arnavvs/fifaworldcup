@@ -96,6 +96,8 @@ def cmd_group(args):
     g = args[0].upper()
     sim = latest_sim()
     tables = sim.get("group_tables_expected", {})
+    if g not in tables and f"Group {g}" in tables:
+        g = f"Group {g}"
     if g not in tables:
         return json.dumps({"error": f"group {g} not found"})
     return json.dumps({
@@ -126,8 +128,18 @@ def cmd_scorers(args):
     top = 20
     if args and args[0] == "--top":
         top = int(args[1]) if len(args) > 1 else 20
-    # scorers.json not yet built
-    return json.dumps({"error": "scorers model not yet built", "top": top})
+    data = None
+    runs = sorted((ROOT / "artifacts").glob("run_*"))
+    if runs:
+        sf = runs[-1] / "scorers.json"
+        if sf.exists():
+            data = json.loads(sf.read_text(encoding="utf-8"))
+    if not data or "scorers" not in data:
+        return json.dumps({"error": "scorers model not yet built"})
+    return json.dumps({
+        "scorers": data["scorers"][:top],
+        "run_id": data.get("meta", {}).get("as_of", "?"),
+    }, default=str)
 
 
 def cmd_chaos(args):

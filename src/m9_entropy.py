@@ -93,9 +93,6 @@ def compute_entropy_match():
 
 def compute_chaos_history(m, ddf):
     """Compute chaos_history.json for each WC 1994-2022."""
-    # Filter WC matches (not qualifiers)
-    wc_mask = m["date"].str.contains("FIFA World Cup", na=False, regex=False)
-    # Actually the competition column is not in the m dataframe, let me get it
     con = sqlite3.connect(DB_PATH)
     wc = pd.read_sql("""
         SELECT match_id, date, competition, home_team, away_team, home_score, away_score

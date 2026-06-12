@@ -22,6 +22,8 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+import re
+
 import numpy as np
 import pandas as pd
 import requests
@@ -93,7 +95,6 @@ def fetch_wikipedia_group(group: str) -> pd.DataFrame:
             for _, r in tbl.iterrows():
                 vals = [str(v) for v in r.values]
                 for i, v in enumerate(vals):
-                    import re
                     m = re.search(r"(\d+)[–-](\d+)", v)
                     if m:
                         home_score = int(m.group(1))
