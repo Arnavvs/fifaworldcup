@@ -133,18 +133,25 @@
   "note": "Golden Boot heuristic: Kane 1.06, Messi 0.91, Haaland 0.90"
  },
  {
+  "id": "m11",
+  "sprint": "Sprint 4 \u2014 Products",
+  "desc": "Scoreline prediction model (DC tilted by ensemble W/D/L)",
+  "status": "done",
+  "note": "72 matches, 7x7 matrices, O/U, BTTS, scorelines.html + ask.py scoreline"
+ },
+ {
   "id": "DASH",
   "sprint": "Sprint 4 \u2014 Products",
-  "desc": "Public dashboard pages (groups/bracket/entropy/scorers)",
+  "desc": "Public dashboard pages (groups/bracket/entropy/scorers/scorelines)",
   "status": "done",
-  "note": "entropy page, bracket page, trajectory chart"
+  "note": "6 pages: index, bracket, entropy, scorelines, progress + nav links"
  },
  {
   "id": "ASK",
   "sprint": "Sprint 4 \u2014 Products",
   "desc": "ask.py JSON CLI + CLAUDE.md for LLM access",
   "status": "done",
-  "note": "ask.py JSON CLI, 7 subcommands, valid JSON output, CLAUDE.md written"
+  "note": "ask.py JSON CLI, 8 subcommands including scoreline, valid JSON output"
  },
  {
   "id": "D-ODDS",
