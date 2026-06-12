@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WC2026 — Entropy & Chaos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--txt:#e6edf3;--dim:#8b949e;
+        --green:#3fb950;--amber:#d29922;--red:#f85149;--blue:#58a6ff;--purple:#bc8cff;--gold:#e3b341}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font:14px/1.5 'Segoe UI',system-ui,sans-serif;padding:24px;max-width:1280px;margin:auto}
+  h1{font-size:24px} h2{font-size:15px;margin:30px 0 12px;color:var(--blue);text-transform:uppercase;letter-spacing:.08em}
+  .sub{color:var(--dim);font-size:13px;margin:4px 0 16px}
+  nav a{color:var(--blue);text-decoration:none;margin-right:16px;font-size:13px}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  th,td{padding:6px 10px;border-bottom:1px solid var(--border);font-size:13px;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  th{background:#1c2129;color:var(--dim)} tr:last-child td{border-bottom:none}
+  .gcard{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:10px}
+  .gcard h3{font-size:13px;color:var(--gold);margin-bottom:8px}
+  .surprisal-row{display:grid;grid-template-columns:60px 120px 120px 80px 80px auto;gap:8px;padding:4px 0;font-size:12.5px;border-bottom:1px solid var(--border)}
+  .surprisal-row:last-child{border-bottom:none}
+  footer{margin-top:30px;color:var(--dim);font-size:12px}
+</style>
+</head>
+<body>
+<h1>🌪 Entropy & Chaos</h1>
+<nav><a href="index.html">Simulations</a><a href="progress.html">Engineering tracker</a></nav>
+<div class="sub" id="meta">loading…</div>
+
+<h2>📊 Historical WC chaos ranking (most → least chaotic)</h2>
+<div id="history"></div>
+
+<h2>🔮 2026 group-stage chaos forecast (expected ΣH)</h2>
+<div id="groups"></div>
+
+<h2>📈 Realized surprisal log (played matches)</h2>
+<div id="realized"></div>
+
+<footer id="foot"></footer>
+
+<script src="data/entropy_data.js"></script>
+<script>
+const E = window.ENTROPY || {};
+function esc(s){return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+
+// meta
+document.getElementById('meta').textContent = `updated: ${E.updated?.slice(0,16) || '?'}`;
+
+// history table
+const hist = E.history || [];
+const histDiv = document.getElementById('history');
+if (hist.length === 0) {
+  histDiv.innerHTML = '<div style="color:var(--dim)">No historical data available.</div>';
+} else {
+  histDiv.innerHTML = `<table><thead><tr><th>year</th><th>n</th><th>ΣI</th><th>ΣH</th><th>ΣX</th><th>mean I</th><th>top shock</th></tr></thead><tbody>
+    ${hist.map((t,i)=>`<tr>
+      <td>${t.year}${i===0?' 🥇':i===1?' 🥈':i===2?' 🥉':''}</td>
+      <td>${t.n_matches}</td>
+      <td>${t.sum_I.toFixed(1)}</td>
+      <td>${t.sum_H.toFixed(1)}</td>
+      <td>${t.sum_X.toFixed(1)}</td>
+      <td>${t.mean_I.toFixed(3)}</td>
+      <td>${esc(t.top5_surprisal?.[0]?.home)} ${esc(t.top5_surprisal?.[0]?.score)} ${esc(t.top5_surprisal?.[0]?.away)} (I=${t.top5_surprisal?.[0]?.I})</td>
+    </tr>`).join('')}
+  </tbody></table>`;
+}
+
+// group chaos
+const gc = E.group_chaos_2026 || {};
+const groupsDiv = document.getElementById('groups');
+const groupEntries = Object.entries(gc).sort((a,b)=>b[1]-a[1]);
+if (groupEntries.length === 0) {
+  groupsDiv.innerHTML = '<div style="color:var(--dim)">No group forecast available.</div>';
+} else {
+  groupsDiv.innerHTML = groupEntries.map(([g, h])=>`
+    <div class="gcard"><h3>Group ${esc(g)}</h3>
+    <div>Expected total entropy: <b>${h.toFixed(1)}</b> nats</div>
+    </div>`).join('');
+}
+
+// realized surprisal
+const real = E.realized || [];
+const realDiv = document.getElementById('realized');
+if (real.length === 0) {
+  realDiv.innerHTML = '<div style="color:var(--dim)">No played matches yet.</div>';
+} else {
+  realDiv.innerHTML = `<div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px">
+    <div class="surprisal-row" style="font-weight:600;color:var(--dim)">
+      <span>match</span><span>home</span><span>away</span><span>outcome</span><span>p(obs)</span><span>surprisal I</span>
+    </div>
+    ${real.map(r=>{
+      const out = r.outcome==2 ? 'H' : r.outcome==1 ? 'D' : 'A';
+      const color = r.surprisal > 1.5 ? 'var(--red)' : r.surprisal > 0.8 ? 'var(--amber)' : 'var(--green)';
+      return `<div class="surprisal-row">
+        <span>#${r.match_number}</span>
+        <span>${esc(r.home)}</span>
+        <span>${esc(r.away)}</span>
+        <span>${out}</span>
+        <span>${r.p_outcome.toFixed(3)}</span>
+        <span style="color:${color}">${r.surprisal.toFixed(2)}</span>
+      </div>`;
+    }).join('')}
+    <div style="margin-top:8px;color:var(--dim);font-size:12px">Cumulative ΣI: <b>${real.reduce((s,r)=>s+r.surprisal,0).toFixed(2)}</b> nats</div>
+  </div>`;
+}
+
+document.getElementById('foot').textContent = `Entropy engine · m9 · ${E.updated?.slice(0,16) || '?'}`;
+</script>
+</body>
+</html>
