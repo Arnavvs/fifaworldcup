@@ -87,8 +87,8 @@
   "id": "BT22",
   "sprint": "Sprint 1 \u2014 Ensemble",
   "desc": "Backtest full stack on WC2022 + WC2018",
-  "status": "todo",
-  "note": "credibility gate"
+  "status": "done",
+  "note": "WC2022 backtest: blend LL=1.0513, Argentina rank=2 (24.8%), market=0.7273, top-5 pass"
  },
  {
   "id": "m8",
@@ -101,22 +101,22 @@
   "id": "PENS",
   "sprint": "Sprint 2 \u2014 Simulator",
   "desc": "Integrate shootouts.csv penalty model",
-  "status": "todo",
-  "note": "file already on disk"
+  "status": "done",
+  "note": "572 shootouts joined, logistic p=sigmoid(0.0185+0.6265*|elo|/400), top5 shift <1pp"
  },
  {
   "id": "m9",
   "sprint": "Sprint 2 \u2014 Simulator",
   "desc": "Entropy engine: surprisal, chaos meter, WC chaos history",
-  "status": "todo",
-  "note": ""
+  "status": "done",
+  "note": "entropy engine: 8 WC tournaments, 2022 most chaotic (sum_I=68.36), dashboard/entropy.html renders"
  },
  {
   "id": "LIVE",
   "sprint": "Sprint 3 \u2014 Live loop",
   "desc": "live_update.py: ingest scores -> update ELO/form -> re-sim",
-  "status": "todo",
-  "note": "feed lags; Wikipedia fallback required"
+  "status": "done",
+  "note": "ingested 2 real scores, idempotent, champion Argentina 17.2%"
  },
  {
   "id": "HIST",

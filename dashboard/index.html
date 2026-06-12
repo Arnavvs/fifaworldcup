@@ -54,7 +54,7 @@
 </head>
 <body>
 <h1>🏆 World Cup 2026 — Prediction Dashboard</h1>
-<nav><a href="index.html">Simulations</a><a href="entropy.html">Entropy</a><a href="progress.html">Engineering tracker</a>
+<nav><a href="index.html">Simulations</a><a href="bracket.html">Bracket</a><a href="entropy.html">Entropy</a><a href="progress.html">Engineering tracker</a>
 <a href="https://github.com/Arnavvs/fifaworldcup" target="_blank">GitHub</a></nav>
 <div class="sub" id="meta">loading…</div>
 <div class="meta-chips" id="chips"></div>
@@ -74,12 +74,17 @@
 </div>
 <div class="mgrid" id="matches"></div>
 
+<h2>📈 Champion probability trajectory</h2>
+<div class="chaos" id="trajectory"></div>
+
 <h2>🌪 Chaos meter (entropy)</h2>
 <div class="chaos" id="chaos"></div>
 
 <footer id="foot"></footer>
 
 <script src="sim_data.js"></script>
+<script src="data/history_data.js"></script>
+<script src="data/entropy_data.js"></script>
 <script>
 const S = window.SIM || {};
 function esc(s){return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
@@ -139,21 +144,61 @@ function renderMatches(){
 }
 renderMatches();
 
+// trajectory
+const H = window.HISTORY || {};
+if (H.timestamps && H.timestamps.length > 1) {
+  const teams = Object.keys(H.teams || {});
+  const colors = ['#e3b341','#58a6ff','#3fb950','#f85149','#bc8cff','#d29922','#79c0ff','#ff7b72'];
+  const svgW = 800, svgH = 220, pad = 32;
+  const maxP = Math.max(...teams.flatMap(t => H.teams[t].filter(v => v != null)));
+  const n = H.timestamps.length;
+  const x = i => pad + (i / (n-1)) * (svgW - 2*pad);
+  const y = p => svgH - pad - (p / maxP) * (svgH - 2*pad);
+  let paths = '';
+  teams.forEach((t, ti) => {
+    const vals = H.teams[t];
+    const d = vals.map((v, i) => (i === 0 ? 'M' : 'L') + `${x(i)},${y(v)}`).join(' ');
+    paths += `<path d="${d}" fill="none" stroke="${colors[ti % colors.length]}" stroke-width="2"/>`;
+  });
+  let labels = '';
+  teams.forEach((t, ti) => {
+    const last = H.teams[t].filter(v => v != null).pop();
+    labels += `<text x="${svgW-pad+4}" y="${y(last)}" fill="${colors[ti % colors.length]}" font-size="11" dominant-baseline="middle">${esc(t)} ${(last*100).toFixed(1)}%</text>`;
+  });
+  document.getElementById('trajectory').innerHTML = `
+    <svg viewBox="0 0 ${svgW+120} ${svgH}" style="width:100%;max-width:900px">
+      <rect x="${pad}" y="${pad}" width="${svgW-2*pad}" height="${svgH-2*pad}" fill="none" stroke="#30363d" stroke-width="1"/>
+      ${paths}
+      ${labels}
+    </svg>`;
+} else {
+  document.getElementById('trajectory').innerHTML = '<div style="color:var(--dim)">Not enough history yet (need 2+ runs).</div>';
+}
+
 // chaos
 const C=S.chaos||{};
 const lo=C.sim_surprisal_p10||0, hi=C.sim_surprisal_p90||1, mid=C.sim_surprisal_p50||0.5;
 const span=hi-lo||1, pad=span*0.35, axLo=lo-pad, axHi=hi+pad, W=x=>100*(x-axLo)/(axHi-axLo);
+
+// Realized surprisal marker
+const RS = window.REALIZED || {sum: 0};
+const realizedSum = RS.sum || 0;
+const realizedPos = Math.max(0, Math.min(100, W(realizedSum)));
+
+const realizedMarker = realizedSum > 0 ? `
+  <div style="position:absolute;top:0;width:3px;height:28px;background:var(--red);left:${realizedPos}%;border-radius:2px" title="realized ΣI = ${realizedSum.toFixed(1)}"></div>
+` : '';
+
 document.getElementById('chaos').innerHTML=`
   <div>Expected group-stage uncertainty (ΣH): <b>${C.expected_total_surprisal_H??'—'}</b> nats
    · simulated total-surprisal band p10–p90: <b>${lo}</b> – <b>${hi}</b> (median ${mid})</div>
   <div class="gauge-bg">
     <div class="gauge-band" style="left:${W(lo)}%;width:${W(hi)-W(lo)}%"></div>
     <div class="gauge-mark" style="left:${W(mid)}%"></div>
+    ${realizedMarker}
   </div>
-  <div style="color:var(--dim);font-size:12.5px">Once real results stream in (live loop),
-  the realized surprisal marker will show whether WC2026 is running calmer or wilder than
-  the simulations expected — the “chaos percentile”. Currently ${meta.locked_matches||0}
-  results ingested.</div>`;
+  <div style="color:var(--dim);font-size:12.5px">Realized ΣI: <b>${realizedSum.toFixed(1)}</b> nats
+  ${meta.locked_matches||0} results ingested.</div>`;
 
 document.getElementById('foot').textContent=
   `All numbers from artifacts run ${meta.as_of||'?'} · regenerate: python src/m8_simulate.py · page auto-refreshes every 120s`;

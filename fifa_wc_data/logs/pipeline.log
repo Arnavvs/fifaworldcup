@@ -377,3 +377,23 @@
 2026-06-12 13:55:45,400 | INFO    | m8_sim             | running knockout sims...
 2026-06-12 13:56:24,766 | INFO    | m8_sim             | TOP-10 CHAMPION ODDS: Argentina 17.2%, Spain 14.5%, England 6.8%, Brazil 6.0%, France 6.0%, Portugal 5.4%, Colombia 5.3%, Morocco 5.2%, Japan 4.3%, Germany 4.2%
 2026-06-12 13:56:24,766 | INFO    | m8_sim             | m8 complete -> C:\Users\HP\OneDrive\Desktop\worldCup\artifacts\run_20260612T0826
+2026-06-12 13:58:22,755 | INFO    | m8_sim             | groups=12 teams=48 sims=50000
+2026-06-12 13:58:23,233 | INFO    | m8_sim             | running knockout sims...
+2026-06-12 13:58:53,936 | INFO    | m8_sim             | TOP-10 CHAMPION ODDS: Argentina 17.8%, Spain 15.1%, England 6.7%, France 6.5%, Brazil 5.9%, Colombia 5.5%, Portugal 5.2%, Morocco 5.0%, Germany 4.2%, Japan 4.0%
+2026-06-12 13:58:53,936 | INFO    | m8_sim             | m8 complete -> C:\Users\HP\OneDrive\Desktop\worldCup\artifacts\run_20260612T0828
+2026-06-12 14:00:13,427 | INFO    | m9_entropy         | entropy_match: 44563 rows (davidson 29779, dixon 14784)
+2026-06-12 14:00:13,480 | INFO    | m9_entropy         | chaos_history.json: 8 tournaments
+2026-06-12 14:00:13,491 | INFO    | m9_entropy         | dashboard/entropy_data.js written
+2026-06-12 14:00:13,492 | INFO    | m9_entropy         | m9 entropy engine complete
+2026-06-12 14:03:03,407 | INFO    | bt22               | DC refit: 28599 matches before 2022-11-20
+2026-06-12 14:03:08,360 | INFO    | m4_dc              | [bt22] fitted: 239 entities, home_adv=0.262, rho=-0.01, mu=0.035
+2026-06-12 14:03:29,242 | INFO    | bt22               | DC refit: 28599 matches before 2022-11-20
+2026-06-12 14:03:33,114 | INFO    | m4_dc              | [bt22] fitted: 239 entities, home_adv=0.262, rho=-0.01, mu=0.035
+2026-06-12 14:03:33,509 | INFO    | bt22               | Davidson refit: nu=0.718 H=139
+2026-06-12 14:03:33,516 | INFO    | bt22               | WC2022 blend log-loss: 1.0513 (n=64)
+2026-06-12 14:04:18,695 | INFO    | bt22               | DC refit: 28599 matches before 2022-11-20
+2026-06-12 14:04:22,489 | INFO    | m4_dc              | [bt22] fitted: 239 entities, home_adv=0.262, rho=-0.01, mu=0.035
+2026-06-12 14:04:22,954 | INFO    | bt22               | Davidson refit: nu=0.718 H=139
+2026-06-12 14:04:22,960 | INFO    | bt22               | WC2022 blend log-loss: 1.0513 (n=64)
+2026-06-12 14:04:22,971 | INFO    | bt22               | WC2022 market log-loss: 0.7273 (n=18)
+2026-06-12 14:04:46,934 | INFO    | bt22               | backtest_wc2022.json written. Our LL=1.0513, market=0.7273089186922294, Argentina rank=2, P=24.8%

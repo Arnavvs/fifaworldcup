@@ -85,6 +85,26 @@ def update():
     (DASH / "progress_data.js").write_text(
         "window.PROGRESS = " + json.dumps(data, indent=1, default=str) + ";",
         encoding="utf-8")
+
+    # Also convert prediction_history.csv -> history_data.js
+    hist = ROOT / "artifacts" / "prediction_history.csv"
+    if hist.exists():
+        hdf = pd.read_csv(hist)
+        hdf = hdf[hdf["kind"] == "CHAMPION"]
+        # Pivot to ts x team
+        piv = hdf.pivot_table(index="ts", columns="team", values="prob", aggfunc="first")
+        # Top 8 teams by latest probability
+        latest = piv.iloc[-1].sort_values(ascending=False)
+        top8 = latest.head(8).index.tolist()
+        history_data = {
+            "timestamps": piv.index.tolist(),
+            "teams": {t: [round(v, 4) if pd.notna(v) else None for v in piv[t].tolist()] for t in top8},
+            "updated": now(),
+        }
+        (DASH / "data" / "history_data.js").write_text(
+            "window.HISTORY = " + json.dumps(history_data, indent=1, default=str) + ";",
+            encoding="utf-8")
+
     print(f"progress_data.js updated ({now()}); best LL={best}; tasks done="
           f"{sum(1 for t in tasks if t['status']=='done')}/{len(tasks)}")
 

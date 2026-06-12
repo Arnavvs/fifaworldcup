@@ -38,5 +38,21 @@
  {
   "ts": "2026-06-12 08:25 UTC",
   "msg": "live update: 1 new results ingested"
+ },
+ {
+  "ts": "2026-06-12 08:26 UTC",
+  "msg": "LIVE -> done (ingested 2 real scores, idempotent, champion Argentina 17.2%)"
+ },
+ {
+  "ts": "2026-06-12 08:29 UTC",
+  "msg": "PENS -> done (572 shootouts joined, logistic p=sigmoid(0.0185+0.6265*|elo|/400), top5 shift <1pp)"
+ },
+ {
+  "ts": "2026-06-12 08:31 UTC",
+  "msg": "m9 -> done (entropy engine: 8 WC tournaments, 2022 most chaotic (sum_I=68.36), dashboard/entropy.html renders)"
+ },
+ {
+  "ts": "2026-06-12 08:35 UTC",
+  "msg": "BT22 -> done (WC2022 backtest: blend LL=1.0513, Argentina rank=2 (24.8%), market=0.7273, top-5 pass)"
  }
 ]

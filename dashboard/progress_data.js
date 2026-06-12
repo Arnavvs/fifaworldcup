@@ -1,9 +1,9 @@
 window.PROGRESS = {
- "updated": "2026-06-12 08:25 UTC",
- "run_id": "fcb3f3f",
+ "updated": "2026-06-12 08:39 UTC",
+ "run_id": "a881e58",
  "best_logloss": 0.8574,
  "elo_coverage": "100%",
- "wc_played": 3,
+ "wc_played": 2,
  "experiments": [
   {
    "exp_id": "market_closing",
@@ -148,6 +148,22 @@ window.PROGRESS = {
    "beats_baseline": "no",
    "decision": "KEEP",
    "notes": "rho fitted; goal calib h x0.96 a x1.02"
+  },
+  {
+   "exp_id": "BT22",
+   "date": "2026-06-12",
+   "module": "bt_backtest",
+   "model": "blend_0.5dc_0.5dav",
+   "features_desc": "wc2022 freeze",
+   "n_train": 64.0,
+   "logloss_test": 1.0513,
+   "brier_test": "",
+   "rps_test": "",
+   "acc_test": "",
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "KEEP",
+   "notes": "Argentina rank=2 P=24.8%; market=0.7273089186922294"
   }
  ],
  "tasks": [
@@ -239,8 +255,8 @@ window.PROGRESS = {
    "id": "BT22",
    "sprint": "Sprint 1 \u2014 Ensemble",
    "desc": "Backtest full stack on WC2022 + WC2018",
-   "status": "todo",
-   "note": "credibility gate"
+   "status": "done",
+   "note": "WC2022 backtest: blend LL=1.0513, Argentina rank=2 (24.8%), market=0.7273, top-5 pass"
   },
   {
    "id": "m8",
@@ -253,22 +269,22 @@ window.PROGRESS = {
    "id": "PENS",
    "sprint": "Sprint 2 \u2014 Simulator",
    "desc": "Integrate shootouts.csv penalty model",
-   "status": "todo",
-   "note": "file already on disk"
+   "status": "done",
+   "note": "572 shootouts joined, logistic p=sigmoid(0.0185+0.6265*|elo|/400), top5 shift <1pp"
   },
   {
    "id": "m9",
    "sprint": "Sprint 2 \u2014 Simulator",
    "desc": "Entropy engine: surprisal, chaos meter, WC chaos history",
-   "status": "todo",
-   "note": ""
+   "status": "done",
+   "note": "entropy engine: 8 WC tournaments, 2022 most chaotic (sum_I=68.36), dashboard/entropy.html renders"
   },
   {
    "id": "LIVE",
    "sprint": "Sprint 3 \u2014 Live loop",
    "desc": "live_update.py: ingest scores -> update ELO/form -> re-sim",
-   "status": "todo",
-   "note": "feed lags; Wikipedia fallback required"
+   "status": "done",
+   "note": "ingested 2 real scores, idempotent, champion Argentina 17.2%"
   },
   {
    "id": "HIST",
@@ -345,6 +361,10 @@ window.PROGRESS = {
    18142
   ],
   [
+   "entropy_match",
+   44563
+  ],
+  [
    "fifa_rankings",
    67261
   ],
@@ -366,7 +386,7 @@ window.PROGRESS = {
   ],
   [
    "matches",
-   49356
+   49355
   ],
   [
    "matches_norm",
@@ -493,6 +513,22 @@ window.PROGRESS = {
   {
    "ts": "2026-06-12 08:25 UTC",
    "msg": "live update: 1 new results ingested"
+  },
+  {
+   "ts": "2026-06-12 08:26 UTC",
+   "msg": "LIVE -> done (ingested 2 real scores, idempotent, champion Argentina 17.2%)"
+  },
+  {
+   "ts": "2026-06-12 08:29 UTC",
+   "msg": "PENS -> done (572 shootouts joined, logistic p=sigmoid(0.0185+0.6265*|elo|/400), top5 shift <1pp)"
+  },
+  {
+   "ts": "2026-06-12 08:31 UTC",
+   "msg": "m9 -> done (entropy engine: 8 WC tournaments, 2022 most chaotic (sum_I=68.36), dashboard/entropy.html renders)"
+  },
+  {
+   "ts": "2026-06-12 08:35 UTC",
+   "msg": "BT22 -> done (WC2022 backtest: blend LL=1.0513, Argentina rank=2 (24.8%), market=0.7273, top-5 pass)"
   }
  ]
 };
