@@ -174,7 +174,12 @@ def main():
         eh, ea = s_rng.poisson(lh / 3), s_rng.poisson(la / 3)
         if eh != ea:
             return home if eh > ea else away
-        p_home = 0.5 + 0.03 * np.sign(elo_arr[home] - elo_arr[away])
+        # Fitted penalty model from 572 shootouts (TASK 2 PENS)
+        # p_higher = sigmoid(0.0185 + 0.6265 * |elo_diff|/400)
+        elo_diff = elo_arr[home] - elo_arr[away]
+        z = 0.0185 + 0.6265 * abs(elo_diff) / 400.0
+        p_higher = 1.0 / (1.0 + np.exp(-z))
+        p_home = p_higher if elo_diff > 0 else (1.0 - p_higher)
         return home if s_rng.random() < p_home else away
 
     log.info("running knockout sims...")

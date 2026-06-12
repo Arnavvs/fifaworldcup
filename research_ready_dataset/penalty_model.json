@@ -1,0 +1,12 @@
+{
+  "model": "logistic",
+  "formula": "p_higher = sigmoid(a + b * elo_diff/400)",
+  "a": 0.01854240510566159,
+  "b": 0.6264688314870159,
+  "n_shootouts": 572,
+  "join_rate": 0.8474074074074074,
+  "higher_won_rate": 0.548951048951049,
+  "accuracy": 0.548951048951049,
+  "old_model": "0.5 + 0.03 * sign(elo_diff)",
+  "constant_offset": 0.04895131405224754
+}
