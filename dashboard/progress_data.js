@@ -1,7 +1,7 @@
 window.PROGRESS = {
- "updated": "2026-06-12 09:34 UTC",
- "run_id": "b341628",
- "best_logloss": 0.8574,
+ "updated": "2026-06-12 09:56 UTC",
+ "run_id": "eced188",
+ "best_logloss": 0.8569,
  "elo_coverage": "100%",
  "wc_played": 2,
  "experiments": [
@@ -28,6 +28,22 @@ window.PROGRESS = {
    "model": "stack(dav+dc+lr+gb)+temp",
    "features_desc": "v2 features",
    "n_train": 34497.0,
+   "logloss_test": 0.8569,
+   "brier_test": 0.5031,
+   "rps_test": "",
+   "acc_test": 0.6067,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "KEEP",
+   "notes": "T=1.099 raw=0.8558"
+  },
+  {
+   "exp_id": "m6_stack_cal",
+   "date": "2026-06-12",
+   "module": "m6_stack",
+   "model": "stack(dav+dc+lr+gb)+temp",
+   "features_desc": "v2 features",
+   "n_train": 34497.0,
    "logloss_test": 0.8574,
    "brier_test": 0.5033,
    "rps_test": "",
@@ -55,15 +71,31 @@ window.PROGRESS = {
   },
   {
    "exp_id": "m0_blend_raw_v2",
-   "date": "2026-06-11",
+   "date": "2026-06-12",
    "module": "m0_baseline_sanity",
    "model": "blend_raw",
-   "features_desc": "classification_dataset_v2.csv (44 feats)",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
    "n_train": 34497.0,
-   "logloss_test": 0.8591,
-   "brier_test": 0.5044,
+   "logloss_test": 0.8582,
+   "brier_test": 0.5039,
    "rps_test": "",
-   "acc_test": 0.6063,
+   "acc_test": 0.6071,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "LOG",
+   "notes": ""
+  },
+  {
+   "exp_id": "m0_blend_cal_v2",
+   "date": "2026-06-12",
+   "module": "m0_baseline_sanity",
+   "model": "blend_cal",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "n_train": 34497.0,
+   "logloss_test": 0.8589,
+   "brier_test": 0.5034,
+   "rps_test": "",
+   "acc_test": 0.6075,
    "ece_test": "",
    "beats_baseline": "yes",
    "decision": "LOG",
@@ -86,16 +118,16 @@ window.PROGRESS = {
    "notes": ""
   },
   {
-   "exp_id": "m0_blend_cal_v2",
-   "date": "2026-06-12",
+   "exp_id": "m0_blend_raw_v2",
+   "date": "2026-06-11",
    "module": "m0_baseline_sanity",
-   "model": "blend_cal",
-   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "model": "blend_raw",
+   "features_desc": "classification_dataset_v2.csv (44 feats)",
    "n_train": 34497.0,
-   "logloss_test": 0.8598,
-   "brier_test": 0.504,
+   "logloss_test": 0.8591,
+   "brier_test": 0.5044,
    "rps_test": "",
-   "acc_test": 0.6067,
+   "acc_test": 0.6063,
    "ece_test": "",
    "beats_baseline": "yes",
    "decision": "LOG",
@@ -112,6 +144,38 @@ window.PROGRESS = {
    "brier_test": 0.504,
    "rps_test": "",
    "acc_test": 0.6067,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "LOG",
+   "notes": ""
+  },
+  {
+   "exp_id": "m0_blend_cal_v2",
+   "date": "2026-06-12",
+   "module": "m0_baseline_sanity",
+   "model": "blend_cal",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "n_train": 34497.0,
+   "logloss_test": 0.8598,
+   "brier_test": 0.504,
+   "rps_test": "",
+   "acc_test": 0.6067,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "LOG",
+   "notes": ""
+  },
+  {
+   "exp_id": "m0_logreg_v2",
+   "date": "2026-06-12",
+   "module": "m0_baseline_sanity",
+   "model": "logreg",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "n_train": 34497.0,
+   "logloss_test": 0.8619,
+   "brier_test": 0.5056,
+   "rps_test": "",
+   "acc_test": 0.6068,
    "ece_test": "",
    "beats_baseline": "yes",
    "decision": "LOG",
@@ -156,10 +220,10 @@ window.PROGRESS = {
    "model": "histgb",
    "features_desc": "classification_dataset_v2.csv (47 feats)",
    "n_train": 34497.0,
-   "logloss_test": 0.8645,
-   "brier_test": 0.5074,
+   "logloss_test": 0.8632,
+   "brier_test": 0.5066,
    "rps_test": "",
-   "acc_test": 0.6046,
+   "acc_test": 0.6053,
    "ece_test": "",
    "beats_baseline": "yes",
    "decision": "LOG",
@@ -180,70 +244,6 @@ window.PROGRESS = {
    "beats_baseline": "yes",
    "decision": "LOG",
    "notes": ""
-  },
-  {
-   "exp_id": "m1_davidson",
-   "date": "2026-06-11",
-   "module": "m1_elo_davidson",
-   "model": "elo_davidson",
-   "features_desc": "per-match elo only",
-   "n_train": 34497.0,
-   "logloss_test": 0.8682,
-   "brier_test": "",
-   "rps_test": "",
-   "acc_test": "",
-   "ece_test": "",
-   "beats_baseline": "yes",
-   "decision": "KEEP",
-   "notes": "nu=0.705 H=142 coverage=1.000"
-  },
-  {
-   "exp_id": "m0_elo_only_v2",
-   "date": "2026-06-12",
-   "module": "m0_baseline_sanity",
-   "model": "elo_only",
-   "features_desc": "classification_dataset_v2.csv (47 feats)",
-   "n_train": 34497.0,
-   "logloss_test": 0.8812,
-   "brier_test": 0.5175,
-   "rps_test": "",
-   "acc_test": 0.6026,
-   "ece_test": "",
-   "beats_baseline": "no",
-   "decision": "LOG",
-   "notes": ""
-  },
-  {
-   "exp_id": "m0_elo_only_v2",
-   "date": "2026-06-11",
-   "module": "m0_baseline_sanity",
-   "model": "elo_only",
-   "features_desc": "classification_dataset_v2.csv (44 feats)",
-   "n_train": 34497.0,
-   "logloss_test": 0.8812,
-   "brier_test": 0.5175,
-   "rps_test": "",
-   "acc_test": 0.6026,
-   "ece_test": "",
-   "beats_baseline": "no",
-   "decision": "LOG",
-   "notes": ""
-  },
-  {
-   "exp_id": "m4_dixon_coles",
-   "date": "2026-06-12",
-   "module": "m4_dixon_coles",
-   "model": "dixon_coles",
-   "features_desc": "team att/def + decay xi=0.0019",
-   "n_train": 24781.0,
-   "logloss_test": 0.9143,
-   "brier_test": "",
-   "rps_test": "",
-   "acc_test": "",
-   "ece_test": "",
-   "beats_baseline": "no",
-   "decision": "KEEP",
-   "notes": "rho fitted; goal calib h x0.96 a x1.02"
   }
  ],
  "tasks": [
@@ -419,8 +419,8 @@ window.PROGRESS = {
    "id": "D-RANK",
    "sprint": "Data days (user)",
    "desc": "FIFA rankings 2024-07 to 2026-06 gap (Wayback Machine)",
-   "status": "in_progress",
-   "note": "Wayback harvest running: ~20 releases 2024-07 to 2026-05 found"
+   "status": "done",
+   "note": "CLOSED via Wayback: 13 validated releases 2024-07 to 2026-01; stack new best 0.8558"
   }
  ],
  "db_tables": [
@@ -446,7 +446,7 @@ window.PROGRESS = {
   ],
   [
    "fifa_rankings",
-   67261
+   69965
   ],
   [
    "goalscorers",
@@ -637,6 +637,14 @@ window.PROGRESS = {
   {
    "ts": "2026-06-12 09:34 UTC",
    "msg": "missing-data round: StatsBomb +205 matches ingested; xG features in v2 (58 cols); FBref stealth probe failed (needs VPN)"
+  },
+  {
+   "ts": "2026-06-12 09:56 UTC",
+   "msg": "D-RANK -> done (CLOSED via Wayback: 13 validated releases 2024-07 to 2026-01; stack new best 0.8558)"
+  },
+  {
+   "ts": "2026-06-12 09:56 UTC",
+   "msg": "rankings gap closed; v2 rebuilt w/ fresh ranks + xG; stack 0.8558 raw / 0.8569 cal = new best"
   }
  ]
 };

@@ -6,27 +6,27 @@
     "logloss_test_2010plus": 0.8812306868572023
   },
   "logreg": {
-    "logloss_test": 0.8624654423918368,
-    "brier_test": 0.505999257924398,
-    "acc_test": 0.606528511445212,
-    "logloss_test_2010plus": 0.8624654423918368
+    "logloss_test": 0.86192627748579,
+    "brier_test": 0.5056490941189103,
+    "acc_test": 0.6067994040362996,
+    "logloss_test_2010plus": 0.86192627748579
   },
   "histgb": {
-    "logloss_test": 0.8644843689579359,
-    "brier_test": 0.5073725385677313,
-    "acc_test": 0.6046322633075986,
-    "logloss_test_2010plus": 0.8644843689579359
+    "logloss_test": 0.8632453066766027,
+    "brier_test": 0.5066143512226153,
+    "acc_test": 0.6053094947853176,
+    "logloss_test_2010plus": 0.8632453066766027
   },
   "blend_raw": {
-    "logloss_test": 0.8590558766618348,
-    "brier_test": 0.5044195416168649,
-    "acc_test": 0.6062576188541243,
-    "logloss_test_2010plus": 0.8590558766618348
+    "logloss_test": 0.858164559506331,
+    "brier_test": 0.503862370616901,
+    "acc_test": 0.6070702966273872,
+    "logloss_test_2010plus": 0.858164559506331
   },
   "blend_cal": {
-    "logloss_test": 0.8598193721128269,
-    "brier_test": 0.5039857493860628,
-    "acc_test": 0.6066639577407558,
-    "logloss_test_2010plus": 0.8598193721128269
+    "logloss_test": 0.8588820470439213,
+    "brier_test": 0.5033914328958502,
+    "acc_test": 0.6074766355140186,
+    "logloss_test_2010plus": 0.8588820470439213
   }
 }

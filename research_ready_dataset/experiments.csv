@@ -18,3 +18,9 @@ m0_histgb_v2,2026-06-12,m0_baseline_sanity,histgb,classification_dataset_v2.csv 
 m0_blend_raw_v2,2026-06-12,m0_baseline_sanity,blend_raw,classification_dataset_v2.csv (47 feats),34497,0.8591,0.5044,,0.6063,,yes,LOG,
 m0_blend_cal_v2,2026-06-12,m0_baseline_sanity,blend_cal,classification_dataset_v2.csv (47 feats),34497,0.8598,0.5040,,0.6067,,yes,LOG,
 m6_stack_cal,2026-06-12,m6_stack,stack(dav+dc+lr+gb)+temp,v2 features,34497,0.8574,0.5033,,0.6065,,yes,KEEP,T=1.099 raw=0.8563
+m0_elo_only_v2,2026-06-12,m0_baseline_sanity,elo_only,classification_dataset_v2.csv (47 feats),34497,0.8812,0.5175,,0.6026,,no,LOG,
+m0_logreg_v2,2026-06-12,m0_baseline_sanity,logreg,classification_dataset_v2.csv (47 feats),34497,0.8619,0.5056,,0.6068,,yes,LOG,
+m0_histgb_v2,2026-06-12,m0_baseline_sanity,histgb,classification_dataset_v2.csv (47 feats),34497,0.8632,0.5066,,0.6053,,yes,LOG,
+m0_blend_raw_v2,2026-06-12,m0_baseline_sanity,blend_raw,classification_dataset_v2.csv (47 feats),34497,0.8582,0.5039,,0.6071,,yes,LOG,
+m0_blend_cal_v2,2026-06-12,m0_baseline_sanity,blend_cal,classification_dataset_v2.csv (47 feats),34497,0.8589,0.5034,,0.6075,,yes,LOG,
+m6_stack_cal,2026-06-12,m6_stack,stack(dav+dc+lr+gb)+temp,v2 features,34497,0.8569,0.5031,,0.6067,,yes,KEEP,T=1.099 raw=0.8558

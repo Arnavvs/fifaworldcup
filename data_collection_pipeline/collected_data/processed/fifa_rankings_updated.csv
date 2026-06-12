@@ -1,211 +1,211 @@
 rank,team,country_code,points,previous_points,confederation,rank_date,source
-1.0,Argentina,ARG,1860.14,1858.0,CONMEBOL,2024-06-20,kaggle_cashncarry
-2.0,France,FRA,1837.47,1840.59,UEFA,2024-06-20,kaggle_cashncarry
-3.0,Belgium,BEL,1797.98,1795.23,UEFA,2024-06-20,kaggle_cashncarry
-4.0,Brazil,BRA,1791.85,1788.65,CONMEBOL,2024-06-20,kaggle_cashncarry
-5.0,England,ENG,1787.88,1794.9,UEFA,2024-06-20,kaggle_cashncarry
-6.0,Portugal,POR,1747.04,1748.11,UEFA,2024-06-20,kaggle_cashncarry
-7.0,Netherlands,NED,1746.66,1742.29,UEFA,2024-06-20,kaggle_cashncarry
-8.0,Spain,ESP,1729.92,1727.5,UEFA,2024-06-20,kaggle_cashncarry
-9.0,Croatia,CRO,1728.3,1721.07,UEFA,2024-06-20,kaggle_cashncarry
-10.0,Italy,ITA,1724.37,1724.6,UEFA,2024-06-20,kaggle_cashncarry
-11.0,USA,USA,1676.52,1681.13,CONCACAF,2024-06-20,kaggle_cashncarry
-12.0,Colombia,COL,1669.44,1664.28,CONMEBOL,2024-06-20,kaggle_cashncarry
-12.0,Morocco,MAR,1669.44,1661.42,CAF,2024-06-20,kaggle_cashncarry
-14.0,Uruguay,URU,1663.44,1659.39,CONMEBOL,2024-06-20,kaggle_cashncarry
-15.0,Mexico,MEX,1652.33,1661.11,CONCACAF,2024-06-20,kaggle_cashncarry
-16.0,Germany,GER,1646.78,1644.21,UEFA,2024-06-20,kaggle_cashncarry
-17.0,Japan,JPN,1628.81,1621.88,AFC,2024-06-20,kaggle_cashncarry
-18.0,Senegal,SEN,1623.34,1624.73,CAF,2024-06-20,kaggle_cashncarry
-19.0,Switzerland,SUI,1617.24,1616.41,UEFA,2024-06-20,kaggle_cashncarry
-20.0,IR Iran,IRN,1611.16,1613.96,AFC,2024-06-20,kaggle_cashncarry
-21.0,Denmark,DEN,1610.76,1602.72,UEFA,2024-06-20,kaggle_cashncarry
-22.0,Korea Republic,KOR,1572.87,1563.99,AFC,2024-06-20,kaggle_cashncarry
-23.0,Australia,AUS,1571.29,1563.93,AFC,2024-06-20,kaggle_cashncarry
-24.0,Ukraine,UKR,1565.37,1568.86,UEFA,2024-06-20,kaggle_cashncarry
-25.0,Austria,AUT,1560.03,1554.86,UEFA,2024-06-20,kaggle_cashncarry
-26.0,Poland,POL,1541.49,1531.49,UEFA,2024-06-20,kaggle_cashncarry
-27.0,Hungary,HUN,1529.0,1532.2,UEFA,2024-06-20,kaggle_cashncarry
-28.0,Sweden,SWE,1522.19,1531.68,UEFA,2024-06-20,kaggle_cashncarry
-29.0,Wales,WAL,1521.4,1531.38,UEFA,2024-06-20,kaggle_cashncarry
-30.0,Ecuador,ECU,1517.54,1518.22,CONMEBOL,2024-06-20,kaggle_cashncarry
-31.0,Peru,PER,1515.01,1515.82,CONMEBOL,2024-06-20,kaggle_cashncarry
-32.0,Serbia,SRB,1514.76,1514.2,UEFA,2024-06-20,kaggle_cashncarry
-33.0,Russia,RUS,1506.58,1504.02,UEFA,2024-06-20,kaggle_cashncarry
-34.0,Czechia,CZE,1506.23,1501.47,UEFA,2024-06-20,kaggle_cashncarry
-35.0,Qatar,QAT,1504.06,1507.94,AFC,2024-06-20,kaggle_cashncarry
-36.0,Egypt,EGY,1502.34,1499.72,CAF,2024-06-20,kaggle_cashncarry
-37.0,Côte d'Ivoire,CIV,1499.69,1498.8,CAF,2024-06-20,kaggle_cashncarry
-38.0,Nigeria,NGA,1498.93,1520.27,CAF,2024-06-20,kaggle_cashncarry
-39.0,Scotland,SCO,1497.18,1497.46,UEFA,2024-06-20,kaggle_cashncarry
-40.0,Chile,CHI,1496.13,1491.71,CONMEBOL,2024-06-20,kaggle_cashncarry
-41.0,Tunisia,TUN,1494.06,1493.12,CAF,2024-06-20,kaggle_cashncarry
-42.0,Turkey,TUR,1493.38,1495.94,UEFA,2024-06-20,kaggle_cashncarry
-43.0,Panama,PAN,1482.1,1475.62,CONCACAF,2024-06-20,kaggle_cashncarry
-44.0,Algeria,ALG,1474.13,1482.71,CAF,2024-06-20,kaggle_cashncarry
-45.0,Slovakia,SVK,1467.77,1461.55,UEFA,2024-06-20,kaggle_cashncarry
-46.0,Norway,NOR,1466.48,1467.51,UEFA,2024-06-20,kaggle_cashncarry
-47.0,Romania,ROU,1462.35,1468.17,UEFA,2024-06-20,kaggle_cashncarry
-48.0,Canada,CAN,1461.74,1461.16,CONCACAF,2024-06-20,kaggle_cashncarry
-49.0,Cameroon,CMR,1458.47,1452.59,CAF,2024-06-20,kaggle_cashncarry
-50.0,Mali,MLI,1456.74,1477.9,CAF,2024-06-20,kaggle_cashncarry
-51.0,Greece,GRE,1455.95,1457.89,UEFA,2024-06-20,kaggle_cashncarry
-52.0,Costa Rica,CRC,1454.2,1445.38,CONCACAF,2024-06-20,kaggle_cashncarry
-53.0,Jamaica,JAM,1442.82,1435.33,CONCACAF,2024-06-20,kaggle_cashncarry
-54.0,Venezuela,VEN,1442.29,1442.29,CONMEBOL,2024-06-20,kaggle_cashncarry
-55.0,Iraq,IRQ,1433.07,1420.47,AFC,2024-06-20,kaggle_cashncarry
-56.0,Saudi Arabia,KSA,1431.3,1443.53,AFC,2024-06-20,kaggle_cashncarry
-57.0,Slovenia,SVN,1429.74,1427.84,UEFA,2024-06-20,kaggle_cashncarry
-58.0,Paraguay,PAR,1427.11,1430.73,CONMEBOL,2024-06-20,kaggle_cashncarry
-59.0,South Africa,RSA,1416.66,1407.67,CAF,2024-06-20,kaggle_cashncarry
-60.0,Republic of Ireland,IRL,1403.84,1399.74,UEFA,2024-06-20,kaggle_cashncarry
-61.0,Congo DR,COD,1400.93,1388.25,CAF,2024-06-20,kaggle_cashncarry
-62.0,Uzbekistan,UZB,1397.41,1386.58,AFC,2024-06-20,kaggle_cashncarry
-63.0,Finland,FIN,1393.4,1394.44,UEFA,2024-06-20,kaggle_cashncarry
-64.0,Ghana,GHA,1381.25,1358.77,CAF,2024-06-20,kaggle_cashncarry
-65.0,Cabo Verde,CPV,1380.53,1383.44,CAF,2024-06-20,kaggle_cashncarry
-66.0,Albania,ALB,1379.4,1375.1,UEFA,2024-06-20,kaggle_cashncarry
-67.0,Burkina Faso,BFA,1375.16,1390.38,CAF,2024-06-20,kaggle_cashncarry
-68.0,Jordan,JOR,1374.13,1350.21,AFC,2024-06-20,kaggle_cashncarry
-69.0,United Arab Emirates,UAE,1368.84,1366.45,AFC,2024-06-20,kaggle_cashncarry
-70.0,Iceland,ISL,1353.48,1346.82,UEFA,2024-06-20,kaggle_cashncarry
-71.0,North Macedonia,MKD,1348.63,1354.19,UEFA,2024-06-20,kaggle_cashncarry
-72.0,Montenegro,MNE,1345.02,1351.72,UEFA,2024-06-20,kaggle_cashncarry
-73.0,Northern Ireland,NIR,1341.33,1341.05,UEFA,2024-06-20,kaggle_cashncarry
-74.0,Georgia,GEO,1338.91,1333.76,UEFA,2024-06-20,kaggle_cashncarry
-75.0,Bosnia and Herzegovina,BIH,1332.3,1335.6,UEFA,2024-06-20,kaggle_cashncarry
-76.0,Oman,OMA,1326.18,1323.23,AFC,2024-06-20,kaggle_cashncarry
-77.0,Guinea,GUI,1324.8,1324.65,CAF,2024-06-20,kaggle_cashncarry
-78.0,Honduras,HON,1313.05,1301.92,CONCACAF,2024-06-20,kaggle_cashncarry
-79.0,Israel,ISR,1312.54,1311.39,UEFA,2024-06-20,kaggle_cashncarry
-80.0,El Salvador,SLV,1303.65,1305.02,CONCACAF,2024-06-20,kaggle_cashncarry
-81.0,Bahrain,BHR,1302.86,1307.53,AFC,2024-06-20,kaggle_cashncarry
-82.0,Bulgaria,BUL,1295.5,1292.59,UEFA,2024-06-20,kaggle_cashncarry
-83.0,Gabon,GAB,1288.45,1287.33,CAF,2024-06-20,kaggle_cashncarry
-84.0,Bolivia,BOL,1282.43,1283.88,CONMEBOL,2024-06-20,kaggle_cashncarry
-85.0,Luxembourg,LUX,1276.73,1277.94,UEFA,2024-06-20,kaggle_cashncarry
-86.0,Haiti,HAI,1274.46,1262.5,CONCACAF,2024-06-20,kaggle_cashncarry
-87.0,Curacao,CUW,1272.71,1262.48,CONCACAF,2024-06-20,kaggle_cashncarry
-88.0,China PR,CHN,1267.51,1275.22,AFC,2024-06-20,kaggle_cashncarry
-89.0,Equatorial Guinea,EQG,1260.5,1308.03,CAF,2024-06-20,kaggle_cashncarry
-90.0,Zambia,ZAM,1258.4,1278.26,CAF,2024-06-20,kaggle_cashncarry
-91.0,Benin,BEN,1254.18,1225.68,CAF,2024-06-20,kaggle_cashncarry
-92.0,Angola,ANG,1248.94,1235.76,CAF,2024-06-20,kaggle_cashncarry
-93.0,Syria,SYR,1246.68,1266.52,AFC,2024-06-20,kaggle_cashncarry
-94.0,Uganda,UGA,1242.96,1242.15,CAF,2024-06-20,kaggle_cashncarry
-95.0,Palestine,PLE,1231.25,1238.66,AFC,2024-06-20,kaggle_cashncarry
-96.0,Armenia,ARM,1230.79,1229.18,UEFA,2024-06-20,kaggle_cashncarry
-97.0,Namibia,NAM,1219.83,1192.13,CAF,2024-06-20,kaggle_cashncarry
-98.0,Belarus,BLR,1219.78,1226.54,UEFA,2024-06-20,kaggle_cashncarry
-99.0,Trinidad and Tobago,TRI,1219.44,1220.65,CONCACAF,2024-06-20,kaggle_cashncarry
-100.0,Thailand,THA,1218.56,1208.93,AFC,2024-06-20,kaggle_cashncarry
-101.0,Kyrgyz Republic,KGZ,1213.58,1213.6,AFC,2024-06-20,kaggle_cashncarry
-102.0,Tajikistan,TJK,1212.41,1216.76,AFC,2024-06-20,kaggle_cashncarry
-103.0,Mozambique,MOZ,1205.82,1184.49,CAF,2024-06-20,kaggle_cashncarry
-104.0,Madagascar,MAD,1203.66,1185.86,CAF,2024-06-20,kaggle_cashncarry
-105.0,Kosovo,KOS,1203.16,1205.85,UEFA,2024-06-20,kaggle_cashncarry
-106.0,Guatemala,GUA,1199.21,1188.28,CONCACAF,2024-06-20,kaggle_cashncarry
-107.0,New Zealand,NZL,1197.68,1197.68,OFC,2024-06-20,kaggle_cashncarry
-108.0,Kenya,KEN,1195.45,1191.24,CAF,2024-06-20,kaggle_cashncarry
-109.0,Kazakhstan,KAZ,1193.62,1203.64,UEFA,2024-06-20,kaggle_cashncarry
-110.0,Korea DPR,PRK,1183.96,1160.57,AFC,2024-06-20,kaggle_cashncarry
-111.0,Azerbaijan,AZE,1179.88,1177.83,UEFA,2024-06-20,kaggle_cashncarry
-112.0,Mauritania,MTN,1177.5,1195.5,CAF,2024-06-20,kaggle_cashncarry
-113.0,Congo,CGO,1176.45,1179.8,CAF,2024-06-20,kaggle_cashncarry
-114.0,Tanzania,TAN,1174.99,1159.81,CAF,2024-06-20,kaggle_cashncarry
-115.0,Guinea-Bissau,GNB,1168.49,1163.44,CAF,2024-06-20,kaggle_cashncarry
-116.0,Vietnam,VIE,1168.02,1164.54,AFC,2024-06-20,kaggle_cashncarry
-117.0,Lebanon,LBN,1167.64,1158.96,AFC,2024-06-20,kaggle_cashncarry
-118.0,Libya,LBY,1165.73,1166.71,CAF,2024-06-20,kaggle_cashncarry
-119.0,Comoros,COM,1158.71,1163.02,CAF,2024-06-20,kaggle_cashncarry
-120.0,Togo,TOG,1158.7,1170.34,CAF,2024-06-20,kaggle_cashncarry
-121.0,Sudan,SDN,1152.29,1129.32,CAF,2024-06-20,kaggle_cashncarry
-122.0,Sierra Leone,SLE,1149.4,1137.36,CAF,2024-06-20,kaggle_cashncarry
-123.0,Estonia,EST,1146.47,1141.13,UEFA,2024-06-20,kaggle_cashncarry
-124.0,India,IND,1139.39,1145.94,AFC,2024-06-20,kaggle_cashncarry
-125.0,Malawi,MWI,1137.83,1140.93,CAF,2024-06-20,kaggle_cashncarry
-126.0,Cyprus,CYP,1136.78,1141.03,UEFA,2024-06-20,kaggle_cashncarry
-127.0,Central African Republic,CTA,1129.3,1128.17,CAF,2024-06-20,kaggle_cashncarry
-128.0,Niger,NIG,1125.5,1125.5,CAF,2024-06-20,kaggle_cashncarry
-129.0,Zimbabwe,ZIM,1122.54,1143.66,CAF,2024-06-20,kaggle_cashncarry
-130.0,Nicaragua,NCA,1119.88,1102.54,CONCACAF,2024-06-20,kaggle_cashncarry
-131.0,Rwanda,RWA,1114.15,1112.44,CAF,2024-06-20,kaggle_cashncarry
-132.0,The Gambia,GAM,1112.55,1114.8,CAF,2024-06-20,kaggle_cashncarry
-133.0,Solomon Islands,SOL,1111.02,1111.02,OFC,2024-06-20,kaggle_cashncarry
-134.0,Indonesia,IDN,1108.73,1102.7,AFC,2024-06-20,kaggle_cashncarry
-135.0,Malaysia,MAS,1107.58,1094.54,AFC,2024-06-20,kaggle_cashncarry
-136.0,Lithuania,LTU,1100.66,1095.23,UEFA,2024-06-20,kaggle_cashncarry
-137.0,Kuwait,KUW,1098.42,1085.46,AFC,2024-06-20,kaggle_cashncarry
-138.0,Latvia,LVA,1095.98,1095.91,UEFA,2024-06-20,kaggle_cashncarry
-139.0,Faroe Islands,FRO,1093.7,1103.43,UEFA,2024-06-20,kaggle_cashncarry
-140.0,Burundi,BDI,1091.24,1081.63,CAF,2024-06-20,kaggle_cashncarry
-141.0,Suriname,SUR,1087.77,1071.85,CONCACAF,2024-06-20,kaggle_cashncarry
-142.0,Liberia,LBR,1067.05,1029.58,CAF,2024-06-20,kaggle_cashncarry
-143.0,Ethiopia,ETH,1066.16,1068.48,CAF,2024-06-20,kaggle_cashncarry
-144.0,Turkmenistan,TKM,1065.42,1072.52,AFC,2024-06-20,kaggle_cashncarry
-145.0,Botswana,BOT,1064.19,1065.07,CAF,2024-06-20,kaggle_cashncarry
-146.0,St Kitts and Nevis,SKN,1059.53,1056.61,CONCACAF,2024-06-20,kaggle_cashncarry
-147.0,Philippines,PHI,1053.03,1075.14,AFC,2024-06-20,kaggle_cashncarry
-148.0,Antigua and Barbuda,ATG,1052.8,1072.66,CONCACAF,2024-06-20,kaggle_cashncarry
-149.0,Lesotho,LES,1050.83,1047.58,CAF,2024-06-20,kaggle_cashncarry
-150.0,Dominican Republic,DOM,1045.64,1042.86,CONCACAF,2024-06-20,kaggle_cashncarry
-151.0,Afghanistan,AFG,1034.37,1036.92,AFC,2024-06-20,kaggle_cashncarry
-152.0,Moldova,MDA,1033.75,1028.85,UEFA,2024-06-20,kaggle_cashncarry
-153.0,Guyana,GUY,1026.61,1020.31,CONCACAF,2024-06-20,kaggle_cashncarry
-154.0,Eswatini,SWZ,1025.18,1048.89,CAF,2024-06-20,kaggle_cashncarry
-155.0,Yemen,YEM,1021.24,1017.05,AFC,2024-06-20,kaggle_cashncarry
-156.0,Puerto Rico,PUR,1020.22,1006.35,CONCACAF,2024-06-20,kaggle_cashncarry
-157.0,Hong Kong,HKG,1011.91,1012.83,AFC,2024-06-20,kaggle_cashncarry
-158.0,New Caledonia,NCL,1008.92,1008.92,OFC,2024-06-20,kaggle_cashncarry
-159.0,Singapore,SGP,1008.26,1019.06,AFC,2024-06-20,kaggle_cashncarry
-160.0,Maldives,MDV,1003.48,1003.48,AFC,2024-06-20,kaggle_cashncarry
-161.0,Tahiti,TAH,999.48,999.48,OFC,2024-06-20,kaggle_cashncarry
-162.0,Andorra,AND,996.05,998.75,UEFA,2024-06-20,kaggle_cashncarry
-163.0,Chinese Taipei,TPE,991.34,1007.3,AFC,2024-06-20,kaggle_cashncarry
-164.0,Myanmar,MYA,988.98,999.46,AFC,2024-06-20,kaggle_cashncarry
-165.0,Papua New Guinea,PNG,985.32,985.32,OFC,2024-06-20,kaggle_cashncarry
-166.0,Fiji,FIJ,983.81,983.81,OFC,2024-06-20,kaggle_cashncarry
-167.0,South Sudan,SSD,980.02,984.65,CAF,2024-06-20,kaggle_cashncarry
-168.0,St Lucia,LCA,979.57,988.67,CONCACAF,2024-06-20,kaggle_cashncarry
-169.0,Cuba,CUB,975.01,980.65,CONCACAF,2024-06-20,kaggle_cashncarry
-170.0,Vanuatu,VAN,972.14,972.14,OFC,2024-06-20,kaggle_cashncarry
-171.0,Bermuda,BER,971.15,974.3,CONCACAF,2024-06-20,kaggle_cashncarry
-172.0,Malta,MLT,970.62,973.14,UEFA,2024-06-20,kaggle_cashncarry
-173.0,Grenada,GRN,953.67,950.99,CONCACAF,2024-06-20,kaggle_cashncarry
-174.0,St Vincent and the Grenadines,VIN,938.4,953.47,CONCACAF,2024-06-20,kaggle_cashncarry
-175.0,Nepal,NEP,935.93,937.84,AFC,2024-06-20,kaggle_cashncarry
-176.0,Montserrat,MSR,934.46,946.08,CONCACAF,2024-06-20,kaggle_cashncarry
-177.0,Barbados,BRB,932.64,943.8,CONCACAF,2024-06-20,kaggle_cashncarry
-178.0,Chad,CHA,929.97,945.92,CAF,2024-06-20,kaggle_cashncarry
-179.0,Mauritius,MRI,927.94,919.4,CAF,2024-06-20,kaggle_cashncarry
-180.0,Cambodia,CAM,924.52,925.4,AFC,2024-06-20,kaggle_cashncarry
-181.0,Samoa,SAM,920.54,920.54,OFC,2024-06-20,kaggle_cashncarry
-182.0,Dominica,DMA,912.93,922.25,CONCACAF,2024-06-20,kaggle_cashncarry
-183.0,Bhutan,BHU,904.1,904.1,AFC,2024-06-20,kaggle_cashncarry
-184.0,Belize,BLZ,901.43,919.52,CONCACAF,2024-06-20,kaggle_cashncarry
-185.0,Bangladesh,BAN,896.67,905.3,AFC,2024-06-20,kaggle_cashncarry
-186.0,Macau,MAC,896.62,896.62,AFC,2024-06-20,kaggle_cashncarry
-187.0,Cook Islands,COK,896.59,896.59,OFC,2024-06-20,kaggle_cashncarry
-188.0,American Samoa,ASA,890.97,890.97,OFC,2024-06-20,kaggle_cashncarry
-189.0,Laos,LAO,889.62,889.62,AFC,2024-06-20,kaggle_cashncarry
-190.0,Mongolia,MNG,884.92,884.04,AFC,2024-06-20,kaggle_cashncarry
-191.0,Brunei Darussalam,BRU,881.73,872.65,AFC,2024-06-20,kaggle_cashncarry
-192.0,Sao Tome and Principe,STP,878.09,893.58,CAF,2024-06-20,kaggle_cashncarry
-193.0,Djibouti,DJI,875.13,877.28,CAF,2024-06-20,kaggle_cashncarry
-194.0,Aruba,ARU,873.9,875.82,CONCACAF,2024-06-20,kaggle_cashncarry
-195.0,Cayman Islands,CAY,865.34,847.81,CONCACAF,2024-06-20,kaggle_cashncarry
-196.0,Timor-Leste,TLS,843.4,843.4,AFC,2024-06-20,kaggle_cashncarry
-197.0,Pakistan,PAK,842.59,849.94,AFC,2024-06-20,kaggle_cashncarry
-198.0,Gibraltar,GIB,836.14,832.5,UEFA,2024-06-20,kaggle_cashncarry
-199.0,Liechtenstein,LIE,835.83,832.75,UEFA,2024-06-20,kaggle_cashncarry
-200.0,Tonga,TGA,833.12,833.12,OFC,2024-06-20,kaggle_cashncarry
-201.0,Seychelles,SEY,831.96,845.53,CAF,2024-06-20,kaggle_cashncarry
-202.0,Somalia,SOM,829.81,842.64,CAF,2024-06-20,kaggle_cashncarry
-203.0,Bahamas,BAH,823.58,835.81,CONCACAF,2024-06-20,kaggle_cashncarry
-204.0,Guam,GUM,821.91,821.91,AFC,2024-06-20,kaggle_cashncarry
-205.0,Sri Lanka,SRI,820.32,829.41,AFC,2024-06-20,kaggle_cashncarry
-206.0,Turks and Caicos Islands,TCA,817.03,817.03,CONCACAF,2024-06-20,kaggle_cashncarry
-207.0,British Virgin Islands,VGB,801.29,813.31,CONCACAF,2024-06-20,kaggle_cashncarry
-208.0,US Virgin Islands,VIR,797.29,797.29,CONCACAF,2024-06-20,kaggle_cashncarry
-209.0,Anguilla,AIA,779.86,793.48,CONCACAF,2024-06-20,kaggle_cashncarry
-210.0,San Marino,SMR,739.64,742.05,UEFA,2024-06-20,kaggle_cashncarry
+1.0,Spain,,1877.18,,,2026-01-19,wayback:inside.fifa.com (validated)
+2.0,Argentina,,1873.33,,,2026-01-19,wayback:inside.fifa.com (validated)
+3.0,France,,1870.0,,,2026-01-19,wayback:inside.fifa.com (validated)
+4.0,England,,1834.12,,,2026-01-19,wayback:inside.fifa.com (validated)
+5.0,Brazil,,1760.46,,,2026-01-19,wayback:inside.fifa.com (validated)
+6.0,Portugal,,1760.38,,,2026-01-19,wayback:inside.fifa.com (validated)
+7.0,Netherlands,,1756.27,,,2026-01-19,wayback:inside.fifa.com (validated)
+8.0,Morocco,,1736.57,,,2026-01-19,wayback:inside.fifa.com (validated)
+9.0,Belgium,,1730.71,,,2026-01-19,wayback:inside.fifa.com (validated)
+10.0,Germany,,1724.15,,,2026-01-19,wayback:inside.fifa.com (validated)
+11.0,Croatia,,1716.88,,,2026-01-19,wayback:inside.fifa.com (validated)
+12.0,Senegal,,1706.83,,,2026-01-19,wayback:inside.fifa.com (validated)
+13.0,Italy,,1702.06,,,2026-01-19,wayback:inside.fifa.com (validated)
+14.0,Colombia,,1701.3,,,2026-01-19,wayback:inside.fifa.com (validated)
+15.0,USA,,1681.88,,,2026-01-19,wayback:inside.fifa.com (validated)
+16.0,Mexico,,1675.75,,,2026-01-19,wayback:inside.fifa.com (validated)
+17.0,Uruguay,,1672.62,,,2026-01-19,wayback:inside.fifa.com (validated)
+18.0,Switzerland,,1654.69,,,2026-01-19,wayback:inside.fifa.com (validated)
+19.0,Japan,,1650.12,,,2026-01-19,wayback:inside.fifa.com (validated)
+20.0,IR Iran,,1617.02,,,2026-01-19,wayback:inside.fifa.com (validated)
+21.0,Denmark,,1616.75,,,2026-01-19,wayback:inside.fifa.com (validated)
+22.0,Korea Republic,,1599.45,,,2026-01-19,wayback:inside.fifa.com (validated)
+23.0,Ecuador,,1591.73,,,2026-01-19,wayback:inside.fifa.com (validated)
+24.0,Austria,,1585.51,,,2026-01-19,wayback:inside.fifa.com (validated)
+25.0,Türkiye,,1582.69,,,2026-01-19,wayback:inside.fifa.com (validated)
+26.0,Nigeria,,1581.55,,,2026-01-19,wayback:inside.fifa.com (validated)
+27.0,Australia,,1574.01,,,2026-01-19,wayback:inside.fifa.com (validated)
+28.0,Algeria,,1560.91,,,2026-01-19,wayback:inside.fifa.com (validated)
+29.0,Canada,,1559.15,,,2026-01-19,wayback:inside.fifa.com (validated)
+30.0,Ukraine,,1557.47,,,2026-01-19,wayback:inside.fifa.com (validated)
+31.0,Egypt,,1556.71,,,2026-01-19,wayback:inside.fifa.com (validated)
+32.0,Norway,,1553.14,,,2026-01-19,wayback:inside.fifa.com (validated)
+33.0,Panama,,1539.47,,,2026-01-19,wayback:inside.fifa.com (validated)
+34.0,Poland,,1532.04,,,2026-01-19,wayback:inside.fifa.com (validated)
+35.0,Wales,,1529.71,,,2026-01-19,wayback:inside.fifa.com (validated)
+36.0,Russia,,1524.52,,,2026-01-19,wayback:inside.fifa.com (validated)
+37.0,Côte d'Ivoire,,1522.48,,,2026-01-19,wayback:inside.fifa.com (validated)
+38.0,Scotland,,1506.77,,,2026-01-19,wayback:inside.fifa.com (validated)
+39.0,Serbia,,1506.34,,,2026-01-19,wayback:inside.fifa.com (validated)
+40.0,Paraguay,,1501.5,,,2026-01-19,wayback:inside.fifa.com (validated)
+41.0,Hungary,,1496.29,,,2026-01-19,wayback:inside.fifa.com (validated)
+42.0,Sweden,,1487.13,,,2026-01-19,wayback:inside.fifa.com (validated)
+43.0,Czechia,,1487.0,,,2026-01-19,wayback:inside.fifa.com (validated)
+44.0,Slovakia,,1485.65,,,2026-01-19,wayback:inside.fifa.com (validated)
+45.0,Cameroon,,1482.39,,,2026-01-19,wayback:inside.fifa.com (validated)
+46.0,Greece,,1480.38,,,2026-01-19,wayback:inside.fifa.com (validated)
+47.0,Tunisia,,1479.04,,,2026-01-19,wayback:inside.fifa.com (validated)
+48.0,Congo DR,,1468.22,,,2026-01-19,wayback:inside.fifa.com (validated)
+49.0,Romania,,1465.78,,,2026-01-19,wayback:inside.fifa.com (validated)
+50.0,Venezuela,,1465.22,,,2026-01-19,wayback:inside.fifa.com (validated)
+51.0,Costa Rica,,1464.24,,,2026-01-19,wayback:inside.fifa.com (validated)
+52.0,Uzbekistan,,1462.03,,,2026-01-19,wayback:inside.fifa.com (validated)
+53.0,Peru,,1459.57,,,2026-01-19,wayback:inside.fifa.com (validated)
+54.0,Mali,,1458.48,,,2026-01-19,wayback:inside.fifa.com (validated)
+55.0,Chile,,1457.84,,,2026-01-19,wayback:inside.fifa.com (validated)
+56.0,Qatar,,1454.96,,,2026-01-19,wayback:inside.fifa.com (validated)
+57.0,Slovenia,,1447.31,,,2026-01-19,wayback:inside.fifa.com (validated)
+58.0,Iraq,,1436.94,,,2026-01-19,wayback:inside.fifa.com (validated)
+59.0,Republic of Ireland,,1436.04,,,2026-01-19,wayback:inside.fifa.com (validated)
+60.0,South Africa,,1432.76,,,2026-01-19,wayback:inside.fifa.com (validated)
+61.0,Saudi Arabia,,1429.48,,,2026-01-19,wayback:inside.fifa.com (validated)
+62.0,Burkina Faso,,1412.79,,,2026-01-19,wayback:inside.fifa.com (validated)
+63.0,Albania,,1401.07,,,2026-01-19,wayback:inside.fifa.com (validated)
+64.0,Jordan,,1388.93,,,2026-01-19,wayback:inside.fifa.com (validated)
+65.0,Honduras,,1379.54,,,2026-01-19,wayback:inside.fifa.com (validated)
+66.0,North Macedonia,,1378.57,,,2026-01-19,wayback:inside.fifa.com (validated)
+67.0,Cabo Verde,,1370.49,,,2026-01-19,wayback:inside.fifa.com (validated)
+68.0,United Arab Emirates,,1370.47,,,2026-01-19,wayback:inside.fifa.com (validated)
+69.0,Northern Ireland,,1366.02,,,2026-01-19,wayback:inside.fifa.com (validated)
+70.0,Jamaica,,1362.46,,,2026-01-19,wayback:inside.fifa.com (validated)
+71.0,Bosnia and Herzegovina,,1362.37,,,2026-01-19,wayback:inside.fifa.com (validated)
+72.0,Ghana,,1351.09,,,2026-01-19,wayback:inside.fifa.com (validated)
+73.0,Georgia,,1347.88,,,2026-01-19,wayback:inside.fifa.com (validated)
+74.0,Iceland,,1344.72,,,2026-01-19,wayback:inside.fifa.com (validated)
+75.0,Finland,,1341.81,,,2026-01-19,wayback:inside.fifa.com (validated)
+76.0,Bolivia,,1330.52,,,2026-01-19,wayback:inside.fifa.com (validated)
+77.0,Israel,,1328.14,,,2026-01-19,wayback:inside.fifa.com (validated)
+78.0,Oman,,1313.46,,,2026-01-19,wayback:inside.fifa.com (validated)
+79.0,Kosovo,,1308.84,,,2026-01-19,wayback:inside.fifa.com (validated)
+80.0,Guinea,,1307.05,,,2026-01-19,wayback:inside.fifa.com (validated)
+81.0,Curaçao,,1302.7,,,2026-01-19,wayback:inside.fifa.com (validated)
+82.0,Montenegro,,1297.09,,,2026-01-19,wayback:inside.fifa.com (validated)
+83.0,Haiti,,1294.49,,,2026-01-19,wayback:inside.fifa.com (validated)
+84.0,Syria,,1282.62,,,2026-01-19,wayback:inside.fifa.com (validated)
+85.0,New Zealand,,1279.25,,,2026-01-19,wayback:inside.fifa.com (validated)
+86.0,Gabon,,1276.28,,,2026-01-19,wayback:inside.fifa.com (validated)
+87.0,Bulgaria,,1272.19,,,2026-01-19,wayback:inside.fifa.com (validated)
+88.0,Uganda,,1264.09,,,2026-01-19,wayback:inside.fifa.com (validated)
+89.0,Angola,,1263.1,,,2026-01-19,wayback:inside.fifa.com (validated)
+90.0,Bahrain,,1258.53,,,2026-01-19,wayback:inside.fifa.com (validated)
+91.0,Zambia,,1256.68,,,2026-01-19,wayback:inside.fifa.com (validated)
+92.0,Benin,,1250.05,,,2026-01-19,wayback:inside.fifa.com (validated)
+93.0,China PR,,1249.06,,,2026-01-19,wayback:inside.fifa.com (validated)
+94.0,Guatemala,,1245.77,,,2026-01-19,wayback:inside.fifa.com (validated)
+95.0,Palestine,,1244.73,,,2026-01-19,wayback:inside.fifa.com (validated)
+96.0,Thailand,,1243.27,,,2026-01-19,wayback:inside.fifa.com (validated)
+97.0,Trinidad and Tobago,,1227.32,,,2026-01-19,wayback:inside.fifa.com (validated)
+98.0,Belarus,,1227.09,,,2026-01-19,wayback:inside.fifa.com (validated)
+99.0,El Salvador,,1226.65,,,2026-01-19,wayback:inside.fifa.com (validated)
+100.0,Tajikistan,,1224.93,,,2026-01-19,wayback:inside.fifa.com (validated)
+101.0,Mozambique,,1224.31,,,2026-01-19,wayback:inside.fifa.com (validated)
+102.0,Luxembourg,,1218.91,,,2026-01-19,wayback:inside.fifa.com (validated)
+103.0,Kyrgyz Republic,,1201.22,,,2026-01-19,wayback:inside.fifa.com (validated)
+104.0,Madagascar,,1198.87,,,2026-01-19,wayback:inside.fifa.com (validated)
+105.0,Armenia,,1196.08,,,2026-01-19,wayback:inside.fifa.com (validated)
+106.0,Comoros,,1193.49,,,2026-01-19,wayback:inside.fifa.com (validated)
+107.0,Equatorial Guinea,,1190.01,,,2026-01-19,wayback:inside.fifa.com (validated)
+108.0,Vietnam,,1189.51,,,2026-01-19,wayback:inside.fifa.com (validated)
+109.0,Lebanon,,1187.96,,,2026-01-19,wayback:inside.fifa.com (validated)
+110.0,Tanzania,,1186.14,,,2026-01-19,wayback:inside.fifa.com (validated)
+111.0,Niger,,1185.09,,,2026-01-19,wayback:inside.fifa.com (validated)
+112.0,Libya,,1183.06,,,2026-01-19,wayback:inside.fifa.com (validated)
+113.0,Kenya,,1179.54,,,2026-01-19,wayback:inside.fifa.com (validated)
+114.0,Kazakhstan,,1173.0,,,2026-01-19,wayback:inside.fifa.com (validated)
+115.0,Mauritania,,1171.35,,,2026-01-19,wayback:inside.fifa.com (validated)
+116.0,The Gambia,,1161.55,,,2026-01-19,wayback:inside.fifa.com (validated)
+117.0,Sudan,,1157.22,,,2026-01-19,wayback:inside.fifa.com (validated)
+118.0,Namibia,,1153.22,,,2026-01-19,wayback:inside.fifa.com (validated)
+119.0,Korea DPR,,1151.05,,,2026-01-19,wayback:inside.fifa.com (validated)
+120.0,Sierra Leone,,1149.1,,,2026-01-19,wayback:inside.fifa.com (validated)
+121.0,Malaysia,,1145.89,,,2026-01-19,wayback:inside.fifa.com (validated)
+122.0,Indonesia,,1144.73,,,2026-01-19,wayback:inside.fifa.com (validated)
+123.0,Suriname,,1140.54,,,2026-01-19,wayback:inside.fifa.com (validated)
+124.0,Togo,,1140.35,,,2026-01-19,wayback:inside.fifa.com (validated)
+125.0,Faroe Islands,,1135.42,,,2026-01-19,wayback:inside.fifa.com (validated)
+126.0,Malawi,,1133.75,,,2026-01-19,wayback:inside.fifa.com (validated)
+127.0,Azerbaijan,,1132.97,,,2026-01-19,wayback:inside.fifa.com (validated)
+128.0,Cyprus,,1128.5,,,2026-01-19,wayback:inside.fifa.com (validated)
+129.0,Estonia,,1123.11,,,2026-01-19,wayback:inside.fifa.com (validated)
+130.0,Rwanda,,1117.78,,,2026-01-19,wayback:inside.fifa.com (validated)
+131.0,Nicaragua,,1116.86,,,2026-01-19,wayback:inside.fifa.com (validated)
+132.0,Zimbabwe,,1113.61,,,2026-01-19,wayback:inside.fifa.com (validated)
+133.0,Guinea-Bissau,,1108.09,,,2026-01-19,wayback:inside.fifa.com (validated)
+134.0,Congo,,1105.96,,,2026-01-19,wayback:inside.fifa.com (validated)
+135.0,Kuwait,,1105.1,,,2026-01-19,wayback:inside.fifa.com (validated)
+136.0,Philippines,,1090.95,,,2026-01-19,wayback:inside.fifa.com (validated)
+137.0,Turkmenistan,,1087.52,,,2026-01-19,wayback:inside.fifa.com (validated)
+138.0,Central African Republic,,1083.57,,,2026-01-19,wayback:inside.fifa.com (validated)
+139.0,Latvia,,1082.68,,,2026-01-19,wayback:inside.fifa.com (validated)
+140.0,Liberia,,1081.46,,,2026-01-19,wayback:inside.fifa.com (validated)
+141.0,India,,1079.52,,,2026-01-19,wayback:inside.fifa.com (validated)
+142.0,Dominican Republic,,1077.49,,,2026-01-19,wayback:inside.fifa.com (validated)
+143.0,Lesotho,,1065.97,,,2026-01-19,wayback:inside.fifa.com (validated)
+144.0,Botswana,,1062.42,,,2026-01-19,wayback:inside.fifa.com (validated)
+145.0,Burundi,,1060.22,,,2026-01-19,wayback:inside.fifa.com (validated)
+146.0,Lithuania,,1056.34,,,2026-01-19,wayback:inside.fifa.com (validated)
+147.0,Ethiopia,,1055.36,,,2026-01-19,wayback:inside.fifa.com (validated)
+148.0,Singapore,,1050.35,,,2026-01-19,wayback:inside.fifa.com (validated)
+149.0,Yemen,,1049.49,,,2026-01-19,wayback:inside.fifa.com (validated)
+150.0,New Caledonia,,1042.62,,,2026-01-19,wayback:inside.fifa.com (validated)
+151.0,Guyana,,1041.9,,,2026-01-19,wayback:inside.fifa.com (validated)
+152.0,Solomon Islands,,1039.86,,,2026-01-19,wayback:inside.fifa.com (validated)
+153.0,"Hong Kong, China",,1038.14,,,2026-01-19,wayback:inside.fifa.com (validated)
+154.0,St Kitts and Nevis,,1035.25,,,2026-01-19,wayback:inside.fifa.com (validated)
+155.0,Fiji,,1029.7,,,2026-01-19,wayback:inside.fifa.com (validated)
+156.0,Puerto Rico,,1020.07,,,2026-01-19,wayback:inside.fifa.com (validated)
+157.0,Tahiti,,1019.04,,,2026-01-19,wayback:inside.fifa.com (validated)
+158.0,Moldova,,1012.64,,,2026-01-19,wayback:inside.fifa.com (validated)
+159.0,Eswatini,,1010.52,,,2026-01-19,wayback:inside.fifa.com (validated)
+160.0,Vanuatu,,997.01,,,2026-01-19,wayback:inside.fifa.com (validated)
+161.0,Malta,,996.59,,,2026-01-19,wayback:inside.fifa.com (validated)
+162.0,Afghanistan,,991.19,,,2026-01-19,wayback:inside.fifa.com (validated)
+163.0,Myanmar,,990.81,,,2026-01-19,wayback:inside.fifa.com (validated)
+164.0,Grenada,,989.59,,,2026-01-19,wayback:inside.fifa.com (validated)
+165.0,Antigua and Barbuda,,986.58,,,2026-01-19,wayback:inside.fifa.com (validated)
+166.0,Cuba,,980.49,,,2026-01-19,wayback:inside.fifa.com (validated)
+167.0,St Lucia,,980.28,,,2026-01-19,wayback:inside.fifa.com (validated)
+168.0,South Sudan,,977.5,,,2026-01-19,wayback:inside.fifa.com (validated)
+169.0,Bermuda,,976.87,,,2026-01-19,wayback:inside.fifa.com (validated)
+170.0,Papua New Guinea,,974.9,,,2026-01-19,wayback:inside.fifa.com (validated)
+171.0,St Vincent and the Grenadines,,963.74,,,2026-01-19,wayback:inside.fifa.com (validated)
+172.0,Andorra,,949.44,,,2026-01-19,wayback:inside.fifa.com (validated)
+173.0,Maldives,,945.02,,,2026-01-19,wayback:inside.fifa.com (validated)
+174.0,Chinese Taipei,,938.21,,,2026-01-19,wayback:inside.fifa.com (validated)
+175.0,Montserrat,,916.75,,,2026-01-19,wayback:inside.fifa.com (validated)
+176.0,Mauritius,,915.51,,,2026-01-19,wayback:inside.fifa.com (validated)
+177.0,Chad,,914.65,,,2026-01-19,wayback:inside.fifa.com (validated)
+178.0,Barbados,,914.42,,,2026-01-19,wayback:inside.fifa.com (validated)
+179.0,Cambodia,,911.54,,,2026-01-19,wayback:inside.fifa.com (validated)
+180.0,Bangladesh,,911.1,,,2026-01-19,wayback:inside.fifa.com (validated)
+181.0,Belize,,910.74,,,2026-01-19,wayback:inside.fifa.com (validated)
+182.0,Nepal,,902.52,,,2026-01-19,wayback:inside.fifa.com (validated)
+183.0,Dominica,,901.37,,,2026-01-19,wayback:inside.fifa.com (validated)
+184.0,American Samoa,,883.17,,,2026-01-19,wayback:inside.fifa.com (validated)
+185.0,Mongolia,,879.75,,,2026-01-19,wayback:inside.fifa.com (validated)
+186.0,Cook Islands,,877.53,,,2026-01-19,wayback:inside.fifa.com (validated)
+187.0,Samoa,,876.41,,,2026-01-19,wayback:inside.fifa.com (validated)
+188.0,Brunei Darussalam,,875.78,,,2026-01-19,wayback:inside.fifa.com (validated)
+189.0,São Tomé and Príncipe,,871.63,,,2026-01-19,wayback:inside.fifa.com (validated)
+190.0,Laos,,871.16,,,2026-01-19,wayback:inside.fifa.com (validated)
+191.0,Aruba,,867.94,,,2026-01-19,wayback:inside.fifa.com (validated)
+192.0,Bhutan,,867.86,,,2026-01-19,wayback:inside.fifa.com (validated)
+193.0,Macau,,865.29,,,2026-01-19,wayback:inside.fifa.com (validated)
+194.0,Sri Lanka,,857.4,,,2026-01-19,wayback:inside.fifa.com (validated)
+195.0,Cayman Islands,,851.74,,,2026-01-19,wayback:inside.fifa.com (validated)
+196.0,Djibouti,,847.03,,,2026-01-19,wayback:inside.fifa.com (validated)
+197.0,Tonga,,835.64,,,2026-01-19,wayback:inside.fifa.com (validated)
+198.0,Timor-Leste,,835.55,,,2026-01-19,wayback:inside.fifa.com (validated)
+199.0,Pakistan,,833.16,,,2026-01-19,wayback:inside.fifa.com (validated)
+200.0,Somalia,,828.9,,,2026-01-19,wayback:inside.fifa.com (validated)
+201.0,Guam,,823.08,,,2026-01-19,wayback:inside.fifa.com (validated)
+202.0,Gibraltar,,818.03,,,2026-01-19,wayback:inside.fifa.com (validated)
+203.0,Seychelles,,805.33,,,2026-01-19,wayback:inside.fifa.com (validated)
+204.0,Turks and Caicos Islands,,803.98,,,2026-01-19,wayback:inside.fifa.com (validated)
+205.0,Liechtenstein,,799.8,,,2026-01-19,wayback:inside.fifa.com (validated)
+206.0,Bahamas,,796.6,,,2026-01-19,wayback:inside.fifa.com (validated)
+207.0,US Virgin Islands,,776.6,,,2026-01-19,wayback:inside.fifa.com (validated)
+208.0,British Virgin Islands,,776.54,,,2026-01-19,wayback:inside.fifa.com (validated)
+209.0,Anguilla,,759.78,,,2026-01-19,wayback:inside.fifa.com (validated)
+210.0,San Marino,,726.03,,,2026-01-19,wayback:inside.fifa.com (validated)

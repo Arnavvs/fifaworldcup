@@ -171,7 +171,7 @@
   "id": "D-RANK",
   "sprint": "Data days (user)",
   "desc": "FIFA rankings 2024-07 to 2026-06 gap (Wayback Machine)",
-  "status": "in_progress",
-  "note": "Wayback harvest running: ~20 releases 2024-07 to 2026-05 found"
+  "status": "done",
+  "note": "CLOSED via Wayback: 13 validated releases 2024-07 to 2026-01; stack new best 0.8558"
  }
 ]
