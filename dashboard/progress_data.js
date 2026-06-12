@@ -1,9 +1,9 @@
 window.PROGRESS = {
- "updated": "2026-06-12 07:52 UTC",
- "run_id": "7f8d1a7",
+ "updated": "2026-06-12 08:25 UTC",
+ "run_id": "fcb3f3f",
  "best_logloss": 0.8574,
  "elo_coverage": "100%",
- "wc_played": 0,
+ "wc_played": 3,
  "experiments": [
   {
    "exp_id": "market_closing",
@@ -366,7 +366,7 @@ window.PROGRESS = {
   ],
   [
    "matches",
-   49353
+   49356
   ],
   [
    "matches_norm",
@@ -485,6 +485,14 @@ window.PROGRESS = {
   {
    "ts": "2026-06-12 07:52 UTC",
    "msg": "dashboard/index.html simulation showcase built (champion bars, reach table, group forecasts, 72 match cards, chaos gauge)"
+  },
+  {
+   "ts": "2026-06-12 08:08 UTC",
+   "msg": "OPENCODE_PROMPT.md created - tasks LIVE/PENS/m9/BT22/HIST+DASH/m10/ASK/m3+m5/T0.2full delegated, review-on-branch workflow"
+  },
+  {
+   "ts": "2026-06-12 08:25 UTC",
+   "msg": "live update: 1 new results ingested"
   }
  ]
 };

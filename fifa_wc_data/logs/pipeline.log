@@ -341,3 +341,39 @@
 2026-06-12 13:11:51,117 | INFO    | m8_sim             | running knockout sims...
 2026-06-12 13:13:46,145 | INFO    | m8_sim             | TOP-10 CHAMPION ODDS: Argentina 17.5%, Spain 14.6%, England 6.7%, France 6.3%, Brazil 5.8%, Portugal 5.4%, Colombia 5.3%, Morocco 5.1%, Japan 4.3%, Germany 4.1%
 2026-06-12 13:13:46,145 | INFO    | m8_sim             | m8 complete -> C:\Users\HP\OneDrive\Desktop\worldCup\artifacts\run_20260612T0743
+2026-06-12 13:47:02,718 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:48:52,603 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:49:12,052 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:49:12,108 | INFO    | live               | Ingested match 1: Mexico 2–0 South Africa
+2026-06-12 13:49:12,115 | INFO    | live               | Ingested match 2: Korea Republic 2–1 Czechia
+2026-06-12 13:49:31,860 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:49:31,871 | INFO    | live               | All fetched scores already ingested — no-op.
+2026-06-12 13:51:07,601 | INFO    | m8_sim             | groups=12 teams=48 sims=50000
+2026-06-12 13:51:08,086 | INFO    | m8_sim             | running knockout sims...
+2026-06-12 13:51:49,664 | INFO    | m8_sim             | TOP-10 CHAMPION ODDS: Argentina 17.2%, Spain 15.1%, England 6.7%, France 6.3%, Brazil 6.1%, Colombia 5.2%, Portugal 5.1%, Morocco 5.0%, Japan 4.3%, Germany 3.9%
+2026-06-12 13:51:49,664 | INFO    | m8_sim             | m8 complete -> C:\Users\HP\OneDrive\Desktop\worldCup\artifacts\run_20260612T0821
+2026-06-12 13:52:14,657 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:52:14,665 | INFO    | live               | All fetched scores already ingested — no-op.
+2026-06-12 13:52:45,243 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:52:45,252 | INFO    | live               | All fetched scores already ingested — no-op.
+2026-06-12 13:53:09,641 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:53:09,648 | INFO    | live               | Found 1 matches with scores not yet ingested: [3]
+2026-06-12 13:53:09,657 | INFO    | live               | All scores already ingested — no-op.
+2026-06-12 13:53:55,805 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:53:55,829 | INFO    | live               | All scores already ingested — no-op.
+2026-06-12 13:54:23,061 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:54:23,088 | INFO    | live               | Found 1 matches with scores not yet ingested: [3]
+2026-06-12 13:54:23,109 | INFO    | live               | ELO updated: Canada 1899→1909  Bosnia and Herzegovina 1649→1638  (K=60 G=1.5 δ=10.6)
+2026-06-12 13:54:23,110 | INFO    | live               | Re-running simulator...
+2026-06-12 13:54:24,098 | INFO    | m8_sim             | groups=12 teams=48 sims=50000
+2026-06-12 13:54:24,913 | INFO    | m8_sim             | running knockout sims...
+2026-06-12 13:55:05,490 | INFO    | m8_sim             | TOP-10 CHAMPION ODDS: Argentina 17.1%, Spain 14.4%, England 6.8%, France 6.3%, Brazil 6.1%, Portugal 5.3%, Colombia 5.1%, Morocco 5.0%, Germany 4.2%, Japan 4.1%
+2026-06-12 13:55:05,490 | INFO    | m8_sim             | m8 complete -> C:\Users\HP\OneDrive\Desktop\worldCup\artifacts\run_20260612T0825
+2026-06-12 13:55:05,508 | INFO    | live               | Appended 1 rows to realized_surprisal.csv
+2026-06-12 13:55:05,516 | INFO    | live               | live update: 1 new results, champion now Argentina 17.1%
+2026-06-12 13:55:30,837 | INFO    | live               | fixturedownload: 2 finished matches
+2026-06-12 13:55:30,870 | INFO    | live               | All scores already ingested — no-op.
+2026-06-12 13:55:44,935 | INFO    | m8_sim             | groups=12 teams=48 sims=50000
+2026-06-12 13:55:45,400 | INFO    | m8_sim             | running knockout sims...
+2026-06-12 13:56:24,766 | INFO    | m8_sim             | TOP-10 CHAMPION ODDS: Argentina 17.2%, Spain 14.5%, England 6.8%, Brazil 6.0%, France 6.0%, Portugal 5.4%, Colombia 5.3%, Morocco 5.2%, Japan 4.3%, Germany 4.2%
+2026-06-12 13:56:24,766 | INFO    | m8_sim             | m8 complete -> C:\Users\HP\OneDrive\Desktop\worldCup\artifacts\run_20260612T0826
