@@ -23,8 +23,15 @@ log = get_logger("s13_sb")
 OUT = RAW / "statsbomb"
 BASE = "https://raw.githubusercontent.com/statsbomb/open-data/master/data"
 H = {"User-Agent": "Mozilla/5.0 (wc2026-research)"}
-# (competition_id, season_id, label)
-SEASONS = [(43, 106, "WC2022"), (43, 3, "WC2018")]
+# (competition_id, season_id, label) — every senior men's intl tournament in
+# the open-data repo (checked 2026-06-12). Checkpointed, so reruns only fetch new.
+SEASONS = [
+    (43, 106, "WC2022"), (43, 3, "WC2018"),
+    (55, 282, "EURO2024"), (55, 43, "EURO2020"),
+    (223, 282, "COPA2024"), (1267, 107, "AFCON2023"),
+    (43, 55, "WC1990"), (43, 54, "WC1986"), (43, 51, "WC1974"),
+    (43, 272, "WC1970"), (43, 270, "WC1962"), (43, 269, "WC1958"),
+]
 
 
 def get_json(url: str):
@@ -100,11 +107,22 @@ def main():
             mark_done("statsbomb", ck)
         log.info(f"{label}: cumulative starters={len(all_line)} team-rows={len(all_team)}")
 
-    # persist
-    dfm = pd.DataFrame(all_matches).drop_duplicates("match_id")
-    dfl = pd.DataFrame(all_line)
-    dft = pd.DataFrame(all_team)
-    dfp = pd.DataFrame(all_player)
+    # persist — MERGE with existing files (checkpointed reruns only carry new
+    # matches in memory; a plain replace would drop previously fetched rows)
+    def merged(new_rows, fname, keys):
+        new = pd.DataFrame(new_rows)
+        old_p = OUT / fname
+        if old_p.exists():
+            old = pd.read_csv(old_p)
+            new = pd.concat([old, new], ignore_index=True) if len(new) else old
+        if len(new):
+            new = new.drop_duplicates(subset=keys, keep="last")
+        return new
+
+    dfm = merged(all_matches, "sb_matches.csv", ["match_id"])
+    dfl = merged(all_line, "starting_lineups.csv", ["match_id", "team", "player"])
+    dft = merged(all_team, "sb_team_match_stats.csv", ["match_id", "team"])
+    dfp = merged(all_player, "sb_player_match_stats.csv", ["match_id", "team", "player"])
     save_df(dfm, OUT / "sb_matches.csv")
     if len(dfl): save_df(dfl, OUT / "starting_lineups.csv")
     if len(dft): save_df(dft, OUT / "sb_team_match_stats.csv")

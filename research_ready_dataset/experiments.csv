@@ -11,3 +11,10 @@ m6_stack_cal,2026-06-12,m6_stack,stack(dav+dc+lr+gb)+temp,v2 features,34497,0.85
 PENS_logistic,2026-06-12,m8_simulate,penalty_logistic,shootouts.csv 572 joined,572,,,,,,KEEP,logistic p=sigmoid(0.0185+0.6265*|elo|/400); shift<1pp
 m9_entropy,2026-06-12,m9_entropy,entropy_engine,davidson+dixon sources,44563,,,,,,KEEP,8 WC tournaments 1994-2022; 2022 most chaotic
 BT22,2026-06-12,bt_backtest,blend_0.5dc_0.5dav,wc2022 freeze,64,1.0513,,,,,yes,KEEP,Argentina rank=2 P=24.8%; market=0.7273089186922294
+m10_scorers,2026-06-12,m10_scorers,scorer_heuristic,official_squads_2026,1249,,,,,,KEEP,top=Harry Kane (captain) E=1.06
+m0_elo_only_v2,2026-06-12,m0_baseline_sanity,elo_only,classification_dataset_v2.csv (47 feats),34497,0.8812,0.5175,,0.6026,,no,LOG,
+m0_logreg_v2,2026-06-12,m0_baseline_sanity,logreg,classification_dataset_v2.csv (47 feats),34497,0.8625,0.5060,,0.6065,,yes,LOG,
+m0_histgb_v2,2026-06-12,m0_baseline_sanity,histgb,classification_dataset_v2.csv (47 feats),34497,0.8645,0.5074,,0.6046,,yes,LOG,
+m0_blend_raw_v2,2026-06-12,m0_baseline_sanity,blend_raw,classification_dataset_v2.csv (47 feats),34497,0.8591,0.5044,,0.6063,,yes,LOG,
+m0_blend_cal_v2,2026-06-12,m0_baseline_sanity,blend_cal,classification_dataset_v2.csv (47 feats),34497,0.8598,0.5040,,0.6067,,yes,LOG,
+m6_stack_cal,2026-06-12,m6_stack,stack(dav+dc+lr+gb)+temp,v2 features,34497,0.8574,0.5033,,0.6065,,yes,KEEP,T=1.099 raw=0.8563

@@ -1,6 +1,6 @@
 window.PROGRESS = {
- "updated": "2026-06-12 08:39 UTC",
- "run_id": "a881e58",
+ "updated": "2026-06-12 09:34 UTC",
+ "run_id": "b341628",
  "best_logloss": 0.8574,
  "elo_coverage": "100%",
  "wc_played": 2,
@@ -38,6 +38,22 @@ window.PROGRESS = {
    "notes": "T=1.099 raw=0.8563"
   },
   {
+   "exp_id": "m6_stack_cal",
+   "date": "2026-06-12",
+   "module": "m6_stack",
+   "model": "stack(dav+dc+lr+gb)+temp",
+   "features_desc": "v2 features",
+   "n_train": 34497.0,
+   "logloss_test": 0.8574,
+   "brier_test": 0.5033,
+   "rps_test": "",
+   "acc_test": 0.6065,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "KEEP",
+   "notes": "T=1.099 raw=0.8563"
+  },
+  {
    "exp_id": "m0_blend_raw_v2",
    "date": "2026-06-11",
    "module": "m0_baseline_sanity",
@@ -48,6 +64,38 @@ window.PROGRESS = {
    "brier_test": 0.5044,
    "rps_test": "",
    "acc_test": 0.6063,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "LOG",
+   "notes": ""
+  },
+  {
+   "exp_id": "m0_blend_raw_v2",
+   "date": "2026-06-12",
+   "module": "m0_baseline_sanity",
+   "model": "blend_raw",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "n_train": 34497.0,
+   "logloss_test": 0.8591,
+   "brier_test": 0.5044,
+   "rps_test": "",
+   "acc_test": 0.6063,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "LOG",
+   "notes": ""
+  },
+  {
+   "exp_id": "m0_blend_cal_v2",
+   "date": "2026-06-12",
+   "module": "m0_baseline_sanity",
+   "model": "blend_cal",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "n_train": 34497.0,
+   "logloss_test": 0.8598,
+   "brier_test": 0.504,
+   "rps_test": "",
+   "acc_test": 0.6067,
    "ece_test": "",
    "beats_baseline": "yes",
    "decision": "LOG",
@@ -80,6 +128,38 @@ window.PROGRESS = {
    "brier_test": 0.506,
    "rps_test": "",
    "acc_test": 0.6065,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "LOG",
+   "notes": ""
+  },
+  {
+   "exp_id": "m0_logreg_v2",
+   "date": "2026-06-12",
+   "module": "m0_baseline_sanity",
+   "model": "logreg",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "n_train": 34497.0,
+   "logloss_test": 0.8625,
+   "brier_test": 0.506,
+   "rps_test": "",
+   "acc_test": 0.6065,
+   "ece_test": "",
+   "beats_baseline": "yes",
+   "decision": "LOG",
+   "notes": ""
+  },
+  {
+   "exp_id": "m0_histgb_v2",
+   "date": "2026-06-12",
+   "module": "m0_baseline_sanity",
+   "model": "histgb",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "n_train": 34497.0,
+   "logloss_test": 0.8645,
+   "brier_test": 0.5074,
+   "rps_test": "",
+   "acc_test": 0.6046,
    "ece_test": "",
    "beats_baseline": "yes",
    "decision": "LOG",
@@ -119,6 +199,22 @@ window.PROGRESS = {
   },
   {
    "exp_id": "m0_elo_only_v2",
+   "date": "2026-06-12",
+   "module": "m0_baseline_sanity",
+   "model": "elo_only",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "n_train": 34497.0,
+   "logloss_test": 0.8812,
+   "brier_test": 0.5175,
+   "rps_test": "",
+   "acc_test": 0.6026,
+   "ece_test": "",
+   "beats_baseline": "no",
+   "decision": "LOG",
+   "notes": ""
+  },
+  {
+   "exp_id": "m0_elo_only_v2",
    "date": "2026-06-11",
    "module": "m0_baseline_sanity",
    "model": "elo_only",
@@ -148,22 +244,6 @@ window.PROGRESS = {
    "beats_baseline": "no",
    "decision": "KEEP",
    "notes": "rho fitted; goal calib h x0.96 a x1.02"
-  },
-  {
-   "exp_id": "BT22",
-   "date": "2026-06-12",
-   "module": "bt_backtest",
-   "model": "blend_0.5dc_0.5dav",
-   "features_desc": "wc2022 freeze",
-   "n_train": 64.0,
-   "logloss_test": 1.0513,
-   "brier_test": "",
-   "rps_test": "",
-   "acc_test": "",
-   "ece_test": "",
-   "beats_baseline": "yes",
-   "decision": "KEEP",
-   "notes": "Argentina rank=2 P=24.8%; market=0.7273089186922294"
   }
  ],
  "tasks": [
@@ -290,29 +370,29 @@ window.PROGRESS = {
    "id": "HIST",
    "sprint": "Sprint 3 \u2014 Live loop",
    "desc": "prediction_history.csv + champion-prob trajectories",
-   "status": "todo",
-   "note": ""
+   "status": "done",
+   "note": "trajectory chart, history_data.js, bracket.html"
   },
   {
    "id": "m10",
    "sprint": "Sprint 4 \u2014 Products",
    "desc": "Golden Boot scorer model + WC2022 backtest",
-   "status": "todo",
-   "note": ""
+   "status": "done",
+   "note": "Golden Boot heuristic: Kane 1.06, Messi 0.91, Haaland 0.90"
   },
   {
    "id": "DASH",
    "sprint": "Sprint 4 \u2014 Products",
    "desc": "Public dashboard pages (groups/bracket/entropy/scorers)",
-   "status": "todo",
-   "note": "extend dashboard/"
+   "status": "done",
+   "note": "entropy page, bracket page, trajectory chart"
   },
   {
    "id": "ASK",
    "sprint": "Sprint 4 \u2014 Products",
    "desc": "ask.py JSON CLI + CLAUDE.md for LLM access",
-   "status": "todo",
-   "note": ""
+   "status": "done",
+   "note": "ask.py JSON CLI, 7 subcommands, valid JSON output, CLAUDE.md written"
   },
   {
    "id": "D-ODDS",
@@ -325,8 +405,8 @@ window.PROGRESS = {
    "id": "D-XG",
    "sprint": "Data days (user)",
    "desc": "FBref intl team-match xG 2015-2026 via stealth",
-   "status": "todo",
-   "note": "not yet retried with VPN"
+   "status": "done",
+   "note": "StatsBomb expansion: +Euro24/20, Copa24, AFCON23 = 665 team-xG rows, 39/48 WC teams covered; FBref still VPN-blocked"
   },
   {
    "id": "D-AVAIL",
@@ -339,8 +419,8 @@ window.PROGRESS = {
    "id": "D-RANK",
    "sprint": "Data days (user)",
    "desc": "FIFA rankings 2024-07 to 2026-06 gap (Wayback Machine)",
-   "status": "todo",
-   "note": ""
+   "status": "in_progress",
+   "note": "Wayback harvest running: ~20 releases 2024-07 to 2026-05 found"
   }
  ],
  "db_tables": [
@@ -426,15 +506,15 @@ window.PROGRESS = {
   ],
   [
    "sb_matches",
-   128
+   333
   ],
   [
    "sb_player_match_stats",
-   1757
+   4592
   ],
   [
    "sb_team_match_stats",
-   255
+   665
   ],
   [
    "squads",
@@ -442,7 +522,7 @@ window.PROGRESS = {
   ],
   [
    "starting_lineups",
-   2816
+   7326
   ],
   [
    "team_match_features",
@@ -529,6 +609,34 @@ window.PROGRESS = {
   {
    "ts": "2026-06-12 08:35 UTC",
    "msg": "BT22 -> done (WC2022 backtest: blend LL=1.0513, Argentina rank=2 (24.8%), market=0.7273, top-5 pass)"
+  },
+  {
+   "ts": "2026-06-12 08:39 UTC",
+   "msg": "HIST -> done (trajectory chart, history_data.js, bracket.html)"
+  },
+  {
+   "ts": "2026-06-12 08:39 UTC",
+   "msg": "DASH -> done (entropy page, bracket page, trajectory chart)"
+  },
+  {
+   "ts": "2026-06-12 08:41 UTC",
+   "msg": "ASK -> done (ask.py JSON CLI, 7 subcommands, valid JSON output, CLAUDE.md written)"
+  },
+  {
+   "ts": "2026-06-12 08:42 UTC",
+   "msg": "m10 -> done (Golden Boot heuristic: Kane 1.06, Messi 0.91, Haaland 0.90)"
+  },
+  {
+   "ts": "2026-06-12 09:34 UTC",
+   "msg": "D-XG -> done (StatsBomb expansion: +Euro24/20, Copa24, AFCON23 = 665 team-xG rows, 39/48 WC teams covered; FBref still VPN-blocked)"
+  },
+  {
+   "ts": "2026-06-12 09:34 UTC",
+   "msg": "D-RANK -> in_progress (Wayback harvest running: ~20 releases 2024-07 to 2026-05 found)"
+  },
+  {
+   "ts": "2026-06-12 09:34 UTC",
+   "msg": "missing-data round: StatsBomb +205 matches ingested; xG features in v2 (58 cols); FBref stealth probe failed (needs VPN)"
   }
  ]
 };

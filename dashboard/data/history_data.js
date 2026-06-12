@@ -64,5 +64,5 @@ window.HISTORY = {
    0.0502
   ]
  },
- "updated": "2026-06-12 08:39 UTC"
+ "updated": "2026-06-12 09:34 UTC"
 };

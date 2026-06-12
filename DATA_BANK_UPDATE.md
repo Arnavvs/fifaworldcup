@@ -44,3 +44,19 @@ Install the browser stack — `pip install playwright soccerdata statsbombpy` + 
 3. **Playwright → Transfermarkt** injuries (fills #3).
 
 These three close every remaining gap without a paid subscription. #1's recent odds is the highest-value next target.
+
+
+---
+
+## Update 2026-06-12 — missing-data recovery round
+| gap | result | detail |
+|---|---|---|
+| D-RANK FIFA rankings 2024-07→2026 | ✅ **CLOSED** | Wayback Machine archived fifa.com's ranking JSON API; harvested every release 2024-07→2026 (211 teams each), validated (women's + German-locale captures scrubbed by s16b), appended to DB + f1 override refreshed |
+| D-XG (partial) | 🟡 **EXPANDED** | StatsBomb open data had 4 more tournaments: Euro 2024/2020, Copa America 2024, AFCON 2023 (+partial 1958-90 WCs). sb tables now 333 matches / 665 team-xG / 4,592 player-xG / 7,326 lineup rows. New features xg_pm_diff/xga_pm_diff/xg_net_diff cover **39/48 WC2026 teams** |
+| FBref full xG | ❌ still blocked | stealth playwright alone fails (Cloudflare challenge persists); needs VPN — user data-day task |
+| D-AVAIL lineups/injuries | ❌ needs API key | API-Football signup required |
+| D-ODDS 2016-26 odds | ❌ needs VPN | OddsPortal TCP-blocks this host |
+
+Effect on models: global test LL unchanged (xG/rank coverage is concentrated on 2025-26 rows,
+a sliver of the test set) — the gain shows up where it matters: **2026 fixture inference**
+(simulator + ensemble deployment now see fresh ranks + real attacking quality for 39/48 teams).

@@ -122,29 +122,29 @@
   "id": "HIST",
   "sprint": "Sprint 3 \u2014 Live loop",
   "desc": "prediction_history.csv + champion-prob trajectories",
-  "status": "todo",
-  "note": ""
+  "status": "done",
+  "note": "trajectory chart, history_data.js, bracket.html"
  },
  {
   "id": "m10",
   "sprint": "Sprint 4 \u2014 Products",
   "desc": "Golden Boot scorer model + WC2022 backtest",
-  "status": "todo",
-  "note": ""
+  "status": "done",
+  "note": "Golden Boot heuristic: Kane 1.06, Messi 0.91, Haaland 0.90"
  },
  {
   "id": "DASH",
   "sprint": "Sprint 4 \u2014 Products",
   "desc": "Public dashboard pages (groups/bracket/entropy/scorers)",
-  "status": "todo",
-  "note": "extend dashboard/"
+  "status": "done",
+  "note": "entropy page, bracket page, trajectory chart"
  },
  {
   "id": "ASK",
   "sprint": "Sprint 4 \u2014 Products",
   "desc": "ask.py JSON CLI + CLAUDE.md for LLM access",
-  "status": "todo",
-  "note": ""
+  "status": "done",
+  "note": "ask.py JSON CLI, 7 subcommands, valid JSON output, CLAUDE.md written"
  },
  {
   "id": "D-ODDS",
@@ -157,8 +157,8 @@
   "id": "D-XG",
   "sprint": "Data days (user)",
   "desc": "FBref intl team-match xG 2015-2026 via stealth",
-  "status": "todo",
-  "note": "not yet retried with VPN"
+  "status": "done",
+  "note": "StatsBomb expansion: +Euro24/20, Copa24, AFCON23 = 665 team-xG rows, 39/48 WC teams covered; FBref still VPN-blocked"
  },
  {
   "id": "D-AVAIL",
@@ -171,7 +171,7 @@
   "id": "D-RANK",
   "sprint": "Data days (user)",
   "desc": "FIFA rankings 2024-07 to 2026-06 gap (Wayback Machine)",
-  "status": "todo",
-  "note": ""
+  "status": "in_progress",
+  "note": "Wayback harvest running: ~20 releases 2024-07 to 2026-05 found"
  }
 ]

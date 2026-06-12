@@ -54,5 +54,33 @@
  {
   "ts": "2026-06-12 08:35 UTC",
   "msg": "BT22 -> done (WC2022 backtest: blend LL=1.0513, Argentina rank=2 (24.8%), market=0.7273, top-5 pass)"
+ },
+ {
+  "ts": "2026-06-12 08:39 UTC",
+  "msg": "HIST -> done (trajectory chart, history_data.js, bracket.html)"
+ },
+ {
+  "ts": "2026-06-12 08:39 UTC",
+  "msg": "DASH -> done (entropy page, bracket page, trajectory chart)"
+ },
+ {
+  "ts": "2026-06-12 08:41 UTC",
+  "msg": "ASK -> done (ask.py JSON CLI, 7 subcommands, valid JSON output, CLAUDE.md written)"
+ },
+ {
+  "ts": "2026-06-12 08:42 UTC",
+  "msg": "m10 -> done (Golden Boot heuristic: Kane 1.06, Messi 0.91, Haaland 0.90)"
+ },
+ {
+  "ts": "2026-06-12 09:34 UTC",
+  "msg": "D-XG -> done (StatsBomb expansion: +Euro24/20, Copa24, AFCON23 = 665 team-xG rows, 39/48 WC teams covered; FBref still VPN-blocked)"
+ },
+ {
+  "ts": "2026-06-12 09:34 UTC",
+  "msg": "D-RANK -> in_progress (Wayback harvest running: ~20 releases 2024-07 to 2026-05 found)"
+ },
+ {
+  "ts": "2026-06-12 09:34 UTC",
+  "msg": "missing-data round: StatsBomb +205 matches ingested; xG features in v2 (58 cols); FBref stealth probe failed (needs VPN)"
  }
 ]

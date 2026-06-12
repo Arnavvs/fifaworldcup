@@ -74,6 +74,34 @@ def main():
             fs["ch"].map(mp).astype(float) - fs["ca"].map(mp).astype(float),
             np.nan)
 
+    # ---- real-xG aggregates from StatsBomb modern tournaments ----
+    # WC18/22 + EURO20/24 + COPA24 + AFCON23 all ended by 2024-07, so gating the
+    # feature to rows dated >= 2025-01-01 is leakage-free.
+    try:
+        sb = pd.read_sql(
+            "SELECT s.match_id, s.team, s.xg, m.tournament FROM sb_team_match_stats s "
+            "JOIN sb_matches m ON s.match_id = m.match_id", con)
+        modern = sb[sb["tournament"].isin(
+            ["WC2022", "WC2018", "EURO2024", "EURO2020", "COPA2024", "AFCON2023"])].copy()
+        opp = modern.merge(modern, on="match_id", suffixes=("", "_opp"))
+        opp = opp[opp["team"] != opp["team_opp"]]
+        agg = (opp.groupby("team")
+               .agg(xg_pm=("xg", "mean"), xga_pm=("xg_opp", "mean"), n=("xg", "size"))
+               .query("n >= 3"))
+        agg.index = [canon.get(t, t) for t in agg.index]
+        xg_map, xga_map = agg["xg_pm"].to_dict(), agg["xga_pm"].to_dict()
+        recent_xg = pd.to_datetime(fs["date"], errors="coerce") >= pd.Timestamp("2025-01-01")
+        fs["xg_pm_diff"] = np.where(
+            recent_xg, fs["ch"].map(xg_map).astype(float) - fs["ca"].map(xg_map).astype(float), np.nan)
+        fs["xga_pm_diff"] = np.where(
+            recent_xg, fs["ch"].map(xga_map).astype(float) - fs["ca"].map(xga_map).astype(float), np.nan)
+        fs["xg_net_diff"] = fs["xg_pm_diff"] - fs["xga_pm_diff"]
+        cov = fs.loc[recent_xg, "xg_pm_diff"].notna().mean()
+        log.info(f"xG features: {len(agg)} teams w/ >=3 tournament matches; "
+                 f"coverage on 2025+ rows {cov:.1%}")
+    except Exception as e:
+        log.warning(f"xG feature join skipped: {e}")
+
     # fifa rank override for matches after the stale boundary
     fr = pd.read_csv(P2 / "fifa_rankings_updated.csv")
     rmap = team_map(fr, "team", "rank")

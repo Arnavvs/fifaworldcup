@@ -397,3 +397,133 @@
 2026-06-12 14:04:22,960 | INFO    | bt22               | WC2022 blend log-loss: 1.0513 (n=64)
 2026-06-12 14:04:22,971 | INFO    | bt22               | WC2022 market log-loss: 0.7273 (n=18)
 2026-06-12 14:04:46,934 | INFO    | bt22               | backtest_wc2022.json written. Our LL=1.0513, market=0.7273089186922294, Argentina rank=2, P=24.8%
+2026-06-12 14:12:05,182 | INFO    | m10                | m10 scorers: top3 = Harry Kane (captain) (1.061), Lionel Messi (captain) (0.914), Erling Haaland (0.896)
+2026-06-12 14:48:18,705 | INFO    | s13_sb             | WC2022: 64 matches
+2026-06-12 14:48:18,726 | INFO    | s13_sb             | WC2022: cumulative starters=0 team-rows=0
+2026-06-12 14:48:20,404 | INFO    | s13_sb             | WC2018: 64 matches
+2026-06-12 14:48:20,410 | INFO    | s13_sb             | WC2018: cumulative starters=0 team-rows=0
+2026-06-12 14:48:21,623 | INFO    | s13_sb             | EURO2024: 51 matches
+2026-06-12 14:50:22,270 | INFO    | s13_sb             | EURO2024: cumulative starters=1122 team-rows=102
+2026-06-12 14:50:23,699 | INFO    | s13_sb             | EURO2020: 51 matches
+2026-06-12 14:51:14,236 | INFO    | s16_wayback        | CDX captures to fetch: 67
+2026-06-12 14:51:51,226 | WARNING | s16_wayback        |   fetch fail 20260518230201: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:51:52,776 | WARNING | s16_wayback        |   fetch fail 20260323065905: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:51:54,354 | WARNING | s16_wayback        |   fetch fail 20260518230133: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:51:55,899 | WARNING | s16_wayback        |   fetch fail 20250107090857: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:51:57,445 | WARNING | s16_wayback        |   fetch fail 20260401134840: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:51:58,993 | WARNING | s16_wayback        |   fetch fail 20241223023242: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:00,541 | WARNING | s16_wayback        |   fetch fail 20260527163929: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:02,105 | WARNING | s16_wayback        |   fetch fail 20240702110823: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:03,664 | WARNING | s16_wayback        |   fetch fail 20250314005840: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:05,214 | WARNING | s16_wayback        |   fetch fail 20240718093954: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:07,318 | INFO    | s16_wayback        |   harvested release 2024-07-18: 211 teams (top: Argentina)
+2026-06-12 14:52:08,870 | WARNING | s16_wayback        |   fetch fail 20260323064133: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:10,422 | WARNING | s16_wayback        |   fetch fail 20241001235249: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:11,974 | WARNING | s16_wayback        |   fetch fail 20260124215436: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:13,527 | WARNING | s16_wayback        |   fetch fail 20241117091609: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:15,073 | WARNING | s16_wayback        |   fetch fail 20241129153750: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:16,624 | WARNING | s16_wayback        |   fetch fail 20250103161640: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:18,178 | WARNING | s16_wayback        |   fetch fail 20250222031352: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:19,749 | WARNING | s16_wayback        |   fetch fail 20250513104243: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:21,298 | WARNING | s16_wayback        |   fetch fail 20260508031656: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:22,848 | WARNING | s16_wayback        |   fetch fail 20260124205759: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:24,402 | WARNING | s16_wayback        |   fetch fail 20250730102301: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:25,016 | INFO    | s13_sb             | EURO2020: cumulative starters=2244 team-rows=204
+2026-06-12 14:52:25,953 | WARNING | s16_wayback        |   fetch fail 20250710132936: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:26,506 | INFO    | s13_sb             | COPA2024: 32 matches
+2026-06-12 14:52:27,509 | WARNING | s16_wayback        |   fetch fail 20260509202637: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:29,085 | WARNING | s16_wayback        |   fetch fail 20251026074801: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:30,638 | WARNING | s16_wayback        |   fetch fail 20251005081524: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:32,191 | WARNING | s16_wayback        |   fetch fail 20251014111828: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:33,741 | WARNING | s16_wayback        |   fetch fail 20260604032228: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:35,978 | INFO    | s16_wayback        |   harvested release 2025-11-19: 211 teams (top: Spain)
+2026-06-12 14:52:37,527 | WARNING | s16_wayback        |   fetch fail 20260604031704: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:39,079 | WARNING | s16_wayback        |   fetch fail 20260508142154: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:40,640 | WARNING | s16_wayback        |   fetch fail 20260114033046: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:42,189 | WARNING | s16_wayback        |   fetch fail 20260527164113: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:43,737 | WARNING | s16_wayback        |   fetch fail 20260319185715: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:45,281 | WARNING | s16_wayback        |   fetch fail 20240711144459: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:46,835 | WARNING | s16_wayback        |   fetch fail 20260526185031: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:48,388 | WARNING | s16_wayback        |   fetch fail 20250807140439: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:49,941 | WARNING | s16_wayback        |   fetch fail 20250807140117: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:51,492 | WARNING | s16_wayback        |   fetch fail 20250807140631: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:53,052 | WARNING | s16_wayback        |   fetch fail 20250302010008: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:54,608 | WARNING | s16_wayback        |   fetch fail 20251022001510: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:56,178 | WARNING | s16_wayback        |   fetch fail 20250619233241: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:57,734 | WARNING | s16_wayback        |   fetch fail 20260312031334: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:52:59,495 | WARNING | s16_wayback        |   fetch fail 20241001005522: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:53:01,251 | WARNING | s16_wayback        |   fetch fail 20240717154206: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:53:02,815 | WARNING | s16_wayback        |   fetch fail 20241114075835: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:53:04,367 | WARNING | s16_wayback        |   fetch fail 20241226094009: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:53:05,920 | WARNING | s16_wayback        |   fetch fail 20250513104244: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:53:07,473 | WARNING | s16_wayback        |   fetch fail 20250613163122: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:53:09,024 | WARNING | s16_wayback        |   fetch fail 20251005081440: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:53:10,571 | WARNING | s16_wayback        |   fetch fail 20260408020730: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:53:12,127 | WARNING | s16_wayback        |   fetch fail 20260418085009: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was 
+2026-06-12 14:53:40,776 | INFO    | s13_sb             | COPA2024: cumulative starters=2948 team-rows=268
+2026-06-12 14:53:42,432 | INFO    | s13_sb             | AFCON2023: 52 matches
+2026-06-12 14:55:35,128 | INFO    | s16_wayback        | CDX captures to fetch: 67
+2026-06-12 14:55:41,447 | INFO    | s16_wayback        |   harvested release 2024-06-20: 211 teams (top: Argentinien)
+2026-06-12 14:55:43,065 | INFO    | s13_sb             | AFCON2023: cumulative starters=4092 team-rows=372
+2026-06-12 14:55:44,547 | INFO    | s13_sb             | WC1990: 1 matches
+2026-06-12 14:55:46,798 | INFO    | s13_sb             | WC1990: cumulative starters=4114 team-rows=374
+2026-06-12 14:55:47,995 | INFO    | s13_sb             | WC1986: 3 matches
+2026-06-12 14:55:55,112 | INFO    | s13_sb             | WC1986: cumulative starters=4180 team-rows=380
+2026-06-12 14:55:56,348 | INFO    | s13_sb             | WC1974: 6 matches
+2026-06-12 14:56:04,433 | INFO    | s16_wayback        |   harvested release 2024-07-18: 211 teams (top: Argentina)
+2026-06-12 14:56:09,936 | INFO    | s13_sb             | WC1974: cumulative starters=4312 team-rows=392
+2026-06-12 14:56:11,366 | INFO    | s13_sb             | WC1970: 6 matches
+2026-06-12 14:56:25,479 | INFO    | s13_sb             | WC1970: cumulative starters=4444 team-rows=404
+2026-06-12 14:56:26,737 | INFO    | s13_sb             | WC1962: 1 matches
+2026-06-12 14:56:29,147 | INFO    | s13_sb             | WC1962: cumulative starters=4466 team-rows=406
+2026-06-12 14:56:30,348 | INFO    | s13_sb             | WC1958: 2 matches
+2026-06-12 14:56:35,715 | INFO    | s16_wayback        |   harvested release 2024-09-19: 211 teams (top: Argentina)
+2026-06-12 14:56:35,726 | INFO    | s13_sb             | WC1958: cumulative starters=4510 team-rows=410
+2026-06-12 14:56:35,866 | INFO    | common             | wrote    333 rows -> fifa_wc_data\raw\statsbomb\sb_matches.csv
+2026-06-12 14:56:35,884 | INFO    | common             | wrote   7326 rows -> fifa_wc_data\raw\statsbomb\starting_lineups.csv
+2026-06-12 14:56:35,887 | INFO    | common             | wrote    665 rows -> fifa_wc_data\raw\statsbomb\sb_team_match_stats.csv
+2026-06-12 14:56:35,900 | INFO    | common             | wrote   4592 rows -> fifa_wc_data\raw\statsbomb\sb_player_match_stats.csv
+2026-06-12 14:56:35,986 | INFO    | s13_sb             | StatsBomb done: 333 matches, 7326 starter rows, 665 team-xg rows, 4592 player-xg rows
+2026-06-12 14:56:40,918 | INFO    | s16_wayback        |   harvested release 2024-08-16: 204 teams (top: USA)
+2026-06-12 14:56:46,460 | INFO    | s16_wayback        |   harvested release 2024-10-24: 211 teams (top: Argentina)
+2026-06-12 14:56:51,662 | INFO    | s16_wayback        |   harvested release 2024-11-28: 211 teams (top: Argentina)
+2026-06-12 14:57:07,592 | INFO    | s16_wayback        |   harvested release 2024-12-13: 204 teams (top: USA)
+2026-06-12 14:57:13,291 | INFO    | s16_wayback        |   harvested release 2024-12-19: 211 teams (top: Argentina)
+2026-06-12 14:57:44,847 | INFO    | s16_wayback        |   harvested release 2025-04-03: 211 teams (top: Argentina)
+2026-06-12 14:57:50,201 | INFO    | s16_wayback        |   harvested release 2025-03-06: 204 teams (top: USA)
+2026-06-12 14:57:55,799 | INFO    | s16_wayback        |   harvested release 2025-06-12: 204 teams (top: USA)
+2026-06-12 14:58:06,886 | INFO    | s16_wayback        |   harvested release 2025-07-10: 211 teams (top: Argentina)
+2026-06-12 14:58:12,154 | INFO    | s16_wayback        |   harvested release 2025-04-04: 211 teams (top: Brazil)
+2026-06-12 14:58:33,202 | INFO    | s16_wayback        |   harvested release 2025-08-07: 204 teams (top: Spain)
+2026-06-12 14:58:38,376 | INFO    | s16_wayback        |   harvested release 2025-09-18: 211 teams (top: Spain)
+2026-06-12 14:58:53,833 | INFO    | s16_wayback        |   harvested release 2025-08-29: 211 teams (top: Brazil)
+2026-06-12 14:58:58,932 | INFO    | s16_wayback        |   harvested release 2025-12-22: 211 teams (top: Spain)
+2026-06-12 14:59:01,946 | INFO    | f1_features        | base 49281 rows; elo_match joined 100.0%
+2026-06-12 14:59:02,174 | INFO    | f1_features        | xG features: 76 teams w/ >=3 tournament matches; coverage on 2025+ rows 25.2%
+2026-06-12 14:59:06,102 | INFO    | f1_features        | classification_dataset_v2.csv: 49281 rows x 58 cols
+2026-06-12 14:59:08,200 | INFO    | f1_features        | regression_dataset_v2.csv: 49281 rows x 59 cols
+2026-06-12 14:59:08,227 | INFO    | f1_features        | f1 complete; test-era elo coverage now 100.0%
+2026-06-12 14:59:09,381 | INFO    | s16_wayback        |   harvested release 2024-10-11: 211 teams (top: Brazil)
+2026-06-12 14:59:13,603 | INFO    | m0_baseline        | rows train=34497 val=7401 test=7383 (modern test=7383) features=47
+2026-06-12 14:59:13,682 | INFO    | m0_baseline        | elo_only  | LL 0.8812 | Brier 0.5175 | acc 0.603 | LL(2010+) 0.8812
+2026-06-12 14:59:14,286 | INFO    | m0_baseline        | logreg    | LL 0.8625 | Brier 0.5060 | acc 0.607 | LL(2010+) 0.8625
+2026-06-12 14:59:19,790 | INFO    | s16_wayback        |   harvested release 2026-01-19: 211 teams (top: Spain)
+2026-06-12 14:59:23,560 | INFO    | m0_baseline        | histgb    | LL 0.8645 | Brier 0.5074 | acc 0.605 | LL(2010+) 0.8645
+2026-06-12 14:59:23,697 | INFO    | m0_baseline        | blend_raw | LL 0.8591 | Brier 0.5044 | acc 0.606 | LL(2010+) 0.8591
+2026-06-12 14:59:23,724 | INFO    | m0_baseline        | blend_cal | LL 0.8598 | Brier 0.5040 | acc 0.607 | LL(2010+) 0.8598
+2026-06-12 14:59:23,726 | INFO    | m0_baseline        | wrote C:\Users\HP\OneDrive\Desktop\worldCup\research_ready_dataset\baseline_metrics_v2.json
+2026-06-12 15:00:02,897 | INFO    | s16_wayback        |   harvested release 2025-11-19: 211 teams (top: Spain)
+2026-06-12 15:00:13,378 | INFO    | s16_wayback        |   harvested release 2025-12-11: 204 teams (top: Spain)
+2026-06-12 15:00:23,770 | INFO    | s16_wayback        |   harvested release 2025-12-12: 211 teams (top: Brazil)
+2026-06-12 15:01:06,448 | INFO    | s16_wayback        |   harvested release 2026-05-08: 211 teams (top: Brazil)
+2026-06-12 15:01:20,946 | INFO    | m6_stack           | DC coverage val 100.0% test 100.0% (missing -> davidson fallback)
+2026-06-12 15:01:34,366 | INFO    | m6_stack           | STACK test LL 0.8563 -> 0.8574 after T=1.099 | Brier 0.5033 | acc 0.607 | bar 0.8591
+2026-06-12 15:01:38,538 | INFO    | m6_stack           | m6 complete (models/ensemble_v1.pkl)
+2026-06-12 15:01:52,562 | INFO    | s16b_validate      | kept releases: []
+2026-06-12 15:01:52,566 | INFO    | s16b_validate      | fifa_rankings now 67261 rows, latest 2024-04-04
+2026-06-12 15:03:42,735 | INFO    | s16_wayback        | CDX captures to fetch: 67
+2026-06-12 15:03:48,822 | INFO    | s16_wayback        |   harvested release 2024-06-20: 211 teams (top: Argentinien)
+2026-06-12 15:04:11,877 | INFO    | s16_wayback        |   harvested release 2024-07-18: 211 teams (top: Argentina)
+2026-06-12 15:04:43,372 | INFO    | s16_wayback        |   harvested release 2024-09-19: 211 teams (top: Argentina)
+2026-06-12 15:04:48,440 | INFO    | s16_wayback        |   harvested release 2024-08-16: 204 teams (top: USA)
+2026-06-12 15:04:53,744 | INFO    | s16_wayback        |   harvested release 2024-10-24: 211 teams (top: Argentina)
