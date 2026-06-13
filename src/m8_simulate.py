@@ -38,6 +38,9 @@ HOSTS = {"USA", "Mexico", "Canada"}
 ART = ROOT / "artifacts"
 DASH = ROOT / "dashboard" / "data"
 
+# ELO form blend: weight on current ELO vs recent-form ELO
+ELO_FORM_BLEND = 0.15  # 15% recent-form, 85% current
+
 
 def load():
     con = sqlite3.connect(DB_PATH)
@@ -52,10 +55,37 @@ def load():
     return fx, elo, model
 
 
-def match_matrix(model, home, away):
-    neutral = 0 if home in HOSTS else 1
-    lh, la = lambdas(model, home, away, neutral)
-    return score_matrix(lh, la, model["rho"]), lh, la
+def compute_recent_form_elo(team: str, n_matches: int = 10) -> float:
+    """Compute a recent-form ELO from the last N matches (2024-2026)."""
+    con = sqlite3.connect(DB_PATH)
+    rows = con.execute("""
+        SELECT e.elo_home_pre, e.elo_away_pre, m.home_team, m.home_score, m.away_score
+        FROM matches m
+        JOIN elo_match e ON m.match_id = e.match_id
+        WHERE (m.home_team = ? OR m.away_team = ?)
+          AND m.date >= '2024-01-01'
+          AND m.home_score IS NOT NULL
+        ORDER BY m.date DESC
+        LIMIT ?
+    """, (team, team, n_matches)).fetchall()
+    con.close()
+    if not rows:
+        return None
+    # Average of pre-match ELOs for this team
+    vals = []
+    for eh, ea, ht, hs, aws in rows:
+        if ht == team:
+            vals.append(float(eh))
+        else:
+            vals.append(float(ea))
+    return np.mean(vals) if vals else None
+
+
+def blend_elo(elo_current: float, recent_form: float | None) -> float:
+    """Blend current ELO with recent-form ELO."""
+    if recent_form is None:
+        return elo_current
+    return (1 - ELO_FORM_BLEND) * elo_current + ELO_FORM_BLEND * recent_form
 
 
 def sample_scores(M, n, rng):
@@ -69,9 +99,28 @@ def wdl_from_matrix(M):
     # (p_away_win? careful) -- see note in simulate(): rows=home goals, cols=away.
 
 
+def _load_host_bonus() -> float:
+    try:
+        host_params = json.loads((ROOT / "research_ready_dataset" / "host_bonus_params.json").read_text())
+        return host_params.get("host_bonus", 0.0)
+    except Exception:
+        return 0.0
+
+
+def match_matrix(model, home, away, host_bonus=0.0):
+    neutral = 0 if home in HOSTS else 1
+    lh, la = lambdas(model, home, away, neutral)
+    if home in HOSTS and host_bonus != 0.0:
+        # Apply host bonus to home lambda (adds in log-space)
+        lh = lh * np.exp(host_bonus / 400.0)
+    return score_matrix(lh, la, model["rho"]), lh, la
+
+
 def main():
     rng = np.random.default_rng(SEED)
     fx, elo, model = load()
+    host_bonus = _load_host_bonus()
+    log.info(f"Host bonus: {host_bonus:.1f} ELO points")
     groups = sorted(fx.loc[fx["Group"].notna(), "Group"].unique())
     gteams = {g: sorted(set(fx.loc[fx["Group"] == g, "h"]) | set(fx.loc[fx["Group"] == g, "a"]))
               for g in groups}
@@ -84,7 +133,7 @@ def main():
     chaos_H = 0.0
     surprisal = np.zeros(N_SIMS)
     for r in gfx.itertuples(index=False):
-        M, lh, la = match_matrix(model, r.h, r.a)
+        M, lh, la = match_matrix(model, r.h, r.a, host_bonus)
         # rows = home goals, cols = away goals
         p_win = float(np.tril(M, -1).sum())   # home > away
         p_draw = float(np.trace(M))
@@ -158,28 +207,43 @@ def main():
     champion = np.zeros(len(teams), dtype=np.int64)
     reach = {rd: np.zeros(len(teams), dtype=np.int64) for rd in
              ["r32", "r16", "qf", "sf", "final", "champion"]}
-    elo_arr = {t: elo.get(t, 1500.0) for t in teams}
+    # Blend current ELO with recent-form ELO (last 10 matches, 2024-2026)
+    elo_arr = {}
+    for t in teams:
+        current = elo.get(t, 1500.0)
+        recent = compute_recent_form_elo(t, n_matches=10)
+        blended = blend_elo(current, recent)
+        elo_arr[t] = blended
+        if recent is not None:
+            log.debug(f"{t}: current={current:.0f} recent={recent:.0f} blended={blended:.0f}")
+    log.info(f"ELO blended with {ELO_FORM_BLEND*100:.0f}% recent-form weight for {len(teams)} teams")
     pair_cache: dict[tuple, np.ndarray] = {}
 
     def ko_winner(home, away, s_rng):
         key = (home, away)
         if key not in pair_cache:
-            M, _, _ = match_matrix(model, home, away)
+            M, _, _ = match_matrix(model, home, away, host_bonus)
             pair_cache[key] = M
         M = pair_cache[key]
         hs, as_ = sample_scores(M, 1, s_rng)
         if hs[0] != as_[0]:
             return home if hs[0] > as_[0] else away
         lh, la = lambdas(model, home, away, 0 if home in HOSTS else 1)
+        # Apply host bonus to extra time lambda
+        if home in HOSTS:
+            lh = lh * np.exp(host_bonus / 400.0)
         eh, ea = s_rng.poisson(lh / 3), s_rng.poisson(la / 3)
         if eh != ea:
             return home if eh > ea else away
         # Fitted penalty model from 572 shootouts (TASK 2 PENS)
         # p_higher = sigmoid(0.0185 + 0.6265 * |elo_diff|/400)
-        elo_diff = elo_arr[home] - elo_arr[away]
-        z = 0.0185 + 0.6265 * abs(elo_diff) / 400.0
+        # Add host_bonus to ELO diff for host nations
+        effective_elo_diff = elo_arr[home] - elo_arr[away]
+        if home in HOSTS:
+            effective_elo_diff += host_bonus
+        z = 0.0185 + 0.6265 * abs(effective_elo_diff) / 400.0
         p_higher = 1.0 / (1.0 + np.exp(-z))
-        p_home = p_higher if elo_diff > 0 else (1.0 - p_higher)
+        p_home = p_higher if effective_elo_diff > 0 else (1.0 - p_higher)
         return home if s_rng.random() < p_home else away
 
     log.info("running knockout sims...")
