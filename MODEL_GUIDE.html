@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Cup 2026 — How Our Machine Learning Predictions Work</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --border: #334155;
+    --txt: #f1f5f9;
+    --dim: #94a3b8;
+    --blue: #60a5fa;
+    --green: #4ade80;
+    --amber: #fbbf24;
+    --red: #f87171;
+    --purple: #c084fc;
+    --gold: #facc15;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--txt);
+    font: 16px/1.6 'Segoe UI', system-ui, sans-serif;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 24px;
+  }
+  h1 { font-size: 32px; color: var(--gold); margin-bottom: 8px; }
+  h2 { font-size: 22px; color: var(--blue); margin: 40px 0 16px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+  h3 { font-size: 18px; color: var(--green); margin: 28px 0 12px; }
+  h4 { font-size: 15px; color: var(--amber); margin: 20px 0 8px; }
+  p { margin: 12px 0; color: var(--dim); }
+  p strong { color: var(--txt); }
+  .subtitle { font-size: 18px; color: var(--dim); margin-bottom: 32px; }
+  
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .toc h3 { margin-top: 0; color: var(--txt); }
+  .toc ul { list-style: none; margin: 0; padding: 0; }
+  .toc li { margin: 8px 0; }
+  .toc a { color: var(--blue); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .card h4 { margin-top: 0; }
+  
+  .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .badge-blue { background: rgba(96,165,250,0.15); color: var(--blue); }
+  .badge-green { background: rgba(74,222,128,0.15); color: var(--green); }
+  .badge-amber { background: rgba(251,191,36,0.15); color: var(--amber); }
+  .badge-red { background: rgba(248,113,113,0.15); color: var(--red); }
+  .badge-purple { background: rgba(192,132,252,0.15); color: var(--purple); }
+  
+  .param-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .param-table th, .param-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+  }
+  .param-table th {
+    background: rgba(255,255,255,0.03);
+    color: var(--dim);
+    font-weight: 500;
+  }
+  .param-table td:first-child { font-family: monospace; color: var(--green); }
+  
+  .code-block {
+    background: #0b1120;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+    overflow-x: auto;
+    margin: 12px 0;
+    color: var(--txt);
+  }
+  .code-block .comment { color: var(--dim); }
+  .code-block .kw { color: var(--purple); }
+  .code-block .str { color: var(--green); }
+  .code-block .num { color: var(--amber); }
+  
+  .diagram {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .diagram svg { max-width: 100%; }
+  
+  .metric-box {
+    display: inline-block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 24px;
+    margin: 8px 8px 8px 0;
+    min-width: 140px;
+    text-align: center;
+  }
+  .metric-box .value { font-size: 28px; font-weight: 700; color: var(--gold); }
+  .metric-box .label { font-size: 12px; color: var(--dim); margin-top: 4px; }
+  
+  .callout {
+    border-left: 3px solid var(--blue);
+    background: rgba(96,165,250,0.05);
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .callout-red { border-left-color: var(--red); background: rgba(248,113,113,0.05); }
+  .callout-green { border-left-color: var(--green); background: rgba(74,222,128,0.05); }
+  .callout-amber { border-left-color: var(--amber); background: rgba(251,191,36,0.05); }
+  
+  .flow-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+  }
+  .flow-step .arrow {
+    color: var(--dim);
+    font-size: 20px;
+  }
+  .flow-step .box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    flex: 1;
+  }
+  .flow-step .box strong { color: var(--txt); }
+  
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  .model-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  @media (min-width: 700px) {
+    .model-card { grid-template-columns: 1fr 1fr; }
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 6px 0;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<h1>🏆 How Our World Cup 2026 Predictions Work</h1>
+<p class="subtitle">A complete, beginner-friendly guide to every machine learning model in the system</p>
+
+<div class="toc">
+  <h3>📋 Table of Contents</h3>
+  <ul>
+    <li><a href="#overview">1. The Big Picture</a></li>
+    <li><a href="#data">2. The Data We Start With</a></li>
+    <li><a href="#features">3. Features (What the Models "See")</a></li>
+    <li><a href="#m1">4. Model 1: ELO + Davidson (The "Common Sense" Baseline)</a></li>
+    <li><a href="#m4">5. Model 4: Dixon-Coles (The "Goals Engine")</a></li>
+    <li><a href="#m6">6. Model 6: The Stacking Ensemble (The "Brain")</a></li>
+    <li><a href="#m8">7. Model 8: Tournament Simulator (The "Monte Carlo" Crystal Ball)</a></li>
+    <li><a href="#m9">8. Model 9: Entropy Engine (The "Chaos Meter")</a></li>
+    <li><a href="#m10">9. Model 10: Golden Boot Scorer Predictions</a></li>
+    <li><a href="#metrics">10. How We Measure "Good" (Log-Loss, Brier, etc.)</a></li>
+    <li><a href="#live">11. The Live Loop (How Predictions Update Every Matchday)</a></li>
+    <li><a href="#numbers">12. The Numbers That Matter</a></li>
+  </ul>
+</div>
+
+<h2 id="overview">1. The Big Picture</h2>
+
+<p>Think of our prediction system as a <strong>football analysis pipeline</strong> with 5 stages:</p>
+
+<div class="flow-step">
+  <div class="box"><strong>1. Data Collection</strong><br>49,000+ historical matches, player stats, ELO ratings, weather, travel</div>
+  <span class="arrow">→</span>
+  <div class="box"><strong>2. Feature Engineering</strong><br>Turn raw data into 55 "features" the models can understand</div>
+  <span class="arrow">→</span>
+  <div class="box"><strong>3. Model Zoo</strong><br>4 different models each make their own prediction</div>
+</div>
+<div class="flow-step">
+  <div class="box"><strong>4. Stacking Ensemble</strong><br>Combine the 4 models into one "super prediction"</div>
+  <span class="arrow">→</span>
+  <div class="box"><strong>5. Simulation</strong><br>Run 50,000 virtual tournaments to get champion odds</div>
+  <span class="arrow">→</span>
+  <div class="box"><strong>6. Dashboard</strong><br>Display probabilities, charts, chaos meter</div>
+</div>
+
+<div class="callout">
+  <strong>Key idea:</strong> No single model is perfect. We use multiple models with different strengths, then combine them. It's like asking 4 experts for their opinion and averaging the answers — but weighted by how good each expert has been historically.
+</div>
+
+<h2 id="data">2. The Data We Start With</h2>
+
+<div class="card">
+  <h4>📊 Database: 27 tables, 626,000+ rows</h4>
+  <table class="param-table">
+    <tr><th>Table</th><th>Rows</th><th>What it contains</th></tr>
+    <tr><td><code>matches</code></td><td>49,353</td><td>Every international match 1872→2026</td></tr>
+    <tr><td><code>elo_match</code></td><td>49,353</td><td>Pre-match ELO rating for both teams</td></tr>
+    <tr><td><code>ml_match_features</code></td><td>49,281</td><td>55 engineered features per match</td></tr>
+    <tr><td><code>players</code></td><td>18,127</td><td>FIFA game attributes (pace, shooting, etc.)</td></tr>
+    <tr><td><code>official_squads_2026</code></td><td>1,246</td><td>World Cup 2026 rosters (caps, goals, club)</td></tr>
+    <tr><td><code>goalscorers</code></td><td>47,601</td><td>Who scored in every match</td></tr>
+    <tr><td><code>wc2026_fixtures</code></td><td>104</td><td>The actual tournament schedule</td></tr>
+    <tr><td><code>venues</code></td><td>16</td><td>Stadium locations + altitude</td></tr>
+  </table>
+</div>
+
+<h2 id="features">3. Features (What the Models "See")</h2>
+
+<p>Before any model can predict, we need to translate raw data into <strong>features</strong> — numerical columns that describe each match. Think of features as the "questions" we ask about a match:</p>
+
+<div class="card">
+  <h4>🔧 Feature Categories (55 total features)</h4>
+  <table class="param-table">
+    <tr><th>Category</th><th>Features</th><th>Example</th></tr>
+    <tr><td><strong>ELO Family</strong> (9)</td><td><code>elo_diff</code>, <code>elo_home</code>, <code>elo_trend</code>, <code>strength_ratio</code></td><td>"How much better is the home team?"</td></tr>
+    <tr><td><strong>FIFA Rank</strong> (2)</td><td><code>fifa_rank_diff</code>, <code>fifa_rank_home</code></td><td>"What's the FIFA ranking gap?"</td></tr>
+    <tr><td><strong>Form</strong> (6)</td><td><code>form_home</code>, <code>form_away</code>, <code>rest_days</code></td><td>"How did they play last 5 games?"</td></tr>
+    <tr><td><strong>Head-to-Head</strong> (3)</td><td><code>h2h_win_pct_diff</code></td><td>"Who usually wins when they meet?"</td></tr>
+    <tr><td><strong>Squad</strong> (5)</td><td><code>age_diff</code>, <code>caps_diff</code>, <code>club_quality</code></td><td>"Are they experienced?"</td></tr>
+    <tr><td><strong>Manager</strong> (1)</td><td><code>manager_tenure_diff</code></td><td>"How long has the coach been there?"</td></tr>
+    <tr><td><strong>Context</strong> (4)</td><td><code>neutral</code>, <code>stage_weight</code>, <code>home_field</code></td><td>"Is it a World Cup final? Home game?"</td></tr>
+    <tr><td><strong>Travel</strong> (3)</td><td><code>travel_diff_km</code>, <code>tz_delta</code></td><td>"How far did they travel?"</td></tr>
+    <tr><td><strong>Weather</strong> (3)</td><td><code>temp_max</code>, <code>humidity</code>, <code>heat_stress</code></td><td>"Will it be hot?"</td></tr>
+    <tr><td><strong>Qualification</strong> (2)</td><td><code>qual_ppg_diff</code></td><td>"How dominant in qualifying?"</td></tr>
+    <tr><td><strong>Continental</strong> (1)</td><td><code>continental_form_diff</code></td><td>"How did they do in Copa/Euro?"</td></tr>
+  </table>
+</div>
+
+<div class="callout callout-red">
+  <strong>Important:</strong> We <strong>never</strong> use the actual scores as features. The model can't "cheat" by seeing who won. Features are only things you would know <em>before</em> the match kicks off.
+</div>
+
+<h2 id="m1">4. Model 1: ELO + Davidson (The "Common Sense" Baseline)</h2>
+
+<div class="card">
+  <span class="badge badge-blue">Model 1</span>
+  <span class="badge badge-green">Baseline</span>
+  <span class="badge badge-amber">Test LL: 0.868</span>
+  <h4 style="margin-top: 10px;">What it does</h4>
+  <p>Every team has a <strong>rating</strong> (like chess ELO). After each match, ratings update based on result. The model predicts the next match using only these ratings.</p>
+
+  <h4>The Math (simplified)</h4>
+  <div class="code-block">
+    <span class="comment"># ELO update formula</span>
+    <span class="kw">new_rating</span> = old_rating + K × G × (actual_result - expected_result)
+    
+    <span class="comment"># Where:</span>
+    <span class="comment"># K = importance (60 for World Cup, 20 for friendlies)</span>
+    <span class="comment"># G = goal margin factor (1 for close games, up to 3 for blowouts)</span>
+    <span class="comment"># expected_result = 1 / (1 + 10^(-rating_difference/400))</span>
+  </div>
+
+  <h4>Davidson Draw Model</h4>
+  <p>Standard ELO only predicts win/loss. We add the <strong>Davidson model</strong> to estimate draws:</p>
+  <div class="code-block">
+    <span class="comment"># Davidson draw probability</span>
+    <span class="kw">pi</span> = 10 ^ ((home_rating - away_rating + home_advantage) / 400)
+    <span class="kw">draw_prob</span> = nu × sqrt(pi) / (pi + 1 + nu × sqrt(pi))
+    
+    <span class="comment"># nu = draw parameter (fitted: 0.705)</span>
+    <span class="comment"># home_advantage = 142 points (fitted from data)</span>
+  </div>
+
+  <h4>Key Parameters</h4>
+  <table class="param-table">
+    <tr><th>Parameter</th><th>Value</th><th>Meaning</th></tr>
+    <tr><td><code>K_factor</code></td><td>60 (WC), 50 (continental), 40 (qualifiers), 20 (friendlies)</td><td>How fast ratings change</td></tr>
+    <tr><td><code>nu</code></td><td>0.705</td><td>Draw tendency (higher = more draws)</td></tr>
+    <tr><td><code>home_adv</code></td><td>142</td><td>Home advantage in ELO points</td></tr>
+    <tr><td><code>initial_rating</code></td><td>1500</td><td>Starting ELO for new teams</td></tr>
+  </table>
+</div>
+
+<h2 id="m4">5. Model 4: Dixon-Coles (The "Goals Engine")</h2>
+
+<div class="card">
+  <span class="badge badge-blue">Model 4</span>
+  <span class="badge badge-purple">Goals Model</span>
+  <span class="badge badge-amber">Test LL: 0.914</span>
+  <h4 style="margin-top: 10px;">What it does</h4>
+  <p>Instead of predicting win/draw/loss directly, this model predicts <strong>how many goals each team scores</strong>. Then it derives win/draw/loss from the score distribution.</p>
+
+  <div class="callout callout-green">
+    <strong>Why this matters:</strong> The simulator needs to sample scores (e.g., "2-1" or "0-0"), not just outcomes. Dixon-Coles is the gold standard in football analytics.
+  </div>
+
+  <h4>The Math</h4>
+  <div class="code-block">
+    <span class="comment"># Expected goals = Poisson with team attack/defense strengths</span>
+    <span class="kw">home_goals</span> ~ Poisson(exp(μ + home_adv + attack_home - defense_away))
+    <span class="kw">away_goals</span> ~ Poisson(exp(μ + attack_away - defense_home))
+    
+    <span class="comment"># Dixon-Coles correction for low scores (0-0, 1-0, 0-1, 1-1)</span>
+    <span class="kw">tau</span> = 1 - rho × lambda_home × lambda_away  <span class="comment"># for 0-0</span>
+    <span class="comment"># rho = -0.01 (fitted — negative means fewer 0-0s than expected)</span>
+  </div>
+
+  <h4>Key Parameters</h4>
+  <table class="param-table">
+    <tr><th>Parameter</th><th>Value</th><th>Meaning</th></tr>
+    <tr><td><code>mu</code></td><td>0.035</td><td>Average log-goals baseline</td></tr>
+    <tr><td><code>home_adv</code></td><td>0.262</td><td>Home advantage in log-goals</td></tr>
+    <tr><td><code>rho</code></td><td>-0.01</td><td>Low-score correlation (Dixon-Coles parameter)</td></tr>
+    <tr><td><code>xi</code></td><td>0.0019/day</td><td>Time decay (1-year half-life)</td></tr>
+    <tr><td><code>min_matches</code></td><td>30</td><td>Minimum team appearances to get own parameter</td></tr>
+  </table>
+
+  <h4>Time Decay</h4>
+  <p>Recent matches matter more. A match from 2020 gets weight <code>exp(-0.0019 × days_ago)</code>. A match from 2026 gets weight 1.0.</p>
+</div>
+
+<h2 id="m6">6. Model 6: The Stacking Ensemble (The "Brain")</h2>
+
+<div class="card">
+  <span class="badge badge-blue">Model 6</span>
+  <span class="badge badge-purple">Meta-Learner</span>
+  <span class="badge badge-green">Best: 0.857</span>
+  <h4 style="margin-top: 10px;">What it does</h4>
+  <p>We train 4 "level-0" models, then teach a 5th model (the "meta-learner") how to best combine them. It's like a portfolio manager who decides how much to invest in each stock.</p>
+
+  <div class="model-card">
+    <div class="card">
+      <h4>Level-0 Models</h4>
+      <p><strong>1. Davidson (ELO)</strong> — Ratings-based</p>
+      <p><strong>2. Logistic Regression</strong> — Linear, interpretable</p>
+      <p><strong>3. Histogram GBM</strong> — Gradient boosting trees</p>
+      <p><strong>4. Dixon-Coles</strong> — Goals-based</p>
+    </div>
+    <div class="card">
+      <h4>Meta-Learner</h4>
+      <p><strong>Multinomial Logistic Regression</strong> on logit(probs)</p>
+      <p>Inputs: each model's 3 probabilities + context flags</p>
+      <p>Output: final blended probability [loss, draw, win]</p>
+    </div>
+  </div>
+
+  <h4>How We Prevent Cheating (Out-of-Fold)</h4>
+  <p>The meta-learner can't see the actual predictions on the matches it will predict — that would be cheating. Instead, we use <strong>5 expanding-window folds</strong>:</p>
+  <div class="code-block">
+    <span class="comment"># Fold 1: train 1872-1995, predict 1995-2000</span>
+    <span class="comment"># Fold 2: train 1872-2000, predict 2000-2005</span>
+    <span class="comment"># Fold 3: train 1872-2005, predict 2005-2010</span>
+    <span class="comment"># Fold 4: train 1872-2010, predict 2010-2015</span>
+    <span class="comment"># Fold 5: train 1872-2015, predict 2015-2018</span>
+    <span class="comment"># → Meta-learner trains on these 5 "honest" prediction sets</span>
+  </div>
+
+  <h4>Temperature Calibration</h4>
+  <p>The raw ensemble is slightly overconfident. We apply <strong>temperature scaling</strong> (T=1.099) to soften probabilities:</p>
+  <div class="code-block">
+    <span class="kw">soft_prob</span> = softmax(logit(raw_prob) / T)
+    <span class="comment"># T > 1.0 = more uncertain (better calibrated)</span>
+    <span class="comment"># Fitted on validation set to minimize log-loss</span>
+  </div>
+
+  <table class="param-table">
+    <tr><th>Parameter</th><th>Value</th><th>Meaning</th></tr>
+    <tr><td><code>Temperature</code></td><td>1.099</td><td>Calibration softness</td></tr>
+    <tr><td><code>Meta-learner</code></td><td>LogisticRegression(C=1.0)</td><td>Multinomial logistic</td></tr>
+    <tr><td><code>Folds</code></td><td>5</td><td>Expanding-window OOF</td></tr>
+  </table>
+</div>
+
+<h2 id="m8">7. Model 8: Tournament Simulator (The "Monte Carlo" Crystal Ball)</h2>
+
+<div class="card">
+  <span class="badge badge-blue">Model 8</span>
+  <span class="badge badge-green">Simulator</span>
+  <span class="badge badge-purple">50,000 runs</span>
+  <h4 style="margin-top: 10px;">What it does</h4>
+  <p>We don't just predict one match — we simulate the <strong>entire tournament 50,000 times</strong>. Each simulation is a parallel universe where results are random but weighted by our probabilities.</p>
+
+  <div class="callout callout-amber">
+    <strong>Monte Carlo = "What if we played the World Cup 50,000 times?"</strong>
+    In each run, every match gets a random score drawn from the Dixon-Coles probability distribution. We aggregate all 50,000 universes to see how often Argentina wins, how often Spain reaches the final, etc.
+  </div>
+
+  <h4>Simulation Steps</h4>
+  <div class="flow-step">
+    <div class="box"><strong>1. Group Stage</strong><br>72 matches, 12 groups of 4. Sample scores from DC matrix.</div>
+  </div>
+  <div class="flow-step">
+    <div class="box"><strong>2. Rank Groups</strong><br>Points → Goal Difference → Goals → Random tiebreak.</div>
+  </div>
+  <div class="flow-step">
+    <div class="box"><strong>3. Best Thirds</strong><br>8 of 12 third-place teams advance. Rank by points/GD/goals.</div>
+  </div>
+  <div class="flow-step">
+    <div class="box"><strong>4. Knockout</strong><br>R32 (16 matches) → R16 (8) → QF (4) → SF (2) → Final</div>
+  </div>
+  <div class="flow-step">
+    <div class="box"><strong>5. Knockout Draws</strong><br>90' draw → ET (Poisson λ/3) → still draw → Penalties</div>
+  </div>
+
+  <h4>Penalty Model (from real data!)</h4>
+  <p>We fitted a penalty shootout model from 572 real shootouts:</p>
+  <div class="code-block">
+    <span class="kw">p_higher_elo_wins</span> = sigmoid(0.0185 + 0.6265 × |elo_diff| / 400)
+    <span class="comment"># Example: 400 ELO gap → higher team wins 65.6% of shootouts</span>
+    <span class="comment"># Example: 0 ELO gap → 50.5% (basically coin flip)</span>
+  </div>
+
+  <h4>Key Parameters</h4>
+  <table class="param-table">
+    <tr><th>Parameter</th><th>Value</th><th>Meaning</th></tr>
+    <tr><td><code>n_sims</code></td><td>50,000</td><td>Number of parallel universes</td></tr>
+    <tr><td><code>seed</code></td><td>2026</td><td>Random seed (reproducible)</td></tr>
+    <tr><td><code>max_goals</code></td><td>10</td><td>Score matrix truncation</td></tr>
+    <tr><td><code>ET_lambda_factor</code></td><td>1/3</td><td>Extra time goals = 1/3 of normal</td></tr>
+  </table>
+</div>
+
+<h2 id="m9">8. Model 9: Entropy Engine (The "Chaos Meter")</h2>
+
+<div class="card">
+  <span class="badge badge-blue">Model 9</span>
+  <span class="badge badge-amber">Entropy</span>
+  <span class="badge badge-purple">Chaos</span>
+  <h4 style="margin-top: 10px;">What it does</h4>
+  <p>Measures how <strong>surprising</strong> the tournament is. If upsets happen, chaos is high. If favorites win, chaos is low.</p>
+
+  <h4>Three Key Metrics</h4>
+  <div class="model-card">
+    <div class="card">
+      <h4>H = Pre-Match Entropy</h4>
+      <p><code>H = -Σ p_i × ln(p_i)</code></p>
+      <p>How uncertain was the match <em>before</em> it started?</p>
+      <p>50/50 match → H = 1.10 (max)</p>
+      <p>90/10 match → H = 0.33 (boring)</p>
+    </div>
+    <div class="card">
+      <h4>I = Realized Surprisal</h4>
+      <p><code>I = -ln(p_of_actual_result)</code></p>
+      <p>How shocking was the <em>actual</em> result?</p>
+      <p>Favorite wins → I = 0.3-0.7</p>
+      <p>Major upset → I = 2.0+</p>
+    </div>
+    <div class="card">
+      <h4>X = Excess Surprisal</h4>
+      <p><code>X = I - H</code></p>
+      <p>Was the result <em>more</em> chaotic than expected?</p>
+      <p>X > 0 → more chaos than probabilities predicted</p>
+    </div>
+  </div>
+
+  <h4>Historical WC Chaos Ranking</h4>
+  <table class="param-table">
+    <tr><th>Year</th><th>ΣI (Total Chaos)</th><th>Mean I</th><th>Most Shocking Match</th></tr>
+    <tr><td><strong>2022</strong> 🥇</td><td>68.36</td><td>1.068</td><td>Saudi Arabia 2-1 Argentina (I=3.2)</td></tr>
+    <tr><td><strong>2002</strong> 🥈</td><td>66.93</td><td>1.046</td><td>Senegal 1-0 France (I=2.8)</td></tr>
+    <tr><td><strong>2018</strong> 🥉</td><td>62.06</td><td>0.970</td><td>Germany 0-2 South Korea (I=2.9)</td></tr>
+    <tr><td>2010</td><td>58.12</td><td>0.909</td><td>Switzerland 1-0 Spain (I=2.5)</td></tr>
+    <tr><td>1998</td><td>55.43</td><td>0.865</td><td>France 3-0 Brazil (I=1.8)</td></tr>
+  </table>
+</div>
+
+<h2 id="m10">9. Model 10: Golden Boot Scorer Predictions</h2>
+
+<div class="card">
+  <span class="badge badge-blue">Model 10</span>
+  <span class="badge badge-green">Scorers</span>
+  <span class="badge badge-purple">Top 3</span>
+  <h4 style="margin-top: 10px;">What it does</h4>
+  <p>Predicts who will win the Golden Boot (most goals). For each player, we estimate their <strong>share</strong> of their team's goals, then multiply by the team's expected tournament goals.</p>
+
+  <h4>The Formula (per player)</h4>
+  <div class="code-block">
+    <span class="kw">expected_goals</span> = team_expected_goals × goal_share
+    
+    <span class="kw">goal_share</span> = (
+      shrunk_career_rate × minutes_share + penalty_bonus
+    ) / team_total
+    
+    <span class="comment"># shrunk_career_rate = (goals/caps) shrunk toward position average</span>
+    <span class="comment"># minutes_share = 1.0 for starters, 0.35 for bench</span>
+    <span class="comment"># penalty_bonus = +0.08 if player takes >50% of team penalties</span>
+  </div>
+
+  <h4>Current Top 10 Predictions</h4>
+  <table class="param-table">
+    <tr><th>Rank</th><th>Player</th><th>Team</th><th>Expected Goals</th><th>Why?</th></tr>
+    <tr><td>1</td><td><strong>Harry Kane</strong></td><td>England</td><td>1.06</td><td>High caps/goals, penalty taker</td></tr>
+    <tr><td>2</td><td><strong>Lionel Messi</strong></td><td>Argentina</td><td>0.91</td><td>High career rate, captain</td></tr>
+    <tr><td>3</td><td><strong>Erling Haaland</strong></td><td>Norway</td><td>0.90</td><td>Extreme club scoring, high FIFA overall</td></tr>
+    <tr><td>4</td><td><strong>Kylian Mbappé</strong></td><td>France</td><td>0.85</td><td>Fast, high caps, France advances deep</td></tr>
+    <tr><td>5</td><td><strong>Ferran Torres</strong></td><td>Spain</td><td>0.83</td><td>Spain high expected goals</td></tr>
+  </table>
+</div>
+
+<h2 id="metrics">10. How We Measure "Good" (Evaluation Metrics)</h2>
+
+<div class="card">
+  <h4>Log-Loss (Primary Metric)</h4>
+  <p>Penalizes confident wrong predictions heavily. A perfect model has log-loss = 0. A random guesser has log-loss = 1.10.</p>
+  <div class="code-block">
+    <span class="kw">log_loss</span> = -mean( ln(probability_of_actual_result) )
+    <span class="comment"># Example: predict 90% win, team loses → log-loss = -ln(0.1) = 2.3 (BAD)</span>
+    <span class="comment"># Example: predict 50/50, either way → log-loss = -ln(0.5) = 0.69 (OK)</span>
+  </div>
+
+  <div style="margin: 20px 0;">
+    <div class="metric-box">
+      <div class="value">0.8219</div>
+      <div class="label">Bookmaker Ceiling</div>
+    </div>
+    <div class="metric-box">
+      <div class="value">0.8574</div>
+      <div class="label">Our Best (Ensemble)</div>
+    </div>
+    <div class="metric-box">
+      <div class="value">0.8682</div>
+      <div class="label">ELO Only</div>
+    </div>
+    <div class="metric-box">
+      <div class="value">0.9143</div>
+      <div class="label">Dixon-Coles</div>
+    </div>
+    <div class="metric-box">
+      <div class="value">1.0397</div>
+      <div class="label">Year-End ELO</div>
+    </div>
+    <div class="metric-box">
+      <div class="value">1.0986</div>
+      <div class="label">Random Guess</div>
+    </div>
+  </div>
+
+  <div class="progress-bar"><div class="fill" style="width: 75%; background: var(--green);"></div></div>
+  <p style="font-size: 12px; text-align: center; color: var(--dim);">Lower is better. Our model is 78% of the way from random to perfect.</p>
+
+  <h4>Other Metrics</h4>
+  <table class="param-table">
+    <tr><th>Metric</th><th>What it measures</th><th>Our Best</th></tr>
+    <tr><td><strong>Brier Score</strong></td><td>Mean squared error of probabilities</td><td>0.5033</td></tr>
+    <tr><td><strong>Accuracy</strong></td><td>% of correct outcome predictions</td><td>60.7%</td></tr>
+    <tr><td><strong>ECE</strong></td><td>Calibration: when we say 70%, does it happen 70%?</td><td>2.1%</td></tr>
+    <tr><td><strong>RPS</strong></td><td>Ranked Probability Score (ordinal-aware)</td><td>0.34</td></tr>
+  </table>
+</div>
+
+<h2 id="live">11. The Live Loop (How Predictions Update Every Matchday)</h2>
+
+<div class="card">
+  <h4>Automated Pipeline</h4>
+  <div class="flow-step">
+    <div class="box"><strong>1. Ingest Scores</strong><br>Check fixturedownload.com + Wikipedia for new results</div>
+    <span class="arrow">→</span>
+    <div class="box"><strong>2. Update Database</strong><br>Store scores in matches + wc2026_fixtures</div>
+    <span class="arrow">→</span>
+    <div class="box"><strong>3. Update ELO</strong><br>Recompute ratings for both teams (K=60)</div>
+  </div>
+  <div class="flow-step">
+    <div class="box"><strong>4. Re-simulate</strong><br>Run 50,000 Monte Carlo tournaments with new ELOs</div>
+    <span class="arrow">→</span>
+    <div class="box"><strong>5. Compute Surprisal</strong><br>How shocking was the result? (-ln p)</div>
+    <span class="arrow">→</span>
+    <div class="box"><strong>6. Update Dashboard</strong><br>Write new JSON files, refresh charts</div>
+  </div>
+
+  <div class="callout">
+    <strong>Idempotence:</strong> Running the loop twice with no new scores does nothing. We track ingested match numbers in <code>artifacts/ingested.json</code> to avoid double-counting.
+  </div>
+
+  <h4>Current State (as of 2026-06-12)</h4>
+  <table class="param-table">
+    <tr><th>Metric</th><th>Value</th></tr>
+    <tr><td>Matches played</td><td>2</td></tr>
+    <tr><td>Matches simulated</td><td>104</td></tr>
+    <tr><td>Champion favorite</td><td>Argentina (17.8%)</td></tr>
+    <tr><td>Realized chaos (ΣI)</td><td>1.28 nats</td></tr>
+    <tr><td>Last run</td><td>2026-06-12T08:28</td></tr>
+  </table>
+</div>
+
+<h2 id="numbers">12. The Numbers That Matter</h2>
+
+<div class="card">
+  <h4>System Architecture Summary</h4>
+  <table class="param-table">
+    <tr><th>Component</th><th>Details</th></tr>
+    <tr><td><strong>Training data</strong></td><td>49,281 matches (train: 34,497 / val: 7,401 / test: 7,383)</td></tr>
+    <tr><td><strong>Features</strong></td><td>55 per match</td></tr>
+    <tr><td><strong>Models</strong></td><td>4 level-0 + 1 meta-learner</td></tr>
+    <tr><td><strong>Best test log-loss</strong></td><td><strong>0.8574</strong></td></tr>
+    <tr><td><strong>Simulation</strong></td><td>50,000 Monte Carlo runs</td></tr>
+    <tr><td><strong>Best ELO</strong></td><td>Argentina (1976)</td></tr>
+    <tr><td><strong>Best scorer</strong></td><td>Harry Kane (E=1.06 goals)</td></tr>
+    <tr><td><strong>Most chaotic WC</strong></td><td>2022 (ΣI = 68.36)</td></tr>
+    <tr><td><strong>Python</strong></td><td>3.13 (pandas, numpy, sklearn, scipy)</td></tr>
+    <tr><td><strong>Database</strong></td><td>SQLite, 27 tables</td></tr>
+  </table>
+</div>
+
+<div class="callout callout-green">
+  <strong>Bottom line for beginners:</strong> Our system combines 4 different prediction methods, each with different strengths. The ELO model is simple and robust. The Dixon-Coles model understands goals. The ensemble combines them smartly. The simulator runs 50,000 parallel universes. The result is a set of probabilities that are well-calibrated and honest about uncertainty.
+</div>
+
+<footer>
+  <p>World Cup 2026 Prediction System · Branch: opencode/sprint34</p>
+  <p>Built with Python 3.13, pandas, scikit-learn, scipy · Data: 49,353 matches, 1,246 players, 16 venues</p>
+  <p>Current best model: Test LL = 0.8574 (stacker: davidson + dixon + logreg + histgb, T=1.099)</p>
+</footer>
+
+</body>
+</html>
