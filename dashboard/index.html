@@ -65,6 +65,9 @@
 <h2>🏅 SofaScore power rankings</h2>
 <div class="champ" id="power-rank"></div>
 
+<h2>💪 Squad strength (player ratings)</h2>
+<div class="champ" id="squad-strength"></div>
+
 <h2>🥇 Champion probability (50,000 simulated tournaments)</h2>
 <div class="champ" id="champ"></div>
 
@@ -93,6 +96,7 @@
 <script src="data/entropy_data.js"></script>
 <script src="data/scorelines_data.js"></script>
 <script src="data/sofascore_data.js"></script>
+<script src="data/team_strength_data.js"></script>
 <script>
 const S = window.SIM || {};
 const SS = window.SOFASCORE || {};
@@ -121,6 +125,19 @@ if (pr.length) {
     <div class="pct">${r.points}</div></div>`).join('');
 } else {
   document.getElementById('power-rank').innerHTML = '<div style="color:var(--dim)">Run scrapers/sofascore_test.py to fetch power rankings</div>';
+}
+
+// squad strength (top 15)
+const TS = window.TEAM_STRENGTH || {};
+const ts = (TS.teams || []).slice(0, 15);
+if (ts.length) {
+  const maxOvr = ts[0].squad_overall;
+  document.getElementById('squad-strength').innerHTML = ts.map(t => `
+    <div class="crow"><div class="name">${esc(t.team)}</div>
+    <div class="bar-bg"><div class="bar" style="width:${100*t.squad_overall/maxOvr}%;background:linear-gradient(90deg,var(--purple),var(--gold))"></div></div>
+    <div class="pct">${t.squad_overall.toFixed(1)}</div></div>`).join('');
+} else {
+  document.getElementById('squad-strength').innerHTML = '<div style="color:var(--dim)">Run p1_player_features.py to generate squad strength</div>';
 }
 
 // meta
