@@ -1,9 +1,9 @@
 window.PROGRESS = {
- "updated": "2026-06-12 09:56 UTC",
- "run_id": "eced188",
- "best_logloss": 0.8569,
+ "updated": "2026-06-13 15:24 UTC",
+ "run_id": "2f04bac",
+ "best_logloss": 0.848,
  "elo_coverage": "100%",
- "wc_played": 2,
+ "wc_played": 4,
  "experiments": [
   {
    "exp_id": "market_closing",
@@ -20,6 +20,22 @@ window.PROGRESS = {
    "beats_baseline": "",
    "decision": "BENCHMARK",
    "notes": "the honest ceiling on big tournaments"
+  },
+  {
+   "exp_id": "ELO-HOST",
+   "date": "2026-06-12",
+   "module": "m1b_host_calib",
+   "model": "host_bonus",
+   "features_desc": "wc host matches 1990-2022",
+   "n_train": 47.0,
+   "logloss_test": 0.848,
+   "brier_test": "",
+   "rps_test": "",
+   "acc_test": "",
+   "ece_test": "",
+   "beats_baseline": "KEEP",
+   "decision": "host_bonus=14.1 nll_without=0.8485 nll_with=0.8480",
+   "notes": ""
   },
   {
    "exp_id": "m6_stack_cal",
@@ -103,10 +119,10 @@ window.PROGRESS = {
   },
   {
    "exp_id": "m0_blend_raw_v2",
-   "date": "2026-06-12",
+   "date": "2026-06-11",
    "module": "m0_baseline_sanity",
    "model": "blend_raw",
-   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "features_desc": "classification_dataset_v2.csv (44 feats)",
    "n_train": 34497.0,
    "logloss_test": 0.8591,
    "brier_test": 0.5044,
@@ -119,10 +135,10 @@ window.PROGRESS = {
   },
   {
    "exp_id": "m0_blend_raw_v2",
-   "date": "2026-06-11",
+   "date": "2026-06-12",
    "module": "m0_baseline_sanity",
    "model": "blend_raw",
-   "features_desc": "classification_dataset_v2.csv (44 feats)",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
    "n_train": 34497.0,
    "logloss_test": 0.8591,
    "brier_test": 0.5044,
@@ -135,10 +151,10 @@ window.PROGRESS = {
   },
   {
    "exp_id": "m0_blend_cal_v2",
-   "date": "2026-06-11",
+   "date": "2026-06-12",
    "module": "m0_baseline_sanity",
    "model": "blend_cal",
-   "features_desc": "classification_dataset_v2.csv (44 feats)",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
    "n_train": 34497.0,
    "logloss_test": 0.8598,
    "brier_test": 0.504,
@@ -151,10 +167,10 @@ window.PROGRESS = {
   },
   {
    "exp_id": "m0_blend_cal_v2",
-   "date": "2026-06-12",
+   "date": "2026-06-11",
    "module": "m0_baseline_sanity",
    "model": "blend_cal",
-   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "features_desc": "classification_dataset_v2.csv (44 feats)",
    "n_train": 34497.0,
    "logloss_test": 0.8598,
    "brier_test": 0.504,
@@ -183,10 +199,10 @@ window.PROGRESS = {
   },
   {
    "exp_id": "m0_logreg_v2",
-   "date": "2026-06-11",
+   "date": "2026-06-12",
    "module": "m0_baseline_sanity",
    "model": "logreg",
-   "features_desc": "classification_dataset_v2.csv (44 feats)",
+   "features_desc": "classification_dataset_v2.csv (47 feats)",
    "n_train": 34497.0,
    "logloss_test": 0.8625,
    "brier_test": 0.506,
@@ -199,10 +215,10 @@ window.PROGRESS = {
   },
   {
    "exp_id": "m0_logreg_v2",
-   "date": "2026-06-12",
+   "date": "2026-06-11",
    "module": "m0_baseline_sanity",
    "model": "logreg",
-   "features_desc": "classification_dataset_v2.csv (47 feats)",
+   "features_desc": "classification_dataset_v2.csv (44 feats)",
    "n_train": 34497.0,
    "logloss_test": 0.8625,
    "brier_test": 0.506,
@@ -224,22 +240,6 @@ window.PROGRESS = {
    "brier_test": 0.5066,
    "rps_test": "",
    "acc_test": 0.6053,
-   "ece_test": "",
-   "beats_baseline": "yes",
-   "decision": "LOG",
-   "notes": ""
-  },
-  {
-   "exp_id": "m0_histgb_v2",
-   "date": "2026-06-11",
-   "module": "m0_baseline_sanity",
-   "model": "histgb",
-   "features_desc": "classification_dataset_v2.csv (44 feats)",
-   "n_train": 34497.0,
-   "logloss_test": 0.8645,
-   "brier_test": 0.5074,
-   "rps_test": "",
-   "acc_test": 0.6046,
    "ece_test": "",
    "beats_baseline": "yes",
    "decision": "LOG",
@@ -381,18 +381,32 @@ window.PROGRESS = {
    "note": "Golden Boot heuristic: Kane 1.06, Messi 0.91, Haaland 0.90"
   },
   {
+   "id": "m11",
+   "sprint": "Sprint 4 \u2014 Products",
+   "desc": "Scoreline prediction model (DC tilted by ensemble W/D/L)",
+   "status": "done",
+   "note": "72 matches, 7x7 matrices, O/U, BTTS, scorelines.html + ask.py scoreline"
+  },
+  {
+   "id": "PLAYERS",
+   "sprint": "Sprint 4 \u2014 Products",
+   "desc": "SofaScore player ratings scraper + players.html (attack/defence/GK)",
+   "status": "done",
+   "note": "1255 players / 48 teams scraped; FIFA-style attrs (atk/tec/tac/def/cre + GK saves/antic/dist/aerial) current+3 historical yrs; players.html + ask.py player; Yamal 77 top outfield"
+  },
+  {
    "id": "DASH",
    "sprint": "Sprint 4 \u2014 Products",
-   "desc": "Public dashboard pages (groups/bracket/entropy/scorers)",
+   "desc": "Public dashboard pages (groups/bracket/entropy/scorers/scorelines/players)",
    "status": "done",
-   "note": "entropy page, bracket page, trajectory chart"
+   "note": "7 pages: index, bracket, entropy, scorelines, players, progress + nav links; live SofaScore standings on index"
   },
   {
    "id": "ASK",
    "sprint": "Sprint 4 \u2014 Products",
    "desc": "ask.py JSON CLI + CLAUDE.md for LLM access",
    "status": "done",
-   "note": "ask.py JSON CLI, 7 subcommands, valid JSON output, CLAUDE.md written"
+   "note": "ask.py JSON CLI, 9 subcommands including scoreline + player, valid JSON output"
   },
   {
    "id": "D-ODDS",
@@ -466,7 +480,7 @@ window.PROGRESS = {
   ],
   [
    "matches",
-   49355
+   49357
   ],
   [
    "matches_norm",
@@ -515,6 +529,34 @@ window.PROGRESS = {
   [
    "sb_team_match_stats",
    665
+  ],
+  [
+   "sofascore_events",
+   34
+  ],
+  [
+   "sofascore_odds",
+   0
+  ],
+  [
+   "sofascore_player_attributes",
+   4052
+  ],
+  [
+   "sofascore_player_career",
+   1215
+  ],
+  [
+   "sofascore_power_rankings",
+   48
+  ],
+  [
+   "sofascore_standings",
+   48
+  ],
+  [
+   "sofascore_team_strength",
+   190
   ],
   [
    "squads",

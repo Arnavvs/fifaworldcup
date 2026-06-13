@@ -25,3 +25,5 @@ m0_blend_raw_v2,2026-06-12,m0_baseline_sanity,blend_raw,classification_dataset_v
 m0_blend_cal_v2,2026-06-12,m0_baseline_sanity,blend_cal,classification_dataset_v2.csv (47 feats),34497,0.8589,0.5034,,0.6075,,yes,LOG,
 m6_stack_cal,2026-06-12,m6_stack,stack(dav+dc+lr+gb)+temp,v2 features,34497,0.8569,0.5031,,0.6067,,yes,KEEP,T=1.099 raw=0.8558
 ELO-HOST,2026-06-12,m1b_host_calib,host_bonus,wc host matches 1990-2022,47,0.8480,,,,,KEEP,host_bonus=14.1 nll_without=0.8485 nll_with=0.8480
+PLR-FEAT,2026-06-13,p1_player_features,team_strength,sofascore_team_strength+player_career,48,,,,,,KEEP,top10=Spain,Germany,Argentina
+PLR-MODEL,2026-06-13,p2_player_model,player_ensemble,squad_overall+top3_att+caps+heuristic_blend,104,,,,,,KEEP,top5=France,England,Austria
