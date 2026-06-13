@@ -46,3 +46,11 @@ research_ready_dataset/regression_dataset_v2.csv
 # model binaries + sim artifacts (regenerable; keep repo docs-only)
 models/
 artifacts/
+
+# --- Scraped raw data (regenerable via scrapers/; ~40MB of per-entity JSON) ---
+# Keep the scraper scripts + processed dashboard JS; drop the raw cache.
+scrapers/sofascore_players/players/
+scrapers/sofascore_players/squads/
+scrapers/sofascore_data/
+scrapers/sofascore_scraper/
+scrapers/sofascore_test.py.output

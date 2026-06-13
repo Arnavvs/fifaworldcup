@@ -162,6 +162,14 @@ def integrate():
         })
     top.sort(key=lambda x: -x["overall"])
 
+    # rank within position group (overall is position-relative, so a global
+    # leaderboard mixes scales — group_rank lets the UI compare like-for-like)
+    grp_counter = {}
+    for t in top:
+        g = t["group"]
+        grp_counter[g] = grp_counter.get(g, 0) + 1
+        t["group_rank"] = grp_counter[g]
+
     team_strength = [
         {"team": r[0], "group": r[1], "n": r[2], "overall": r[3],
          "attacking": r[4], "technical": r[5], "tactical": r[6],
@@ -171,7 +179,7 @@ def integrate():
     ]
 
     data = {
-        "top_players": top[:60],
+        "top_players": top,  # all rated players (team/position filters need full coverage)
         "team_strength": team_strength,
         "source": "SofaScore attribute-overviews",
         "n_players": len(players),

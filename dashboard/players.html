@@ -44,12 +44,14 @@
 <div class="sub" id="meta">loading…</div>
 
 <h2>🏅 Top players by overall rating</h2>
+<div class="sub">Ratings are <b>position-relative</b> (0–100). Outfield overall = mean of attacking/technical/tactical/defending/creativity; goalkeepers use saves/anticipation/ball-distribution/aerial/tactical — so GK and outfield scores aren't directly comparable. Filter by position to rank like-for-like.</div>
 <div class="controls">
   position: <select id="posSel" onchange="renderTable()">
     <option value="">all</option><option value="GK">GK</option><option value="DEF">DEF</option>
     <option value="MID">MID</option><option value="ATT">ATT</option></select>
   team: <select id="teamSel" onchange="renderTable()"><option value="">all</option></select>
   search: <input id="search" placeholder="player name" oninput="renderTable()">
+  <span id="rowcount" style="color:var(--dim);font-size:12px"></span>
 </div>
 <table id="ptable">
   <thead><tr>
@@ -113,8 +115,12 @@ function renderTable(){
   rows.sort((a,b)=>{const x=a[sortKey],y=b[sortKey];
     if(typeof x==='string') return sortDir*x.localeCompare(y);
     return sortDir*((x??-1)-(y??-1));});
+  const total=rows.length, CAP=200;
+  const shown=rows.slice(0,CAP);
+  document.getElementById('rowcount').textContent =
+    total>CAP ? `showing top ${CAP} of ${total} — narrow with filters/search` : `${total} player${total===1?'':'s'}`;
   const tb=document.querySelector('#ptable tbody');
-  tb.innerHTML=rows.map((p,i)=>`<tr>
+  tb.innerHTML=shown.map((p,i)=>`<tr>
     <td>${i+1}</td>
     <td>${esc(p.name)}</td>
     <td>${esc(p.team)}</td>
