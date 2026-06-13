@@ -123,9 +123,14 @@ same rows; ledger row with both numbers.
   probability function. Write `artifacts/run_<ts>/wc2026_blend_probs.json` and have
   `m8_simulate` optionally consume it (flag `--probs blend`). Keep the pure-ELO path as default
   so the historical backtest is untouched.
-**ACCEPTANCE:** the blend's mean log-loss on the **played** WC2026 matches (recomputed each run
-from `sofascore_events`) is reported in the ledger and is ≤ the pure-ELO model's on the same
-matches. If it is NOT better yet, KEEP it but say so honestly (small sample).
+**SHIP-AS-PARALLEL-TRACK (user decision):** Do **NOT** gate or kill the player-blend on the
+small live sample. Always ship it as a **parallel track** shown alongside pure-ELO on the
+scorecard (TASK 4) and let the live numbers decide over the full tournament. Report its mean
+log-loss on the **played** WC2026 matches (recomputed each run from `sofascore_events`) in the
+ledger, next to pure-ELO's, but never auto-remove it. The disagreement between the two models
+is itself a feature (surfaced in TASK 6).
+**ACCEPTANCE:** `wc2026_blend_probs.json` produced; ledger row reports blend vs pure-ELO
+log-loss on played matches (no kill decision); both models appear on the scorecard.
 
 ### TASK 4 (id: SCORECARD) — live model success-rate tracker (for LinkedIn) ⭐
 This is the headline deliverable for publishing. Build `src/scorecard.py`.
@@ -142,9 +147,12 @@ This is the headline deliverable for publishing. Build `src/scorecard.py`.
   per-match detail list. Include `generated_at`.
 - Wire it into `src/live_update.py` so it runs after every ingest, and into
   `src/track.py update`.
-**ACCEPTANCE:** with the current 4 results, `scorecard_data.js` exists and shows, per model,
-hit_rate and mean_logloss; numbers reconcile with a hand check of the 4 matches
-(elo_host hit_rate ≥ elo_davidson hit_rate). Re-running is a no-op (no duplicate rows).
+All four variants (`elo_davidson`, `elo_host`, `player_blend`, `market`) are tracked as
+**parallel tracks** — the scorecard compares them, it does not pick a winner or drop any.
+A starter `src/scorecard.py` already exists tracking `elo_dixon`; extend it (don't rewrite from
+scratch) to emit one summary block per model variant.
+**ACCEPTANCE:** with the current 4 results, `scorecard_data.js` shows, per model, hit_rate and
+mean_logloss; numbers reconcile with a hand check of the 4 matches. Re-running is a no-op.
 
 ### TASK 5 (id: DASH-ACC) — accuracy/scorecard dashboard page (publish-ready)
 New `dashboard/accuracy.html` (match the existing dark theme + nav; copy header/nav from
