@@ -1,6 +1,8 @@
 # --- Large / regenerable data (NOT pushed; rebuild via the pipeline) ---
 # Raw downloads: 6.6 GB incl. a 5.6 GB FIFA CSV — far over GitHub's 100 MB limit
 fifa_wc_data/raw/
+# Data collection pipeline raw files
+data_collection_pipeline/collected_data/raw/
 # SQLite DB is 122 MB (>100 MB limit) and regenerable from src/
 fifa_wc_data/db/
 *.db
