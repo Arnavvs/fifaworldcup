@@ -140,18 +140,25 @@
   "note": "72 matches, 7x7 matrices, O/U, BTTS, scorelines.html + ask.py scoreline"
  },
  {
+  "id": "PLAYERS",
+  "sprint": "Sprint 4 \u2014 Products",
+  "desc": "SofaScore player ratings scraper + players.html (attack/defence/GK)",
+  "status": "done",
+  "note": "1255 players / 48 teams scraped; FIFA-style attrs (atk/tec/tac/def/cre + GK saves/antic/dist/aerial) current+3 historical yrs; players.html + ask.py player; Yamal 77 top outfield"
+ },
+ {
   "id": "DASH",
   "sprint": "Sprint 4 \u2014 Products",
-  "desc": "Public dashboard pages (groups/bracket/entropy/scorers/scorelines)",
+  "desc": "Public dashboard pages (groups/bracket/entropy/scorers/scorelines/players)",
   "status": "done",
-  "note": "6 pages: index, bracket, entropy, scorelines, progress + nav links"
+  "note": "7 pages: index, bracket, entropy, scorelines, players, progress + nav links; live SofaScore standings on index"
  },
  {
   "id": "ASK",
   "sprint": "Sprint 4 \u2014 Products",
   "desc": "ask.py JSON CLI + CLAUDE.md for LLM access",
   "status": "done",
-  "note": "ask.py JSON CLI, 8 subcommands including scoreline, valid JSON output"
+  "note": "ask.py JSON CLI, 9 subcommands including scoreline + player, valid JSON output"
  },
  {
   "id": "D-ODDS",
