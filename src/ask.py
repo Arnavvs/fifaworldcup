@@ -8,6 +8,8 @@ Usage:
   python ask.py match <match_number>
   python ask.py scorers [--top N]
   python ask.py scoreline <match_number>
+  python ask.py player <name>
+  python ask.py player --team <team> [--pos GK|DEF|MID|ATT] [--top N]
   python ask.py chaos
   python ask.py status
 
@@ -24,6 +26,7 @@ import difflib
 
 ROOT = Path(__file__).resolve().parent.parent
 DASH = ROOT / "dashboard" / "data"
+DB_PATH = ROOT / "fifa_wc_data" / "db" / "football.db"
 
 def load_json(path):
     if path.exists():
@@ -185,6 +188,61 @@ def cmd_scoreline(args):
     return json.dumps({"error": f"match {n} not found in scorelines"})
 
 
+def cmd_player(args):
+    """player <name> | player --team <team> [--pos GK|DEF|MID|ATT] [--top N]"""
+    import sqlite3
+    if not DB_PATH.exists():
+        return json.dumps({"error": "no DB"})
+    con = sqlite3.connect(str(DB_PATH))
+    con.row_factory = sqlite3.Row
+    try:
+        cols = ("name, team, position, pos_group, attacking, technical, tactical, "
+                "defending, creativity, saves, anticipation, ball_distribution, aerial")
+        if args and args[0] == "--team":
+            team = args[1]
+            pos = None
+            top = 30
+            if "--pos" in args:
+                pos = args[args.index("--pos") + 1].upper()
+            if "--top" in args:
+                top = int(args[args.index("--top") + 1])
+            q = f"SELECT {cols} FROM sofascore_player_attributes WHERE year_shift=0 AND team LIKE ?"
+            params = [f"%{team}%"]
+            if pos:
+                q += " AND pos_group=?"
+                params.append(pos)
+            rows = con.execute(q, params).fetchall()
+            # rank by overall
+            def overall(r):
+                if r["pos_group"] == "GK":
+                    v = [r[k] for k in ("tactical", "saves", "anticipation", "ball_distribution", "aerial") if r[k] is not None]
+                else:
+                    v = [r[k] for k in ("attacking", "technical", "tactical", "defending", "creativity") if r[k] is not None]
+                return round(sum(v) / len(v), 1) if v else 0
+            out = sorted([dict(r) | {"overall": overall(r)} for r in rows], key=lambda x: -x["overall"])[:top]
+            return json.dumps({"team_query": team, "pos": pos, "players": out})
+        # single player by name
+        name = args[0] if args else ""
+        rows = con.execute(
+            f"SELECT {cols} FROM sofascore_player_attributes WHERE year_shift=0").fetchall()
+        names = [r["name"] for r in rows]
+        match = difflib.get_close_matches(name, names, n=1, cutoff=0.5)
+        if not match:
+            return json.dumps({"error": "player not found", "query": name})
+        r = next(r for r in rows if r["name"] == match[0])
+        # historical
+        hist = con.execute(
+            "SELECT year_shift, attacking, technical, tactical, defending, creativity, saves, anticipation, ball_distribution, aerial "
+            "FROM sofascore_player_attributes WHERE name=? ORDER BY year_shift",
+            (match[0],)).fetchall()
+        return json.dumps({
+            "player": dict(r),
+            "history": [dict(h) for h in hist],
+        }, default=str)
+    finally:
+        con.close()
+
+
 def cmd_status(args):
     sim = latest_sim()
     meta = sim.get("meta", {})
@@ -214,6 +272,8 @@ def main():
         print(cmd_scorers(args))
     elif cmd == "scoreline":
         print(cmd_scoreline(args))
+    elif cmd == "player":
+        print(cmd_player(args))
     elif cmd == "chaos":
         print(cmd_chaos(args))
     elif cmd == "status":
