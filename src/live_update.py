@@ -393,6 +393,9 @@ def main():
     subprocess.run(["python", str(ROOT / "src" / "track.py"), "log",
                   f"live update: {n_new} new results ingested"])
 
+    # refresh the live model scorecard (accuracy.html) from played results
+    subprocess.run(["python", str(ROOT / "src" / "scorecard.py")])
+
 
 if __name__ == "__main__":
     main()

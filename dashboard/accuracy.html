@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WC2026 — Model Accuracy Scorecard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--txt:#e6edf3;--dim:#8b949e;
+        --green:#3fb950;--amber:#d29922;--red:#f85149;--blue:#58a6ff;--purple:#bc8cff;--gold:#e3b341}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font:14px/1.5 'Segoe UI',system-ui,sans-serif;padding:24px;max-width:1200px;margin:auto}
+  h1{font-size:24px} h2{font-size:15px;margin:30px 0 12px;color:var(--blue);text-transform:uppercase;letter-spacing:.08em}
+  .sub{color:var(--dim);font-size:13px;margin:4px 0 16px}
+  nav a{color:var(--blue);text-decoration:none;margin-right:16px;font-size:13px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+  .kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center}
+  .kpi .big{font-size:34px;font-weight:800;line-height:1.1}
+  .kpi .lbl{color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+  .kpi .note{color:var(--dim);font-size:12px;margin-top:6px}
+  .kpi.good .big{color:var(--green)} .kpi.gold .big{color:var(--gold)} .kpi.blue .big{color:var(--blue)}
+
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  th,td{padding:8px 10px;border-bottom:1px solid var(--border);font-size:13px;text-align:right}
+  th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}
+  th{background:#1c2129;color:var(--dim)} tr:last-child td{border-bottom:none}
+  .ok{color:var(--green);font-weight:700} .miss{color:var(--red);font-weight:700}
+  .pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700}
+
+  .barrow{display:grid;grid-template-columns:130px 1fr 90px;align-items:center;gap:10px;margin:6px 0}
+  .barrow .nm{font-size:13px}
+  .bar-bg{background:#21262d;border-radius:6px;height:20px;overflow:hidden}
+  .bar{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;font-size:11px;font-weight:700;color:#0d1117}
+
+  .methodology{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;color:var(--dim);font-size:13px;line-height:1.6}
+  .methodology b{color:var(--txt)}
+  footer{margin-top:30px;color:var(--dim);font-size:12px}
+  svg text{fill:var(--dim);font-size:11px}
+</style>
+</head>
+<body>
+<h1>🎯 World Cup 2026 — Model Accuracy Scorecard</h1>
+<nav><a href="index.html">Simulations</a><a href="bracket.html">Bracket</a><a href="entropy.html">Entropy</a><a href="scorelines.html">Scorelines</a><a href="players.html">Players</a><a href="accuracy.html">Accuracy</a><a href="progress.html">Tracker</a>
+<a href="https://github.com/Arnavvs/fifaworldcup" target="_blank">GitHub</a></nav>
+<div class="sub" id="meta">loading…</div>
+
+<h2>📊 Live performance (group stage)</h2>
+<div class="cards" id="kpis"></div>
+
+<h2>📉 Log-loss vs baselines <span style="color:var(--dim);font-weight:400;text-transform:none">— lower is better</span></h2>
+<div class="card" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px" id="bars"></div>
+
+<h2>✅ Every prediction, graded</h2>
+<div class="sub">What the model said <b>before</b> each match vs what happened. P(actual) = probability the model assigned to the result that occurred.</div>
+<table id="mtable">
+  <thead><tr><th>#</th><th>match</th><th>score</th><th>result</th><th>P(home)</th><th>P(draw)</th><th>P(away)</th><th>P(actual)</th><th>call</th></tr></thead>
+  <tbody></tbody>
+</table>
+
+<h2>🎚 Calibration <span style="color:var(--dim);font-weight:400;text-transform:none">— are confident picks actually right more often?</span></h2>
+<div class="card" style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px" id="calib"></div>
+
+<h2>🧪 Methodology</h2>
+<div class="methodology" id="method"></div>
+
+<footer id="foot"></footer>
+
+<script src="data/scorecard_data.js"></script>
+<script>
+const SC = window.SCORECARD || {};
+function esc(s){return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function pct(x){return (100*x).toFixed(0)+'%'}
+
+const models = SC.models || [];
+const matches = SC.matches || [];
+const best = models.slice().sort((a,b)=>a.mean_logloss-b.mean_logloss)[0];
+
+document.getElementById('meta').textContent = matches.length
+  ? `${matches.length} matches graded · updated ${SC.generated_at||'?'} · class order [away, draw, home]`
+  : 'No graded matches yet — run python src/scorecard.py after results come in.';
+
+// KPI cards (headline = best model)
+if (best){
+  document.getElementById('kpis').innerHTML = `
+    <div class="kpi gold"><div class="big">${pct(best.hit_rate)}</div><div class="lbl">Hit rate</div>
+      <div class="note">${Math.round(best.hit_rate*best.n_matches)}/${best.n_matches} outcomes called right</div></div>
+    <div class="kpi good"><div class="big">${best.mean_logloss.toFixed(3)}</div><div class="lbl">Mean log-loss</div>
+      <div class="note">coin-flip = ${SC.coinflip_logloss}</div></div>
+    <div class="kpi blue"><div class="big">${best.vs_coinflip>=0?'+':''}${best.vs_coinflip.toFixed(3)}</div><div class="lbl">Edge vs coin-flip</div>
+      <div class="note">nats of information gained</div></div>
+    <div class="kpi"><div class="big">${best.mean_brier.toFixed(3)}</div><div class="lbl">Brier score</div>
+      <div class="note">0 = perfect, 0.667 = random</div></div>`;
+}
+
+// Log-loss bars (each model + coin-flip reference)
+const cf = SC.coinflip_logloss || 1.0986;
+const barItems = models.map(m=>({nm:m.model, ll:m.mean_logloss, good:true}))
+  .concat([{nm:'coin-flip', ll:cf, good:false}]);
+const maxLL = Math.max(...barItems.map(b=>b.ll))*1.1;
+document.getElementById('bars').innerHTML = barItems.map(b=>`
+  <div class="barrow"><span class="nm">${esc(b.nm)}</span>
+    <div class="bar-bg"><div class="bar" style="width:${100*b.ll/maxLL}%;background:${b.good?'linear-gradient(90deg,var(--green),#8ce99a)':'#6e7681'}">${b.ll.toFixed(3)}</div></div>
+    <span style="text-align:right;color:var(--dim);font-size:12px">${b.good?'model':'baseline'}</span></div>`).join('');
+
+// Per-match table
+document.querySelector('#mtable tbody').innerHTML = matches.map(m=>{
+  const callCls = m.correct?'ok':'miss';
+  const callTxt = m.correct?'✓ hit':'✗ miss';
+  const poClr = m.p_outcome>=0.5?'var(--green)':m.p_outcome>=0.33?'var(--amber)':'var(--red)';
+  return `<tr>
+    <td>${m.match_number}</td>
+    <td>${esc(m.home)} <span style="color:var(--dim)">v</span> ${esc(m.away)}</td>
+    <td><b>${esc(m.score)}</b></td>
+    <td style="color:var(--dim)">${esc(m.outcome)}</td>
+    <td>${pct(m.p_home)}</td><td>${pct(m.p_draw)}</td><td>${pct(m.p_away)}</td>
+    <td style="color:${poClr};font-weight:700">${pct(m.p_outcome)}</td>
+    <td class="${callCls}">${callTxt}</td>
+  </tr>`;
+}).join('');
+
+// Calibration plot (predicted confidence vs observed hit-rate)
+const cal = (best && best.calibration) || [];
+const W=560,H=240,pad=40;
+const x=v=>pad+v*(W-2*pad), y=v=>H-pad-v*(H-2*pad);
+let pts='', dots='';
+cal.filter(b=>b.n>0).forEach(b=>{
+  const cx=x(b.pred), cy=y(b.obs);
+  dots+=`<circle cx="${cx}" cy="${cy}" r="${4+b.n}" fill="var(--blue)" opacity="0.8"/>
+         <text x="${cx+8}" y="${cy-6}">${b.n} pick${b.n>1?'s':''}</text>`;
+});
+document.getElementById('calib').innerHTML = `
+  <svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:600px">
+    <line x1="${x(0)}" y1="${y(0)}" x2="${x(1)}" y2="${y(1)}" stroke="#30363d" stroke-dasharray="4 4"/>
+    <text x="${x(1)-90}" y="${y(1)+14}">perfect calibration</text>
+    <line x1="${pad}" y1="${pad}" x2="${pad}" y2="${H-pad}" stroke="#30363d"/>
+    <line x1="${pad}" y1="${H-pad}" x2="${W-pad}" y2="${H-pad}" stroke="#30363d"/>
+    <text x="${pad}" y="${H-pad+22}">0%</text><text x="${W-pad-20}" y="${H-pad+22}">100%</text>
+    <text x="6" y="${pad+6}" transform="rotate(0)">obs</text>
+    <text x="${W/2-60}" y="${H-8}">model confidence (top pick)</text>
+    ${dots}
+  </svg>
+  <div class="sub" style="margin-top:6px">Dot above the dashed line = model was <b style="color:var(--green)">underconfident</b> (won more than it claimed); below = <b style="color:var(--red)">overconfident</b>. Bubble size = number of matches in that confidence band.</div>`;
+
+// Methodology
+const b = best||{};
+document.getElementById('method').innerHTML = `
+  <b>What this measures.</b> Every group-stage match, we log the probabilities our model gave
+  <b>before kickoff</b> — <code>[away win, draw, home win]</code> — then grade them against the result.
+  <br><br>
+  <b>Model.</b> ELO + Davidson draw model feeding a Dixon-Coles goals simulator (50,000 Monte-Carlo
+  tournaments). Trained on ~49k international matches with strict chronological splits
+  (train ≤ 2011 · validate ≤ 2018 · test after) — <b>no peeking at the future</b>, no leakage.
+  Historical hold-out log-loss: <b>0.857</b>.
+  <br><br>
+  <b>Baselines.</b> A coin-flip over 3 outcomes scores ${SC.coinflip_logloss} log-loss; we currently
+  sit at <b>${(b.mean_logloss||0).toFixed(3)}</b> (${(b.vs_coinflip||0)>=0?'better':'worse'} by ${Math.abs(b.vs_coinflip||0).toFixed(3)} nats).
+  <br><br>
+  <b>Honest caveat.</b> ${matches.length} matches is a tiny sample — one upset swings the numbers a lot.
+  This page updates after every matchday; judge it over the full 104-match tournament, not 4 games.`;
+
+document.getElementById('foot').textContent =
+  `Live scorecard · regenerate: python src/scorecard.py · class order [away, draw, home]`;
+</script>
+</body>
+</html>

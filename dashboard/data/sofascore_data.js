@@ -916,9 +916,9 @@ window.SOFASCORE = {
       "id": 15186836,
       "home": "Canada",
       "away": "Bosnia & Herzegovina",
-      "hs": null,
-      "as": null,
-      "status": "Not started",
+      "hs": 1,
+      "as": 1,
+      "status": "Ended",
       "ts": 1781290800,
       "group": "FIFA World Cup, Group B"
     },
@@ -926,9 +926,9 @@ window.SOFASCORE = {
       "id": 15186873,
       "home": "USA",
       "away": "Paraguay",
-      "hs": null,
-      "as": null,
-      "status": "Not started",
+      "hs": 4,
+      "as": 1,
+      "status": "Ended",
       "ts": 1781312400,
       "group": "FIFA World Cup, Group D"
     },
@@ -1211,6 +1211,26 @@ window.SOFASCORE = {
       "status": "Not started",
       "ts": 1781924400,
       "group": "FIFA World Cup, Group D"
+    },
+    {
+      "id": 15186957,
+      "home": "Netherlands",
+      "away": "Sweden",
+      "hs": null,
+      "as": null,
+      "status": "Not started",
+      "ts": 1781974800,
+      "group": "FIFA World Cup, Group F"
+    },
+    {
+      "id": 15186905,
+      "home": "Germany",
+      "away": "Côte d'Ivoire",
+      "hs": null,
+      "as": null,
+      "status": "Not started",
+      "ts": 1781985600,
+      "group": "FIFA World Cup, Group E"
     }
   ],
   "source": "SofaScore",
