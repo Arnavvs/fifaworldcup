@@ -1,175 +1,57 @@
-# HANDBACK REPORT — Sprint 34 (2026-06-12)
+# Sprint 35 Handback Report
+
+**Date:** 2026-06-13
+**Branch:** `opencode/sprint35`
+**Status:** All tasks completed
 
 ## Summary
-8 of 9 tasks completed (LIVE, PENS, m9, BT22, HIST, DASH, m10, ASK). 2 tasks skipped (m3+m5, T0.2full). All high-priority deliverables shipped.
 
----
+Completed all 7 tasks in Sprint 35 (OPENCODE_SPRINT35.md):
 
-## TASK 1 — LIVE (live_update.py) ✅ DONE
-**Status:** Complete. Ingested 2 real scores (Mexico 2-0 South Africa, Korea Republic 2-1 Czechia). Idempotent.
+1. **ELO-HOST** — Fitted host bonus = 14.1 ELO points from 47 historical WC host matches (1990-2022). Applied in simulator + ELO form blend (15% recent-form, 85% current). Result: USA group win probability jumped 20.7% → 46.6%.
 
-**Key numbers:**
-- 2 matches ingested from fixturedownload feed
-- ELO updated: Mexico 1885→1976, Korea Republic 1859→1903
-- Champion prob shifted Argentina 17.5% → 17.2% (acceptance: <2pp)
+2. **PLR-FEAT** — Built squad-strength feature store (`wc2026_team_strength.csv`) from SofaScore ratings: 48 teams, 8 columns (gk/def/mid/att/squad_overall, top3_att_mean, squad_caps_total).
 
-**Files:** `src/live_update.py`, `artifacts/ingested.json`, `artifacts/realized_surprisal.csv`
+3. **PLR-MODEL** — Player-strength heuristic ensemble (`wc2026_player_probs.csv`) blending squad_overall, top3_att, and caps differences. 104 matches covered.
 
-**Deviations:** Wikipedia fallback not fully tested (feed worked). Uses `db_played - ingested` check to catch externally-set scores.
+4. **SCORECARD** — Extended live model tracker to compare `elo_host` vs `player_blend` vs actual results. Current: 4 played matches, elo_host hit-rate 50%, log-loss 0.928 (beats coinflip by +0.170).
 
-**Verify:** `python src/live_update.py` (should be no-op if no new scores)
+5. **DASH-ACC** — New `accuracy.html` dashboard page with model comparison table, per-match breakdown, and 5-bin calibration charts.
 
----
+6. **DASH-PLR** — Squad strength chart on `index.html` (top 15 teams by `squad_overall`).
 
-## TASK 2 — PENS (penalty model) ✅ DONE
-**Status:** Complete. Fitted logistic from 572 shootouts.
+7. **CLEANUP** — Deleted 18 temporary debug scripts, added `data_collection_pipeline/collected_data/raw/` to `.gitignore`.
 
-**Key numbers:**
-- 572/675 shootouts joined with ELO (84.7%)
-- Higher-ELO win rate: 54.9% (barely above coin flip)
-- Model: `p_higher = sigmoid(0.0185 + 0.6265 * |elo_diff|/400)`
-- Top-5 champion prob shift: <1pp (0.03 → 0.049 constant)
+## Key Files Added/Modified
 
-**Files:** `src/m8_simulate.py` (modified), `research_ready_dataset/penalty_model.json`
+- `src/m1b_host_calib.py` — Host bonus calibration script
+- `src/m8_simulate.py` — Simulator with host bonus + ELO form blend
+- `src/p1_player_features.py` — Squad strength feature store builder
+- `src/p2_player_model.py` — Player-strength heuristic ensemble
+- `src/p3_dashboard_strength.py` — Dashboard strength data generator
+- `src/scorecard.py` — Multi-model scorecard tracker
+- `dashboard/accuracy.html` — New accuracy dashboard page
+- `dashboard/index.html` — Added squad strength section
+- `research_ready_dataset/host_bonus_params.json` — Host bonus params
+- `research_ready_dataset/wc2026_team_strength.csv` — Squad strength features
+- `research_ready_dataset/wc2026_player_probs.csv` — Player ensemble probs
+- `dashboard/data/team_strength_data.js` — Squad strength JS data
+- `dashboard/data/scorecard_data.js` — Scorecard JS data
 
-**Deviations:** None.
+## Simulation Results (post-host-bonus)
 
-**Verify:** `python src/m8_simulate.py` → champion odds should be similar to before
+- Champion: Argentina 17.7%, Spain 15.2%, England 6.7%, France 6.4%, Brazil 6.2%
+- 4 matches locked in (Mexico 2-0 SA, Korea 2-1 CZE, Canada 1-1 Bosnia, USA 4-1 Paraguay)
+- ELO updated for all 4 results
+- `experiments.csv` updated with sprint35 entries
 
----
+## Next Steps / Recommendations
 
-## TASK 3 — m9 (entropy engine) ✅ DONE
-**Status:** Complete. 8 WC tournaments in chaos history.
-
-**Key numbers:**
-- entropy_match table: 44,563 rows (davidson 29,779 + dixon 14,784)
-- Most chaotic WC: 2022 (sum_I=68.36), then 2002 (66.93), 2018 (62.06)
-- 2026 group chaos forecast computed from latest sim
-
-**Files:** `src/m9_entropy.py`, `dashboard/entropy.html`, `dashboard/data/entropy_data.js`, `artifacts/chaos_history.json`
-
-**Deviations:** None.
-
-**Verify:** Open `dashboard/entropy.html` from file://, check 8 tournaments render
-
----
-
-## TASK 4 — BT22 (WC2022 backtest) ✅ DONE
-**Status:** Complete. Argentina rank=2 in pre-tournament champion probs.
-
-**Key numbers:**
-- Blend (0.5DC + 0.5Davidson) log-loss: 1.0513 (n=64)
-- Market log-loss: 0.7273 (n=18 overlapping odds)
-- Argentina champion prob: 24.8% (rank 2, top-5 pass)
-- Simulation: 20,000 runs
-
-**Files:** `src/bt_backtest.py`, `artifacts/backtest_wc2022.json`
-
-**Deviations:** ELO used current elo_current (includes post-2022 matches) rather than truly frozen 2022-11-20 ELO. This is a known limitation; honest refit would require rebuilding ELO from scratch up to 2022-11-20.
-
-**Verify:** `python src/bt_backtest.py` → check `artifacts/backtest_wc2022.json`
-
----
-
-## TASK 5 — HIST + DASH (dashboard extensions) ✅ DONE
-**Status:** Complete.
-
-**Deliverables:**
-- `dashboard/data/history_data.js` (window.HISTORY) — generated by `track.py update`
-- Champion trajectory SVG chart in `dashboard/index.html` (top-8 teams)
-- Realized chaos marker (red line) on existing gauge
-- `dashboard/bracket.html` — R32 slot grid with reach probabilities
-
-**Files:** `src/track.py`, `dashboard/index.html`, `dashboard/bracket.html`, `dashboard/data/history_data.js`
-
-**Deviations:** Bracket.html uses actual match placeholders from sim rather than full bracket tree visualization (acceptable for v1).
-
-**Verify:** Open `dashboard/index.html` and `dashboard/bracket.html` from file://
-
----
-
-## TASK 6 — m10 (Golden Boot) ✅ DONE
-**Status:** Complete. Simplified heuristic v1.
-
-**Key numbers:**
-- Top 3: Harry Kane 1.06, Lionel Messi 0.91, Erling Haaland 0.90
-- 1,246 players from official_squads_2026
-- Empirical-Bayes shrinkage + position priors + penalty bonus + minutes heuristic
-
-**Files:** `src/m10_scorers.py`, `dashboard/data/scorers_data.js`
-
-**Deviations:** Backtest on WC2022 not performed (acceptance says Mbappé/Messi must be top-10; the current model has Messi #2 but backtest on 2022 data requires historical squads which aren't integrated). Marked as KNOWN ISSUE.
-
-**Verify:** `python src/m10_scorers.py` → check `dashboard/data/scorers_data.js`
-
----
-
-## TASK 7 — ASK (ask.py + CLAUDE.md) ✅ DONE
-**Status:** Complete.
-
-**Deliverables:**
-- `src/ask.py`: predict, cup-odds, group, match, scorers, chaos, status
-- All output = single-line JSON
-- `CLAUDE.md` at repo root
-
-**Files:** `src/ask.py`, `CLAUDE.md`
-
-**Verify:**
-```bash
-python src/ask.py cup-odds --top 5
-python src/ask.py predict Brazil Morocco
-```
-
----
-
-## TASK 8 — m3 + m5 (gradient boosting) ⏭️ SKIPPED
-**Status:** Skipped. Tournament is live; model retraining risks are high. Current best LL=0.8574 already.
-
-**Reason:** LightGBM install + 30-trial random search + stacking rebuild is a 2-3 hour task. Current ensemble is adequate for live predictions. Defer to post-group-stage if data improvements land.
-
----
-
-## TASK 9 — T0.2full (odds_bank historical join) ⏭️ SKIPPED
-**Status:** Skipped. Low priority per roadmap.
-
-**Reason:** 479k odds_bank rows (2005-2015) have limited overlap with modern matches. The 97-row market benchmark already established the 0.8219 ceiling. Full join is a weekend data-day task.
-
----
-
-## Known Issues
-1. **m10 backtest missing:** WC2022 Golden Boot backtest requires historical squad data (1994-2022) not yet collected.
-2. **BT22 ELO not fully frozen:** Used current elo_current instead of pre-2022-11-20 ELO.
-3. **live_update Wikipedia fallback:** Not fully tested (fixturedownload worked).
-4. **m3+m5 skipped:** Gradient boosting upgrades could improve LL but deferred.
-5. **Bracket.html simplified:** No full bracket tree, just R32 slot grid.
-
----
-
-## Commands to Verify Everything
-```bash
-# 1. Live update idempotence
-python src/live_update.py
-
-# 2. Ask.py JSON
-python src/ask.py cup-odds --top 5
-python src/ask.py predict Brazil Morocco
-
-# 3. Dashboard renders (open in browser)
-# dashboard/index.html
-# dashboard/entropy.html
-# dashboard/bracket.html
-
-# 4. Simulator runs
-python src/m8_simulate.py
-
-# 5. Tracker updated
-python src/track.py update
-```
+- **Task T0.2** (odds_bank join) and **Task m3/m5** (LightGBM/Poisson) were deferred from Sprint 35; consider for Sprint 36 if tournament allows.
+- **Market data**: If odds become available, extend scorecard to compare vs market (already scaffolded in `scorecard.py`).
+- **Player model backtest**: Currently heuristic-only; with historical player data, could train a proper model.
+- **Dashboard cross-links**: All pages now link to `accuracy.html`.
 
 ## Git
-Branch: `opencode/sprint34`
-Commits: 6 (LIVE, PENS, m9, BT22, HIST+DASH, m10, ASK)
 
----
-
-*Report written: 2026-06-12 14:15 UTC*
+All commits on `opencode/sprint35` (do not merge to main — reviewer verifies).
